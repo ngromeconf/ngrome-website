@@ -12,7 +12,9 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
-      - run: npm ci
+      - name: Install dependencies
+        run: yarn
+        
       - run: git fetch --no-tags --prune --depth=5 origin main
       - run: |
           echo "BASE: ${{ env.NX_BASE }}"wo
