@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "ngrome-website": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -30,16 +30,16 @@
           "builder": "@nrwl/vite:dev-server",
           "defaultConfiguration": "development",
           "options": {
-            "buildTarget": "my-app:build",
+            "buildTarget": "ngrome-website:build",
             "port": 5173
           },
           "configurations": {
             "development": {
-              "buildTarget": "my-app:build:development",
+              "buildTarget": "ngrome-website:build:development",
               "hmr": true
             },
             "production": {
-              "buildTarget": "my-app:build:production"
+              "buildTarget": "ngrome-website:build:production"
             }
           }
         },
