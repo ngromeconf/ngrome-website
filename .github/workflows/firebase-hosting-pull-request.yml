@@ -16,15 +16,15 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
-      - name: Install dependencies
+      - name: Install & Build
         run: yarn
-
       - run: git fetch --no-tags --prune --depth=5 origin main
       - run: |
           echo "BASE: ${{ env.NX_BASE }}"
           echo "HEAD: ${{ env.NX_HEAD }}"
       - run: npx nx affected --target=build --parallel=3 --base=origin/main
       - uses: FirebaseExtended/action-hosting-deploy@v0
+        id: hosting
         with:
           repoToken: '${{ secrets.FIREBASE_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NGROME_WEBSITE }}'
@@ -34,6 +34,6 @@ jobs:
           message: |
             **Want to see your work?**
             🌏
-            ${{ steps.vars.outputs.urls }}
+            ${{ steps.hosting.outputs.urls }}
           
 
