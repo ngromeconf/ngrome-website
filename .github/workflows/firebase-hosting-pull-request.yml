@@ -7,21 +7,36 @@ jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
-      - name: Install dependencies
+      - name: Install & Build
         run: yarn
-
       - run: git fetch --no-tags --prune --depth=5 origin main
       - run: |
           echo "BASE: ${{ env.NX_BASE }}"
           echo "HEAD: ${{ env.NX_HEAD }}"
       - run: npx nx affected --target=build --parallel=3 --base=origin/main
       - uses: FirebaseExtended/action-hosting-deploy@v0
+        id: hosting
         with:
-          projectId: ngrome-website
           repoToken: '${{ secrets.FIREBASE_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NGROME_WEBSITE }}'
+          projectId: ngrome-website
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Want to see your work?**
+            🌏
+            ${{ steps.hosting.outputs.details_url }}
+            ${{ steps.hosting.outputs.url }}
+            Expire in: ${{ steps.hosting.outputs.expire_time }}
+            
+          
+

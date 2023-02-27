@@ -14,13 +14,15 @@ jobs:
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
-      - run: npm ci
+      
+      - name: Install dependencies
+        run: yarn
       - run: npx nx affected --target=build --parallel=3
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
 
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RAFFLE_1DD52 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NGROME_WEBSITE }}'
           channelId: live
-          projectId: raffle-1dd52
+          projectId: ngrome-website
