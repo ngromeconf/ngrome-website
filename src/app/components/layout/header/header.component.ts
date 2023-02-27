@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { BrowserPlatformLocation, CommonModule } from "@angular/common";
+
+import { NAV_MENU, BLACK_BUTTON, WHITE_BUTTON } from './constants';
 
 @Component({
   selector: "app-header",
@@ -46,48 +48,20 @@ import { CommonModule } from "@angular/common";
           :class="{'flex': open, 'hidden': !open}"
           class="flex-col items-end flex-grow hidden px-5 md:pb-0 lg:flex lg:justify-end lg:flex-row lg:space-x-4"
         >
-          <a
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            href="./index.html"
-            >Home</a
+          <a *ngFor="let item of NavMenu"
+            class="{{item.type=='white' ? WhiteButton : BlackButton }}"
+            [href]="item.destinationUrl"
+            >{{item.name}}</a
           >
-
-          <a
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            href="#pricing"
-            >About</a
-          >
-          <a
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            href="./blog.html"
-            >Sponsors</a
-          >
-          <a
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            href="./blog.html"
-            >Venue</a
-          >
-          <a
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            href="./blog.html"
-            >Info</a
-          >
-          <a
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            href="./blog-post.html"
-            >Blog</a
-          >
-          <a
-            href="https://wicked-templates.gumroad.com/l/monotone-starter"
-            target="_blank"
-            class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-black rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-slate-500 focus:ring-2 ring-offset-current ring-offset-2"
-          >
-            Tickets
-          </a>
         </nav>
       </div>
     </section>
   `,
   styles: [],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  public NavMenu = NAV_MENU;
+  public WhiteButton = WHITE_BUTTON;
+  public BlackButton = BLACK_BUTTON;
+}
