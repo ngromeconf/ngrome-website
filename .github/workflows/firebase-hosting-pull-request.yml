@@ -34,6 +34,9 @@ jobs:
           message: |
             **Want to see your work?**
             🌏
-            ${{ steps.hosting.outputs.urls }}
+            ${{ steps.hosting.outputs.details_url }}
+            ${{ steps.hosting.outputs.url }}
+            Expire in: ${{ steps.hosting.outputs.expire_time }}
+            
           
 
