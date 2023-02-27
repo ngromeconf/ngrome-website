@@ -7,6 +7,10 @@ jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
         with:
@@ -22,6 +26,8 @@ jobs:
       - run: npx nx affected --target=build --parallel=3 --base=origin/main
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          projectId: ngrome-website
           repoToken: '${{ secrets.FIREBASE_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NGROME_WEBSITE }}'
+          projectId: ngrome-website
+          
+
