@@ -8,11 +8,11 @@ import { CommonModule } from '@angular/common';
   template: `
     <section class="relative w-full h-screen overflow-hidden bg-center bg-no-repeat bg-cover bg-patternTop">
       <div class="container relative w-full px-8 pt-32 pb-24 mx-auto lg:px-4">
-        <div class="flex flex-col w-full mb-12 text-left lg:text-center ">
-          <strong class="mb-4 text-xs font-semibold tracking-widest uppercase text-slate-500">MMXXIII</strong>
-          <h1 class="mb-6 font-roboto text-4xl font-bold tracking-tighter text-black md:text-8xl lg:text-6xl">
-            NGROME
-          </h1>
+        <div class="flex flex-col w-full mb-12 text-left lg:text-center items-center ">
+          <strong class="mb-4 text-xs font-semibold tracking-widest uppercase text-slate-500">only at</strong>
+          <div class="lg:flex">
+          <img src="./ngrome-mmxxiii.svg">
+          </div>
           <p class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2">
             The largest Italian Angular Conference
           </p>
