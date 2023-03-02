@@ -35,7 +35,9 @@ module.exports = {
           '"Apple Color Emoji"',
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"'
-        ] // Ensure fonts with spaces have " " surrounding it.
+        ],
+        roboto: ['Roboto', 'sans-serif'],
+         // Ensure fonts with spaces have " " surrounding it.
       }
     }
   },
