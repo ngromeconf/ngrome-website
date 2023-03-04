@@ -1,20 +1,31 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
-  selector: 'app-hero',
+  selector: "app-hero",
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover bg-patternTop">
+    <section
+      class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover bg-patternTop"
+    >
       <div class="container relative w-full px-8 pt-32 pb-24 mx-auto lg:px-4">
-        <div class="flex flex-col w-full mb-12 text-left lg:text-center items-center ">
-          <strong class="mb-12 text-xs font-semibold tracking-widest uppercase text-slate-500">only at</strong>
+        <div
+          class="flex flex-col w-full mb-12 text-left lg:text-center items-center "
+        >
+          <strong
+            class="mb-12 text-xs font-semibold tracking-widest uppercase text-slate-500 text-center"
+            >The largest Italian Angular Conference is taking place at</strong
+          >
           <div class="lg:flex mb-12">
-          <img src="./ngrome-mmxxiii.svg">
+            <img class="w-full md:h-96" src="./ngrome-mmxxiii.svg" />
           </div>
-          <p class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 bg-white bg-opacity-25">
-            Whether you are a beginner, intermediate, or an expert, this will be the best opportunity to learn about the latest trends in the Angular world and web technologies.
+          <p
+            class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
+          >
+            Whether you are a beginner, intermediate, or an expert, this will be
+            the best opportunity to learn about the latest trends in the Angular
+            world and web technologies.
           </p>
         </div>
         <div class="flex w-full mt-6  justify-center ">
@@ -30,9 +41,6 @@ import { CommonModule } from '@angular/common';
       </div>
     </section>
   `,
-  styles: ['.bg-patternTop{background-image:url(./patternTop.svg)}'
-  ]
+  styles: [".bg-patternTop{background-image:url(./patternTop.svg)}"],
 })
-export class HeroComponent {
-
-}
+export class HeroComponent {}
