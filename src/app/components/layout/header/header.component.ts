@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, HostListener } from "@angular/core";
 import { BrowserPlatformLocation, CommonModule } from "@angular/common";
 
 
@@ -13,7 +13,6 @@ import { NAV_MENU, WHITE_BUTTON, RED_BUTTON } from './constants';
   template: `
     <section class="border-b">
       <div
-        x-data="{ open: false }"
         class="flex flex-col w-full p-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-16 lg:items-center lg:justify-between lg:flex-row md:px-6"
       >
         <div class="flex flex-row items-center justify-between">
@@ -76,8 +75,16 @@ export class HeaderComponent {
   public WhiteButton = WHITE_BUTTON;
   public BlackButton = RED_BUTTON;
 
+  
 
   constructor(public toggleService:ToggleService){
   }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event:HostListener) {
+    this.toggleService.updateData(false);
+  }
+
+  
 
 }
