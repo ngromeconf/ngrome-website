@@ -106,28 +106,26 @@ import { CommonModule } from "@angular/common";
         </div>
       </div>
     </section>
-    <section class="pt-32 overflow-hidden bg-patternBottom">
+    <section class="pt-32 overflow-hidden">
       <video
             autoplay
             loop
             muted
-            class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+            autopictureinpicture="true"
+            class="absolute z-10 w-auto min-w-full max-w-none"
           >
-            <source
-              src="https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2F2022-conf-highlights-no-audio-final.webm?alt=media&token=14a1542a-dec0-4270-8a3c-6e17bb223296"
-              type="video/webm"
-            />
             <source
               src="https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2F2022-conf-highlights-no-audio-final.mp4?alt=media&token=49779d7d-d2d3-4748-a417-10d56d2b1196"
               type="video/mp4"
             />
+            <source
+              src="https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2F2022-conf-highlights-no-audio-final.webm?alt=media&token=14a1542a-dec0-4270-8a3c-6e17bb223296"
+              type="video/webm"
+            />
           </video>
       <div
         class="container relative flex flex-col items-center px-5 py-16 mx-auto lg:px-24 lg:py-24 md:flex-row"
-      >
-        
-          
-        
+      >   
       </div>
     </section>
   `,
