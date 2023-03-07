@@ -112,7 +112,7 @@ import { CommonModule } from "@angular/common";
             loop
             muted
             autopictureinpicture="true"
-            class="absolute z-10 w-auto min-w-full max-w-none"
+            class="absolute z-10 w-fit lg:w-full hidden md:block "
           >
             <source
               src="https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2F2022-conf-highlights-no-audio-final.mp4?alt=media&token=49779d7d-d2d3-4748-a417-10d56d2b1196"
