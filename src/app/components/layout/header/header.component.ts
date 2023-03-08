@@ -59,7 +59,7 @@ import { NAV_MENU, WHITE_BUTTON, RED_BUTTON } from './constants';
           class="flex-col items-end flex-grow hidden px-5 md:pb-0 lg:flex lg:justify-end lg:flex-row lg:space-x-4"
         >
           <a *ngFor="let item of NavMenu"
-            class="{{item.type=='white' ? WhiteButton : BlackButton }}"
+            class="{{item.type=='white' ? WhiteButton : RedButton }}"
             [href]="item.destinationUrl"
             >{{item.name}}</a
           >
@@ -73,7 +73,7 @@ export class HeaderComponent {
 
   public NavMenu = NAV_MENU;
   public WhiteButton = WHITE_BUTTON;
-  public BlackButton = RED_BUTTON;
+  public RedButton = RED_BUTTON;
 
   
 
