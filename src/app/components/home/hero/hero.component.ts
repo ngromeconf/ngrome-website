@@ -7,7 +7,9 @@ import { CommonModule } from "@angular/common";
   imports: [CommonModule],
   template: `
     <section
-      class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover bg-patternTop"
+      class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
+      bg-[url('https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2FpatternMobile.svg?alt=media&token=7eea2949-79c7-43f2-934d-5ffc74e3efbc')]
+		  md:bg-[url('https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2FpatternTop.svg?alt=media&token=7b0d6f17-084e-47dd-8dcd-c45e42b42f57')]"
     >
       <div class="container relative w-full px-8 pt-32 pb-24 mx-auto lg:px-4">
         <div

@@ -9,7 +9,6 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         patternTop: "url('../images/patternTop.svg')",
-        patternBottom: "url('../images/patternBottom.svg')"
       }),
       boxShadow: {
         DEFAULT: "rgba(103, 151, 255, 0.11) 0px 8px 60px 0px,  rgba(103, 151, 255, 0.11) 0px 12px 90px 0px;",
@@ -22,12 +21,12 @@ module.exports = {
       fontFamily: {
         serif: ['"Playfair Display"', "serif"],
         sans: [
+          "Roboto",
           '"Inter"',
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
           '"Segoe UI"',
-          "Roboto",
           '"Helvetica Neue"',
           "Arial",
           '"Noto Sans"',
