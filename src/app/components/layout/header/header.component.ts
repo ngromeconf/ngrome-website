@@ -75,8 +75,6 @@ export class HeaderComponent {
   public WhiteButton = WHITE_BUTTON;
   public RedButton = RED_BUTTON;
 
-  
-
   constructor(public toggleService:ToggleService){
   }
 
