@@ -6,29 +6,43 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <main
-      class="h-screen w-full flex flex-col justify-center items-center bg-red-500"
-    >
-      <h1 class="text-9xl font-extrabold text-white tracking-widest">404</h1>
-      <div class="bg-green-500 px-2 text-sm rounded rotate-12 absolute">
-        Page Not Found
-      </div>
-      <button class="mt-5">
-        <a
-          class="relative inline-block text-sm font-medium text-white group active:text-orange-500 focus:outline-none focus:ring"
-        >
-          <span
-            class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"
-          ></span>
+    <div class="flex items-center justify-center min-h-screen bg-white  bg-fixed bg-cover bg-bottom
+    bg-[url('https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2FpatternMobile.svg?alt=media&token=7eea2949-79c7-43f2-934d-5ffc74e3efbc')]
+		md:bg-[url('https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2FpatternTop.svg?alt=media&token=7b0d6f17-084e-47dd-8dcd-c45e42b42f57')]"
+	style="background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f0b608' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23e6d710' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e7af05' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23e7d808' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d8a408' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23f1e213' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f0b607' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23e4d506' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23eab822' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23e8da14' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23e8b008' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23edde14' points='943 900 1210 900 971 687'/%3E%3C/svg%3E);">
 
-          <span
-            class="relative block px-8 py-3 bg-red-500 hover:bg-green-500 border border-current"
-          >
-            <a href="/">Go Home</a>
-          </span>
-        </a>
-      </button>
-    </main>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 offset-sm-2 text-gray-800 text-center -mt-52">
+				<div class="relative ">
+				<h1 class="relative text-9xl tracking-tighter-less text-shadow font-sans font-bold">
+					<span>4</span><span>0</span><span>4</span></h1>
+					<span class="absolute  top-0   -ml-12  text-gray-800 font-semibold">Oops!</span>
+					</div>
+				<h5 class="text-gray-800 font-semibold -mr-10 -mt-3">Page not found</h5>
+				<p class="text-gray-800 mt-2 mb-6">we are sorry, but the page you requested was not found</p>
+				<a
+					class="bg-green-400  px-5 py-3 text-sm shadow-sm font-medium tracking-wider text-gray-50 rounded-full hover:shadow-lg"
+          href="/">
+					Got to Home
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<style>
+	.error-bg {
+		
+	}
+	.tracking-tighter-less {
+		letter-spacing: -0.75rem;
+	}
+	.text-shadow {
+		text-shadow: -8px 0 0 rgb(222 0 49);
+	}
+</style>
   `,
 })
 export default class PageNotFoundComponent {}

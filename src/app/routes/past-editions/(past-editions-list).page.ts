@@ -1,19 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { ListItemComponent } from '../../components/past-editions/list-item/list-item.component';
 
 @Component({
   selector: 'app-past-editions-list',
   standalone: true,
-  imports: [RouterOutlet],
   template: `
-    <h2>NGROME Editions List</h2>
-
-    <ul>
-      <li><a href="/past-editions/2019">2019</a></li>
-      <li><a href="/past-editions/2020">2020</a></li>
-      <li><a href="/past-editions/2021">2021</a></li>
-      <li><a href="/past-editions/2022">2022</a></li>
-    </ul>
+    <section *ngFor="let item of list">
+      
+        <app-list-item [item]="item" />
+      
+    </section>
   `,
+
+  imports: [RouterOutlet, ListItemComponent, CommonModule],
 })
-export default class PastEditionListComponent {}
+export default class PastEditionListComponent {
+  public list = [2019, 2020, 2021, 2022];
+}

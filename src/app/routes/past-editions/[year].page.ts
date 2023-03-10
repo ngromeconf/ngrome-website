@@ -9,15 +9,19 @@ import { map } from 'rxjs';
   standalone: true,
   imports: [AsyncPipe, JsonPipe],
   template: `
-    <h2>Past Edition Details</h2>
+    <h1 class="mb-6 font-roboto text-4xl font-bold tracking-tighter text-black md:text-8xl lg:text-6xl">
+            Let's see the edition:
+            <br class="hidden lg:block" />
+            {{ year$ | async }}
+          </h1>
 
-    ID: {{ productId$ | async }}
+    
   `,
 })
 export default class ProductDetailsPageComponent {
   private readonly route = inject(ActivatedRoute);
 
-  readonly productId$ = this.route.paramMap.pipe(
+  readonly year$ = this.route.paramMap.pipe(
     map((params) => params.get('year'))
   );
 }

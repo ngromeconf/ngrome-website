@@ -7,9 +7,14 @@ import { HeaderComponent } from '../components/layout/header/header.component';
   standalone: true,
   template: `
     <app-header />
-    <h2>NGROME PAST EDITIONS</h2>
 
-    <router-outlet></router-outlet>
+    <section
+      class="relative w-full h-screen bg-center bg-no-repeat bg-cover bg-patternTop"
+    >
+      
+        <router-outlet></router-outlet>
+      
+    </section>
   `,
   imports: [RouterOutlet, HeaderComponent],
 })
