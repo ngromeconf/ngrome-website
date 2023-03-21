@@ -14,7 +14,6 @@ module.exports = {
         DEFAULT: "rgba(103, 151, 255, 0.11) 0px 8px 60px 0px,  rgba(103, 151, 255, 0.11) 0px 12px 90px 0px;",
         monotone: "0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)"
       },
-
       colors: {
         black: "#16171b",
         red: "#DD0031"

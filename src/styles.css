@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.red{
+    color: #DD0031;
+}
+.bg-red-500{
+    background-color: #DD0031;
+}
+
+.confetti {
+    background: #DD0031;
+    position: absolute;
+    transition: top 0.5s linear, left 1.5s linear, right 1.5s linear, transform 2s;
+}
