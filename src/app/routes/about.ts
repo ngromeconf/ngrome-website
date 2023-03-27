@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../components/layout/header/header.component";
+import { HeaderComponent } from '../components/layout/header/header.component';
+import { FooterComponent } from '../components/layout/footer/footer.component';
 
 @Component({
-    selector: 'app-about',
-    standalone: true,
-    template: `
+  selector: 'app-about',
+  standalone: true,
+  template: `
     <app-header />
-    
-  `,
-    imports: [HeaderComponent]
-})
-export default class AboutComponent {
 
-}
+    <app-footer />
+  `,
+  imports: [HeaderComponent, FooterComponent],
+})
+export default class AboutComponent {}

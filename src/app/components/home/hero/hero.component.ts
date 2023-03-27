@@ -34,9 +34,9 @@ import { CommonModule } from "@angular/common";
           <div class="mt-3 rounded-lg sm:mt-0">
             <a
               href="https://wicked-templates.gumroad.com/l/monotone-starter"
-              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-red-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-green-500 focus:ring-2 ring-offset-current ring-offset-2"
+              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-red border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-green-500 focus:ring-2 ring-offset-current ring-offset-2"
             >
-              Buy for $110
+              Reserve your seat
             </a>
           </div>
         </div>
