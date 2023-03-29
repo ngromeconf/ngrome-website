@@ -8,7 +8,6 @@ import { VenueComponent } from '../components/home/venue/venue.component';
   selector: 'app-home',
   standalone: true,
   template: `
-    <app-header />
     <app-hero />
     <app-features />
     <app-venue />

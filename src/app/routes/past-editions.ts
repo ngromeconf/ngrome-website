@@ -7,7 +7,6 @@ import { FooterComponent } from "../components/layout/footer/footer.component";
     selector: 'app-past-editions',
     standalone: true,
     template: `
-    <app-header />
 
     <section
       class="relative w-full h-screen bg-center bg-no-repeat bg-cover bg-patternTop"
@@ -17,7 +16,6 @@ import { FooterComponent } from "../components/layout/footer/footer.component";
       
     </section>
 
-    <app-footer />
   `,
     imports: [RouterOutlet, HeaderComponent, FooterComponent]
 })

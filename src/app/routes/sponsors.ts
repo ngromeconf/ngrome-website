@@ -6,8 +6,7 @@ import { FooterComponent } from "../components/layout/footer/footer.component";
     selector: 'app-sponsor',
     standalone: true,
     template: `
-    <app-header />
-    <app-footer />
+    
   `,
     imports: [HeaderComponent, FooterComponent]
 })
