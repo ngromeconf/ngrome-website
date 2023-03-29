@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SocialShareComponent } from "../../social-share/social-share.component";
 
 @Component({
-    selector: 'app-main-about',
+    selector: 'app-page-head',
     standalone: true,
     template: `
     <section>
@@ -16,12 +16,13 @@ import { SocialShareComponent } from "../../social-share/social-share.component"
           <h1
             class="mb-8 font-serif text-4xl font-bold tracking-tight text-black md:text-6xl"
           >
-            About NGRome & The TEAM
+            {{title}}
           </h1>
 
           <p class="mx-auto text-lg leading-snug text-slate-500">
-            NG-Rome is a non-profit community conference run by a team of volunteers.
-We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.
+            {{subtitle}}
+          </p>
+          <p class="mx-auto text-lg eading-snug text-slate-500">
           </p>
        
           <app-social-share />
@@ -32,4 +33,9 @@ We are all active members of the tech community, and run or contribute to variou
     styles: [],
     imports: [CommonModule, SocialShareComponent]
 })
-export class MainAboutComponent {}
+export class PageHeadComponent {
+
+  @Input() title:string = '';
+  @Input() subtitle:string = '';
+
+}
