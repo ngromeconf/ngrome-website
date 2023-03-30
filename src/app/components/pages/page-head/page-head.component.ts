@@ -14,7 +14,7 @@ import { SocialShareComponent } from "../../social-share/social-share.component"
           class="flex flex-col items-center mx-auto text-center lg:flex-grow md:items-start md:text-left lg:max-w-3xl"
         >
           <h1
-            class="mb-8 font-serif text-4xl font-bold tracking-tight text-black md:text-6xl"
+            class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
           >
             {{title}}
           </h1>

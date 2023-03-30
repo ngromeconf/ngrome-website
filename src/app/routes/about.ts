@@ -8,7 +8,7 @@ import { MainContentComponent } from '../components/about/main-content/main-cont
   standalone: true,
   template: `
     <app-page-head
-      [title]="'About NGRome & The TEAM'"
+      [title]="'About NGRome Conference & The TEAM'"
       [subtitle]="
         'NG-Rome is a non-profit community conference run by a team of volunteers.
             We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.'
