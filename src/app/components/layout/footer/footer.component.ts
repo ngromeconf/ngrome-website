@@ -192,6 +192,9 @@ import { FOOTER_MENU } from './constants';
       .hover-svg-blue-600:hover svg path {
         fill: rgb(37 99 235 / var(--tw-text-opacity));
       }
+      section {
+        max-height: 2.5rem;
+      }
     `,
   ],
 })
