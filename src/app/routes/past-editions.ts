@@ -8,7 +8,7 @@ import { FooterComponent } from '../components/layout/footer/footer.component';
   standalone: true,
   template: `
     <section
-      class="relative w-full h-screen bg-center bg-no-repeat bg-cover bg-patternTop"
+      class="relative w-full h-screen bg-center bg-no-repeat bg-cover bg-patternTop d-contents"
     >
       <router-outlet></router-outlet>
     </section>
