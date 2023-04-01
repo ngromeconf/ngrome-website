@@ -46,7 +46,7 @@ export interface SponsorInterface {
           </p>
         </div>
         <div class="flex flex-wrap -m-4">
-          <div class="w-full p-4 md:w-1/3" *ngFor="let item of pastEditionSponsors">
+          <div class="w-full p-4 md:w-1/6" *ngFor="let item of pastEditionSponsors">
             <div class="p-6 border shadow-xl rounded-3xl">
               <a class="inline-flex items-center mb-2" [href]="item.url">
                 <img
@@ -57,6 +57,8 @@ export interface SponsorInterface {
               </a>
             </div>
           </div>
+
+          
           
           
         </div>
