@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-main-content',
+  selector: 'app-content',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -36,6 +36,6 @@ Fostering new relationships within Italy, and across borders. Simultaneously dev
   styles: [
   ]
 })
-export class MainContentComponent {
+export class ContentComponent {
 
 }
