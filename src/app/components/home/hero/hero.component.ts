@@ -17,7 +17,7 @@ import { ConfettiService } from "./confetti.service";
             class="mb-12 text-xs font-semibold tracking-widest uppercase text-slate-500 text-center"
             >The largest Italian Angular Conference is taking place at</strong
           >
-          <div class="lg:flex mb-12">
+          <div class="lg:flex mb-12" id="event-title-container">
             <img class="w-full md:h-96" src="./ngrome-mmxxiii.svg" />
           </div>
           <p
@@ -46,9 +46,9 @@ import { ConfettiService } from "./confetti.service";
 export class HeroComponent implements AfterViewInit {
   constructor(
     private confettiService: ConfettiService
-  ) {}
+  ) { }
 
   ngAfterViewInit(): void {
-    this.confettiService.animate('#hero-container')
+    setTimeout(() => this.confettiService.parallaxOver('#hero-container', { avoid: '#event-title-container' }), 1000)
   }
 }

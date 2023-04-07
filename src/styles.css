@@ -13,5 +13,10 @@
 .confetti {
     background: #DD0031;
     position: absolute;
+}
+.confetti.rain {
     transition: top 0.5s linear, left 1.5s linear, right 1.5s linear, transform 2s;
+}
+.confetti.parallax {
+    transition: top 0.1s linear;
 }
