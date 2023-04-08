@@ -19,8 +19,8 @@ import { SocialShareComponent } from "../../../social-share/social-share.compone
             {{title}}
           </h1>
 
-          <p class="mx-auto text-lg leading-snug text-slate-500">
-            {{subtitle}}
+          <p class="mx-auto text-lg leading-snug text-slate-500"
+          [innerHTML]="subtitle">
           </p>
           <p class="mx-auto text-lg eading-snug text-slate-500">
           </p>
@@ -35,7 +35,7 @@ import { SocialShareComponent } from "../../../social-share/social-share.compone
 })
 export class PageHeadComponent {
 
-  @Input() title:string = '';
+  @Input() title:string|undefined = '';
   @Input() subtitle:string = '';
 
 }

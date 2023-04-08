@@ -2,25 +2,54 @@ import { Component } from '@angular/core';
 import { PageHeadComponent } from '../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
 import { ContentComponent } from '../components/about/main-content/content.component';
+import { Apollo, gql } from 'apollo-angular';
+import { CommonModule } from '@angular/common';
+import Page from '../models/page.model';
 
 @Component({
-    selector: 'app-about',
-    standalone: true,
-    template: `
-    <app-page-head
-      [title]="'About NGRome Conference & The TEAM'"
-      [subtitle]="
-        'NG-Rome is a non-profit community conference run by a team of volunteers.
-            We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.'
-      "
-    />
-    <app-page-image
-      [image]="
-        'https://lh3.googleusercontent.com/pw/AMWts8BYmzSzQS2EFjUySyYrcez0cHtqfiJVtqwMEMlCsKvmHy14sXwBWaarzHuJAps67u30-OOd58sC8DvF3Avl9aHeR_2-aRDLRefcY02nLbD-dg3fZgm6G73V-vF04CIaewWBq8j3StOwjrtXyK_lCHad=w3138-h2092-s-no?authuser=0'
-      "
-    />
-    <app-content />
+  selector: 'app-about',
+  standalone: true,
+  template: `
+    <app-content *ngIf="!loading" [dataPage]="page"/>
   `,
-    imports: [PageHeadComponent, PageImageComponent, ContentComponent]
+  imports: [CommonModule, PageHeadComponent, PageImageComponent, ContentComponent],
 })
-export default class AboutComponent {}
+export default class AboutComponent {
+  
+  page: Page | null = null;
+  loading = true;
+  error: any;
+
+  constructor(private apollo: Apollo) {
+    this.apollo
+      .watchQuery({
+        query: gql`
+          query About {
+            page(_id: "d3ffc272-c15a-49a5-85b9-0a9158635045") {
+              id
+              data {
+                title
+                sections {
+                  _id
+                  header
+                  description {
+                    html
+                  }
+                  image {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        `,
+      })
+      .valueChanges.subscribe((result: any) => {
+        console.log(result.data.page);
+        this.page = result?.data?.page;
+        this.loading = result.loading;
+        this.error = result.error;
+      });
+  }
+
+}
