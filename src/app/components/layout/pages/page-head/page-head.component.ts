@@ -36,6 +36,6 @@ import { SocialShareComponent } from "../../../social-share/social-share.compone
 export class PageHeadComponent {
 
   @Input() title:string|undefined = '';
-  @Input() subtitle:string = '';
+  @Input() subtitle:string|undefined = '';
 
 }

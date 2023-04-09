@@ -5,7 +5,7 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 
-const AUTH = `1SmYIUeXv0lWhSO9aLsDDZKfDPgCxCyykdng2c4irA6OozwFBySKmnDOuylGWT0SoE8YcQJDfK7iMg2p3yX8Br5WcHGwdGFZQjJ9ZJPV0aeho3UoMIcPCw4c7XeDWBTBq6wCWMg4cHuEtMYIi6hnKHAcyk`;
+const AUTH = `f74b94fc5a63a38e82b0a1971d9b7d0a1fa06c9e06fc25eaef26d1dfca084f7a`;
 
 @Injectable()
 export class ApolloInterceptor implements HttpInterceptor {

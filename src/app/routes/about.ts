@@ -9,13 +9,15 @@ import Page from '../models/page.model';
 @Component({
   selector: 'app-about',
   standalone: true,
-  template: `
-    <app-content *ngIf="!loading" [dataPage]="page"/>
-  `,
-  imports: [CommonModule, PageHeadComponent, PageImageComponent, ContentComponent],
+  template: ` <app-content *ngIf="!loading" [dataPage]="page" /> `,
+  imports: [
+    CommonModule,
+    PageHeadComponent,
+    PageImageComponent,
+    ContentComponent,
+  ],
 })
 export default class AboutComponent {
-  
   page: Page | null = null;
   loading = true;
   error: any;
@@ -25,19 +27,31 @@ export default class AboutComponent {
       .watchQuery({
         query: gql`
           query About {
-            page(_id: "d3ffc272-c15a-49a5-85b9-0a9158635045") {
-              id
-              data {
-                title
-                sections {
+            Page(id: "b3d52585-3bbf-4900-86c1-e2ada614c739") {
+              _id
+              title
+              subtitle
+              _slug
+              stack {
+                __typename
+                ... on ImageAndText {
                   _id
-                  header
-                  description {
-                    html
-                  }
+                  title
+                  text
                   image {
+                    name
                     url
                   }
+                  image_position
+                }
+              }
+              seo {
+                _id
+                title
+                description
+                social_media_image {
+                  _id
+                  url
                 }
               }
             }
@@ -45,11 +59,10 @@ export default class AboutComponent {
         `,
       })
       .valueChanges.subscribe((result: any) => {
-        console.log(result.data.page);
-        this.page = result?.data?.page;
+        console.log(result.data.Page);
+        this.page = result?.data?.Page;
         this.loading = result.loading;
         this.error = result.error;
       });
   }
-
 }
