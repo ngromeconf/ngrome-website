@@ -1,10 +1,38 @@
 import { Component } from '@angular/core';
+import { RouteMeta } from '@analogjs/router';
 import { PageHeadComponent } from '../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
 import { ContentComponent } from '../components/about/main-content/content.component';
 import { Apollo, gql } from 'apollo-angular';
 import { CommonModule } from '@angular/common';
 import Page from '../models/page.model';
+
+export const routeMeta: RouteMeta = {
+  title: 'About NGRome',
+  meta: [
+    {
+      name: 'description',
+      content: 'NG-Rome is a non-profit community conference run by a team of volunteers.',
+    },
+    {
+      name: 'author',
+      content: 'NGRome Team',
+    },
+    {
+      property: 'og:title',
+      content: 'About NGRome',
+    },
+    {
+      property: 'og:description',
+      content: 'NG-Rome is a non-profit community conference run by a team of volunteers.',
+    },
+    {
+      property: 'og:image',
+      content: 'https://ngrome.stream.prepr.io/w_1920/5l2988gibhd2-ng-rome-1805-1.jpg',
+    },
+  ],
+};
+
 
 @Component({
   selector: 'app-about',
