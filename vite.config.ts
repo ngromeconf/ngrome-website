@@ -12,7 +12,19 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog()],
+  plugins: [
+    analog({
+      ssr: true,
+      static: true, // prerender pages without building an SSR server
+      prerender: {
+        routes: async () => [
+          '/',
+          '/about',
+          '/sponsors',
+        ],
+      },
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
