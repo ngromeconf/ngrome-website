@@ -17,7 +17,7 @@ jobs:
       
       - name: Install dependencies
         run: yarn
-      - run: npx nx affected --target=build --parallel=3
+      - run: yarn build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
 

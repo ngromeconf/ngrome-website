@@ -22,7 +22,7 @@ jobs:
       - run: |
           echo "BASE: ${{ env.NX_BASE }}"
           echo "HEAD: ${{ env.NX_HEAD }}"
-      - run: npx nx affected --target=build --parallel=3 --base=origin/main
+      - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         id: hosting
         with:
