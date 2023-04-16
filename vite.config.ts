@@ -17,14 +17,13 @@ export default defineConfig(({ mode }) => ({
       ssr: true,
       static: true, // prerender pages without building an SSR server
       prerender: {
-        routes: async () => [
-          '/',
-          '/about',
-          '/sponsors',
-        ],
+        routes: async () => ['/', '/about', '/sponsors'],
       },
     }),
   ],
+  ssr: {
+    noExternal: ['apollo-angular', 'apollo-angular/**'],
+  },
   test: {
     globals: true,
     environment: 'jsdom',

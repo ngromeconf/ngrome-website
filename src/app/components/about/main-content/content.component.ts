@@ -9,7 +9,7 @@ import Page from 'src/app/models/page.model';
   standalone: true,
   template: `
     <app-page-head [title]="dataPage?.title" [subtitle]="dataPage?.subtitle" />
-
+  
     <div *ngFor="let item of dataPage?.stack">
       <div *ngFor="let image of item.image">
         <app-page-image [image]="image.url" />
