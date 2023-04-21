@@ -14,6 +14,7 @@
     "test": "ng test"
   },
   "dependencies": {
+    "@analogjs/content": "^0.2.0-beta.3",
     "@analogjs/router": "^0.1.0-alpha.10",
     "@angular/animations": "^15.2.0",
     "@angular/common": "^15.2.0",
@@ -28,7 +29,10 @@
     "@angular/router": "^15.0.0",
     "@nrwl/angular": "^15.7.0",
     "firebase": "^9.17.1",
+    "front-matter": "^4.0.2",
+    "marked": "^4.3.0",
     "prettier": "^2.8.4",
+    "prismjs": "^1.29.0",
     "rxjs": "^7.8.0",
     "tslib": "^2.5.0",
     "zone.js": "^0.11.8"
