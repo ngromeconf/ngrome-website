@@ -1,50 +1,42 @@
 export const FOOTER_MENU = [
   {
     name: 'Code of Conduct',
-    destinationUrl: './',
-    type: 'modal',
+    destinationUrl: '/code-of-conduct',
     visible: true,
   },
   {
     name: 'Terms & Privacy',
-    destinationUrl: './',
-    type: 'modal',
+    destinationUrl: '/terms',
     visible: true,
   },
   {
     name: 'Diversity',
-    destinationUrl: './',
-    type: 'link',
+    destinationUrl: '/diversity',
     visible: true,
   },
   {
     name: 'Sponsors',
-    destinationUrl: './',
-    type: 'link',
+    destinationUrl: '/sponsors',
     visible: true,
   },
   {
     name: 'Speakers',
-    destinationUrl: './',
-    type: 'link',
+    destinationUrl: '/speakers',
     visible: true,
   },
   {
     name: 'Workshops',
-    destinationUrl: './',
-    type: 'link',
+    destinationUrl: '/workshops',
     visible: true,
   },
   {
     name: 'About',
-    destinationUrl: './',
-    type: 'link',
+    destinationUrl: '/about',
     visible: true,
   },
   {
     name: 'Info',
-    destinationUrl: './',
-    type: 'link',
+    destinationUrl: '/info',
     visible: true,
   },
 ];

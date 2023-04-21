@@ -45,20 +45,11 @@ import { FOOTER_MENU } from './constants';
               >
                 <li *ngFor="let item of footerMenu">
                   <a
-                    *ngIf="item.type === 'link'; else templateModal"
                     class="text-white hover:text-blue-600 cursor-pointer"
                     [title]="item.name"
                     [href]="item.destinationUrl"
                     >{{ item.name }}</a
                   >
-                  <ng-template #templateModal>
-                    <span
-                      [title]="item.name"
-                      (click)="openModal(item.name)"
-                      class="text-white hover:text-blue-600 cursor-pointer"
-                      >{{ item.name }}</span
-                    >
-                  </ng-template>
                 </li>
               </ul>
             </div>
@@ -202,9 +193,5 @@ export class FooterComponent {
   year: string = new Date().getFullYear().toString();
   footerMenu = FOOTER_MENU.filter((item) => item.visible);
 
-  constructor() {}
-
-  openModal(nameModal: string): void {
-    console.log(nameModal);
-  }
+  constructor() { }
 }
