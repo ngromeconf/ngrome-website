@@ -87,13 +87,13 @@ export default class TermsComponent {
       ],
     },
     {
-      title: 'HOLDER OF THE TREATMENT',
+      title: 'Holder of the treatment',
       paragraphs: [
         'Holder of the treatment is Satyricon Factory Ltd., Suite 1 Second Floor Everdene House, Deansleigh Road, Bournemouth, Dorset, United Kingdom, BH7 7DU - Company Number 10168160 - email: satyriconfactory@gmail.com',
       ],
     },
     {
-      title: 'DATA PROTECTION MANAGER',
+      title: 'Data Protection Manager',
       paragraphs: [
         'The Satyricon Factory Ltd. as a result of assessing their risk profile on personal data processed, decided to have a Personal Data Protection Manager available at satyriconfactory@gmail.com.',
       ],

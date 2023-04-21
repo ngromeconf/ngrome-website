@@ -53,11 +53,6 @@ import { Article } from './article.model';
 
       .title {
         padding-top: 20px;
-        padding-left: 20px;
-      }
-
-      .content {
-        padding-left: 20px;
       }
 
       .title:before {
@@ -68,6 +63,7 @@ import { Article } from './article.model';
         height: 10px;
         width: 90px;
         background-color: #dd0031;
+        margin-left: -20px;
       }
 
       ul {
