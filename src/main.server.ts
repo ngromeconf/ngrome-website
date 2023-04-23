@@ -1,21 +1,22 @@
 import 'zone.js/node';
 import { enableProdMode } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
 import { renderApplication } from '@angular/platform-server';
-import { provideFileRouter } from '@analogjs/router';
-import { withEnabledBlockingInitialNavigation } from '@angular/router';
-
 import { AppComponent } from './app/app.component';
+import { config } from './app/app.config.server';
 
 if (import.meta.env.PROD) {
   enableProdMode();
 }
 
+export function bootstrap() {
+  return bootstrapApplication(AppComponent, config);
+}
+
 export default async function render(url: string, document: string) {
-  const html = await renderApplication(AppComponent, {
-    appId: 'analog-app',
+  const html = await renderApplication(bootstrap, {
     document,
     url,
-    providers: [provideFileRouter(withEnabledBlockingInitialNavigation())],
   });
 
   return html;
