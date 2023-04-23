@@ -12,23 +12,34 @@ import { Article } from './article.model';
         class="relative flex flex-col items-center mx-auto text-center lg:flex-grow md:items-start md:text-left lg:max-w-3xl"
       >
         <h2
-          class="title mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
+         class="title font-sans mb-6 uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
         >
           {{ title }}
         </h2>
 
         <div class="content">
           <article>
-            <div *ngFor="let article of articles">
-              <h3 *ngIf="article?.title">
+            <div *ngFor="let article of articles" class="mb-6">
+              <h3
+                class="font-bold font-sans mb-2 md:text-2xl lg:text-4xl text-black tracking-tight uppercase"
+                *ngIf="article?.title"
+              >
                 {{ article.title }}
               </h3>
 
-              <p *ngFor="let paragraph of article?.paragraphs">
+              <p
+                class="mx-auto mb-4 text-lg leading-snug text-slate-500"
+                *ngFor="let paragraph of article?.paragraphs"
+              >
                 {{ paragraph }}
               </p>
-              <ul *ngIf="article?.list">
-                <li *ngFor="let item of article.list">{{ item }}</li>
+              <ul *ngIf="article?.list" class="mb-4">
+                <li
+                  class="mx-auto text-lg leading-snug text-slate-500"
+                  *ngFor="let item of article.list"
+                >
+                  {{ item }}
+                </li>
               </ul>
             </div>
           </article>
@@ -38,19 +49,6 @@ import { Article } from './article.model';
   </section>`,
   styles: [
     `
-      p {
-        font-size: 17px;
-        line-height: 1.6;
-        margin-bottom: 32px;
-      }
-
-      h3 {
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        line-height: 1;
-      }
-
       .title {
         padding-top: 20px;
       }
@@ -69,9 +67,6 @@ import { Article } from './article.model';
       ul {
         list-style: unset;
         list-style-position: inside;
-        font-size: 17px;
-        line-height: 1.6;
-        margin-bottom: 32px;
       }
     `,
   ],
