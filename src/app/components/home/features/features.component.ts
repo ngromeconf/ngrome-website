@@ -34,6 +34,7 @@ import { CommonModule } from '@angular/common';
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
+                height="100%"
               >
                 <path
                   stroke-linecap="round"
@@ -62,6 +63,7 @@ import { CommonModule } from '@angular/common';
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
+                height="100%"
               >
                 <path
                   stroke-linecap="round"
@@ -90,6 +92,7 @@ import { CommonModule } from '@angular/common';
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
+                height="100%"
               >
                 <path
                   stroke-linecap="round"
@@ -118,6 +121,7 @@ import { CommonModule } from '@angular/common';
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
+                height="100%"
               >
                 <path
                   stroke-linecap="round"

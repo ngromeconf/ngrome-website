@@ -27,7 +27,7 @@ export const routeMeta: RouteMeta = {
   ],
 })
 export default class AboutComponent {
-  
-  page$: Observable<Page> | null = resolvePageData();
+  documentID = 'b3d52585-3bbf-4900-86c1-e2ada614c739';
+  page$: Observable<Page> | null = resolvePageData(this.documentID);
   
 }
