@@ -13,13 +13,14 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideClientHydration(),
     importProvidersFrom(HttpClientModule, ApolloModule),
+    importProvidersFrom(HttpClientModule, ApolloModule),
     {
       provide: APOLLO_OPTIONS,
       useFactory: (httpLink: HttpLink) => {
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: 'https://api.apito.io/secured/graphql',
+            uri: 'https://graphql.prepr.io/f74b94fc5a63a38e82b0a1971d9b7d0a1fa06c9e06fc25eaef26d1dfca084f7a',
           }),
         };
       },
