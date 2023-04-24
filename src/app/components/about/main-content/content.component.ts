@@ -2,7 +2,8 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageHeadComponent } from '../../layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../../layout/pages/main-image/page-image.component';
-import Page from 'src/app/models/page.model';
+import { Page } from 'src/app/models/page.model';
+
 
 @Component({
   selector: 'app-content',
