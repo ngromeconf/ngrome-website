@@ -10,7 +10,7 @@ import { VenueComponent } from '../components/home/venue/venue.component';
   template: `
     <app-hero />
     <app-features />
-    <app-venue />
+    <!-- <app-venue /> -->
   `,
   imports: [HeaderComponent, HeroComponent, FeaturesComponent, VenueComponent],
 })

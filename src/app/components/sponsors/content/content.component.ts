@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface SponsorInterface {
-  name: string,
-  image: string,
-  url: string
+  name: string;
+  image: string;
+  url: string;
 }
 
 @Component({
@@ -25,7 +25,8 @@ export interface SponsorInterface {
       <div class="flex w-full mt-6  justify-center ">
         <div class="mt-3 rounded-lg sm:mt-0">
           <a
-            href="https://wicked-templates.gumroad.com/l/monotone-starter"
+            href="https://forms.gle/FGRUKbigLn8BjePW7"
+            target="_blank"
             class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-red border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-green-500 focus:ring-2 ring-offset-current ring-offset-2"
           >
             CONTACT US
@@ -46,7 +47,10 @@ export interface SponsorInterface {
           </p>
         </div>
         <div class="flex flex-wrap -m-4">
-          <div class="w-full p-4 md:w-1/6" *ngFor="let item of pastEditionSponsors">
+          <div
+            class="w-full p-4 md:w-1/6"
+            *ngFor="let item of pastEditionSponsors"
+          >
             <div class="p-6 border shadow-xl rounded-3xl">
               <a class="inline-flex items-center mb-2" [href]="item.url">
                 <img
@@ -57,10 +61,6 @@ export interface SponsorInterface {
               </a>
             </div>
           </div>
-
-          
-          
-          
         </div>
       </div>
     </section>
@@ -68,7 +68,5 @@ export interface SponsorInterface {
   styles: [],
 })
 export class ContentComponent {
-
   @Input() pastEditionSponsors: SponsorInterface[] = [];
-
 }

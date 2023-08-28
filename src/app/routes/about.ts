@@ -4,9 +4,9 @@ import { PageImageComponent } from '../components/layout/pages/main-image/page-i
 import { ContentComponent } from '../components/about/main-content/content.component';
 
 @Component({
-    selector: 'app-about',
-    standalone: true,
-    template: `
+  selector: 'app-about',
+  standalone: true,
+  template: `
     <app-page-head
       [title]="'About NGRome Conference & The TEAM'"
       [subtitle]="
@@ -14,13 +14,9 @@ import { ContentComponent } from '../components/about/main-content/content.compo
             We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.'
       "
     />
-    <app-page-image
-      [image]="
-        'https://lh3.googleusercontent.com/pw/AMWts8BYmzSzQS2EFjUySyYrcez0cHtqfiJVtqwMEMlCsKvmHy14sXwBWaarzHuJAps67u30-OOd58sC8DvF3Avl9aHeR_2-aRDLRefcY02nLbD-dg3fZgm6G73V-vF04CIaewWBq8j3StOwjrtXyK_lCHad=w3138-h2092-s-no?authuser=0'
-      "
-    />
+    <app-page-image [image]="'/photo/about-stage.jpg'" />
     <app-content />
   `,
-    imports: [PageHeadComponent, PageImageComponent, ContentComponent]
+  imports: [PageHeadComponent, PageImageComponent, ContentComponent],
 })
 export default class AboutComponent {}

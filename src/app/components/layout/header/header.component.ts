@@ -1,12 +1,11 @@
-import { Component, HostListener } from "@angular/core";
-import { BrowserPlatformLocation, CommonModule } from "@angular/common";
-
+import { Component, HostListener } from '@angular/core';
+import { BrowserPlatformLocation, CommonModule } from '@angular/common';
 
 import { ToggleService } from '../../../services/toggle.service';
 import { NAV_MENU } from './constants';
 
 @Component({
-  selector: "app-header",
+  selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
   providers: [ToggleService],
@@ -21,7 +20,7 @@ import { NAV_MENU } from './constants';
             class="focus:outline-none focus:shadow-outline"
           >
             <div class="object-contain h-10">
-              <img src="/logo-horizontal.svg" class="h-full">  
+              <img src="/logo-horizontal.svg" class="h-full" />
             </div>
           </a>
           <button
@@ -55,18 +54,24 @@ import { NAV_MENU } from './constants';
           </button>
         </div>
         <nav
-          [ngClass]="{'flex': toggleService.toggle$ | async, 'hidden': !(toggleService.toggle$ | async)}"
+          [ngClass]="{
+            flex: toggleService.toggle$ | async,
+            hidden: !(toggleService.toggle$ | async)
+          }"
           class="flex-col items-end flex-grow hidden px-5 md:pb-0 lg:flex lg:justify-end lg:flex-row lg:space-x-4"
         >
-          
-          <a *ngFor="let item of NavMenu"
+          <a
+            *ngFor="let item of NavMenu"
             class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
             [href]="item.destinationUrl"
-            >{{item.name}}</a>
-          <a 
-            class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-red rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-green-500 focus:ring-2 ring-offset-current ring-offset-2"
-            href="/ticket"
-            >Tickets</a>
+            >{{ item.name }}</a
+          >
+          <a
+            class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-500 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+            href="https://ti.to/ngrome-events/ngrome-summit-2023"
+            target="_blank"
+            >Tickets</a
+          >
         </nav>
       </div>
     </section>
@@ -74,17 +79,12 @@ import { NAV_MENU } from './constants';
   styles: [],
 })
 export class HeaderComponent {
-
   public NavMenu = NAV_MENU;
 
-  constructor(public toggleService:ToggleService){
-  }
+  constructor(public toggleService: ToggleService) {}
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event:HostListener) {
+  onScroll(event: HostListener) {
     this.toggleService.updateData(false);
   }
-
-  
-
 }
