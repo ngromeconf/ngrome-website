@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: "app-hero",
+  selector: 'app-hero',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -20,7 +20,7 @@ import { CommonModule } from "@angular/common";
             >The largest Italian Angular Conference is taking place at</strong
           >
           <div class="lg:flex mb-12">
-            <img class="w-full md:h-96" src="./ngrome-mmxxiii.svg" />
+            <img class="w-full md:h-96" src="./ngrome-hero.svg" />
           </div>
           <p
             class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
@@ -33,8 +33,9 @@ import { CommonModule } from "@angular/common";
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
             <a
-              href="https://wicked-templates.gumroad.com/l/monotone-starter"
-              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-red border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-green-500 focus:ring-2 ring-offset-current ring-offset-2"
+              href="https://2023.ngrome.io"
+              target="_blank"
+              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
             >
               Reserve your seat
             </a>
@@ -43,6 +44,6 @@ import { CommonModule } from "@angular/common";
       </div>
     </section>
   `,
-  styles: [".bg-patternTop{background-image:url(./patternTop.svg)}"],
+  styles: ['.bg-patternTop{background-image:url(./patternTop.svg)}'],
 })
 export class HeroComponent {}

@@ -1,14 +1,14 @@
 export const FOOTER_MENU = [
   {
     name: 'Code of Conduct',
-    destinationUrl: './',
-    type: 'modal',
+    destinationUrl: '/code-of-conduct',
+    type: 'link',
     visible: true,
   },
   {
     name: 'Terms & Privacy',
-    destinationUrl: './',
-    type: 'modal',
+    destinationUrl: '/terms-and-privacy',
+    type: 'link',
     visible: true,
   },
   {
@@ -19,32 +19,32 @@ export const FOOTER_MENU = [
   },
   {
     name: 'Sponsors',
-    destinationUrl: './',
+    destinationUrl: './sponsors',
     type: 'link',
     visible: true,
   },
-  {
-    name: 'Speakers',
-    destinationUrl: './',
-    type: 'link',
-    visible: true,
-  },
-  {
-    name: 'Workshops',
-    destinationUrl: './',
-    type: 'link',
-    visible: true,
-  },
-  {
-    name: 'About',
-    destinationUrl: './',
-    type: 'link',
-    visible: true,
-  },
-  {
-    name: 'Info',
-    destinationUrl: './',
-    type: 'link',
-    visible: true,
-  },
+  // {
+  //   name: 'Speakers',
+  //   destinationUrl: './',
+  //   type: 'link',
+  //   visible: true,
+  // },
+  // {
+  //   name: 'Workshops',
+  //   destinationUrl: './',
+  //   type: 'link',
+  //   visible: true,
+  // },
+  // {
+  //   name: 'About',
+  //   destinationUrl: './',
+  //   type: 'link',
+  //   visible: true,
+  // },
+  // {
+  //   name: 'Info',
+  //   destinationUrl: './',
+  //   type: 'link',
+  //   visible: true,
+  // },
 ];

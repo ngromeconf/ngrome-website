@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+analog-markdown,analog-markdown-route{
+    @apply relative w-full h-screen overflow-hidden bg-no-repeat bg-cover
+}
+
+.analog-markdown,.analog-markdown-route {
+    @apply container relative w-full px-8 pt-32 pb-24 mx-auto lg:px-4
+}
+
+.analog-markdown,.analog-markdown-route img {
+    max-width: 100%;
+}
+
+.analog-markdown,.analog-markdown-route p {
+    text-align: left;
+    margin: 40px 0;
+    line-height: 2.5rem;
+}
+
+.analog-markdown,.analog-markdown-route h1,
+.analog-markdown,.analog-markdown-route h2 {
+    @apply mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl
+}
+
+.analog-markdown,.analog-markdown-route p code {
+    padding: 0 8px;
+    background-color: black;
+}
+
+.analog-markdown,.analog-markdown-route blockquote {
+    border-left: 4px solid var(--color-accent);
+    padding-left: 16px;
+    margin-left: 0;
+}
+
+.analog-markdown,.analog-markdown-route li {
+    margin: 16px 0;
+}
