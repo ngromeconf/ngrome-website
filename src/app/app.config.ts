@@ -7,9 +7,9 @@ import { withInMemoryScrolling } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideFileRouter(),
     provideHttpClient(),
     provideClientHydration(),
-    provideFileRouter(withInMemoryScrolling({ anchorScrolling: 'enabled' })),
     provideContent(withMarkdownRenderer()),
   ],
 };
