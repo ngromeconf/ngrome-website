@@ -14,15 +14,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      static: true,
+      ssr: true,
       prerender: {
-        routes: async () => [
-          '/',
-          '/about',
-          '/sponsors',
-          '/code-of-conduct',
-          '/terms-and-privacy',
-        ],
+        routes: async () => ['/', '/about', '/sponsors'],
         sitemap: {
           host: 'https://ngrome.io',
         },
