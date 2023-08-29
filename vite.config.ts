@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      static: true, // prerender pages without building an SSR server
+      static: true,
       prerender: {
         routes: async () => [
           '/',
@@ -22,7 +22,6 @@ export default defineConfig(({ mode }) => ({
           '/sponsors',
           '/code-of-conduct',
           '/terms-and-privacy',
-          '',
         ],
         sitemap: {
           host: 'https://ngrome.io',
