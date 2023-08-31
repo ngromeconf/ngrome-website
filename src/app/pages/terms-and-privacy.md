@@ -8,9 +8,7 @@ meta:
     content: Terms and privacy
 ---
 
-# TERMS
-
-## Terms of Service ("Terms")
+# Terms of Service ("Terms")
 Last updated: September 09, 2022
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the ngrome.io website (the "Service") operated by NGRome ("us", "we", or "our").
