@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   template: `
     <section
       class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
@@ -20,7 +20,12 @@ import { CommonModule } from '@angular/common';
             >The largest Italian Angular Conference is taking place at</strong
           >
           <div class="lg:flex mb-12">
-            <img class="w-full md:h-96" src="./ngrome-hero.svg" />
+            <img
+              class="w-full md:h-96"
+              ngSrc="./ngrome-hero.svg"
+              width="706"
+              height="384"
+            />
           </div>
           <p
             class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
