@@ -25,6 +25,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
               ngSrc="./ngrome-hero.svg"
               width="706"
               height="384"
+              priority
             />
           </div>
           <p
