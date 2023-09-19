@@ -148,11 +148,12 @@ import { CommonModule } from '@angular/common';
     </section>
     <section class="pt-8 overflow-hidden">
       <video
-        playsinline
         autoplay
-        loop
         muted
+        loop
+        playsinline
         class="w-full h-full mx-auto rounded"
+        poster="./video-poster.jpg"
       >
         <source
           src="https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2F2022-conf-highlights-no-audio-final-2.mp4?alt=media&token=a5f0f01f-a589-4deb-b636-ef4395d30af5"
