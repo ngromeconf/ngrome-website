@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainSponsorComponent } from '../main/main-sponsor.component';
 import { GoldSponsorComponent } from '../gold/gold-sponsor.component';
+import { SilverSponsorComponent } from '../silver/silver-sponsor.component';
 
 export interface SponsorInterface {
   name: string;
@@ -51,8 +52,9 @@ export interface SponsorInterface {
         </div>
       </div>
 
-      <app-main-sponsor></app-main-sponsor>
-      <app-gold-sponsor></app-gold-sponsor>
+      <app-main-sponsor />
+      <app-gold-sponsor />
+      <app-silver-sponsor />
 
       <div class="container px-5 py-24 mx-auto lg:px-24">
         <div class="flex flex-col w-full mb-12 text-left lg:text-center">
@@ -80,7 +82,12 @@ export interface SponsorInterface {
     </section>
   `,
   styles: [],
-  imports: [CommonModule, MainSponsorComponent, GoldSponsorComponent],
+  imports: [
+    CommonModule,
+    MainSponsorComponent,
+    GoldSponsorComponent,
+    SilverSponsorComponent,
+  ],
 })
 export class ContentComponent {
   @Input() pastEditionSponsors: SponsorInterface[] = [];

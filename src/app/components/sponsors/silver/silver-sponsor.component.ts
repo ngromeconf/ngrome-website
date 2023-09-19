@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SponsorInterface } from '../content/content.component';
 
 @Component({
-  selector: 'app-main-sponsor',
+  selector: 'app-silver-sponsor',
   standalone: true,
   imports: [CommonModule],
   template: `<div class="flex mt-12   items-center justify-center">
@@ -17,9 +17,9 @@ import { SponsorInterface } from '../content/content.component';
             role="presentation"
           ></span>
           <span
-            class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase bg-red text-white"
+            class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase bg-slate-300 text-white"
           >
-            MAIN SPONSOR
+            SILVER SPONSOR
           </span>
           <span
             class="flex-grow block border-t border-red"
@@ -28,12 +28,12 @@ import { SponsorInterface } from '../content/content.component';
           ></span>
         </h2>
         <!-- Component ends here -->
-        <div class="flex flex-wrap -m-4 items-center">
+        <div class="flex flex-center -m-4 items-center">
           <div
-            class="w-full p-4 md:w-1/1 items-center"
-            *ngFor="let item of mainSponsor"
+            class="w-full p-12 items-center"
+            *ngFor="let item of silverSponsor"
           >
-            <div class="p-6">
+            <div class="p-12">
               <a
                 class="inline-flex items-center mb-2"
                 [href]="item.url"
@@ -51,14 +51,14 @@ import { SponsorInterface } from '../content/content.component';
       </div>
     </div>
   </div>`,
-  styleUrls: ['./main-sponsor.component.css'],
+  styleUrls: ['./silver-sponsor.component.css'],
 })
-export class MainSponsorComponent {
-  public mainSponsor: SponsorInterface[] = [
+export class SilverSponsorComponent {
+  public silverSponsor: SponsorInterface[] = [
     {
-      name: 'Microsoft',
-      image: './sponsors/Microsoft-logo.svg',
-      url: 'https://microsoft.com',
+      name: 'Fervento',
+      image: './sponsors/fervento-logo.svg',
+      url: 'https://fervento.com',
     },
   ];
 }
