@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SilverComponent } from './silver.component';
+import { SilverSponsorComponent } from './silver-sponsor.component';
 
-describe('SilverComponent', () => {
-  let component: SilverComponent;
-  let fixture: ComponentFixture<SilverComponent>;
+describe('SilverSponsorComponent', () => {
+  let component: SilverSponsorComponent;
+  let fixture: ComponentFixture<SilverSponsorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SilverComponent],
+      imports: [SilverSponsorComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SilverComponent);
+    fixture = TestBed.createComponent(SilverSponsorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

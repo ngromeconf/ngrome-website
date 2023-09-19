@@ -31,10 +31,10 @@ import { SponsorInterface } from '../content/content.component';
         <!-- Component ends here -->
         <div class="flex flex-center -m-4 items-center">
           <div
-            class="w-full p-4 items-center"
+            class="w-full md:w-9/12 p-12 items-center"
             *ngFor="let item of goldSponsors"
           >
-            <div class="p-6">
+            <div class="p-12">
               <a
                 class="inline-flex items-center mb-2"
                 [href]="item.url"
@@ -58,15 +58,13 @@ export class GoldSponsorComponent {
   public goldSponsors: SponsorInterface[] = [
     {
       name: 'Key Partner',
-      image:
-        'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FKeyPartner_newLogo.svg?alt=media&token=76585b8d-05e5-4d53-95df-d2217d87e9e7',
-      url: '',
+      image: './sponsors/KeyPartner-logo.svg',
+      url: 'https://www.keypartner.com/',
     },
     {
       name: 'ICT Group',
-      image:
-        'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/sponsor%2FICTGROUP-logo.svg?alt=media&token=c38f7bea-cc9e-4533-bb4b-7b7b9911d316',
-      url: '',
+      image: './sponsors/ict-group-logo.svg',
+      url: 'https://ict-group.it/',
     },
   ];
 }
