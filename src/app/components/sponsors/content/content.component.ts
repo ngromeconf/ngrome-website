@@ -17,8 +17,7 @@ export interface SponsorInterface {
     <section class="">
       <div class="relative mx-auto max-w-5xl mt-20">
         <div
-          class="rounded-xl p-1"
-          style="background-image: linear-gradient(to right bottom, rgb(79, 70, 229) 0%, rgb(165, 56, 164) 50%, rgb(220, 38, 38) 100%);"
+          class="rounded-xl p-1 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
         >
           <div class="rounded-lg bg-black/80 backdrop-blur">
             <div
@@ -26,7 +25,7 @@ export interface SponsorInterface {
             >
               <div class="lg:max-w-xl">
                 <h2
-                  class="block w-full pb-2 bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
+                  class="block w-full pb-2 bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
                 >
                   SPONSORSHIP OPPORTUNITY
                 </h2>

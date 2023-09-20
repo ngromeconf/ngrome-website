@@ -6,7 +6,7 @@ import { SponsorInterface } from '../content/content.component';
   selector: 'app-silver-sponsor',
   standalone: true,
   imports: [CommonModule],
-  template: `<div class="flex mt-12   items-center justify-center">
+  template: `<div class="flex mt-6  items-center justify-center">
     <div class="w-full px-10 mx-auto bg-white">
       <div class=" mx-auto space-y-6 ">
         <!-- Component starts here -->
