@@ -6,7 +6,7 @@ import { SponsorInterface } from '../content/content.component';
   selector: 'app-main-sponsor',
   standalone: true,
   imports: [CommonModule],
-  template: `<div class="flex mt-12   items-center justify-center">
+  template: `<div class="flex mt-6 items-center justify-center">
     <div class="w-full px-10 mx-auto bg-white">
       <div class=" mx-auto space-y-6 ">
         <!-- Component starts here -->
@@ -29,10 +29,7 @@ import { SponsorInterface } from '../content/content.component';
         </h2>
         <!-- Component ends here -->
         <div class="flex flex-wrap -m-4 items-center">
-          <div
-            class="w-full p-4 md:w-1/1 items-center"
-            *ngFor="let item of mainSponsor"
-          >
+          <div class="w-full p-4 items-center" *ngFor="let item of mainSponsor">
             <div class="p-6">
               <a
                 class="inline-flex items-center mb-2"
