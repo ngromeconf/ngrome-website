@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SocialShareComponent } from "../../../social-share/social-share.component";
+import { SocialShareComponent } from '../../../social-share/social-share.component';
 
 @Component({
-    selector: 'app-page-head',
-    standalone: true,
-    template: `
+  selector: 'app-page-head',
+  standalone: true,
+  template: `
     <section>
       <div
         class="container flex flex-col items-center px-5 py-24 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20"
@@ -16,26 +16,22 @@ import { SocialShareComponent } from "../../../social-share/social-share.compone
           <h1
             class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
           >
-            {{title}}
+            {{ title }}
           </h1>
 
-          <p class="mx-auto text-lg leading-snug text-slate-500">
-            {{subtitle}}
+          <p class="text-lg md:text-left leading-snug text-slate-500">
+            {{ subtitle }}
           </p>
-          <p class="mx-auto text-lg eading-snug text-slate-500">
-          </p>
-       
-          <app-social-share />
+
+          <!-- <app-social-share /> -->
         </div>
       </div>
     </section>
   `,
-    styles: [],
-    imports: [CommonModule, SocialShareComponent]
+  styles: [],
+  imports: [CommonModule, SocialShareComponent],
 })
 export class PageHeadComponent {
-
-  @Input() title:string = '';
-  @Input() subtitle:string = '';
-
+  @Input() title: string = '';
+  @Input() subtitle: string = '';
 }

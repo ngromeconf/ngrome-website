@@ -22,6 +22,7 @@ export default defineConfig(({ mode }) => ({
           '/sponsors',
           '/code-of-conduct',
           '/terms-and-privacy',
+          '/api/v1/workshops',
         ],
         sitemap: {
           host: 'https://ngrome.io',
