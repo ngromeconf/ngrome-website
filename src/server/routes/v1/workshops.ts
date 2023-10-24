@@ -1,6 +1,5 @@
 import { defineEventHandler } from 'h3';
-
-import { WorkshopAttributes } from 'src/app/models/workshop.model';
+import { WorkshopAttributes } from '../../../app/models/workshop.model';
 
 const WORKSHOP: WorkshopAttributes[] = [
   {

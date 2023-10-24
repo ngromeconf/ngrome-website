@@ -22,6 +22,7 @@ export default defineConfig(({ mode }) => ({
           '/sponsors',
           '/code-of-conduct',
           '/terms-and-privacy',
+          '/workshops',
           '/api/v1/workshops',
         ],
         sitemap: {

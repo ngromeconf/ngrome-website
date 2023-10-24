@@ -36,6 +36,12 @@ export const NAV_MENU = [
   //   visible: false,
   // },
   {
+    name: 'Workshops',
+    destinationUrl: '/workshops',
+    type: 'white',
+    visible: true,
+  },
+  {
     name: '2022',
     destinationUrl: 'https://2022.ngrome.io',
     type: 'white',

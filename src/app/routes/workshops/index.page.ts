@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { AsyncPipe, DatePipe, JsonPipe, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { Observable } from 'rxjs/internal/Observable';
+import { WorkshopAttributes } from '../../models/workshop.model';
 
 @Component({
   standalone: true,
