@@ -12,7 +12,7 @@ const WORKSHOP: WorkshopAttributes[] = [
     author: 'Alisa Duncan',
     location: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
     image: 'photo/workshop-staying-safe-20231130.jpg',
-    link: '',
+    link: 'https://ti.to/ngrome-events/staying-safe-angular-with-alisa-duncan',
   },
   {
     slug: 'ng-girls-workshop',
