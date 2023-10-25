@@ -10,7 +10,7 @@ import { WorkshopAttributes } from '../../models/workshop.model';
   imports: [NgFor, NgIf, JsonPipe, RouterLink, AsyncPipe, DatePipe],
   template: `
     <div
-      class="max-w-screen-xl p-5 mx-auto dark:text-gray-100"
+      class="max-w-screen-xl p-5 mx-auto"
       *ngIf="workshops$ | async as workshopItems"
     >
       <div
@@ -31,12 +31,10 @@ import { WorkshopAttributes } from '../../models/workshop.model';
               rel="noopener noreferrer"
               href="{{ workshop.link }}"
               target="_blank"
-              class="px-3 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined"
+              class="px-3 py-2 text-xs text-white font-semibold tracki uppercase bgundefined"
               >{{ workshop.tag }}</a
             >
-            <div
-              class="flex flex-col justify-start text-center dark:text-gray-100"
-            >
+            <div class="flex flex-col justify-start text-center text-white">
               <span class="text-3xl font-semibold leadi tracki">{{
                 workshop.workshopDate | date : 'd'
               }}</span>
@@ -50,7 +48,7 @@ import { WorkshopAttributes } from '../../models/workshop.model';
               rel="noopener noreferrer"
               href="{{ workshop.link }}"
               target="_blank"
-              class="font-medium text-md hover:underline dark:text-gray-100"
+              class="font-medium text-md hover:underline text-white"
             >
               {{ workshop.title }}</a
             >
