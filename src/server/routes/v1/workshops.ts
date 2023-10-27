@@ -23,7 +23,7 @@ const WORKSHOP: WorkshopAttributes[] = [
     author: 'ngGirls team',
     location: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
     image: 'photo/workshop-ng-girls-20231130.jpg',
-    link: '',
+    link: 'https://www.ng-girls.org/',
   },
   {
     slug: 'generative-ai-masterclass',
