@@ -39,11 +39,11 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
             <a
-              href="https://2023.ngrome.io"
+              href="https://ti.to/ngrome-events/ngrome-conf-mmxxiv"
               target="_blank"
               class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
             >
-              Reserve your seat
+              REGISTER NOW
             </a>
           </div>
         </div>
