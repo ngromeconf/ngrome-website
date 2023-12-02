@@ -1,8 +1,8 @@
 import { Component, HostListener } from '@angular/core';
-import { BrowserPlatformLocation, CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { ToggleService } from '../../../services/toggle.service';
-import { NAV_MENU } from './constants';
+import { NAV_MENU, TICKET_URL } from './constants';
 
 @Component({
   selector: 'app-header',
@@ -68,7 +68,7 @@ import { NAV_MENU } from './constants';
           >
           <a
             class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-500 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-            href="https://ti.to/ngrome-events/ngrome-summit-2023"
+            [href]="TicketUrl"
             target="_blank"
             >Tickets</a
           >
@@ -80,6 +80,7 @@ import { NAV_MENU } from './constants';
 })
 export class HeaderComponent {
   public NavMenu = NAV_MENU;
+  public TicketUrl = TICKET_URL;
 
   constructor(public toggleService: ToggleService) {}
 
