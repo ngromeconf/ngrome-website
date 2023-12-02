@@ -1,3 +1,4 @@
+export const TICKET_URL = 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv';
 export const NAV_MENU = [
   {
     name: 'Home',
