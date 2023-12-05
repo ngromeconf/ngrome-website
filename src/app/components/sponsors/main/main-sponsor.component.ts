@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SponsorInterface } from '../content/content.component';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { SponsorInterface } from 'src/app/models/sponsor.model';
 
 @Component({
   selector: 'app-main-sponsor',
@@ -29,7 +31,8 @@ import { SponsorInterface } from '../content/content.component';
         </h2>
         <!-- Component ends here -->
         <div class="flex flex-wrap -m-4 items-center">
-          <div class="w-full p-4 items-center" *ngFor="let item of mainSponsor">
+          @for (item of sponsors; track $index) {
+          <div class="w-full p-4 items-center">
             <div class="p-6">
               <a
                 class="inline-flex items-center mb-2"
@@ -44,18 +47,14 @@ import { SponsorInterface } from '../content/content.component';
               </a>
             </div>
           </div>
+          }
         </div>
       </div>
     </div>
   </div>`,
-  styleUrls: ['./main-sponsor.component.css'],
 })
 export class MainSponsorComponent {
-  public mainSponsor: SponsorInterface[] = [
-    {
-      name: 'Microsoft',
-      image: './sponsors/Microsoft-logo.svg',
-      url: 'https://microsoft.com',
-    },
-  ];
+  constructor(private http: HttpClient) {}
+
+  @Input() sponsors: SponsorInterface[] | undefined;
 }

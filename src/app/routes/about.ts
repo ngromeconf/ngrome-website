@@ -9,10 +9,7 @@ import { ContentComponent } from '../components/about/main-content/content.compo
   template: `
     <app-page-head
       [title]="'About NGRome Conference & The TEAM'"
-      [subtitle]="
-        'NG-Rome is a non-profit community conference run by a team of volunteers.
-            We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.'
-      "
+      [subtitle]="'NG-Rome is a non-profit community conference run by a team of volunteers. We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.'"
     />
     <app-page-image [image]="'/photo/about-stage.jpg'" />
     <app-content />

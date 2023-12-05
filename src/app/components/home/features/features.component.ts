@@ -12,12 +12,12 @@ import { CommonModule } from '@angular/common';
           <h2
             class="mb-6 font-roboto text-4xl font-bold tracking-tighter text-black md:text-8xl lg:text-6xl"
           >
-            5 Years of conference with international speakers
+            6 Years of conference with international speakers
             <br class="hidden lg:block" />
             workshop days and communities around you
           </h2>
           <p class="mx-auto text-lg leading-snug text-slate-500">
-            Tailwind CSS templates with a wicked design.
+          Empowering Growth: Half a Decade of Global Conferences, Inspiring Workshops, and Thriving Communities.
           </p>
         </div>
         <div
@@ -49,7 +49,7 @@ import { CommonModule } from '@angular/common';
                 Attendee
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-                spiegare i vantaggi nel partecipare
+              Dive into cutting-edge Angular insights at NGRome—network, learn, and grow! Elevate your skills amidst industry leaders. 
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ import { CommonModule } from '@angular/common';
                 Sponsor
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-                spiegare i vantaggi nel partecipare
+              Amplify your brand's visibility at NGRome, engaging with top-notch Angular enthusiasts worldwide. Partner with innovation!
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ import { CommonModule } from '@angular/common';
                 Communities
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-                spiegare i vantaggi nel partecipare
+              Unite with global Angular communities at NGRome—exchange ideas, foster collaborations, and strengthen networks. Join the collective force! 
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ import { CommonModule } from '@angular/common';
                 Speakers
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-                spiegare i vantaggi nel partecipare
+              Showcase your expertise to a vibrant Angular audience at NGRome. Empower, inspire, and make an impact!
               </p>
             </div>
           </div>

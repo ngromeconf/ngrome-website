@@ -22,10 +22,12 @@ Fostering new relationships within Italy, and across borders. Simultaneously dev
         <div class="mx-auto mt-24 prose prose-lg text-slate-500 prose-indigo">
           <h3 class="mt-12 font-serif text-2xl font-bold leading-6 text-black">STAY INFORMED</h3>
           <p class="mt-6 text-lg text-slate-500">
-            Follow us on Twitter and Instagram!
+            Follow us on <a href="https://twitter.com/ngromeconf" target="_blank">Twitter</a>, 
+            <a href="https://www.linkedin.com/company/ngrome" target="_blank">Linkedin</a>, 
+            <a href="https://www.youtube.com/@ngromeconf4784" target="_blank">Youtube</a> and <a href="https://www.instagram.com/ngromeconf/?hl=it" target="_blank">Instagram</a>!
           </p>
           
-          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A taste of <a href="https://twitter.com/hashtag/NGRomeMMXIX?src=hash&amp;ref_src=twsrc%5Etfw">#NGRomeMMXIX</a> 🇮🇹 <a href="https://t.co/9gaoN3AJer">pic.twitter.com/9gaoN3AJer</a></p>&mdash; NGRomeConf (@ngromeconf) <a href="https://twitter.com/ngromeconf/status/1131316168487317505?ref_src=twsrc%5Etfw">May 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          
 
           
           
