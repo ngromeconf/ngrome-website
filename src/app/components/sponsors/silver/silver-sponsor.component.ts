@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SponsorInterface } from '../content/content.component';
+import { SponsorInterface } from 'src/app/models/sponsor.model';
+
 
 @Component({
   selector: 'app-silver-sponsor',
@@ -8,7 +9,7 @@ import { SponsorInterface } from '../content/content.component';
   imports: [CommonModule],
   template: `<div class="flex mt-6  items-center justify-center">
     <div class="w-full px-10 mx-auto bg-white">
-      <div class=" mx-auto space-y-6 ">
+      <div class=" mx-auto space-y-6">
         <!-- Component starts here -->
         <h2 class="flex flex-row flex-nowrap items-center my-8">
           <span
@@ -17,9 +18,10 @@ import { SponsorInterface } from '../content/content.component';
             role="presentation"
           ></span>
           <span
-            class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase bg-slate-300 text-white"
+            class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase text-white"
+            [ngClass]="{'bg-slate-300': type === 'Silver', 'bg-yellow-800': type === 'Bronze'}"
           >
-            SILVER SPONSOR
+            {{type}} SPONSOR
           </span>
           <span
             class="flex-grow block border-t border-red"
@@ -29,11 +31,9 @@ import { SponsorInterface } from '../content/content.component';
         </h2>
         <!-- Component ends here -->
         <div class="flex flex-center -m-4 items-center">
-          <div
-            class="w-full p-12 items-center"
-            *ngFor="let item of silverSponsor"
-          >
-            <div class="p-12">
+          <div class="w-full grid grid-cols-[repeat(auto-fit,_23.666666%)] m-auto p-24 justify-center" >
+            @for (item of sponsors; track $index) {
+            <div class="p-12 flex items-center justify-center">
               <a
                 class="inline-flex items-center mb-2"
                 [href]="item.url"
@@ -46,19 +46,14 @@ import { SponsorInterface } from '../content/content.component';
                 />
               </a>
             </div>
+            }
           </div>
         </div>
       </div>
     </div>
   </div>`,
-  styleUrls: ['./silver-sponsor.component.css'],
 })
 export class SilverSponsorComponent {
-  public silverSponsor: SponsorInterface[] = [
-    {
-      name: 'Fervento',
-      image: './sponsors/fervento-logo.svg',
-      url: 'https://fervento.com',
-    },
-  ];
+  @Input() sponsors: SponsorInterface[] | undefined;
+  @Input() type: string | undefined;
 }

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SponsorInterface } from '../content/content.component';
+import { SponsorInterface } from 'src/app/models/sponsor.model';
 
 @Component({
   selector: 'app-gold-sponsor',
@@ -31,8 +31,8 @@ import { SponsorInterface } from '../content/content.component';
         <!-- Component ends here -->
         <div class="flex flex-center -m-4 items-center">
           <div
-            class="w-full md:w-9/12 p-12 items-center"
-            *ngFor="let item of goldSponsors"
+            class="w-full md:w-6/12 p-12 items-center"
+            *ngFor="let item of sponsors"
           >
             <div class="p-12">
               <a
@@ -55,16 +55,5 @@ import { SponsorInterface } from '../content/content.component';
   styleUrls: ['./gold.component.css'],
 })
 export class GoldSponsorComponent {
-  public goldSponsors: SponsorInterface[] = [
-    {
-      name: 'Key Partner',
-      image: './sponsors/KeyPartner-logo.svg',
-      url: 'https://www.keypartner.com/',
-    },
-    {
-      name: 'ICT Group',
-      image: './sponsors/ict-group-logo.svg',
-      url: 'https://ict-group.it/',
-    },
-  ];
+  @Input() sponsors: SponsorInterface[] | undefined;
 }

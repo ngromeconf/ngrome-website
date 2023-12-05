@@ -6,6 +6,10 @@ import { VenueComponent } from '../components/home/venue/venue.component';
 import { MainSponsorComponent } from '../components/sponsors/main/main-sponsor.component';
 import { GoldSponsorComponent } from '../components/sponsors/gold/gold-sponsor.component';
 import { SilverSponsorComponent } from '../components/sponsors/silver/silver-sponsor.component';
+import { Observable } from 'rxjs';
+import { Sponsors } from '../models/sponsor.model';
+import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -14,11 +18,15 @@ import { SilverSponsorComponent } from '../components/sponsors/silver/silver-spo
     <app-hero />
     <app-features />
     <!-- <app-venue /> -->
-    <app-main-sponsor />
-    <app-gold-sponsor />
-    <app-silver-sponsor />
+    @if (Sponsors$ | async; as Sponsors) {
+      <app-main-sponsor [sponsors]="Sponsors.Main" />
+      <app-gold-sponsor [sponsors]="Sponsors.Gold" />
+      <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
+      <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze"/>
+      }
   `,
   imports: [
+    CommonModule,
     HeaderComponent,
     HeroComponent,
     FeaturesComponent,
@@ -28,4 +36,19 @@ import { SilverSponsorComponent } from '../components/sponsors/silver/silver-spo
     SilverSponsorComponent,
   ],
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  /**
+   * Observable representing the sponsors data.
+   * @type {Observable<Sponsors>}
+   */
+  public Sponsors$: Observable<Sponsors>;
+
+  constructor(private http: HttpClient) {
+    console.log('ContentComponent');
+    this.getSponsors();
+  }
+  getSponsors() {
+    console.log('getSponsors');
+    this.Sponsors$ = this.http.get<Sponsors>('/api/v1/sponsors');
+  }
+}

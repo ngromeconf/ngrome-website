@@ -1,14 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainSponsorComponent } from '../main/main-sponsor.component';
 import { GoldSponsorComponent } from '../gold/gold-sponsor.component';
 import { SilverSponsorComponent } from '../silver/silver-sponsor.component';
 
-export interface SponsorInterface {
-  name: string;
-  image: string;
-  url: string;
-}
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 @Component({
   selector: 'app-content',
@@ -51,9 +49,12 @@ export interface SponsorInterface {
         </div>
       </div>
 
-      <app-main-sponsor />
-      <app-gold-sponsor />
-      <app-silver-sponsor />
+      @if (Sponsors$ | async; as Sponsors) {
+      <app-main-sponsor [sponsors]="Sponsors.Main" />
+      <app-gold-sponsor [sponsors]="Sponsors.Gold" />
+      <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
+      <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
+      }
 
       <div class="container px-5 py-24 mx-auto lg:px-24">
         <div class="flex flex-col w-full mb-12 text-left lg:text-center">
@@ -89,5 +90,24 @@ export interface SponsorInterface {
   ],
 })
 export class ContentComponent {
+  /**
+   * Represents the sponsors for past editions.
+   * @type {SponsorInterface[]}
+   */
   @Input() pastEditionSponsors: SponsorInterface[] = [];
+
+  /**
+   * Observable representing the sponsors data.
+   * @type {Observable<Sponsors>}
+   */
+  public Sponsors$: Observable<Sponsors>;
+
+  constructor(private http: HttpClient) {
+    console.log('ContentComponent');
+    this.getSponsors();
+  }
+  getSponsors() {
+    console.log('getSponsors');
+    this.Sponsors$ = this.http.get<Sponsors>('/api/v1/sponsors');
+  }
 }
