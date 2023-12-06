@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { SponsorInterface } from 'src/app/models/sponsor.model';
 
 
 @Component({
   selector: 'app-silver-sponsor',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   template: `<div class="flex mt-6  items-center justify-center">
     <div class="w-full px-10 mx-auto bg-white">
       <div class=" mx-auto space-y-6">
@@ -41,8 +41,10 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
               >
                 <img
                   [alt]="item.name"
-                  [src]="item.image"
+                  [ngSrc]="item.image"
                   class="flex-shrink-0 object-cover object-center w-full h-25"
+                  width="200"
+                  height="50"
                 />
               </a>
             </div>
