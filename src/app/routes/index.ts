@@ -3,8 +3,6 @@ import { HeaderComponent } from '../components/layout/header/header.component';
 import { HeroComponent } from '../components/home/hero/hero.component';
 import { FeaturesComponent } from '../components/home/features/features.component';
 import { VenueComponent } from '../components/home/venue/venue.component';
-import { MainSponsorComponent } from '../components/sponsors/main/main-sponsor.component';
-import { GoldSponsorComponent } from '../components/sponsors/gold/gold-sponsor.component';
 import { SilverSponsorComponent } from '../components/sponsors/silver/silver-sponsor.component';
 import { Observable } from 'rxjs';
 import { Sponsors } from '../models/sponsor.model';
@@ -19,8 +17,8 @@ import { CommonModule } from '@angular/common';
     <app-features />
     <!-- <app-venue /> -->
     @if (Sponsors$ | async; as Sponsors) {
-      <app-main-sponsor [sponsors]="Sponsors.Main" />
-      <app-gold-sponsor [sponsors]="Sponsors.Gold" />
+      <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" />
+      <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
       <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
       <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze"/>
       }
@@ -31,8 +29,6 @@ import { CommonModule } from '@angular/common';
     HeroComponent,
     FeaturesComponent,
     VenueComponent,
-    MainSponsorComponent,
-    GoldSponsorComponent,
     SilverSponsorComponent,
   ],
 })

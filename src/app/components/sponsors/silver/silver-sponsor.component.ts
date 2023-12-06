@@ -19,7 +19,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           ></span>
           <span
             class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase text-white"
-            [ngClass]="{'bg-slate-300': type === 'Silver', 'bg-yellow-800': type === 'Bronze'}"
+            [ngClass]="{'bg-slate-300': type === 'Silver', 'bg-yellow-800': type === 'Bronze', 'bg-red': type === 'Main', 'bg-yellow-400': type === 'Gold'}"
           >
             {{type}} SPONSOR
           </span>

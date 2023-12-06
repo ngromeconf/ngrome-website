@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainSponsorComponent } from '../main/main-sponsor.component';
-import { GoldSponsorComponent } from '../gold/gold-sponsor.component';
 import { SilverSponsorComponent } from '../silver/silver-sponsor.component';
 
 import { HttpClient } from '@angular/common/http';
@@ -50,8 +48,8 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
       </div>
 
       @if (Sponsors$ | async; as Sponsors) {
-      <app-main-sponsor [sponsors]="Sponsors.Main" />
-      <app-gold-sponsor [sponsors]="Sponsors.Gold" />
+      <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" />
+      <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
       <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
       <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
       }
@@ -82,12 +80,7 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
     </section>
   `,
   styles: [],
-  imports: [
-    CommonModule,
-    MainSponsorComponent,
-    GoldSponsorComponent,
-    SilverSponsorComponent,
-  ],
+  imports: [CommonModule, SilverSponsorComponent],
 })
 export class ContentComponent {
   /**
