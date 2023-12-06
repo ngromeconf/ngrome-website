@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TICKET_URL } from '../../layout/header/constants';
 
@@ -6,6 +6,7 @@ import { TICKET_URL } from '../../layout/header/constants';
   selector: 'app-hero',
   standalone: true,
   imports: [CommonModule, NgOptimizedImage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <section
       class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
@@ -33,18 +34,19 @@ import { TICKET_URL } from '../../layout/header/constants';
           <p
             class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
           >
-          Empower your network and embrace excellence. <br>Join NGRome MMXXIV for an Immersive dive into cutting-edge Angular and web tech trends where professionals of all levels thrive in Learning and networking excellence.
+            Empower your network and embrace excellence. <br />Join NGRome
+            MMXXIV for an Immersive dive into cutting-edge Angular and web tech
+            trends where professionals of all levels thrive in Learning and
+            networking excellence.
           </p>
         </div>
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
-            <a
-              [href]="ticketUrl"
-              target="_blank"
+            <tito-button
               class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-            >
-              REGISTER NOW
-            </a>
+              event="ngrome-events/ngrome-conf-mmxxiv"
+              buttonLabel="Buy your ticket"
+            ></tito-button>
           </div>
         </div>
       </div>
@@ -54,4 +56,6 @@ import { TICKET_URL } from '../../layout/header/constants';
 })
 export class HeroComponent {
   public ticketUrl = TICKET_URL;
+
+  constructor() {}
 }
