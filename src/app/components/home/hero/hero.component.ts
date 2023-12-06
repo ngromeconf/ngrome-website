@@ -24,6 +24,7 @@ import { TICKET_URL } from '../../layout/header/constants';
             <img
               class="w-full md:h-96"
               ngSrc="./ngrome-hero.svg"
+              alt="NGRome MMXXIV"
               width="706"
               height="384"
               priority
@@ -32,9 +33,7 @@ import { TICKET_URL } from '../../layout/header/constants';
           <p
             class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
           >
-            Whether you are a beginner, intermediate, or an expert, this will be
-            the best opportunity to learn about the latest trends in the Angular
-            world and web technologies.
+          Empower your network and embrace excellence. <br>Join NGRome MMXXIV for an Immersive dive into cutting-edge Angular and web tech trends where professionals of all levels thrive in Learning and networking excellence.
           </p>
         </div>
         <div class="flex w-full mt-6  justify-center ">

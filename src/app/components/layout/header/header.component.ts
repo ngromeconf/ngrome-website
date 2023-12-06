@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { ToggleService } from '../../../services/toggle.service';
 import { NAV_MENU, TICKET_URL } from './constants';
@@ -7,7 +7,7 @@ import { NAV_MENU, TICKET_URL } from './constants';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,NgOptimizedImage],
   providers: [ToggleService],
   template: `
     <section class="border-b">
@@ -20,7 +20,7 @@ import { NAV_MENU, TICKET_URL } from './constants';
             class="focus:outline-none focus:shadow-outline"
           >
             <div class="object-contain h-10">
-              <img src="/logo-horizontal.svg" class="h-full" />
+              <img ngSrc="/logo-horizontal.svg" alt="NGRome Home" class="h-full" width="242" height="40" />
             </div>
           </a>
           <button
