@@ -3,7 +3,8 @@ import { HeaderComponent } from '../components/layout/header/header.component';
 import { FooterComponent } from '../components/layout/footer/footer.component';
 import { PageHeadComponent } from '../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
-import { ContentComponent, SponsorInterface } from '../components/sponsors/content/content.component';
+import { ContentComponent } from '../components/sponsors/content/content.component';
+import { SponsorInterface } from '../models/sponsor.model';
 
 @Component({
   selector: 'app-sponsor',
