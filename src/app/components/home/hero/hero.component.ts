@@ -1,11 +1,14 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TICKET_URL } from '../../layout/header/constants';
+import { TitoService } from '../../../services/tito.service';
+import { WindowRef } from '../../../services/window.provider';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   imports: [CommonModule, NgOptimizedImage],
+  providers: [TitoService, WindowRef],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <section
@@ -52,10 +55,31 @@ import { TICKET_URL } from '../../layout/header/constants';
       </div>
     </section>
   `,
-  styles: ['.bg-patternTop{background-image:url(./patternTop.svg)}'],
+  styles: [
+    `
+      .bg-patternTop {
+        background-image: url(./patternTop.svg);
+      }
+    `,
+  ],
 })
 export class HeroComponent {
   public ticketUrl = TICKET_URL;
+  private tito: any;
+  constructor(titoService: TitoService, winRef: WindowRef) {
+    // getting the native window obj
 
-  constructor() {}
+    titoService.lazyLoadTito().subscribe((res) => {
+      console.log('Tito loaded', res);
+      this.tito = winRef.nativeWindow.tito;
+
+      this.tito('on:widget:loaded', function (data: any) {
+        console.log('Tito widget loaded', data);
+      });
+      this.tito('on:registration:started', function (data: any) {});
+      this.tito('on:registration:finished', function (data: any) {
+        console.log('Tito registration finished', data);
+      });
+    });
+  }
 }
