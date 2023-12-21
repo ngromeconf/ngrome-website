@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      static: true,
+      static: false,
       prerender: {
         routes: async () => [
           '/',
@@ -24,7 +24,9 @@ export default defineConfig(({ mode }) => ({
           '/terms-and-privacy',
           '/workshops',
           '/thank-you',
+          '/workshops/[slug]',
           '/api/v1/workshops',
+          '/api/v1/workshops?slug=[slug]',
           '/api/v1/sponsors',
         ],
         sitemap: {
