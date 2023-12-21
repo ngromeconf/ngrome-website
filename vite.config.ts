@@ -24,7 +24,6 @@ export default defineConfig(({ mode }) => ({
           '/terms-and-privacy',
           '/workshops',
           '/api/v1/workshops',
-          '/api/v1/workshops/:slug',
           '/api/v1/sponsors',
         ],
         sitemap: {
