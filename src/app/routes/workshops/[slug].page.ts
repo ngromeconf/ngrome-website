@@ -1,8 +1,8 @@
 import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { map, of, switchMap } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, of, switchMap, tap } from 'rxjs';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
@@ -82,12 +82,20 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
 })
 export default class ProductDetailsPageComponent {
   private readonly route = inject(ActivatedRoute);
+  private readonly http = inject(HttpClient);
+  private readonly router = inject(Router);
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   readonly workshop$ = this.route.paramMap.pipe(
     map((params) => params.get('slug')),
+    tap((slug) => {
+      if (!slug) this.redirectTo404();
+    }),
     switchMap((slug) => this.getWorkshop(slug)),
+    tap((workshop) => {
+      if (!workshop) this.redirectTo404();
+    }),
   );
 
   private getWorkshop(slug: string | null) {
@@ -95,5 +103,9 @@ export default class ProductDetailsPageComponent {
     return this.http.get<WorkshopAttributes>('/api/v1/workshops', {
       params: new HttpParams().set('slug', slug),
     });
+  }
+
+  private redirectTo404() {
+    this.router.navigate(['/404']);
   }
 }
