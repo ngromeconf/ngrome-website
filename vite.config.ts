@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      static: false,
+      static: true,
       prerender: {
         routes: async () => [
           '/',
