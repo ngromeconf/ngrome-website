@@ -3,9 +3,19 @@ export interface WorkshopAttributes {
   tag: string;
   title: string;
   description: string;
-  workshopDate: string;
-  author: string;
-  location: string;
+  date: string;
+  author: {
+    name: string;
+    biography: string;
+    image: string;
+    link: string;
+  };
+  location: {
+    name: string;
+    mapsLink: string;
+  };
   image: string;
   link: string;
+  col: number;
+  [key: string]: string | number | boolean | Date | undefined | Object;
 }

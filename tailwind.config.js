@@ -1,9 +1,12 @@
-const plugin = require("tailwindcss/plugin");
-const colors = require("tailwindcss/colors");
+const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors');
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist: [
+    {
+      pattern: /col-span-(1|2|3)/,
+      variants: ['lg', 'sm'],
+    },
   ],
   theme: {
     extend: {
@@ -11,55 +14,59 @@ module.exports = {
         patternTop: "url('../images/patternTop.svg')",
       }),
       boxShadow: {
-        DEFAULT: "rgba(103, 151, 255, 0.11) 0px 8px 60px 0px,  rgba(103, 151, 255, 0.11) 0px 12px 90px 0px;",
-        monotone: "0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)"
+        DEFAULT:
+          'rgba(103, 151, 255, 0.11) 0px 8px 60px 0px,  rgba(103, 151, 255, 0.11) 0px 12px 90px 0px;',
+        monotone:
+          '0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)',
       },
 
       colors: {
-        black: "#16171b",
-        red: "#DD0031"
+        black: '#16171b',
+        red: '#DD0031',
       },
       fontFamily: {
-        serif: ['"Playfair Display"', "serif"],
+        serif: ['"Playfair Display"', 'serif'],
         sans: [
-          "Roboto",
+          'Roboto',
           '"Inter"',
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
           '"Segoe UI"',
           '"Helvetica Neue"',
-          "Arial",
+          'Arial',
           '"Noto Sans"',
-          "sans-serif",
+          'sans-serif',
           '"Apple Color Emoji"',
           '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"'
+          '"Segoe UI Symbol"',
         ],
         roboto: ['Roboto', 'sans-serif'],
-         // Ensure fonts with spaces have " " surrounding it.
-      }
-    }
+        // Ensure fonts with spaces have " " surrounding it.
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
     plugin(function ({ addVariant, e, postcss }) {
-      addVariant("firefox", ({ container, separator }) => {
+      addVariant('firefox', ({ container, separator }) => {
         const isFirefoxRule = postcss.atRule({
-          name: "-moz-document",
-          params: "url-prefix()"
+          name: '-moz-document',
+          params: 'url-prefix()',
         });
         isFirefoxRule.append(container.nodes);
         container.append(isFirefoxRule);
         isFirefoxRule.walkRules((rule) => {
-          rule.selector = `.${e(`firefox${separator}${rule.selector.slice(1)}`)}`;
+          rule.selector = `.${e(
+            `firefox${separator}${rule.selector.slice(1)}`,
+          )}`;
         });
       });
-    })
-  ]
+    }),
+  ],
 };
