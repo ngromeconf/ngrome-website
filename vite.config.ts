@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => ({
           '/workshops/[slug]',
           '/api/v1/workshops',
           '/api/v1/workshops?slug=[slug]',
+          '/api/v1/workshops/:slug',
           '/api/v1/sponsors',
         ],
         sitemap: {

@@ -1,7 +1,7 @@
-import { defineEventHandler, getQuery } from 'h3';
+import { defineEventHandler } from 'h3';
 import { WorkshopAttributes } from '../../../app/models/workshop.model';
 
-const WORKSHOP: WorkshopAttributes[] = [
+export const WORKSHOP: WorkshopAttributes[] = [
   {
     slug: 'angular-architects-signal-ddd-mfe',
     tag: 'Architecture',
@@ -86,8 +86,4 @@ const WORKSHOP: WorkshopAttributes[] = [
   },
 ];
 
-export default defineEventHandler((event) => {
-  const { slug } = getQuery(event);
-  if (!slug) return WORKSHOP;
-  return WORKSHOP.find((workshop) => workshop.slug === slug);
-});
+export default defineEventHandler(() => WORKSHOP);
