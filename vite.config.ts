@@ -24,10 +24,8 @@ export default defineConfig(({ mode }) => ({
           '/terms-and-privacy',
           '/workshops',
           '/thank-you',
-          '/workshops/[slug]',
+          '/workshops/angular-architects-signal-ddd-mfe',
           '/api/v1/workshops',
-          '/api/v1/workshops?slug=[slug]',
-          '/api/v1/workshops/:slug',
           '/api/v1/sponsors',
         ],
         sitemap: {

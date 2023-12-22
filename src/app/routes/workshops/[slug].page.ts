@@ -7,10 +7,6 @@ import { PageHeadComponent } from '../../components/layout/pages/page-head/page-
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
 
-import { toSignal } from '@angular/core/rxjs-interop';
-import { injectLoad } from '@analogjs/router';
-
-import { load } from './[slug].server'; // not included in client build
 @Component({
   standalone: true,
   imports: [NgIf, AsyncPipe, DatePipe, PageHeadComponent, PageImageComponent],
@@ -88,11 +84,8 @@ export default class ProductDetailsPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
-  data = toSignal(injectLoad<typeof load>(), { requireSync: true });
 
-  constructor() {
-    console.log('DAT', this.data());
-  }
+  constructor() {}
 
   readonly workshop$ = this.route.paramMap.pipe(
     map((params) => params.get('slug')),
