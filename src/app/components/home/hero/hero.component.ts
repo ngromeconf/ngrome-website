@@ -1,15 +1,13 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TICKET_URL } from '../../layout/header/constants';
-import { TitoService } from '../../../services/tito.service';
-import { WindowRef } from '../../../services/window.provider';
+import { TicketComponent } from '../../shared/ticket.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
-  providers: [TitoService, WindowRef],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [],
+  schemas: [],
   template: `
     <section
       class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
@@ -34,8 +32,14 @@ import { WindowRef } from '../../../services/window.provider';
               priority
             />
           </div>
+          <h2
+            class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
+          >
+            June 27
+            <span class="font-bold text-red">2024</span>
+          </h2>
           <p
-            class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
+            class="mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center"
           >
             Empower your network and embrace excellence. <br />Join NGRome
             MMXXIV for an Immersive dive into cutting-edge Angular and web tech
@@ -45,11 +49,14 @@ import { WindowRef } from '../../../services/window.provider';
         </div>
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
-            <tito-button
-              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-              event="ngrome-events/ngrome-conf-mmxxiv"
+            <app-ticket
+              classList="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+            ></app-ticket>
+            <!-- <tito-button
+              class=""
+              event="ngrome-events/test-website-conf"
               buttonLabel="Buy your ticket"
-            ></tito-button>
+            ></tito-button> -->
           </div>
         </div>
       </div>
@@ -62,24 +69,8 @@ import { WindowRef } from '../../../services/window.provider';
       }
     `,
   ],
+  imports: [CommonModule, NgOptimizedImage, TicketComponent],
 })
 export class HeroComponent {
   public ticketUrl = TICKET_URL;
-  private tito: any;
-  constructor(titoService: TitoService, winRef: WindowRef) {
-    // getting the native window obj
-
-    titoService.lazyLoadTito().subscribe((res) => {
-      console.log('Tito loaded', res);
-      this.tito = winRef.nativeWindow.tito;
-
-      this.tito('on:widget:loaded', function (data: any) {
-        console.log('Tito widget loaded', data);
-      });
-      this.tito('on:registration:started', function (data: any) {});
-      this.tito('on:registration:finished', function (data: any) {
-        console.log('Tito registration finished', data);
-      });
-    });
-  }
 }

@@ -3,11 +3,11 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { ToggleService } from '../../../services/toggle.service';
 import { NAV_MENU, TICKET_URL } from './constants';
+import { TicketComponent } from '../../shared/ticket.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,NgOptimizedImage],
   providers: [ToggleService],
   template: `
     <section class="border-b">
@@ -20,7 +20,13 @@ import { NAV_MENU, TICKET_URL } from './constants';
             class="focus:outline-none focus:shadow-outline"
           >
             <div class="object-contain h-10">
-              <img ngSrc="/logo-horizontal.svg" alt="NGRome Home" class="h-full" width="242" height="40" />
+              <img
+                ngSrc="/logo-horizontal.svg"
+                alt="NGRome Home"
+                class="h-full"
+                width="242"
+                height="40"
+              />
             </div>
           </a>
           <button
@@ -66,17 +72,20 @@ import { NAV_MENU, TICKET_URL } from './constants';
             [href]="item.destinationUrl"
             >{{ item.name }}</a
           >
-          <a
-            class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-500 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+          <app-ticket
+            classList="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-500 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+          ></app-ticket>
+          <!-- <a
+            class=""
             [href]="TicketUrl"
             target="_blank"
-            >Tickets</a
-          >
+            >Tickets</a> -->
         </nav>
       </div>
     </section>
   `,
   styles: [],
+  imports: [CommonModule, NgOptimizedImage, TicketComponent],
 })
 export class HeaderComponent {
   public NavMenu = NAV_MENU;

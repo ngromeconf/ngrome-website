@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
           '/code-of-conduct',
           '/terms-and-privacy',
           '/workshops',
+          '/thank-you',
           '/api/v1/workshops',
           '/api/v1/sponsors',
         ],

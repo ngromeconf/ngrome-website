@@ -6,22 +6,24 @@ const TITO_URL = 'https://js.tito.io/v2/with/inline,';
 const TITO_DEV_MODE = 'development_mode,';
 const TITO_TEST_MODE = 'test_mode,';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class TitoService {
   private _loadedLibraries: { [url: string]: ReplaySubject<any> } = {};
 
-  constructor(@Inject(DOCUMENT) private readonly document: any) {
-    console.log('TitoService Constructor');
-  }
+  constructor(@Inject(DOCUMENT) private readonly document: any) {}
 
   lazyLoadTito(): Observable<any> {
     return forkJoin([
-      this.loadScript(TITO_URL + TITO_DEV_MODE + TITO_TEST_MODE),
+      this.loadScript(TITO_URL + TITO_TEST_MODE + TITO_DEV_MODE),
     ]);
   }
 
   private loadScript(url: string): Observable<any> {
+    console.log('loadScript:', this._loadedLibraries);
     if (this._loadedLibraries[url]) {
+      console.log('loadScript:already loaded');
       return this._loadedLibraries[url].asObservable();
     }
 
