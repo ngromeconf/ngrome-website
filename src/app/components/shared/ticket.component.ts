@@ -21,7 +21,7 @@ import { WindowRef } from '../../services/window.provider';
 })
 export class TicketComponent {
   @Input() classList: string = '';
-  @Input() event: string = 'ngrome-events/test-website-conf';
+  @Input() event: string = 'ngrome-events/ngrome-conf-mmxxiv';
 
   private tito: any;
 
