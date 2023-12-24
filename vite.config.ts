@@ -3,6 +3,17 @@
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
 
+// Only run in Netlify CI
+if (process.env['NETLIFY'] === 'true') {
+  let base = process.env['URL'];
+
+  if (process.env['CONTEXT'] === 'deploy-preview') {
+    base = `${process.env['DEPLOY_PRIME_URL']}/`;
+  }
+
+  // set process.env.VITE_ANALOG_PUBLIC_BASE_URL = base URL
+  process.env['VITE_ANALOG_PUBLIC_BASE_URL'] = base;
+}
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   publicDir: 'src/assets',
