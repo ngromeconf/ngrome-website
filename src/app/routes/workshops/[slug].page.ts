@@ -6,12 +6,15 @@ import { map, switchMap } from 'rxjs';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { injectLoad } from '@analogjs/router';
 
+import { load } from './[slug].server'; // not included in client build
 @Component({
   standalone: true,
   imports: [NgIf, AsyncPipe, DatePipe, PageHeadComponent, PageImageComponent],
   template: `
-    <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
+    <div class="flex flex-col" *ngIf="data().workshop as workshop">
       <app-page-head
         [title]="workshop.title"
         [subtitle]="workshop.description"
@@ -85,25 +88,27 @@ export default class ProductDetailsPageComponent {
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
 
+  data = toSignal(injectLoad<typeof load>(), { requireSync: true });
+
   constructor() {}
 
-  readonly workshop$ = this.route.paramMap.pipe(
-    map((params) => params.get('slug')),
-    map((slug) => {
-      if (!slug) {
-        this.redirectTo404();
-      }
-      return slug!;
-    }),
-    switchMap((slug) => this.getWorkshop(slug)),
-  );
+  // readonly workshop$ = this.route.paramMap.pipe(
+  //   map((params) => params.get('slug')),
+  //   map((slug) => {
+  //     if (!slug) {
+  //       this.redirectTo404();
+  //     }
+  //     return slug!;
+  //   }),
+  //   switchMap((slug) => this.getWorkshop(slug)),
+  // );
 
-  private getWorkshop(slug: string) {
-    console.log('get work/slug', slug);
-    return this.http.get<WorkshopAttributes | null>(
-      `/api/v1/workshops/${slug}`,
-    );
-  }
+  // private getWorkshop(slug: string) {
+  //   console.log('get work/slug', slug);
+  //   return this.http.get<WorkshopAttributes | null>(
+  //     `/api/v1/workshops/${slug}`,
+  //   );
+  // }
 
   private redirectTo404() {
     this.router.navigate(['/404']);
