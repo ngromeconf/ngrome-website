@@ -6,10 +6,6 @@ import { map, switchMap } from 'rxjs';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { injectLoad } from '@analogjs/router';
-
-import { load } from './[slug].server'; // not included in client build
 @Component({
   standalone: true,
   imports: [NgIf, AsyncPipe, DatePipe, PageHeadComponent, PageImageComponent],
@@ -88,8 +84,6 @@ export default class ProductDetailsPageComponent {
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
 
-  data = toSignal(injectLoad<typeof load>(), { requireSync: true });
-
   constructor() {}
 
   readonly workshop$ = this.route.paramMap.pipe(
@@ -104,8 +98,20 @@ export default class ProductDetailsPageComponent {
   );
 
   private getWorkshop(slug: string) {
-    return this.http.get<WorkshopAttributes | null>(
-      `/api/v1/workshops/${slug}`,
+    return this.http.get<WorkshopAttributes[] | null>(`/api/v1/workshops`).pipe(
+      map((workshops) => {
+        if (!workshops) {
+          this.redirectTo404();
+        }
+        return workshops!;
+      }),
+      map((workshops) => workshops.find((workshop) => workshop.slug === slug)),
+      map((workshop) => {
+        if (!workshop) {
+          this.redirectTo404();
+        }
+        return workshop!;
+      }),
     );
   }
 
