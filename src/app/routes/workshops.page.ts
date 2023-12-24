@@ -3,10 +3,10 @@ import { AsyncPipe, JsonPipe, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { WorkshopAttributes } from '../../models/workshop.model';
+import { WorkshopAttributes } from '../models/workshop.model';
 import { tap } from 'rxjs';
-import { WorkshopCardComponent } from '../../components/workshops/workshop-card.component';
-import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
+import { WorkshopCardComponent } from '../components/workshops/workshop-card.component';
+import { PageHeadComponent } from '../components/layout/pages/page-head/page-head.component';
 
 @Pipe({
   name: 'filterByDate',
