@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TICKET_URL } from '../../layout/header/constants';
+import { TicketComponent } from '../../shared/ticket.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  providers: [],
+  schemas: [],
   template: `
     <section
       class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
@@ -30,27 +32,44 @@ import { TICKET_URL } from '../../layout/header/constants';
               priority
             />
           </div>
-          <p
-            class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2 text-center"
+          <h2
+            class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
-          Empower your network and embrace excellence. <br>Join NGRome MMXXIV for an Immersive dive into cutting-edge Angular and web tech trends where professionals of all levels thrive in Learning and networking excellence.
+            June 27
+            <span class="font-bold text-red">2024</span>
+          </h2>
+          <p
+            class="mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center"
+          >
+            Empower your network and embrace excellence. <br />Join NGRome
+            MMXXIV for an Immersive dive into cutting-edge Angular and web tech
+            trends where professionals of all levels thrive in Learning and
+            networking excellence.
           </p>
         </div>
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
-            <a
-              [href]="ticketUrl"
-              target="_blank"
-              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-            >
-              REGISTER NOW
-            </a>
+            <app-ticket
+              classList="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+            ></app-ticket>
+            <!-- <tito-button
+              class=""
+              event="ngrome-events/test-website-conf"
+              buttonLabel="Buy your ticket"
+            ></tito-button> -->
           </div>
         </div>
       </div>
     </section>
   `,
-  styles: ['.bg-patternTop{background-image:url(./patternTop.svg)}'],
+  styles: [
+    `
+      .bg-patternTop {
+        background-image: url(./patternTop.svg);
+      }
+    `,
+  ],
+  imports: [CommonModule, NgOptimizedImage, TicketComponent],
 })
 export class HeroComponent {
   public ticketUrl = TICKET_URL;

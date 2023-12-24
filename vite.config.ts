@@ -35,6 +35,7 @@ export default defineConfig(({ mode }) => ({
           '/terms-and-privacy',
           '/workshops',
           '/workshops/angular-architects-signal-ddd-mfe',
+          '/thank-you',
           '/api/v1/workshops',
           '/api/v1/workshops/angular-architects-signal-ddd-mfe',
           '/api/v1/sponsors',

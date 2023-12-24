@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { I } from 'vitest/dist/types-198fd1d9';
 
 @Component({
   selector: 'app-social-share',
@@ -7,9 +8,11 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <span class="z-0 mt-8 lg:inline-flex lg:space-x-4">
-      <button
+      <a
         type="button"
         class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium rounded border text-slate-500 bg-white hover:bg-trueGray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        [href]="'https://twitter.com/intent/tweet?text=' + message"
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,11 +26,14 @@ import { CommonModule } from '@angular/common';
           />
         </svg>
         <span>Tweet</span>
-      </button>
+      </a>
 
-      <button
+      <a
         type="button"
         class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium rounded border text-slate-500 bg-white hover:bg-trueGray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        href="https://www.linkedin.com/shareArticle?url={{ pageUrl }}&summary={{
+          message
+        }}"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +46,10 @@ import { CommonModule } from '@angular/common';
             fill="currentColor"
           />
         </svg>
-        <span>Tweet</span>
-      </button>
+        <span>Post</span>
+      </a>
 
-      <button
+      <!-- <button
         type="button"
         class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium rounded border text-slate-500 bg-white hover:bg-trueGray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       >
@@ -59,9 +65,12 @@ import { CommonModule } from '@angular/common';
           />
         </svg>
         <span>Copy</span>
-      </button>
+      </button> -->
     </span>
   `,
   styles: [],
 })
-export class SocialShareComponent {}
+export class SocialShareComponent {
+  @Input() public pageUrl: string;
+  @Input() public message: string;
+}
