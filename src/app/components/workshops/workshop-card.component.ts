@@ -35,7 +35,6 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
         <a
           rel="noopener noreferrer"
           href="{{ workshop.link }}"
-          target="_blank"
           class="font-medium text-md hover:underline text-white"
         >
           {{ workshop.title }}</a
