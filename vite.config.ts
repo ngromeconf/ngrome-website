@@ -34,14 +34,13 @@ export default defineConfig(({ mode }) => ({
           '/code-of-conduct',
           '/terms-and-privacy',
           '/workshops',
-          '/workshops/angular-architects-signal-ddd-mfe',
           '/thank-you',
           '/api/v1/workshops',
-          '/api/v1/workshops/angular-architects-signal-ddd-mfe',
           '/api/v1/sponsors',
         ],
         sitemap: {
-          host: 'https://ngrome.io',
+          host:
+            process.env['VITE_ANALOG_PUBLIC_BASE_URL'] || 'https://ngrome.io',
         },
       },
     }),
