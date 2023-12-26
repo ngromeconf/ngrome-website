@@ -108,7 +108,7 @@ export default class SponsorComponent {
     {
       name: 'Stickermule',
       image:
-        'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2F02-sticker-mule-logo-light-bg-stacked.svg?alt=media&token=a7b05991-2d89-4b9b-b625-f21878a4baefhttps://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2F02-sticker-mule-logo-light-bg-stacked.svg?alt=media&token=a7b05991-2d89-4b9b-b625-f21878a4baef',
+        'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2F02-sticker-mule-logo-light-bg-stacked.svg?alt=media&token=a7b05991-2d89-4b9b-b625-f21878a4baef',
       url: '',
     },
     {
