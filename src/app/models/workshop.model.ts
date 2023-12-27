@@ -4,12 +4,7 @@ export interface WorkshopAttributes {
   title: string;
   description: string;
   date: string;
-  author: {
-    name: string;
-    biography: string;
-    image: string;
-    link: string;
-  };
+  authors: WorkshopAuthor[];
   location: {
     name: string;
     mapsLink: string;
@@ -18,4 +13,11 @@ export interface WorkshopAttributes {
   link: string;
   col: number;
   [key: string]: string | number | boolean | Date | undefined | Object;
+}
+
+interface WorkshopAuthor {
+  name: string;
+  biography: string;
+  image: string;
+  link?: string;
 }

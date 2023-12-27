@@ -1,4 +1,4 @@
-import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
+import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,7 +8,14 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
 @Component({
   standalone: true,
-  imports: [NgIf, AsyncPipe, DatePipe, PageHeadComponent, PageImageComponent],
+  imports: [
+    NgIf,
+    NgFor,
+    AsyncPipe,
+    DatePipe,
+    PageHeadComponent,
+    PageImageComponent,
+  ],
   template: `
     <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
       <app-page-head
@@ -19,10 +26,13 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
       <app-page-image [image]="workshop.image" />
 
       <section class="w-full flex flex-col gap-5 p-5">
-        <div class="w-full sm:max-w-full sm:flex">
+        <div
+          class="w-full sm:max-w-full sm:flex"
+          *ngFor="let author of workshop.authors"
+        >
           <div
             class="h-48 sm:h-auto sm:w-48 flex-none bg-cover bg-top sm:bg-center rounded-t sm:rounded-t-none sm:rounded-l overflow-hidden"
-            style="background-image: url('{{ workshop.author.image }}')"
+            style="background-image: url('{{ author.image }}')"
             title="Woman holding a mug"
           ></div>
           <div
@@ -31,16 +41,17 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
             <div class="mb-8 text-left">
               <p class=" text-gray-600 flex items-center">Author</p>
               <div class="text-gray-900 font-bold text-xl mb-2">
-                {{ workshop.author.name }}
+                {{ author.name }}
               </div>
               <p class="text-gray-700 text-base">
-                {{ workshop.author.biography }}
+                {{ author.biography }}
               </p>
               <a
-                [href]="workshop.author.link"
+                *ngIf="author.link"
+                [href]="author.link"
                 target="_blank"
                 class="text-blue-600 hover:underline"
-                >Read more about {{ workshop.author.name }}</a
+                >Read more about {{ author.name }}</a
               >
             </div>
           </div>
