@@ -20,8 +20,8 @@ import { CommonModule } from '@angular/common';
       <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" />
       <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
       <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
-      <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze"/>
-      }
+      <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
+    }
   `,
   imports: [
     CommonModule,
