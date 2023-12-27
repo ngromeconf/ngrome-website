@@ -17,7 +17,8 @@ import { CommonModule } from '@angular/common';
             workshop days and communities around you
           </h2>
           <p class="mx-auto text-lg leading-snug text-slate-500">
-          Empowering Growth: Half a Decade of Global Conferences, Inspiring Workshops, and Thriving Communities.
+            Empowering Growth: Half a Decade of Global Conferences, Inspiring
+            Workshops, and Thriving Communities.
           </p>
         </div>
         <div
@@ -49,7 +50,8 @@ import { CommonModule } from '@angular/common';
                 Attendee
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-              Dive into cutting-edge Angular insights at NGRome—network, learn, and grow! Elevate your skills amidst industry leaders. 
+                Dive into cutting-edge Angular insights at NGRome—network,
+                learn, and grow! Elevate your skills amidst industry leaders.
               </p>
             </div>
           </div>
@@ -79,7 +81,9 @@ import { CommonModule } from '@angular/common';
                 Sponsor
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-              Amplify your brand's visibility at NGRome, engaging with top-notch Angular enthusiasts worldwide. Partner with innovation!
+                Amplify your brand's visibility at NGRome, engaging with
+                top-notch Angular enthusiasts worldwide. Partner with
+                innovation!
               </p>
             </div>
           </div>
@@ -109,7 +113,9 @@ import { CommonModule } from '@angular/common';
                 Communities
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-              Unite with global Angular communities at NGRome—exchange ideas, foster collaborations, and strengthen networks. Join the collective force! 
+                Unite with global Angular communities at NGRome—exchange ideas,
+                foster collaborations, and strengthen networks. Join the
+                collective force!
               </p>
             </div>
           </div>
@@ -139,7 +145,8 @@ import { CommonModule } from '@angular/common';
                 Speakers
               </h3>
               <p class="mt-6 text-lg text-slate-500">
-              Showcase your expertise to a vibrant Angular audience at NGRome. Empower, inspire, and make an impact!
+                Showcase your expertise to a vibrant Angular audience at NGRome.
+                Empower, inspire, and make an impact!
               </p>
             </div>
           </div>
@@ -154,6 +161,7 @@ import { CommonModule } from '@angular/common';
         playsinline
         class="w-full h-full mx-auto rounded"
         poster="./video-poster.jpg"
+        preload="none"
       >
         <source
           src="https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2F2022-conf-highlights-no-audio-final-2.mp4?alt=media&token=a5f0f01f-a589-4deb-b636-ef4395d30af5"
