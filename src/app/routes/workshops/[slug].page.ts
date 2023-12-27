@@ -36,7 +36,7 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
             [title]="author.name"
           ></div>
           <div
-            class="border-r border-b border-l border-gray-400 sm:border-l-0 sm:border-t sm:border-gray-400 bg-white rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal"
+            class="w-full border-r border-b border-l border-gray-400 sm:border-l-0 sm:border-t sm:border-gray-400 bg-white rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal"
           >
             <div class="mb-8 text-left">
               <p class=" text-gray-600 flex items-center">Author</p>
