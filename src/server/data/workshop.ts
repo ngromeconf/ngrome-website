@@ -31,6 +31,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
     },
     image: 'photo/workshop-angular-architects-20240627.png',
     link: '/workshops/angular-architects-signal-ddd-mfe',
+    ticket: 'https://ti.to/ngrome-events/modern-angular-architecture',
     col: 3,
   },
   {
@@ -45,8 +46,8 @@ export const WORKSHOP: WorkshopAttributes[] = [
         name: 'Alisa Duncan',
         biography:
           'Alisa is a Developer Advocate at Google on the Angular team. She is passionate about helping others learn and improve their lives through technology. She is also a co-organizer of GDG New Orleans and Angular New Orleans.',
-        image: 'photo/alisa-duncan.jpg',
-        link: '',
+        image: 'photo/authors/alisa-duncan.jpg',
+        link: 'https://alisaduncan.dev',
       },
     ],
     location: {
@@ -54,7 +55,9 @@ export const WORKSHOP: WorkshopAttributes[] = [
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
     image: 'photo/workshop-staying-safe-20231130.jpg',
-    link: 'https://ti.to/ngrome-events/staying-safe-angular-with-alisa-duncan',
+    link: '/workshops/staying-safe-with-angular',
+    ticket:
+      'https://ti.to/ngrome-events/staying-safe-angular-with-alisa-duncan',
     col: 1,
   },
   {
@@ -64,13 +67,21 @@ export const WORKSHOP: WorkshopAttributes[] = [
     description: 'We are holding a one-day workshops for beginners! ',
     date: '2023-11-30',
     biography: '',
-    authors: [{ name: 'ngGirls team', biography: '', image: '', link: '' }],
+    authors: [
+      {
+        name: 'ngGirls team',
+        biography: '',
+        image: 'photo/authors/ng-girls.png',
+        link: 'https://www.ng-girls.org',
+      },
+    ],
     location: {
       name: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
     image: 'photo/workshop-ng-girls-20231130.jpg',
-    link: 'https://www.ng-girls.org/',
+    link: '/workshops/ng-girls-workshop',
+    ticket: 'https://www.ng-girls.org/',
     col: 1,
   },
   {
@@ -85,7 +96,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
         name: 'Gerard Sans',
         biography:
           'Gerard is a Google Developer Expert in Web Technologies and Angular. He works as a Developer Advocate at AWS and he is the founder of the AngularZone community in London. He loves coding, learning and sharing knowledge.',
-        image: 'photo/gerard-sans.jpg',
+        image: 'photo/authors/gerard-sans.webp',
         link: 'https://gerardsans.com/',
       },
     ],
@@ -94,7 +105,9 @@ export const WORKSHOP: WorkshopAttributes[] = [
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
     image: 'photo/workshop-generative-ai-20231204.jpg',
-    link: 'https://ti.to/ngrome-events/generative-ai-workshop-with-gerard-sans',
+    link: '/workshops/generative-ai-masterclass',
+    ticket:
+      'https://ti.to/ngrome-events/generative-ai-workshop-with-gerard-sans',
     col: 1,
   },
 ];

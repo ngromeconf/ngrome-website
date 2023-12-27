@@ -31,9 +31,9 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
           *ngFor="let author of workshop.authors"
         >
           <div
-            class="h-48 sm:h-auto sm:w-48 flex-none bg-cover bg-top sm:bg-center rounded-t sm:rounded-t-none sm:rounded-l overflow-hidden"
+            class="h-48 sm:h-auto sm:w-48 flex-none bg-no-repeat bg-contain sm:bg-cover  bg-top sm:bg-center rounded-tl sm:rounded-l overflow-hidden border-b border-t border-l border-r sm:border-r-0 border-gray-400"
             style="background-image: url('{{ author.image }}')"
-            title="Woman holding a mug"
+            [title]="author.name"
           ></div>
           <div
             class="border-r border-b border-l border-gray-400 sm:border-l-0 sm:border-t sm:border-gray-400 bg-white rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal"
@@ -79,11 +79,11 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
             >
           </div>
           <a
-            [href]="'#'"
+            [href]="workshop.ticket"
             target="_blank"
             class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
           >
-            RESERVE YOUR SEAT
+            {{ isWorkshopActive(workshop) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
           </a>
         </div>
       </div>
@@ -94,8 +94,6 @@ export default class ProductDetailsPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
-
-  constructor() {}
 
   readonly workshop$ = this.route.paramMap.pipe(
     map((params) => params.get('slug')),
@@ -128,5 +126,9 @@ export default class ProductDetailsPageComponent {
 
   private redirectTo404() {
     this.router.navigate(['/404']);
+  }
+
+  isWorkshopActive(workshop: WorkshopAttributes) {
+    return new Date(workshop.date) > new Date();
   }
 }

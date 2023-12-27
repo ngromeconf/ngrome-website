@@ -11,6 +11,7 @@ export interface WorkshopAttributes {
   };
   image: string;
   link: string;
+  ticket: string;
   col: number;
   [key: string]: string | number | boolean | Date | undefined | Object;
 }
