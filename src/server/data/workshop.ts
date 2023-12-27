@@ -21,7 +21,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
         name: 'Rainer Hahnekamp',
         biography:
           'Rainer Hahnekamp is a Google Developer Expert, working as a trainer and consultant in the expert network of Angular Architects. Among his responsibilities is providing training sessions on Angular and Spring. In addition, he offers a weekly brief overview of relevant events in the Angular ecosystem on YouTube through ng-news.',
-        image: 'photo/authors/rainer-hahnekamp.jpg',
+        image: 'photo/authors/rainer-hahnekamp.webp',
         link: 'https://www.rainerhahnekamp.com/en/',
       },
     ],
@@ -29,7 +29,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
       name: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
-    image: 'photo/workshop-angular-architects-20240627.png',
+    image: 'photo/workshop-angular-architects-20240627.webp',
     link: '/workshops/angular-architects-signal-ddd-mfe',
     ticket: 'https://ti.to/ngrome-events/modern-angular-architecture',
     col: 3,
@@ -46,7 +46,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
         name: 'Alisa Duncan',
         biography:
           'Alisa is a Developer Advocate at Google on the Angular team. She is passionate about helping others learn and improve their lives through technology. She is also a co-organizer of GDG New Orleans and Angular New Orleans.',
-        image: 'photo/authors/alisa-duncan.jpg',
+        image: 'photo/authors/alisa-duncan.webp',
         link: 'https://alisaduncan.dev',
       },
     ],
@@ -54,7 +54,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
       name: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
-    image: 'photo/workshop-staying-safe-20231130.jpg',
+    image: 'photo/workshop-staying-safe-20231130.webp',
     link: '/workshops/staying-safe-with-angular',
     ticket:
       'https://ti.to/ngrome-events/staying-safe-angular-with-alisa-duncan',
@@ -71,7 +71,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
       {
         name: 'ngGirls team',
         biography: '',
-        image: 'photo/authors/ng-girls.png',
+        image: 'photo/authors/ng-girls.webp',
         link: 'https://www.ng-girls.org',
       },
     ],
@@ -79,7 +79,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
       name: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
-    image: 'photo/workshop-ng-girls-20231130.jpg',
+    image: 'photo/workshop-ng-girls-20231130.webp',
     link: '/workshops/ng-girls-workshop',
     ticket: 'https://www.ng-girls.org/',
     col: 1,
@@ -104,7 +104,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
       name: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
       mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
     },
-    image: 'photo/workshop-generative-ai-20231204.jpg',
+    image: 'photo/workshop-generative-ai-20231204.webp',
     link: '/workshops/generative-ai-masterclass',
     ticket:
       'https://ti.to/ngrome-events/generative-ai-workshop-with-gerard-sans',
