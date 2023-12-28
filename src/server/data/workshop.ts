@@ -26,8 +26,8 @@ export const WORKSHOP: WorkshopAttributes[] = [
       },
     ],
     location: {
-      name: 'Spaces Laurentina - Viale Luca Gaurico 91/93',
-      mapsLink: 'https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8',
+      name: 'TBD',
+      mapsLink: '',
     },
     image: 'photo/workshop-angular-architects-20240627.webp',
     link: '/workshops/angular-architects-signal-ddd-mfe',
