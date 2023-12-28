@@ -33,7 +33,7 @@ export const routeMeta: RouteMeta = {
     },
     {
       property: 'og:image',
-      content: './photo/ngrome-cover-mmxxiv-social.jpg',
+      content: '/photo/ngrome-cover-mmxxiv-social.jpg',
     },
   ],
 };

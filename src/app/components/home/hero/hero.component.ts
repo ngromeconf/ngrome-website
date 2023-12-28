@@ -35,8 +35,9 @@ import { TicketComponent } from '../../shared/ticket.component';
           <h2
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
-            June 27
-            <span class="font-bold text-red">2024</span>
+            JUNE
+            <span class="font-bold text-red">27</span>
+            2024
           </h2>
           <p
             class="mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center"
