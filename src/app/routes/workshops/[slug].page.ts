@@ -71,17 +71,21 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
                 workshop.date | date: 'MMMM dd, YYYY'
               }}</span>
             </p>
-            <a [href]="workshop.location.mapsLink" target="_blank"
-              >Venue:
-              <span class="text-blue-600 hover:underline">{{
-                workshop.location.name
-              }}</span></a
-            >
+            @if (workshop.location.mapsLink) {
+              <a [href]="workshop.location.mapsLink" target="_blank"
+                >Venue:
+                <span class="text-blue-600 hover:underline">{{
+                  workshop.location.name
+                }}</span></a
+              >
+            } @else {
+              Venue: {{ workshop.location.name }}
+            }
           </div>
           <a
             [href]="workshop.ticket"
             target="_blank"
-            class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+            class="inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
           >
             {{ isWorkshopActive(workshop) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
           </a>
