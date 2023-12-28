@@ -11,8 +11,8 @@ import { TicketComponent } from '../../shared/ticket.component';
   template: `
     <section
       class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
-      bg-[url('https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2FpatternMobile.svg?alt=media&token=7eea2949-79c7-43f2-934d-5ffc74e3efbc')]
-		  md:bg-[url('https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2FpatternTop.svg?alt=media&token=7b0d6f17-084e-47dd-8dcd-c45e42b42f57')]"
+		  bg-[url('/patternMobile.svg')]
+		  md:bg-[url('/patternTop.svg')]"
     >
       <div class="container relative w-full px-8 pt-10 pb-24 mx-auto lg:px-4">
         <div
@@ -51,7 +51,7 @@ import { TicketComponent } from '../../shared/ticket.component';
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
             <app-ticket
-              classList="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-500 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+              classList="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
             ></app-ticket>
             <!-- <tito-button
               class=""

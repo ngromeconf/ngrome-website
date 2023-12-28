@@ -3,8 +3,10 @@ import { ReplaySubject, Observable, forkJoin } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 
 const TITO_URL = 'https://js.tito.io/v2/with/inline,';
-const TITO_DEV_MODE = 'development_mode,';
-const TITO_TEST_MODE = 'test_mode,';
+//const TITO_DEV_MODE = 'development_mode,';
+const TITO_DEV_MODE = '';
+//const TITO_TEST_MODE = 'test_mode,';
+const TITO_TEST_MODE = '';
 
 @Injectable({
   providedIn: 'root',
@@ -21,9 +23,7 @@ export class TitoService {
   }
 
   private loadScript(url: string): Observable<any> {
-    console.log('loadScript:', this._loadedLibraries);
     if (this._loadedLibraries[url]) {
-      console.log('loadScript:already loaded');
       return this._loadedLibraries[url].asObservable();
     }
 
