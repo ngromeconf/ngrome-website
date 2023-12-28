@@ -8,6 +8,35 @@ import { Observable } from 'rxjs';
 import { Sponsors } from '../models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouteMeta } from '@analogjs/router';
+
+export const routeMeta: RouteMeta = {
+  meta: [
+    {
+      name: 'description',
+      content:
+        'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+    },
+    {
+      name: 'author',
+      content:
+        'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
+    },
+    {
+      property: 'og:title',
+      content: 'NG Rome - Unleash Your Angular Expertise in the Eternal City',
+    },
+    {
+      property: 'og:description',
+      content:
+        'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+    },
+    {
+      property: 'og:image',
+      content: './photo/ngrome-cover-mmxxiv-social.jpg',
+    },
+  ],
+};
 
 @Component({
   selector: 'app-home',
