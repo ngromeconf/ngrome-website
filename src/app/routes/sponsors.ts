@@ -16,11 +16,7 @@ import { SponsorInterface } from '../models/sponsor.model';
         'We want to say thank you to our Sponsors and Community Partners! They help make NG Rome Conference possible. Come and say Ciao the day of the conference.'
       "
     />
-    <app-page-image
-      [image]="
-        'https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2Fsponsor-image.jpg?alt=media&token=ed47ea50-9751-48df-af56-1c22cf374c61'
-      "
-    />
+    <app-page-image [image]="'/photo/sponsor-cover.jpg'" />
     <app-content [pastEditionSponsors]="pastEditionSponsors" />
   `,
   imports: [
