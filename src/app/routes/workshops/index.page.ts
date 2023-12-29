@@ -68,7 +68,7 @@ export class FilterByDatePipe implements PipeTransform {
           [workshop]="workshop"
         />
       </div>
-      <h2 class="my-5 text-2xl font-bold">Our Past Workshops</h2>
+      <h2 class="my-5 pt-10 text-xl font-bold">Our Past Workshops</h2>
       <div
         class="grid grid-cols-1 justify-center gap-5 lg:grid-cols-3 sm:grid-cols-2"
       >
