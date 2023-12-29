@@ -7,40 +7,35 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
   standalone: true,
   imports: [DatePipe],
   template: `
-    <div
-      class="relative flex items-end justify-start w-full text-left bg-top bg-cover h-96 dark:bg-gray-500"
-      style="background-image: url(&quot;{{ workshop.image }}&quot;);"
-    >
+    <a rel="noopener noreferrer" href="{{ workshop.link }}" target="_blank">
       <div
-        class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"
-      ></div>
-      <div
-        class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3"
+        class="relative flex items-end justify-start w-full text-left bg-top bg-cover h-96 dark:bg-gray-500"
+        style="background-image: url(&quot;{{ workshop.image }}&quot;);"
       >
-        <a
-          rel="noopener noreferrer"
-          href="{{ workshop.link }}"
-          target="_blank"
-          class="px-3 py-2 text-xs text-white font-semibold tracki uppercase bgundefined"
-          >{{ workshop.tag }}</a
+        <div
+          class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"
+        ></div>
+
+        <div
+          class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3 text-white"
         >
-        <div class="flex flex-col justify-start text-center text-white">
-          <span class="text-3xl font-semibold leadi tracki">{{
-            workshop.date | date: 'd'
-          }}</span>
-          <span class="leadi uppercase">{{ workshop.date | date: 'LLL' }}</span>
+          {{ workshop.tag }}
+          <div class="flex flex-col justify-start text-center text-white">
+            <span class="text-3xl font-semibold leadi tracki">{{
+              workshop.date | date: 'd'
+            }}</span>
+            <span class="leadi uppercase">{{
+              workshop.date | date: 'LLL'
+            }}</span>
+          </div>
         </div>
-      </div>
-      <h2 class="z-10 p-5">
-        <a
-          rel="noopener noreferrer"
-          href="{{ workshop.link }}"
-          class="font-medium text-md hover:underline text-white"
+        <h2
+          class="z-10 p-5 text-white font-bold text-2xl bg-black opacity-75 hover:bg-white hover:text-black dark:bg-gray-900 dark:text-white dark:opacity-75"
         >
-          {{ workshop.title }}</a
-        >
-      </h2>
-    </div>
+          {{ workshop.title }}
+        </h2>
+      </div></a
+    >
   `,
 })
 export class WorkshopCardComponent {

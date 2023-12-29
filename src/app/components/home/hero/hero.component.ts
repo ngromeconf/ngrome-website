@@ -10,7 +10,7 @@ import { TicketComponent } from '../../shared/ticket.component';
   schemas: [],
   template: `
     <section
-      class="relative w-full h-screen overflow-hidden bg-no-repeat bg-cover 
+      class="relative w-full h-screen bg-no-repeat bg-cover 
 		  bg-[url('/patternMobile.svg')]
 		  md:bg-[url('/patternTop.svg')]"
     >

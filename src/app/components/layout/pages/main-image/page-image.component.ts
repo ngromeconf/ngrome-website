@@ -7,17 +7,14 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <section
-      class="h-screen bg-right bg-cover lg:bg-top"
+      class="h-screen max-h-96 bg-right bg-cover bg-center"
       style="
-        background-image: url({{image}});
+        background-image: url({{ image }});
       "
     ></section>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class PageImageComponent {
-
-  @Input() image:string = '';
-
+  @Input() image: string = '';
 }

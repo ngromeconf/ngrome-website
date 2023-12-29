@@ -5,6 +5,35 @@ import { PageHeadComponent } from '../components/layout/pages/page-head/page-hea
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
 import { ContentComponent } from '../components/sponsors/content/content.component';
 import { SponsorInterface } from '../models/sponsor.model';
+import { RouteMeta } from '@analogjs/router';
+
+export const routeMeta: RouteMeta = {
+  meta: [
+    {
+      name: 'description',
+      content:
+        'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+    },
+    {
+      name: 'author',
+      content:
+        'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
+    },
+    {
+      property: 'og:title',
+      content: 'NG Rome - SPONSORS',
+    },
+    {
+      property: 'og:description',
+      content:
+        "Our sponsors and partners help make the NG Rome Conference possible. Come and say 'Ciao' on the day of the conference! June 27, 2024 / Rome, Italy",
+    },
+    {
+      property: 'og:image',
+      content: '/photo/ngrome-cover-mmxxiv-social.jpg',
+    },
+  ],
+};
 
 @Component({
   selector: 'app-sponsor',
@@ -16,11 +45,7 @@ import { SponsorInterface } from '../models/sponsor.model';
         'We want to say thank you to our Sponsors and Community Partners! They help make NG Rome Conference possible. Come and say Ciao the day of the conference.'
       "
     />
-    <app-page-image
-      [image]="
-        'https://firebasestorage.googleapis.com/v0/b/ngrome-website.appspot.com/o/assets%2Fsponsor-image.jpg?alt=media&token=ed47ea50-9751-48df-af56-1c22cf374c61'
-      "
-    />
+    <app-page-image [image]="'/photo/sponsor-cover.jpg'" />
     <app-content [pastEditionSponsors]="pastEditionSponsors" />
   `,
   imports: [
