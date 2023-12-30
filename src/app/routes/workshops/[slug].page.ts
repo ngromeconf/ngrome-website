@@ -8,6 +8,7 @@ import {
 import { Component } from '@angular/core';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
+import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
 import { ContentFile, injectContent } from '@analogjs/content';
@@ -28,8 +29,7 @@ export const routeMeta: RouteMeta = {
     DatePipe,
     PageHeadComponent,
     PageImageComponent,
-    NgFor,
-    NgIf,
+    SocialShareComponent,
   ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
     <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
