@@ -6,7 +6,7 @@ import { ButtonComponent } from '../shared/button.component';
   selector: 'app-tickets',
   standalone: true,
   template: `
-    <section class="py-4 pt-10 md:py-8 bg-gray-200 text-black">
+    <section id="tickets" class="py-4 pt-10 md:py-8 bg-gray-200 text-black">
       <div class="container px-5 py-32 mx-auto lg:px-24">
         <h2
           class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl"
