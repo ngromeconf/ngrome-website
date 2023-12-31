@@ -36,7 +36,7 @@ import { ButtonComponent } from '../shared/button.component';
               class="flex flex-col items-center bg-slate-100 p-8 rounded-lg shadow-lg max-w-sm"
               [ngClass]="{
                 'bg-gradient-to-br from-white via-gray-200 to-white rounded-lg shadow-lg relative border-4 border-red-ngrome max-w-sm':
-                  item.popular
+                  item.popular || item.bestExperience
               }"
             >
               @if (item.popular) {
@@ -64,6 +64,28 @@ import { ButtonComponent } from '../shared/button.component';
                   class="mono text-sm absolute -top-4 bg-red-ngrome text-zinc-100 py-0.5 px-2 font-bold tracking-wider rounded"
                 >
                   BEST VALUE
+                </p>
+              }
+              @if (item.bestExperience) {
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="0.5"
+                  stroke="white"
+                  class="w-20 h-20 absolute -top-11 -left-11 fill-red-ngrome"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <p
+                  class="mono text-sm absolute -top-4 bg-red-ngrome text-zinc-100 py-0.5 px-2 font-bold tracking-wider rounded"
+                >
+                  BEST EXPERIENCE
                 </p>
               }
               <div>
@@ -116,7 +138,7 @@ import { ButtonComponent } from '../shared/button.component';
 export class TicketsComponent {
   public ticketLists = [
     {
-      name: 'Blind Ticket',
+      name: 'NGRome Conference Blind Ticket',
       subtitle: 'Get your ticket now, ticket price will increase soon!',
       price: '75',
       realPrice: '155',
@@ -128,8 +150,8 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Early Bird Combo',
-      subtitle: 'Get your ticket now, ticket price will increase soon!',
+      name: 'Combo Tickets - Early Bird',
+      subtitle: 'Workshop & Conference best value ticket',
       price: '325',
       popular: true,
       realPrice: '465',
@@ -142,7 +164,7 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Early Bird Workshop',
+      name: 'Workshop - Early Bird ',
       subtitle: 'Modern Angular Architectures Workshop',
       price: 250,
       realPrice: 310,
@@ -150,7 +172,7 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Student',
+      name: 'NGRome Conference - Student',
       subtitle: 'If you are a student, this is your ticket!',
       price: 50,
       realPrice: 155,
@@ -158,8 +180,9 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Early Bird VIP',
+      name: 'VIP - Early Bird',
       subtitle: 'The best experience for your journey in Rome',
+      bestExperience: true,
       price: '375',
       realPrice: '500',
       features: [
@@ -172,7 +195,7 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Early Bird Conference',
+      name: 'NGRome Conference - Early Bird ',
       subtitle: 'Get your ticket now, ticket price will increase soon!',
       price: 110,
       realPrice: 155,
@@ -184,7 +207,7 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Regular Conference',
+      name: 'NGRome Conference - Regular ',
       subtitle: 'Get your ticket now, ticket price will increase soon!',
       price: '155',
       features: [
@@ -195,14 +218,14 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Regular Workshop',
+      name: 'Workshop - Regular ',
       subtitle: 'Modern Angular Architectures Workshop',
       price: '310',
       features: ['Workshop on June 26', 'Luch included on 26'],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Regular Combo',
+      name: 'Combo Tickets - Regular',
       subtitle: 'Get your ticket now, ticket price will increase soon!',
       price: '465',
       features: [
@@ -214,7 +237,7 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'VIP Regular Combo',
+      name: 'VIP  - Regular Combo',
       subtitle: 'The best experience for your journey in Rome',
       price: '500',
       features: [
@@ -227,7 +250,7 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Last Minute Conference',
+      name: 'NGRome Conference - Last Minute',
       price: '250',
       features: [
         'Access to the conference',
@@ -237,10 +260,10 @@ export class TicketsComponent {
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
-      name: 'Last Minute Workshop',
+      name: 'Workshop - Last Minute ',
       subtitle: 'Modern Angular Architectures Workshop',
       price: '560',
-      features: ['Workshop on June 26', 'Luch included on 26'],
+      features: ['Workshop on June 26', 'Luch included'],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
   ];
