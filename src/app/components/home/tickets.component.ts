@@ -158,7 +158,7 @@ export class TicketsComponent {
       features: [
         'Workshop on June 26',
         'Conference on June 27',
-        'Luch included both days',
+        'Lunch included both days',
         'NGRome T-shirt',
       ],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
@@ -168,7 +168,7 @@ export class TicketsComponent {
       subtitle: 'Modern Angular Architectures Workshop',
       price: 250,
       realPrice: 310,
-      features: ['Workshop on June 26', 'Luch included on 26'],
+      features: ['Workshop on June 26', 'Lunch included on 26'],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
@@ -189,7 +189,7 @@ export class TicketsComponent {
         'Workshop on June 26',
         'Speaker Dinner on June 26',
         'Conference on June 27',
-        'Luch included both days',
+        'Lunch included both days',
         'NGRome T-shirt',
       ],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
@@ -221,7 +221,7 @@ export class TicketsComponent {
       name: 'Workshop - Regular ',
       subtitle: 'Modern Angular Architectures Workshop',
       price: '310',
-      features: ['Workshop on June 26', 'Luch included on 26'],
+      features: ['Workshop on June 26', 'Lunch included on 26'],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
     {
@@ -231,7 +231,7 @@ export class TicketsComponent {
       features: [
         'Workshop on June 26',
         'Conference on June 27',
-        'Luch included',
+        'Lunch included',
         'NGRome T-shirt',
       ],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
@@ -244,7 +244,7 @@ export class TicketsComponent {
         'Workshop on June 26',
         'Speaker Dinner on June 26',
         'Conference on June 27',
-        'Luch included both days',
+        'Lunch included both days',
         'NGRome T-shirt',
       ],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
@@ -263,7 +263,7 @@ export class TicketsComponent {
       name: 'Workshop - Last Minute ',
       subtitle: 'Modern Angular Architectures Workshop',
       price: '560',
-      features: ['Workshop on June 26', 'Luch included'],
+      features: ['Workshop on June 26', 'Lunch included'],
       url: 'https://ti.to/ngrome-events/ngrome-conf-mmxxiv',
     },
   ];
