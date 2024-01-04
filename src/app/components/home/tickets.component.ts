@@ -148,6 +148,20 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                         >
                           SOLD OUT
                         </span>
+                      } @else if (item.saleStart) {
+                        <span
+                          class="text-1xl
+                        font-extrabold
+                        text-transparent
+                        bg-clip-text
+                        bg-gradient-to-r
+                        from-gray-600
+                        trough-gray-400
+                        to-slate-600"
+                        >
+                          Sales start on
+                          {{ item.saleStart | date: 'dd MMMM yyyy' }}
+                        </span>
                       } @else {
                         <app-button
                           [eventID]="item.event"
