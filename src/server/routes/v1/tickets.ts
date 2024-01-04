@@ -8,7 +8,7 @@ enum features {
   Workshop = 'In-person Workshop 🎟️',
   WorkshopLunch = 'Workshop Lunch 🍕',
   SpeakerDinner = 'Speaker Dinner 🥳',
-  ConferenceCoffee = 'Conference Coffee included 🍪☕',
+  ConferenceCoffee = 'Conference Coffee ☕',
   ConferenceLunch = 'Conference Lunch 🍝',
   Swag = 'NGRome Swag 😎',
 }
