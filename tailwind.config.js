@@ -22,7 +22,7 @@ module.exports = {
 
       colors: {
         black: '#16171b',
-        red: '#DD0031',
+        'red-ngrome': '#DD0031',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],

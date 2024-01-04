@@ -4,6 +4,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ToggleService } from '../../../services/toggle.service';
 import { NAV_MENU, TICKET_URL } from './constants';
 import { TicketComponent } from '../../shared/ticket.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -72,14 +73,12 @@ import { TicketComponent } from '../../shared/ticket.component';
             [href]="item.destinationUrl"
             >{{ item.name }}</a
           >
-          <app-ticket
-            classList="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-600 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-          ></app-ticket>
-          <!-- <a
-            class=""
-            [href]="TicketUrl"
+          <a
+            class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-600 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+            (click)="onGoToTicket()"
             target="_blank"
-            >Tickets</a> -->
+            >Tickets</a
+          >
         </nav>
       </div>
     </section>
@@ -91,10 +90,20 @@ export class HeaderComponent {
   public NavMenu = NAV_MENU;
   public TicketUrl = TICKET_URL;
 
-  constructor(public toggleService: ToggleService) {}
+  constructor(
+    public toggleService: ToggleService,
+    private router: Router,
+  ) {}
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: HostListener) {
     this.toggleService.updateData(false);
+  }
+  onGoToTicket() {
+    if (this.router.url === '/') {
+      this.router.navigate([], { fragment: 'TicketSection' });
+    } else {
+      this.router.navigate(['/'], { fragment: 'TicketSection' });
+    }
   }
 }

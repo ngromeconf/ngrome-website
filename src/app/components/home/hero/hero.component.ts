@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { TICKET_URL } from '../../layout/header/constants';
 import { TicketComponent } from '../../shared/ticket.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -36,7 +36,7 @@ import { TicketComponent } from '../../shared/ticket.component';
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
             JUNE
-            <span class="font-bold text-red">27</span>
+            <span class="font-bold text-red-ngrome">27</span>
             2024
           </h2>
           <p
@@ -50,14 +50,11 @@ import { TicketComponent } from '../../shared/ticket.component';
         </div>
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
-            <app-ticket
-              classList="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-            ></app-ticket>
-            <!-- <tito-button
-              class=""
-              event="ngrome-events/test-website-conf"
-              buttonLabel="Buy your ticket"
-            ></tito-button> -->
+            <a
+              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+              (click)="onGoToTicket()"
+              >Tickets</a
+            >
           </div>
         </div>
       </div>
@@ -73,5 +70,8 @@ import { TicketComponent } from '../../shared/ticket.component';
   imports: [CommonModule, NgOptimizedImage, TicketComponent],
 })
 export class HeroComponent {
-  public ticketUrl = TICKET_URL;
+  constructor(private router: Router) {}
+  onGoToTicket() {
+    this.router.navigate([], { fragment: 'TicketSection' });
+  }
 }
