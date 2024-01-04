@@ -4,13 +4,13 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
 export default defineEventHandler(() => tickets);
 
 enum features {
-  Conference = 'Conference in-person 🎟️',
-  Workshop = 'In-person Workshop 🎟️',
-  WorkshopLunch = 'Workshop Lunch 🍕',
-  SpeakerDinner = 'Speaker Dinner 🥳',
-  ConferenceCoffee = 'Conference Coffee ☕',
-  ConferenceLunch = 'Conference Lunch 🍝',
-  Swag = 'NGRome Swag 😎',
+  Conference = '🎟️ Conference in-person',
+  Workshop = '🎟️ In-person Workshop',
+  WorkshopLunch = '🍕 Workshop Lunch ',
+  SpeakerDinner = '🥳 Speaker Dinner ',
+  ConferenceCoffee = '☕ Conference Coffee ',
+  ConferenceLunch = '🍝 Conference Lunch ',
+  Swag = '😎 NGRome Swag ',
 }
 
 const tickets: TicketInterface[] = [
