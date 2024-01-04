@@ -101,6 +101,6 @@ export class ContentComponent {
   }
   getSponsors() {
     console.log('getSponsors');
-    this.Sponsors$ = this.http.get<Sponsors>('/api/v1/sponsors');
+    this.Sponsors$ = this.http.get<Sponsors>('./api/v1/sponsors');
   }
 }

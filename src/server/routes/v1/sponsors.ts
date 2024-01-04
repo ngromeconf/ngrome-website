@@ -1,12 +1,7 @@
 import { H3Event, defineEventHandler } from 'h3';
-import { SponsorInterface, Sponsors, sponsorType } from 'src/app/models/sponsor.model';
+import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
-export default defineEventHandler((event: H3Event) => {
-  if ((event.context.params?.['type'])){
-    return {mainSponsor}
-  }
-  else return sponsors;
-});
+export default defineEventHandler(() => sponsors);
 
 const mainSponsor: SponsorInterface[] = [
   {
@@ -73,10 +68,10 @@ const technicalSponsors: SponsorInterface[] = [
 ];
 
 const sponsors: Sponsors = {
-    Main: mainSponsor,
-    Gold: goldSponsors,
-    Silver: silverSponsor,
-    Bronze: bronzeSponsor,
-    Diversity: diversitySponsor,
-    technical: technicalSponsors,
+  Main: mainSponsor,
+  Gold: goldSponsors,
+  Silver: silverSponsor,
+  Bronze: bronzeSponsor,
+  Diversity: diversitySponsor,
+  technical: technicalSponsors,
 };

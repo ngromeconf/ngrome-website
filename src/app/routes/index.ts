@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../components/layout/header/header.component';
 import { HeroComponent } from '../components/home/hero/hero.component';
 import { FeaturesComponent } from '../components/home/features/features.component';
@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { TicketsComponent } from '../components/home/tickets.component';
+
 export const routeMeta: RouteMeta = {
   meta: [
     {
@@ -63,19 +64,20 @@ export const routeMeta: RouteMeta = {
     TicketsComponent,
   ],
 })
-export default class HomeComponent {
+export default class HomeComponent implements OnInit {
   /**
    * Observable representing the sponsors data.
    * @type {Observable<Sponsors>}
    */
   public Sponsors$: Observable<Sponsors>;
 
-  constructor(private http: HttpClient) {
-    console.log('ContentComponent');
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
     this.getSponsors();
   }
+
   getSponsors() {
-    console.log('getSponsors');
-    this.Sponsors$ = this.http.get<Sponsors>('/api/v1/sponsors');
+    this.Sponsors$ = this.http.get<Sponsors>(`/api/v1/sponsors`);
   }
 }

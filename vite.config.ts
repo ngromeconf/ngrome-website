@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => ({
           '/api/v1/workshops',
           '/api/v1/workshops/angular-architects-signal-ddd-mfe',
           '/api/v1/sponsors',
+          '/api/v1/tickets',
         ],
         sitemap: {
           host:
