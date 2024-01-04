@@ -33,6 +33,11 @@ export const routeMeta: RouteMeta = {
   ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
     <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
+      <app-social-share
+        class="transform -translate-y-12"
+        [message]="socialMessage(workshop)"
+      />
+
     <app-page-image [image]="workshop.image || ''" />
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
       @for (author of workshop.authors; track $index) {
