@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { SocialShareComponent } from '../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
-import { postMetaResolver } from './resolvers';
+import { postMetaThankResolver } from './resolvers';
 import { WindowRef } from '../services/window.provider';
 
 export const routeMeta: RouteMeta = {
-  meta: postMetaResolver,
+  meta: postMetaThankResolver,
 };
 
 @Component({
@@ -51,7 +51,6 @@ export const routeMeta: RouteMeta = {
         menu.classList.toggle('hidden');
       };
     </script>`,
-  styles: ``,
 })
 export default class ThankYouComponent implements OnInit {
   public email: string;

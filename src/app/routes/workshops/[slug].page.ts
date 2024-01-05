@@ -2,10 +2,18 @@ import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map, switchMap } from 'rxjs';
+import { Observable, map, switchMap } from 'rxjs';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
+import { WorkshopResolver, postMetaSlugResolver } from '../resolvers';
+import { RouteMeta } from '@analogjs/router';
+
+export const routeMeta: RouteMeta = {
+  resolve: { workshop: WorkshopResolver },
+  meta: postMetaSlugResolver,
+};
+
 @Component({
   standalone: true,
   imports: [
@@ -68,7 +76,7 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
             <p>
               When:
               <span class="font-semibold">{{
-                workshop.date | date: 'MMMM dd, YYYY'
+                workshop.date | date : 'MMMM dd, YYYY'
               }}</span>
             </p>
             @if (workshop.location.mapsLink) {
@@ -96,41 +104,8 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
 })
 export default class ProductDetailsPageComponent {
   private readonly route = inject(ActivatedRoute);
-  private readonly http = inject(HttpClient);
-  private readonly router = inject(Router);
-
-  readonly workshop$ = this.route.paramMap.pipe(
-    map((params) => params.get('slug')),
-    map((slug) => {
-      if (!slug) {
-        this.redirectTo404();
-      }
-      return slug!;
-    }),
-    switchMap((slug) => this.getWorkshop(slug)),
-  );
-
-  private getWorkshop(slug: string) {
-    return this.http.get<WorkshopAttributes[] | null>(`/api/v1/workshops`).pipe(
-      map((workshops) => {
-        if (!workshops) {
-          this.redirectTo404();
-        }
-        return workshops!;
-      }),
-      map((workshops) => workshops.find((workshop) => workshop.slug === slug)),
-      map((workshop) => {
-        if (!workshop) {
-          this.redirectTo404();
-        }
-        return workshop!;
-      }),
-    );
-  }
-
-  private redirectTo404() {
-    this.router.navigate(['/404']);
-  }
+  workshop$: Observable<WorkshopAttributes> =
+    this.route.snapshot.data['workshop'];
 
   isWorkshopActive(workshop: WorkshopAttributes) {
     return new Date(workshop.date) > new Date();
