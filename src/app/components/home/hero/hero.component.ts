@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { TicketComponent } from '../../shared/ticket.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +9,7 @@ import { Router } from '@angular/router';
   schemas: [],
   template: `
     <section
-      class="relative w-full h-screen bg-no-repeat bg-cover 
+      class="relative w-full h-fit bg-no-repeat bg-cover
 		  bg-[url('/patternMobile.svg')]
 		  md:bg-[url('/patternTop.svg')]"
     >
@@ -67,7 +66,7 @@ import { Router } from '@angular/router';
       }
     `,
   ],
-  imports: [CommonModule, NgOptimizedImage, TicketComponent],
+  imports: [CommonModule, NgOptimizedImage],
 })
 export class HeroComponent {
   constructor(private router: Router) {}
