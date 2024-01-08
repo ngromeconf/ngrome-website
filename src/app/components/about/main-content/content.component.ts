@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TeamComponent } from '../team/team.component';
 
 @Component({
   selector: 'app-content',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TeamComponent],
   template: `
     <div class="relative py-16 overflow-hidden bg-white">
       <div class="relative px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-3xl">
@@ -33,6 +34,7 @@ Fostering new relationships within Italy, and across borders. Simultaneously dev
           
         </div>
       </div>
+      <app-team></app-team>
     </div>
   `,
   styles: [
