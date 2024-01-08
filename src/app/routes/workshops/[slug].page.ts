@@ -1,11 +1,11 @@
 import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
-import { ContentFile, ContentRenderer, injectContent } from '@analogjs/content';
-import {  map } from 'rxjs';
+import { ContentFile, injectContent } from '@analogjs/content';
+import { map } from 'rxjs';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
 export const routeMeta: RouteMeta = {
@@ -100,11 +100,11 @@ export const routeMeta: RouteMeta = {
     </div>`,
 })
 export default class ProductDetailsPageComponent {
-  readonly workshop$ = injectContent<WorkshopAttributes>().pipe(map((workshop: ContentFile<WorkshopAttributes>) => {
+  readonly workshop$ = injectContent<WorkshopAttributes>().pipe(map((workshop: ContentFile<WorkshopAttributes | Record<string, never>>) => {
     return {
       ...workshop, attributes: {
         ...workshop.attributes, authors: JSON.parse(workshop.attributes?.authors as unknown as string), location: JSON.parse(workshop.attributes?.location as unknown as string)
-      }
+      } as WorkshopAttributes
     }
   }));
 
