@@ -1,17 +1,16 @@
 import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, map, switchMap } from 'rxjs';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
-import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
-import { WorkshopResolver, postMetaSlugResolver } from '../resolvers';
 import { RouteMeta } from '@analogjs/router';
+import { postMetaSlugResolver, postTitleResolver } from './resolvers';
+import { ContentFile, ContentRenderer, injectContent } from '@analogjs/content';
+import {  map } from 'rxjs';
+import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
 export const routeMeta: RouteMeta = {
-  resolve: { workshop: WorkshopResolver },
   meta: postMetaSlugResolver,
+  title: postTitleResolver,
 };
 
 @Component({
@@ -25,18 +24,18 @@ export const routeMeta: RouteMeta = {
     PageImageComponent,
   ],
   template: `
-    <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
+    <div class="flex flex-col" *ngIf="workshop$| async as workshop">
       <app-page-head
-        [title]="workshop.title"
-        [subtitle]="workshop.description"
+        [title]="workshop.attributes.title "
+        [subtitle]="workshop.attributes.description"
       />
 
-      <app-page-image [image]="workshop.image" />
+      <app-page-image [image]="workshop.attributes.image || ''" />
 
       <section class="w-full flex flex-col gap-5 p-5">
         <div
           class="w-full sm:max-w-full sm:flex"
-          *ngFor="let author of workshop.authors"
+          *ngFor="let author of workshop.attributes?.authors"
         >
           <div
             class="h-48 sm:h-auto sm:w-48 flex-none bg-no-repeat bg-contain sm:bg-cover  bg-top sm:bg-center rounded-tl sm:rounded-l overflow-hidden border-b border-t border-l border-r sm:border-r-0 border-gray-400"
@@ -76,36 +75,38 @@ export const routeMeta: RouteMeta = {
             <p>
               When:
               <span class="font-semibold">{{
-                workshop.date | date : 'MMMM dd, YYYY'
+                workshop.attributes.date | date : 'MMMM dd, YYYY'
               }}</span>
             </p>
-            @if (workshop.location.mapsLink) {
-              <a [href]="workshop.location.mapsLink" target="_blank"
-                >Venue:
-                <span class="text-blue-600 hover:underline">{{
-                  workshop.location.name
-                }}</span></a
-              >
-            } @else {
-              Venue: {{ workshop.location.name }}
+            @if (workshop.attributes?.location?.mapsLink) {
+            <a [href]="workshop.attributes?.location.mapsLink" target="_blank"
+              >Venue:
+              <span class="text-blue-600 hover:underline">{{
+                workshop.attributes?.location.name
+              }}</span></a
+            >
+            } @else { Venue: {{ workshop.attributes?.location.name }}
             }
           </div>
           <a
-            [href]="workshop.ticket"
+            [href]="workshop.attributes?.ticket"
             target="_blank"
             class="inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
           >
-            {{ isWorkshopActive(workshop) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
+            {{ isWorkshopActive(workshop.attributes) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
           </a>
         </div>
       </div>
-    </div>
-  `,
+    </div>`,
 })
 export default class ProductDetailsPageComponent {
-  private readonly route = inject(ActivatedRoute);
-  workshop$: Observable<WorkshopAttributes> =
-    this.route.snapshot.data['workshop'];
+  readonly workshop$ = injectContent<WorkshopAttributes>().pipe(map((workshop: ContentFile<WorkshopAttributes>) => {
+    return {
+      ...workshop, attributes: {
+        ...workshop.attributes, authors: JSON.parse(workshop.attributes?.authors as unknown as string), location: JSON.parse(workshop.attributes?.location as unknown as string)
+      }
+    }
+  }));
 
   isWorkshopActive(workshop: WorkshopAttributes) {
     return new Date(workshop.date) > new Date();

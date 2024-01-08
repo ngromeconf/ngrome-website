@@ -63,7 +63,7 @@ export const WORKSHOP: WorkshopAttributes[] = [
   },
   {
     slug: 'ng-girls-workshop',
-    tag: 'diversity',
+    tag: 'Diversity',
     title: 'ng-Girls - one-day workshops for beginners!',
     description: 'We are holding a one-day workshops for beginners! ',
     date: '2023-11-30',
