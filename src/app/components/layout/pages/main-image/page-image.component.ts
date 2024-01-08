@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <section
       class="h-screen max-h-96 bg-right bg-cover bg-center"
-      style="background-image: url(&quot;/{{ image }}&quot;);"
+      style="background-image: url({{ image }});"
     ></section>
   `,
   styles: [],

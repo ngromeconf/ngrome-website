@@ -6,7 +6,7 @@ description: In this full day training, you will learn how to leverage Google's 
 date: '2023-12-04'
 authors: '[{"name": "Gerard Sans","biography":"Gerard is a Google Developer Expert in Web Technologies and Angular. He works as a Developer Advocate at AWS and he is the founder of the AngularZone community in London. He loves coding, learning and sharing knowledge.","image": "photo/authors/gerard-sans.webp","link": "https://gerardsans.com/"}]'
 location: '{"name": "Spaces Laurentina - Viale Luca Gaurico 91/93","mapsLink":"https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8"}'
-image: photo/workshop-generative-ai-20231204.webp
+image: /photo/workshop-generative-ai-20231204.webp
 link: /workshops/generative-ai-masterclass
 ticket: https://ti.to/ngrome-events/generative-ai-workshop-with-gerard-sans
 col: 1

@@ -6,7 +6,7 @@ description: In this interactive workshop, we use Angular’s latest innovations
 date: '2024-06-26'
 authors: '[{"name":"Manfred Steyer","biography":"Manfred Steyer is a trainer and consultant with a focus on Angular. Google Developer Expert (GDE) who writes for O’Reilly, the German Java Magazine, and windows.developer. He regularly speaks at conferences.","image": "photo/authors/manfred-steyer.webp","link": "https://www.softwarearchitekt.at/"},{"name": "Rainer Hahnekamp","biography":"Rainer Hahnekamp is a Google Developer Expert, working as a trainer and consultant in the expert network of Angular Architects. Among his responsibilities is providing training sessions on Angular and Spring. In addition, he offers a weekly brief overview of relevant events in the Angular ecosystem on YouTube through ng-news.","image": "photo/authors/rainer-hahnekamp.webp", "link": "https://www.rainerhahnekamp.com/en/"}]'
 location: '{"name": "TBD","mapsLink":""}'
-image: photo/workshop-angular-architects-20240627.webp
+image: /photo/workshop-angular-architects-20240627.webp
 link: /workshops/angular-architects-signal-ddd-mfe'
 ticket: https://ti.to/ngrome-events/modern-angular-architecture
 col: 3
