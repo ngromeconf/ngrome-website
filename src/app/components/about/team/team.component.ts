@@ -17,7 +17,6 @@ import { CommonModule } from '@angular/common';
           <div *ngFor="let contributor of contributors" class="space-y-4">
             <span class="space-y-4">
               <img [src]="contributor.imageUrl" class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56">
-
               <h3 class="font-medium text-white text-2xl text-center">
                 {{contributor.name}}
               </h3>
@@ -27,7 +26,6 @@ import { CommonModule } from '@angular/common';
               <a *ngIf="contributor?.twitter" [href]="contributor.twitter" target="_blank"
                 class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">X</span>
-
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 22 22" aria-hidden="true">
                   <path
                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
@@ -54,12 +52,10 @@ import { CommonModule } from '@angular/common';
                   </path>
                 </svg>
               </a>
+
             </div>
-
           </div>
-
         </div>
-        
       </div>
     </section>
   `,

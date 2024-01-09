@@ -12,11 +12,8 @@ import { TeamComponent } from '../team/team.component';
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500">
             <span class="font-serif text-6xl text-black"> NG</span>Rome event is the biggest International Angular Conference in Italy, helping bring together ideas and developers from all the corners of Italy and Europe.
-
 The community is born by a group of passionate devs, JavaScript lovers, and enthusiastic developer that use the Angular framework.
-
 Our mission is to connect Italian developers to the global community.
-
 Fostering new relationships within Italy, and across borders. Simultaneously develop new skills and having moments of fun.
           </blockquote>
         </div>
@@ -27,14 +24,9 @@ Fostering new relationships within Italy, and across borders. Simultaneously dev
             <a href="https://www.linkedin.com/company/ngrome" target="_blank">Linkedin</a>, 
             <a href="https://www.youtube.com/@ngromeconf4784" target="_blank">Youtube</a> and <a href="https://www.instagram.com/ngromeconf/?hl=it" target="_blank">Instagram</a>!
           </p>
-          
-          
-
-          
-          
         </div>
       </div>
-      <app-team></app-team>
+    <app-team></app-team>
     </div>
   `,
   styles: [
