@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { featureCardInterface } from 'src/app/models/features.model';
 
 @Component({
   selector: 'app-card',
@@ -7,6 +9,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div
       class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+      (click)="goToLink(details.link)"
     >
       <span
         class="absolute left-10 top-10 z-0 h-20 w-20 rounded-full bg-red-ngrome transition-all duration-300 group-hover:scale-[10]"
@@ -92,11 +95,30 @@ import { Component, Input } from '@angular/core';
             {{ details.description }}
           </p>
         </div>
+        <div class="pt-5 text-base font-semibold leading-7">
+          <p>
+            <a
+              [href]="details.link"
+              class="text-sky-500 transition-all duration-300 group-hover:text-white"
+              >{{ details.button }} &rarr;
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   `,
   styles: ``,
 })
 export class CardComponent {
-  @Input() details: any;
+  @Input() details: featureCardInterface;
+
+  constructor(private router: Router) {}
+  goToLink(url: string | undefined) {
+    if (url && url.startsWith('#')) {
+      url = url.replace('#', '');
+      this.router.navigate(['/'], { fragment: url });
+    } else {
+      this.router.navigate([url]);
+    }
+  }
 }

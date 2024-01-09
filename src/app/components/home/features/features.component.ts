@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card.component';
+import { featureCardInterface } from 'src/app/models/features.model';
 
 @Component({
   selector: 'app-features',
@@ -21,7 +22,9 @@ import { CardComponent } from './card.component';
             Workshops, and Thriving Communities.
           </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 bg-white p-6 pt-28">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 bg-white p-6 pt-28"
+        >
           @for (card of cards; track $index) {
             <app-card [details]="card"></app-card>
           }
@@ -53,26 +56,34 @@ import { CardComponent } from './card.component';
   imports: [CommonModule, CardComponent],
 })
 export class FeaturesComponent {
-  public cards = [
+  public cards: featureCardInterface[] = [
     {
       title: 'Attendee',
       description:
         'Attend for valuable insights, knowledge sharing, and extensive networking opportunities with industry experts and peers.',
+      button: 'Get your ticket!',
+      link: '#TicketSection',
     },
     {
       title: 'Communities',
       description:
         'Connect with like-minded people, welcome new members, and foster collaboration among developers and leaders within the community.',
+      button: 'Contact us!',
+      link: 'about',
     },
     {
       title: 'Sponsor',
       description:
-        'Gain visibility, boost employer branding, and showcase your products or services to a targeted audience',
+        'Gain visibility, boost employer branding, and showcase your products or services to a targeted audience. Join us as a sponsor!',
+      button: 'Become a sponsor!',
+      link: 'sponsors',
     },
     {
       title: 'Speakers',
       description:
         'Join inspiring speakers who connect with the audience and foster networking, creating a dynamic atmosphere at our event.',
+      button: 'Apply to speak!',
+      link: '#callForPapers',
     },
   ];
 }
