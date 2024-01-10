@@ -23,14 +23,15 @@ import { Component } from '@angular/core';
                   The CFP is Open! <br /><span>Deadline to submit is</span
                   ><br />March 3, 2024.
                 </h2>
-                <button
-                  type="button"
+                <a
                   class="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
                   data-te-ripple-init
                   data-te-ripple-color="light"
+                  href="https://forms.gle/45PaWodBEkeAo5Ht6"
+                  target="_blank"
                 >
                   Submit a talk
-                </button>
+                </a>
               </div>
             </div>
           </div>
