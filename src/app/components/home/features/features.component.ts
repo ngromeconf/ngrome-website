@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from './card.component';
+import { featureCardInterface } from 'src/app/models/features.model';
 
 @Component({
   selector: 'app-features',
   standalone: true,
-  imports: [CommonModule],
   template: `
     <section id="features">
       <div class="container px-5 py-32 mx-auto lg:px-24">
@@ -22,134 +23,11 @@ import { CommonModule } from '@angular/common';
           </p>
         </div>
         <div
-          class="flex flex-wrap -mx-4 -mt-4 -mb-10 space-y-6 sm:-m-4 md:space-y-0"
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 bg-white p-6 pt-28"
         >
-          <div class="flex p-4 lg:w-1/4">
-            <div
-              class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-4 text-black rounded-full bg-slate-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-                width="24"
-                height="24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
-                />
-              </svg>
-            </div>
-            <div class="flex-grow pl-6">
-              <h3 class="font-roboto text-2xl font-semibold text-black">
-                Attendee
-              </h3>
-              <p class="mt-6 text-lg text-slate-500">
-                Dive into cutting-edge Angular insights at NGRome—network,
-                learn, and grow! Elevate your skills amidst industry leaders.
-              </p>
-            </div>
-          </div>
-          <div class="flex p-4 lg:w-1/4">
-            <div
-              class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-4 text-black rounded-full bg-slate-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-                width="24"
-                height="24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                />
-              </svg>
-            </div>
-            <div class="flex-grow pl-6">
-              <h3 class="font-roboto text-2xl font-semibold text-black">
-                Sponsor
-              </h3>
-              <p class="mt-6 text-lg text-slate-500">
-                Amplify your brand's visibility at NGRome, engaging with
-                top-notch Angular enthusiasts worldwide. Partner with
-                innovation!
-              </p>
-            </div>
-          </div>
-          <div class="flex p-4 lg:w-1/4">
-            <div
-              class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-4 text-black rounded-full bg-slate-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-                width="24"
-                height="24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
-                />
-              </svg>
-            </div>
-            <div class="flex-grow pl-6">
-              <h3 class="font-roboto text-2xl font-semibold text-black">
-                Communities
-              </h3>
-              <p class="mt-6 text-lg text-slate-500">
-                Unite with global Angular communities at NGRome—exchange ideas,
-                foster collaborations, and strengthen networks. Join the
-                collective force!
-              </p>
-            </div>
-          </div>
-          <div class="flex p-4 lg:w-1/4">
-            <div
-              class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-4 text-black rounded-full bg-slate-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-                width="24"
-                height="24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
-                />
-              </svg>
-            </div>
-            <div class="flex-grow pl-6">
-              <h3 class="font-roboto text-2xl font-semibold text-black">
-                Speakers
-              </h3>
-              <p class="mt-6 text-lg text-slate-500">
-                Showcase your expertise to a vibrant Angular audience at NGRome.
-                Empower, inspire, and make an impact!
-              </p>
-            </div>
-          </div>
+          @for (card of cards; track $index) {
+            <app-card [details]="card"></app-card>
+          }
         </div>
       </div>
     </section>
@@ -175,5 +53,37 @@ import { CommonModule } from '@angular/common';
     </section>
   `,
   styles: [],
+  imports: [CommonModule, CardComponent],
 })
-export class FeaturesComponent {}
+export class FeaturesComponent {
+  public cards: featureCardInterface[] = [
+    {
+      title: 'Attendee',
+      description:
+        'Attend for valuable insights, knowledge sharing, and extensive networking opportunities with industry experts and peers.',
+      button: 'Get your ticket!',
+      link: '#TicketSection',
+    },
+    {
+      title: 'Communities',
+      description:
+        'Connect with like-minded people, welcome new members, and foster collaboration among developers and leaders within the community.',
+      button: 'Contact us!',
+      link: 'about',
+    },
+    {
+      title: 'Sponsor',
+      description:
+        'Gain visibility, boost employer branding, and showcase your products or services to a targeted audience. Join us as a sponsor!',
+      button: 'Become a sponsor!',
+      link: 'sponsors',
+    },
+    {
+      title: 'Speakers',
+      description:
+        'Join inspiring speakers who connect with the audience and foster networking, creating a dynamic atmosphere at our event.',
+      button: 'Apply to speak!',
+      link: '#callForPapers',
+    },
+  ];
+}
