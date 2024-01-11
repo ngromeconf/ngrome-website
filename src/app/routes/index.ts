@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { TicketsComponent } from '../components/home/tickets.component';
+import { CallForPaperComponent } from '../components/home/call-for-paper.component';
 
 export const routeMeta: RouteMeta = {
   meta: [
@@ -47,6 +48,7 @@ export const routeMeta: RouteMeta = {
     <app-features />
     <!-- <app-venue /> -->
     <app-tickets />
+    <app-call-for-paper id="ticket-section" />
     @if (Sponsors$ | async; as Sponsors) {
       <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" />
       <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
@@ -62,6 +64,7 @@ export const routeMeta: RouteMeta = {
     VenueComponent,
     SilverSponsorComponent,
     TicketsComponent,
+    CallForPaperComponent,
   ],
 })
 export default class HomeComponent implements OnInit {
