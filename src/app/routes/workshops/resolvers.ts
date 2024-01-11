@@ -1,18 +1,27 @@
-import {
-  ActivatedRouteSnapshot,
-  ResolveFn,
-} from '@angular/router';
+import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
-import { injectContentFiles } from '@analogjs/content';
+import {
+  injectContentFiles,
+} from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
+export function injectActiveWorkshops(): WorkshopAttributes[] {
+  const files = injectContentFiles<WorkshopAttributes>((contentFile) =>
+    contentFile.filename.includes('/src/content/workshops/'),
+  ).map((workshop) => workshop.attributes as unknown as WorkshopAttributes);
+
+  return files;
+}
+
 function injectActiveWorkshopAttributes(
-  route: ActivatedRouteSnapshot
+  route: ActivatedRouteSnapshot,
 ): WorkshopAttributes {
-  const file = injectContentFiles<WorkshopAttributes>().find((contentFile) => {
-    return (contentFile.filename === `/src/content/${route.params['slug']}.md` ||
-      contentFile.slug === route.params['slug'])
-  })
+  const file = injectContentFiles<WorkshopAttributes>().find(
+    (contentFile) =>
+      contentFile.filename ===
+        `/src/content/workshops/${route.params['slug']}.md` ||
+      contentFile.slug === route.params['slug'],
+  );
 
   return file!.attributes;
 }
