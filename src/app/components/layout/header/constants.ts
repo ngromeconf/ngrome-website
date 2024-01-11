@@ -19,7 +19,7 @@ export const NAV_MENU = [
     visible: true,
   },
   {
-    name: 'Call for Paper',
+    name: 'CFP',
     destinationUrl: '#callForPaper',
     type: 'white',
     visible: true,
