@@ -38,7 +38,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'og:url',
-      content: 'https://ngrome.io/workshops/' + workshop?.slug,
+      content: 'https://ngrome.io' + workshop?.link,
     },
     {
       name: 'og:type',
@@ -55,7 +55,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'og:image',
-      content: 'https://ngrome.io/' + workshop?.image,
+      content: 'https://ngrome.io' + workshop?.image,
     },
     {
       name: 'twitter:card',
@@ -67,7 +67,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'twitter:url',
-      content: 'https://ngrome.io/workshops/' + workshop?.slug,
+      content: 'https://ngrome.io' + workshop?.link,
     },
     {
       name: 'twitter:title',
@@ -79,7 +79,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'twitter:image',
-      content: 'https://ngrome.io/' + workshop?.image,
+      content: 'https://ngrome.io' + workshop?.image,
     },
   ];
 };

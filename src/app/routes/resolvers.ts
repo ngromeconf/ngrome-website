@@ -36,3 +36,81 @@ export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route) => {
     },
   ];
 };
+
+export const postMetaHomeResolver: ResolveFn<MetaTag[]> = () => [
+  {
+    name: 'description',
+    content:
+      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+  },
+  {
+    name: 'author',
+    content:
+      'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
+  },
+  {
+    property: 'og:title',
+    content: 'NG Rome - Unleash Your Angular Expertise in the Eternal City',
+  },
+  {
+    property: 'og:description',
+    content:
+      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+  },
+  {
+    property: 'og:image',
+    content: 'https://ngrome.io/photo/ngrome-cover-mmxxiv-social.jpg',
+  },
+];
+
+export const postMetaAboutResolver: ResolveFn<MetaTag[]> = () => [
+  {
+    name: 'description',
+    content:
+      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+  },
+  {
+    name: 'author',
+    content:
+      'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
+  },
+  {
+    property: 'og:title',
+    content: 'NG Rome - ABOUT NGROME CONFERENCE & THE TEAM',
+  },
+  {
+    property: 'og:description',
+    content:
+      'NG-Rome is a non-profit community conference run by a team of volunteers. We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives. June 27, 2024 / Rome, Italy',
+  },
+  {
+    property: 'og:image',
+    content: 'https://ngrome.io/photo/ngrome-cover-mmxxiv-social.jpg',
+  },
+];
+
+export const postMetaSponsorResolver: ResolveFn<MetaTag[]> = () => [
+  {
+    name: 'description',
+    content:
+      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
+  },
+  {
+    name: 'author',
+    content:
+      'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
+  },
+  {
+    property: 'og:title',
+    content: 'NG Rome - SPONSORS',
+  },
+  {
+    property: 'og:description',
+    content:
+      "Our sponsors and partners help make the NG Rome Conference possible. Come and say 'Ciao' on the day of the conference! June 27, 2024 / Rome, Italy",
+  },
+  {
+    property: 'og:image',
+    content: 'https://ngrome.io/photo/ngrome-cover-mmxxiv-social.jpg',
+  },
+];
