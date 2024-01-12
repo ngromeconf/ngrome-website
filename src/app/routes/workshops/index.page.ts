@@ -5,6 +5,7 @@ import { WorkshopAttributes } from '../../models/workshop.model';
 import { WorkshopCardComponent } from '../../components/workshops/workshop-card.component';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { injectActiveWorkshops } from './resolvers';
+import { RouteMeta } from '@analogjs/router';
 
 @Pipe({
   name: 'filterByDate',
@@ -28,6 +29,11 @@ export class FilterByDatePipe implements PipeTransform {
     });
   }
 }
+
+export const routeMeta: RouteMeta = {
+  title: 'NG Rome - Workshops',
+};
+
 @Component({
   standalone: true,
   imports: [

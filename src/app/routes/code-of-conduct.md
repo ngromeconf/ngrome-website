@@ -1,5 +1,5 @@
 ---
-title: Code Of Conduct
+title: NG Rome - Code Of Conduct
 meta:
   - name: code-of-conduct
     content: CODE OF CONDUCT
