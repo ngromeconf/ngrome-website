@@ -37,24 +37,23 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
       content: workshop?.description,
     },
     {
-      name: 'og:url',
+      property: 'og:url',
       content: 'https://ngrome.io' + workshop?.link,
     },
     {
-      name: 'og:type',
+      property: 'og:type',
       content: 'website',
     },
-
     {
-      name: 'og:title',
+      property: 'og:title',
       content: 'NG Rome - ' + workshop?.title,
     },
     {
-      name: 'og:description',
+      property: 'og:description',
       content: workshop?.description,
     },
     {
-      name: 'og:image',
+      property: 'og:image',
       content: 'https://ngrome.io' + workshop?.image,
     },
     {

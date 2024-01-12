@@ -1,5 +1,7 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
+import { PageAttributes } from '../models/page-attributes';
+import { injectContentFiles } from '@analogjs/content';
 
 // temporary
 function injectActivePostAttributes(route: ActivatedRouteSnapshot) {
@@ -9,27 +11,24 @@ function injectActivePostAttributes(route: ActivatedRouteSnapshot) {
   };
 }
 
-export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route) => {
+function injectActivePageAttributes(
+  route: ActivatedRouteSnapshot,
+): PageAttributes {
+  const file = injectContentFiles<PageAttributes>().find(
+    (contentFile) =>
+      contentFile.filename === `/src/content/${route.data['slug']}.md` ||
+      contentFile.slug === route.data['slug'],
+  );
+
+  return file!.attributes;
+}
+
+export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route, state) => {
   const postAttributes = injectActivePostAttributes(route);
+  const metaPage = postMetaPageResolver(route, state);
 
   return [
-    {
-      name: 'description',
-      content: 'NGRome 2024 - Thank you for your purchase!',
-    },
-    {
-      name: 'author',
-      content: 'Analog Team',
-    },
-    {
-      property: 'og:title',
-      content: 'NGRome 2024 - Thank you for your purchase!',
-    },
-    {
-      property: 'og:description',
-      content:
-        'We are looking forward to seeing you at the conference! NGRome June 27 2024',
-    },
+    ...(metaPage as MetaTag[]),
     {
       property: 'og:image',
       content: `https://myticket.ngrome.io/api/og?fullname=${postAttributes.fullname}&ticketref=${postAttributes.ticketref}`,
@@ -37,80 +36,62 @@ export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route) => {
   ];
 };
 
-export const postMetaHomeResolver: ResolveFn<MetaTag[]> = () => [
-  {
-    name: 'description',
-    content:
-      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
-  },
-  {
-    name: 'author',
-    content:
-      'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
-  },
-  {
-    property: 'og:title',
-    content: 'NG Rome - Unleash Your Angular Expertise in the Eternal City',
-  },
-  {
-    property: 'og:description',
-    content:
-      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
-  },
-  {
-    property: 'og:image',
-    content: 'https://ngrome.io/photo/ngrome-cover-mmxxiv-social.jpg',
-  },
-];
+export const postMetaPageResolver: ResolveFn<MetaTag[]> = (route) => {
+  const page: PageAttributes = injectActivePageAttributes(route);
+  return [
+    {
+      name: 'description',
+      content: page.description,
+    },
+    {
+      name: 'author',
+      content: page.author,
+    },
+    {
+      property: 'og:url',
+      content: 'https://ngrome.io' + page.url,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
 
-export const postMetaAboutResolver: ResolveFn<MetaTag[]> = () => [
-  {
-    name: 'description',
-    content:
-      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
-  },
-  {
-    name: 'author',
-    content:
-      'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
-  },
-  {
-    property: 'og:title',
-    content: 'NG Rome - ABOUT NGROME CONFERENCE & THE TEAM',
-  },
-  {
-    property: 'og:description',
-    content:
-      'NG-Rome is a non-profit community conference run by a team of volunteers. We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives. June 27, 2024 / Rome, Italy',
-  },
-  {
-    property: 'og:image',
-    content: 'https://ngrome.io/photo/ngrome-cover-mmxxiv-social.jpg',
-  },
-];
+    {
+      property: 'og:title',
+      content: 'NG Rome - ' + page.title,
+    },
+    {
+      property: 'og:description',
+      content: page.description,
+    },
+    {
+      property: 'og:image',
+      content: 'https://ngrome.io' + page.image,
+    },
 
-export const postMetaSponsorResolver: ResolveFn<MetaTag[]> = () => [
-  {
-    name: 'description',
-    content:
-      'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
-  },
-  {
-    name: 'author',
-    content:
-      'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
-  },
-  {
-    property: 'og:title',
-    content: 'NG Rome - SPONSORS',
-  },
-  {
-    property: 'og:description',
-    content:
-      "Our sponsors and partners help make the NG Rome Conference possible. Come and say 'Ciao' on the day of the conference! June 27, 2024 / Rome, Italy",
-  },
-  {
-    property: 'og:image',
-    content: 'https://ngrome.io/photo/ngrome-cover-mmxxiv-social.jpg',
-  },
-];
+    {
+      name: 'twitter:card',
+      content: page.sizeImage,
+    },
+    {
+      property: 'twitter:domain',
+      content: 'ngrome.io',
+    },
+    {
+      property: 'twitter:url',
+      content: 'https://ngrome.io' + page.url,
+    },
+    {
+      name: 'twitter:title',
+      content: 'NG Rome - ' + page.title,
+    },
+    {
+      name: 'twitter:description',
+      content: page.description,
+    },
+    {
+      name: 'twitter:image',
+      content: 'https://ngrome.io' + page.image,
+    },
+  ];
+};

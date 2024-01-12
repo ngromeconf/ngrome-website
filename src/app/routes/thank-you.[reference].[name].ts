@@ -8,6 +8,7 @@ import { WindowRef } from '../services/window.provider';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaThankResolver,
+  data: { slug: 'thank-you' },
 };
 
 @Component({

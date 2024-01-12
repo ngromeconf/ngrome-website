@@ -3,10 +3,11 @@ import { PageHeadComponent } from '../components/layout/pages/page-head/page-hea
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
 import { ContentComponent } from '../components/about/main-content/content.component';
 import { RouteMeta } from '@analogjs/router';
-import { postMetaAboutResolver } from './resolvers';
+import { postMetaPageResolver } from './resolvers';
 
 export const routeMeta: RouteMeta = {
-  meta: postMetaAboutResolver,
+  meta: postMetaPageResolver,
+  data: { slug: 'about' },
 };
 
 @Component({

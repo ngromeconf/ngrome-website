@@ -10,10 +10,11 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { TicketsComponent } from '../components/home/tickets.component';
-import { postMetaHomeResolver } from './resolvers';
+import {  postMetaPageResolver } from './resolvers';
 
 export const routeMeta: RouteMeta = {
-  meta: postMetaHomeResolver,
+  meta: postMetaPageResolver,
+  data: { slug: 'index' },
 };
 
 @Component({
