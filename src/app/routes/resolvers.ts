@@ -23,6 +23,9 @@ function injectActivePageAttributes(
   return file!.attributes;
 }
 
+export const postTitleResolver: ResolveFn<string> = (route) =>
+  'NG Rome - ' + injectActivePageAttributes(route).title;
+
 export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route, state) => {
   const postAttributes = injectActivePostAttributes(route);
   const metaPage = postMetaPageResolver(route, state);
@@ -42,10 +45,6 @@ export const postMetaPageResolver: ResolveFn<MetaTag[]> = (route) => {
     {
       name: 'description',
       content: page.description,
-    },
-    {
-      name: 'author',
-      content: page.author,
     },
     {
       property: 'og:url',

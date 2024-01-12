@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { SocialShareComponent } from '../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
-import { postMetaThankResolver } from './resolvers';
+import { postMetaThankResolver, postTitleResolver } from './resolvers';
 import { WindowRef } from '../services/window.provider';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaThankResolver,
   data: { slug: 'thank-you' },
+  title: postTitleResolver,
 };
 
 @Component({

@@ -6,11 +6,12 @@ import { PageImageComponent } from '../components/layout/pages/main-image/page-i
 import { ContentComponent } from '../components/sponsors/content/content.component';
 import { SponsorInterface } from '../models/sponsor.model';
 import { RouteMeta } from '@analogjs/router';
-import { postMetaPageResolver } from './resolvers';
+import { postMetaPageResolver, postTitleResolver } from './resolvers';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
   data: { slug: 'sponsors' },
+  title: postTitleResolver,
 };
 
 @Component({

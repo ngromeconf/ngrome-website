@@ -4,7 +4,6 @@ export interface PageAttributes {
   description: string;
   image: string;
   sizeImage: string;
-  author: string;
   url: string;
   domain: string;
 }
