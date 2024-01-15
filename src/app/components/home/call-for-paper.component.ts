@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <!-- Container for demo purpose -->
-    <div class="w-full">
+    <div class="w-full" id="callForPaper">
       <!-- Section: Design Block -->
       <section class="mb-32">
         <div
