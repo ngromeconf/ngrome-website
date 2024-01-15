@@ -18,6 +18,12 @@ export const NAV_MENU = [
     type: 'white',
     visible: true,
   },
+  {
+    name: 'CFP',
+    destinationUrl: '#callForPaper',
+    type: 'white',
+    visible: true,
+  },
   // {
   //   name: "Venue",
   //   destinationUrl: "/venue",

@@ -23,7 +23,7 @@ import { featureCardInterface } from 'src/app/models/features.model';
           </p>
         </div>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 bg-white p-6 pt-28"
+          class="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 bg-white "
         >
           @for (card of cards; track $index) {
             <app-card [details]="card"></app-card>
@@ -83,7 +83,7 @@ export class FeaturesComponent {
       description:
         'Join inspiring speakers who connect with the audience and foster networking, creating a dynamic atmosphere at our event.',
       button: 'Apply to speak!',
-      link: '#callForPapers',
+      link: '#callForPaper',
     },
   ];
 }
