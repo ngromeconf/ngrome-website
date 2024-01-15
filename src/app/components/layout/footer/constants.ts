@@ -1,22 +1,22 @@
 export const FOOTER_MENU = [
   {
     name: 'Code of Conduct',
-    destinationUrl: '/code-of-conduct',
+    destinationUrl: './code-of-conduct',
     type: 'link',
     visible: true,
   },
   {
     name: 'Terms & Privacy',
-    destinationUrl: '/terms-and-privacy',
+    destinationUrl: './terms-and-privacy',
     type: 'link',
     visible: true,
   },
-  {
-    name: 'Diversity',
-    destinationUrl: './',
-    type: 'link',
-    visible: true,
-  },
+  // {
+  //   name: 'Diversity',
+  //   destinationUrl: './',
+  //   type: 'link',
+  //  visible: true,
+  // },
   {
     name: 'Sponsors',
     destinationUrl: './sponsors',
@@ -29,18 +29,18 @@ export const FOOTER_MENU = [
   //   type: 'link',
   //   visible: true,
   // },
-  // {
-  //   name: 'Workshops',
-  //   destinationUrl: './',
-  //   type: 'link',
-  //   visible: true,
-  // },
-  // {
-  //   name: 'About',
-  //   destinationUrl: './',
-  //   type: 'link',
-  //   visible: true,
-  // },
+  {
+    name: 'Workshops',
+    destinationUrl: './workshops',
+    type: 'link',
+    visible: true,
+  },
+  {
+    name: 'About',
+    destinationUrl: './about',
+    type: 'link',
+    visible: true,
+  },
   // {
   //   name: 'Info',
   //   destinationUrl: './',

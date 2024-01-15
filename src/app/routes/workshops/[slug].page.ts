@@ -1,11 +1,24 @@
-import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { map, switchMap } from 'rxjs';
+import {
+  AsyncPipe,
+  CommonModule,
+  DatePipe,
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import { Component } from '@angular/core';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
-import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
+import { RouteMeta } from '@analogjs/router';
+import { postMetaSlugResolver, postTitleResolver } from './resolvers';
+import { ContentFile, injectContent } from '@analogjs/content';
+import { map } from 'rxjs';
+import { WorkshopAttributes } from 'src/app/models/workshop.model';
+
+export const routeMeta: RouteMeta = {
+  meta: postMetaSlugResolver,
+  title: postTitleResolver,
+};
+
 @Component({
   standalone: true,
   imports: [
@@ -15,21 +28,15 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
     DatePipe,
     PageHeadComponent,
     PageImageComponent,
+    NgFor,
+    NgIf,
   ],
-  template: `
-    <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
-      <app-page-head
-        [title]="workshop.title"
-        [subtitle]="workshop.description"
-      />
-
-      <app-page-image [image]="workshop.image" />
-
-      <section class="w-full flex flex-col gap-5 p-5">
-        <div
-          class="w-full sm:max-w-full sm:flex"
-          *ngFor="let author of workshop.authors"
-        >
+  template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
+    <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
+    <app-page-image [image]="workshop.image || ''" />
+    <section class="w-full flex flex-col gap-5 p-5">
+      @for (author of workshop.authors; track $index) {
+        <div class="w-full sm:max-w-full sm:flex">
           <div
             class="h-48 sm:h-auto sm:w-48 flex-none bg-no-repeat bg-contain sm:bg-cover  bg-top sm:bg-center rounded-tl sm:rounded-l overflow-hidden border-b border-t border-l border-r sm:border-r-0 border-gray-400"
             style="background-image: url('{{ author.image }}')"
@@ -46,91 +53,70 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
               <p class="text-gray-700 text-base">
                 {{ author.biography }}
               </p>
-              <a
-                *ngIf="author.link"
-                [href]="author.link"
-                target="_blank"
-                class="text-blue-600 hover:underline"
-                >Read more about {{ author.name }}</a
-              >
+              @if (author.link) {
+                <a
+                  [href]="author.link"
+                  target="_blank"
+                  class="text-blue-600 hover:underline"
+                  >Read more about {{ author.name }}</a
+                >
+              }
             </div>
           </div>
         </div>
-      </section>
+      }
+    </section>
 
+    <div
+      class="sticky bottom-0 w-full bg-white px-20 py-5 rounded-t-lg shadow-xl"
+    >
       <div
-        class="sticky bottom-0 w-full bg-white px-20 py-5 rounded-t-lg shadow-xl"
+        class="flex flex-col items-center md:items-start md:flex-row gap-5 justify-between max-w-3xl mx-auto"
       >
-        <div
-          class="flex flex-col items-center md:items-start md:flex-row gap-5 justify-between max-w-3xl mx-auto"
-        >
-          <div class="flex flex-col gap-4 text-center md:text-left">
-            <p>
-              When:
-              <span class="font-semibold">{{
-                workshop.date | date: 'MMMM dd, YYYY'
-              }}</span>
-            </p>
-            @if (workshop.location.mapsLink) {
-              <a [href]="workshop.location.mapsLink" target="_blank"
-                >Venue:
-                <span class="text-blue-600 hover:underline">{{
-                  workshop.location.name
-                }}</span></a
-              >
-            } @else {
-              Venue: {{ workshop.location.name }}
-            }
-          </div>
-          <a
-            [href]="workshop.ticket"
-            target="_blank"
-            class="inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-          >
-            {{ isWorkshopActive(workshop) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
-          </a>
+        <div class="flex flex-col gap-4 text-center md:text-left">
+          <p>
+            When:
+            <span class="font-semibold">{{
+              workshop.date | date: 'MMMM dd, YYYY'
+            }}</span>
+          </p>
+          @if (workshop.location?.mapsLink) {
+            <a [href]="workshop.location?.mapsLink" target="_blank"
+              >Venue:
+              <span class="text-blue-600 hover:underline">{{
+                workshop.location?.name
+              }}</span></a
+            >
+          } @else {
+            Venue: {{ workshop.location?.name }}
+          }
         </div>
+        <a
+          [href]="workshop.ticket"
+          target="_blank"
+          class="inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+        >
+          {{ isWorkshopActive(workshop) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
+        </a>
       </div>
     </div>
-  `,
+  </div>`,
 })
 export default class ProductDetailsPageComponent {
-  private readonly route = inject(ActivatedRoute);
-  private readonly http = inject(HttpClient);
-  private readonly router = inject(Router);
-
-  readonly workshop$ = this.route.paramMap.pipe(
-    map((params) => params.get('slug')),
-    map((slug) => {
-      if (!slug) {
-        this.redirectTo404();
-      }
-      return slug!;
+  readonly workshop$ = injectContent<WorkshopAttributes>({
+    param: 'slug',
+    subdirectory: 'workshops',
+  }).pipe(
+    map((workshop: ContentFile<WorkshopAttributes | Record<string, never>>) => {
+      return {
+        ...workshop.attributes,
+        authors: JSON.parse(workshop.attributes?.authors as unknown as string),
+        location: JSON.parse(
+          workshop.attributes?.location as unknown as string,
+        ),
+      } as WorkshopAttributes;
     }),
-    switchMap((slug) => this.getWorkshop(slug)),
   );
-
-  private getWorkshop(slug: string) {
-    return this.http.get<WorkshopAttributes[] | null>(`/api/v1/workshops`).pipe(
-      map((workshops) => {
-        if (!workshops) {
-          this.redirectTo404();
-        }
-        return workshops!;
-      }),
-      map((workshops) => workshops.find((workshop) => workshop.slug === slug)),
-      map((workshop) => {
-        if (!workshop) {
-          this.redirectTo404();
-        }
-        return workshop!;
-      }),
-    );
-  }
-
-  private redirectTo404() {
-    this.router.navigate(['/404']);
-  }
 
   isWorkshopActive(workshop: WorkshopAttributes) {
     return new Date(workshop.date) > new Date();

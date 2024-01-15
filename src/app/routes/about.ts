@@ -3,33 +3,12 @@ import { PageHeadComponent } from '../components/layout/pages/page-head/page-hea
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
 import { ContentComponent } from '../components/about/main-content/content.component';
 import { RouteMeta } from '@analogjs/router';
+import { postMetaPageResolver, postTitleResolver } from './resolvers';
 
 export const routeMeta: RouteMeta = {
-  meta: [
-    {
-      name: 'description',
-      content:
-        'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
-    },
-    {
-      name: 'author',
-      content:
-        'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
-    },
-    {
-      property: 'og:title',
-      content: 'NG Rome - ABOUT NGROME CONFERENCE & THE TEAM',
-    },
-    {
-      property: 'og:description',
-      content:
-        'NG-Rome is a non-profit community conference run by a team of volunteers. We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives. June 27, 2024 / Rome, Italy',
-    },
-    {
-      property: 'og:image',
-      content: '/photo/ngrome-cover-mmxxiv-social.jpg',
-    },
-  ],
+  meta: postMetaPageResolver,
+  data: { slug: 'about' },
+  title: postTitleResolver,
 };
 
 @Component({

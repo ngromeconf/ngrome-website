@@ -6,33 +6,12 @@ import { PageImageComponent } from '../components/layout/pages/main-image/page-i
 import { ContentComponent } from '../components/sponsors/content/content.component';
 import { SponsorInterface } from '../models/sponsor.model';
 import { RouteMeta } from '@analogjs/router';
+import { postMetaPageResolver, postTitleResolver } from './resolvers';
 
 export const routeMeta: RouteMeta = {
-  meta: [
-    {
-      name: 'description',
-      content:
-        'NGRome Conference: Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 27, 2024 / Rome, Italy',
-    },
-    {
-      name: 'author',
-      content:
-        'Luciano Murruni, Valentina Ricci, Raul Valentini, Giovanni Malacaria, Giuseppe Ettorre',
-    },
-    {
-      property: 'og:title',
-      content: 'NG Rome - SPONSORS',
-    },
-    {
-      property: 'og:description',
-      content:
-        "Our sponsors and partners help make the NG Rome Conference possible. Come and say 'Ciao' on the day of the conference! June 27, 2024 / Rome, Italy",
-    },
-    {
-      property: 'og:image',
-      content: '/photo/ngrome-cover-mmxxiv-social.jpg',
-    },
-  ],
+  meta: postMetaPageResolver,
+  data: { slug: 'sponsors' },
+  title: postTitleResolver,
 };
 
 @Component({

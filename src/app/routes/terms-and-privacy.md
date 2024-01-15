@@ -1,5 +1,5 @@
 ---
-title: Terms and privacy
+title: NG Rome - Terms and privacy
 slug: 2022-09-01-terms-and-privacy
 meta:
   - name: terms-and-privacy
