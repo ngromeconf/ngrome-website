@@ -52,6 +52,19 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
         <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
         <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
         <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
+
+        <div class="mx-auto px-5 container flex flex-col justify-center">
+          <h2
+            class="block w-full pb-2 bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
+          >
+            WE BELIEVE IN COMMUNITY
+          </h2>
+          <app-silver-sponsor
+            [sponsors]="Sponsors.Community"
+            type="Community"
+            [showTitle]="false"
+          />
+        </div>
       }
 
       <div class="container px-5 py-24 mx-auto lg:px-24">
