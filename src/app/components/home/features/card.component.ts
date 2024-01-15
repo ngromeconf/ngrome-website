@@ -8,15 +8,15 @@ import { featureCardInterface } from 'src/app/models/features.model';
   imports: [],
   template: `
     <div
-      class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+      class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
       (click)="goToLink(details.link)"
     >
       <span
-        class="absolute left-10 top-10 z-0 h-20 w-20 rounded-full bg-red-ngrome transition-all duration-700 group-hover:scale-[10]"
+        class="absolute left-6 top-10 z-0 h-20 w-20 rounded-full bg-red-ngrome transition-all duration-700 group-hover:scale-[10]"
       ></span>
       <div class="relative z-10 mx-auto max-w-md">
         <span
-          class="grid h-20 w-20 place-items-center rounded-full bg-red-ngrome text-white transition-all duration-300 group-hover:bg-white group-hover:text-red-ngrome"
+          class="grid h-20 w-20 z-10 place-items-center rounded-full bg-red-ngrome text-white transition-all duration-300 group-hover:bg-white group-hover:text-red-ngrome"
         >
           @if (details.title === 'Sponsor') {
             <svg
