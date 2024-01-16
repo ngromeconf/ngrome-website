@@ -9,5 +9,5 @@ location: '{"name": "TBD","mapsLink":""}'
 image: /photo/workshop-angular-architects-20240627.webp
 link: /workshops/angular-architects-signal-ddd-mfe
 ticket: https://ti.to/ngrome-events/modern-angular-architecture
-col: 3
+col: 2
 ---
