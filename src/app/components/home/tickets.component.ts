@@ -45,7 +45,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
             @for (item of TicketsList; track $index) {
               @if (item.visible) {
                 <div
-                  class="flex flex-col items-center bg-slate-100 p-8 rounded-lg shadow-lg max-w-sm"
+                  class="flex flex-col items-center bg-slate-100 p-4 rounded-lg shadow-lg max-w-sm"
                   [ngClass]="{
                     'bg-gradient-to-br from-white via-gray-200 to-white rounded-lg shadow-lg relative border-4 border-red-ngrome max-w-sm':
                       item.popular || item.bestExperience
@@ -114,6 +114,41 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                       }
                     </div>
                   </div>
+                  <div class="flex justify-center mt-2 mb-8 ">
+                    @if (item.soldOut) {
+                      <span
+                        class="text-3xl
+                        font-extrabold
+                        text-transparent
+                        bg-clip-text
+                        bg-gradient-to-r
+                        from-red-ngrome
+                        to-pink-600
+                        rotate-12"
+                      >
+                        SOLD OUT
+                      </span>
+                    } @else if (item.saleStart) {
+                      <span
+                        class="text-1xl
+                        font-extrabold
+                        text-transparent
+                        bg-clip-text
+                        bg-gradient-to-r
+                        from-gray-600
+                        trough-gray-400
+                        to-slate-600"
+                      >
+                        Sales start on
+                        {{ item.saleStart | date: 'dd MMMM yyyy' }}
+                      </span>
+                    } @else {
+                      <app-button
+                        [eventID]="item.event"
+                        [ticketID]="item.ticket"
+                      />
+                    }
+                  </div>
                   <div class="flex flex-col gap-1">
                     @for (feature of item.features; track $index) {
                       <p class="flex items-start text-sm">
@@ -133,42 +168,6 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                         <b>{{ feature }}</b>
                       </p>
                     }
-
-                    <div class="flex justify-center mt-8 ">
-                      @if (item.soldOut) {
-                        <span
-                          class="text-3xl
-                        font-extrabold
-                        text-transparent
-                        bg-clip-text
-                        bg-gradient-to-r
-                        from-red-ngrome
-                        to-pink-600
-                        rotate-12"
-                        >
-                          SOLD OUT
-                        </span>
-                      } @else if (item.saleStart) {
-                        <span
-                          class="text-1xl
-                        font-extrabold
-                        text-transparent
-                        bg-clip-text
-                        bg-gradient-to-r
-                        from-gray-600
-                        trough-gray-400
-                        to-slate-600"
-                        >
-                          Sales start on
-                          {{ item.saleStart | date: 'dd MMMM yyyy' }}
-                        </span>
-                      } @else {
-                        <app-button
-                          [eventID]="item.event"
-                          [ticketID]="item.ticket"
-                        />
-                      }
-                    </div>
                   </div>
                 </div>
               }
