@@ -54,7 +54,7 @@ export const routeMeta: RouteMeta = {
     @if (workshops) {
       <div class="max-w-screen-xl p-5 mx-auto">
         <div
-          class="grid grid-cols-1 justify-center gap-5 lg:grid-cols-3 sm:grid-cols-2"
+          class="grid grid-cols-1 justify-center gap-5 lg:grid-cols-2 sm:grid-cols-2"
         >
           @for (
             workshop of workshops | filterByDate: 'date' : 'future';

@@ -9,5 +9,5 @@ location: '{"name": "TBD","mapsLink":""}'
 image: /photo/workshop-ng-girls-20231130.webp
 link: /workshops/ng-girls-workshop-2024-06
 ticket: https://www.ng-girls.org/event/rome-2024
-col: 2
+col: 1
 ---
