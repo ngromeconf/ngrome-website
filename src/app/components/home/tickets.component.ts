@@ -45,7 +45,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
             @for (item of TicketsList; track $index) {
               @if (item.visible) {
                 <div
-                  class="flex flex-col items-center bg-slate-100 p-4 rounded-lg shadow-lg max-w-sm"
+                  class="flex flex-col items-center bg-slate-100 p-4 rounded-lg shadow-lg"
                   [ngClass]="{
                     'bg-gradient-to-br from-white via-gray-200 to-white rounded-lg shadow-lg relative border-4 border-red-ngrome max-w-sm':
                       item.popular || item.bestExperience
@@ -146,6 +146,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                       <app-button
                         [eventID]="item.event"
                         [ticketID]="item.ticket"
+                        [label]="'REGISTER'"
                       />
                     }
                   </div>
