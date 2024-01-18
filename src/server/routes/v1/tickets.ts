@@ -4,13 +4,14 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
 export default defineEventHandler(() => tickets);
 
 enum features {
-  Conference = '🎟️ Conference in-person',
+  Conference = '🎟️ Conference Access In Person',
   Workshop = '🎟️ In-person Workshop',
   WorkshopLunch = '🍕 Workshop Lunch ',
   SpeakerDinner = '🥳 Speaker Dinner ',
-  ConferenceCoffee = '☕ Conference Coffee ',
+  ConferenceBreackfast = '🥐 Conference Welcome Breakfast',
+  ConferenceCoffee = '☕ Open Coffee all day',
   ConferenceLunch = '🍝 Conference Lunch ',
-  Swag = '😎 NGRome Swag ',
+  Swag = '😎 NGRome Swag',
 }
 
 const tickets: TicketInterface[] = [
@@ -23,6 +24,7 @@ const tickets: TicketInterface[] = [
     realPrice: 155,
     features: [
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -38,6 +40,7 @@ const tickets: TicketInterface[] = [
     realPrice: '155',
     features: [
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -57,6 +60,7 @@ const tickets: TicketInterface[] = [
       features.Workshop,
       features.WorkshopLunch,
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -87,6 +91,7 @@ const tickets: TicketInterface[] = [
       features.WorkshopLunch,
       features.SpeakerDinner,
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -102,6 +107,7 @@ const tickets: TicketInterface[] = [
     realPrice: 155,
     features: [
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
