@@ -75,7 +75,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                     <p
                       class="mono text-sm absolute -top-4 bg-red-ngrome text-zinc-100 py-0.5 px-2 font-bold tracking-wider rounded"
                     >
-                      BEST VALUE
+                      BEST VALUE!
                     </p>
                   }
                   @if (item.bestExperience) {
@@ -97,7 +97,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                     <p
                       class="mono text-sm absolute -top-4 bg-red-ngrome text-zinc-100 py-0.5 px-2 font-bold tracking-wider rounded"
                     >
-                      BEST EXPERIENCE
+                      BEST EXPERIENCE!
                     </p>
                   }
                   <div>
@@ -107,16 +107,13 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                     <p class="opacity-60 text-center">
                       {{ item.subtitle }}
                     </p>
-                    @if (!item.soldOut) {
-                      <div class="flex flex-col items-center my-8">
-                        <p class="font-extrabold text-4xl">€{{ item.price }}</p>
-                        @if (item.realPrice) {
-                          <span class="line-through"
-                            >€{{ item.realPrice }}</span
-                          >
-                        }
-                      </div>
-                    }
+
+                    <div class="flex flex-col items-center my-8">
+                      <p class="font-extrabold text-4xl">€{{ item.price }}</p>
+                      @if (item.realPrice) {
+                        <span class="line-through">€{{ item.realPrice }}</span>
+                      }
+                    </div>
                   </div>
                   <div class="flex justify-center mt-2 mb-8 ">
                     @if (item.soldOut) {
