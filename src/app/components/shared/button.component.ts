@@ -80,12 +80,12 @@ export class ButtonComponent implements OnInit {
 
   constructor(private winRef: WindowRef) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit() {
     this.tito = this.winRef.nativeWindow.tito;
 
-    console.log('Tito button', this.eventID, this.ticketID);
-
-    if (this.eventID && this.ticketID) {
+    if (this.tito && this.eventID && this.ticketID) {
       this.tito('button.mount', {
         el: `#tito-button-${this.ticketID}`,
         event: this.eventID,

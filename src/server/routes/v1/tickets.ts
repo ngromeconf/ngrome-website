@@ -4,13 +4,14 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
 export default defineEventHandler(() => tickets);
 
 enum features {
-  Conference = '🎟️ Conference in-person',
+  Conference = '🎟️ Conference Access In Person',
   Workshop = '🎟️ In-person Workshop',
   WorkshopLunch = '🍕 Workshop Lunch ',
   SpeakerDinner = '🥳 Speaker Dinner ',
-  ConferenceCoffee = '☕ Conference Coffee ',
+  ConferenceBreackfast = '🥐 Conference Welcome Breakfast',
+  ConferenceCoffee = '☕ Open Coffee all day',
   ConferenceLunch = '🍝 Conference Lunch ',
-  Swag = '😎 NGRome Swag ',
+  Swag = '😎 NGRome Swag',
 }
 
 const tickets: TicketInterface[] = [
@@ -23,6 +24,7 @@ const tickets: TicketInterface[] = [
     realPrice: 155,
     features: [
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -32,20 +34,22 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'NGRome Conference Blind Ticket',
+    name: 'NGRome Conference - Early Bird ',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: '75',
-    realPrice: '155',
+    price: 110,
+    realPrice: 155,
     features: [
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
     ],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'blind-ticket',
+    ticket: 'early-bird',
     soldOut: false,
   },
+
   {
     visible: true,
     name: 'Combo Tickets - Early Bird',
@@ -57,6 +61,7 @@ const tickets: TicketInterface[] = [
       features.Workshop,
       features.WorkshopLunch,
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -87,6 +92,7 @@ const tickets: TicketInterface[] = [
       features.WorkshopLunch,
       features.SpeakerDinner,
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
@@ -96,20 +102,20 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'NGRome Conference - Early Bird ',
+    name: 'NGRome Conference Blind Ticket',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: 110,
-    realPrice: 155,
+    price: '75',
+    realPrice: '155',
     features: [
       features.Conference,
+      features.ConferenceBreackfast,
       features.ConferenceCoffee,
       features.ConferenceLunch,
       features.Swag,
     ],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'early-bird',
-    soldOut: false,
-    saleStart: '2024-01-20T00:00:00.000Z',
+    ticket: 'blind-ticket',
+    soldOut: true,
   },
   {
     visible: false,
