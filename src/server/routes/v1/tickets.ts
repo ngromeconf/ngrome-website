@@ -34,10 +34,10 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'NGRome Conference Blind Ticket',
+    name: 'NGRome Conference - Early Bird ',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: '75',
-    realPrice: '155',
+    price: 110,
+    realPrice: 155,
     features: [
       features.Conference,
       features.ConferenceBreackfast,
@@ -46,9 +46,10 @@ const tickets: TicketInterface[] = [
       features.Swag,
     ],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'blind-ticket',
+    ticket: 'early-bird',
     soldOut: false,
   },
+
   {
     visible: true,
     name: 'Combo Tickets - Early Bird',
@@ -101,10 +102,10 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'NGRome Conference - Early Bird ',
+    name: 'NGRome Conference Blind Ticket',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: 110,
-    realPrice: 155,
+    price: '75',
+    realPrice: '155',
     features: [
       features.Conference,
       features.ConferenceBreackfast,
@@ -113,9 +114,8 @@ const tickets: TicketInterface[] = [
       features.Swag,
     ],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'early-bird',
-    soldOut: false,
-    saleStart: '2024-01-20T00:00:00.000Z',
+    ticket: 'blind-ticket',
+    soldOut: true,
   },
   {
     visible: false,
