@@ -10,19 +10,88 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   standalone: true,
   providers: [ToggleService],
-  template: `
-    <section class="border-b">
+  template: `<header class="bg-white" style="height: 89px;">
+    <nav
+      class="mx-auto flex items-center justify-between p-6 lg:px-8 border-b"
+      style="background: white; position: fixed; width: 100%; top: 0; z-index: 9999;"
+      aria-label="Global"
+    >
+      <!--      style="background: white; position: fixed; width: 100%; top: 0; z-index: 9999;" -->
+      <div class="flex lg:flex-1">
+        <a href="./" class="focus:outline-none focus:shadow-outline">
+          <div class="object-contain h-10">
+            <img
+              ngSrc="./logo-horizontal.svg"
+              alt="NGRome Home"
+              class="h-full"
+              width="242"
+              height="40"
+            />
+          </div>
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button
+          type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          (click)="toggleService.updateData(true)"
+          aria-label="hidden"
+          *ngIf="!(toggleService.toggle$ | async)"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg fill="#000000" viewBox="0 0 20 20" class="w-6 h-6">
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
       <div
-        class="flex flex-col w-full p-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-16 lg:items-center lg:justify-between lg:flex-row md:px-6"
+        class="hidden lg:flex gap-6"
+        [ngClass]="{
+          flex: toggleService.toggle$ | async,
+          hidden: !(toggleService.toggle$ | async)
+        }"
+        *ngIf="!(toggleService.toggle$ | async)"
       >
-        <div class="flex flex-row items-center justify-between">
-          <a
-            href="./index.html"
-            class="focus:outline-none focus:shadow-outline"
-          >
+        <a
+          *ngFor="let item of NavMenu"
+          class="font-semibold leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
+          [href]="item.destinationUrl"
+          >{{ item.name }}</a
+        >
+        <a
+          class="font-semibold cursor-pointer inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-600 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+          (click)="onGoToTicket()"
+          target="_blank"
+          >Tickets</a
+        >
+      </div>
+    </nav>
+    <div
+      [ngClass]="{
+        flex: toggleService.toggle$ | async,
+        hidden: !(toggleService.toggle$ | async)
+      }"
+      x-description="Mobile menu, show/hide based on menu open state."
+      class="lg:hidden"
+      aria-modal="true"
+    >
+      <div
+        x-description="Background backdrop, show/hide based on slide-over state."
+        class="fixed inset-0 z-10"
+      ></div>
+      <div
+        style="background: white;  z-index: 9999;"
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+      >
+        <div class="flex items-center justify-between">
+          <a href="./" class="focus:outline-none focus:shadow-outline">
             <div class="object-contain h-10">
               <img
-                ngSrc="/logo-horizontal.svg"
+                ngSrc="./logo-horizontal.svg"
                 alt="NGRome Home"
                 class="h-full"
                 width="242"
@@ -31,11 +100,13 @@ import { Router } from '@angular/router';
             </div>
           </a>
           <button
-            class="lg:hidden focus:outline-none"
+            type="button"
+            class="-m-2.5 rounded-md p-2.5 text-gray-700"
             (click)="toggleService.updateData(false)"
             aria-label="hidden"
             *ngIf="toggleService.toggle$ | async"
           >
+            <span class="sr-only">Close menu</span>
             <svg fill="#000000" viewBox="0 0 20 20" class="w-6 h-6">
               <path
                 fill-rule="evenodd"
@@ -45,44 +116,28 @@ import { Router } from '@angular/router';
               ></path>
             </svg>
           </button>
-          <button
-            class="lg:hidden focus:outline-none"
-            (click)="toggleService.updateData(true)"
-            aria-label="hidden"
-            *ngIf="!(toggleService.toggle$ | async)"
-          >
-            <svg fill="#000000" viewBox="0 0 20 20" class="w-6 h-6">
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
         </div>
-        <nav
-          [ngClass]="{
-            flex: toggleService.toggle$ | async,
-            hidden: !(toggleService.toggle$ | async)
-          }"
-          class="flex-col items-end flex-grow hidden px-5 md:pb-0 lg:flex lg:justify-end lg:flex-row lg:space-x-4"
-        >
-          <a
-            *ngFor="let item of NavMenu"
-            class="p-2 text-black transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-            [href]="item.destinationUrl"
-            >{{ item.name }}</a
-          >
-          <a
-            class="inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-600 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-            (click)="onGoToTicket()"
-            target="_blank"
-            >Tickets</a
-          >
-        </nav>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a
+                *ngFor="let item of NavMenu"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                [href]="item.destinationUrl"
+                >{{ item.name }}</a
+              >
+              <a
+                class="font-semibold cursor-pointer inline-flex items-center px-6 py-2 text-sm text-white transition-all duration-500 ease-in-out transform bg-green-600 rounded-md hover:text-white md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+                (click)="onGoToTicket()"
+                target="_blank"
+                >Tickets</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  `,
+    </div>
+  </header>`,
   styles: [],
   imports: [CommonModule, NgOptimizedImage, TicketComponent],
 })
