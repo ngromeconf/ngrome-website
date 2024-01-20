@@ -82,8 +82,7 @@ const communityPartners: SponsorInterface[] = [
   },
   {
     name: 'Angular Love',
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular-love.jpeg?alt=media&amp;token=d8fc89eb-2354-455b-9a92-ae91081343a4',
+    image: 'sponsors/community/angular-love.svg',
     url: 'https://www.angular.love/',
   },
   {
