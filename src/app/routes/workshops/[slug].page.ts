@@ -91,13 +91,20 @@ export const routeMeta: RouteMeta = {
             Venue: {{ workshop.location?.name }}
           }
         </div>
-        <a
-          [href]="workshop.ticket"
-          target="_blank"
-          class="inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-        >
-          {{ isWorkshopActive(workshop) ? 'RESERVE YOUR SEAT' : 'EXPIRED' }}
-        </a>
+        @if (isWorkshopActive(workshop)) {
+          <a
+            [href]="workshop.ticket"
+            target="_blank"
+            class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+          >
+            RESERVE YOUR SEAT
+          </a>
+        } @else {
+          <a
+            class="cursor-no-drop inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-gray-300 focus:outline-none border-2 rounded-lg md:mb-2 lg:mb-0 focus:ring-2 ring-offset-current ring-offset-2"
+            >EXPIRED</a
+          >
+        }
       </div>
     </div>
   </div>`,
@@ -118,7 +125,7 @@ export default class ProductDetailsPageComponent {
     }),
   );
 
-  isWorkshopActive(workshop: WorkshopAttributes) {
+  isWorkshopActive(workshop: WorkshopAttributes): boolean {
     return new Date(workshop.date) > new Date();
   }
 }
