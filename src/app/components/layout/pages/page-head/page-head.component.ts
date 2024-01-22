@@ -19,9 +19,10 @@ import { SocialShareComponent } from '../../../social-share/social-share.compone
             {{ title }}
           </h1>
 
-          <p class="text-lg md:text-left leading-snug text-slate-500">
-            {{ subtitle }}
-          </p>
+          <p
+            class="text-lg md:text-left leading-snug text-slate-500"
+            [innerHtml]="subtitle"
+          ></p>
 
           <!-- <app-social-share /> -->
         </div>
