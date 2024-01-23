@@ -40,7 +40,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
 
         @if (ticketsList$ | async; as TicketsList) {
           <div
-            class="grid lg:grid-cols-2 xl:grid-cols-3 px-8 gap-10 text-zinc-800 mt-10"
+            class="grid lg:grid-cols-2 xl:grid-cols-3 px-2 gap-10 text-zinc-800 mt-10"
           >
             @for (item of TicketsList; track $index) {
               @if (item.visible) {
@@ -118,14 +118,16 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                   <div class="flex justify-center mt-2 mb-8 ">
                     @if (item.soldOut) {
                       <span
-                        class="absolute text-7xl
+                        class=" text-5xl
                         font-extrabold
                         text-transparent
                         bg-clip-text
                         bg-gradient-to-r
                         from-red-ngrome
                         to-pink-600
-                        rotate-12"
+                        rotate-12
+                        border-2
+                        border-red-ngrome"
                       >
                         SOLD OUT
                       </span>
@@ -152,22 +154,12 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                     }
                   </div>
                   <div class="flex flex-col gap-1">
+                    <b class="text-xs sm:text-sm">{{
+                      item.featuresDescription
+                    }}</b>
                     @for (feature of item.features; track $index) {
-                      <p class="flex items-start text-sm">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          aria-hidden="true"
-                          class="w-4 h-4 mr-2 text-green-600"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                        <b>{{ feature }}</b>
+                      <p class="flex items-center text-xs sm:text-sm">
+                        {{ feature }}
                       </p>
                     }
                   </div>
