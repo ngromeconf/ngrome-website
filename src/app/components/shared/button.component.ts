@@ -16,6 +16,7 @@ import { WindowRef } from '../../services/window.provider';
       <div
         id="tito-button-{{ ticketID }}"
         class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-red-ngrome text-white text-sm font-medium rounded-md"
+        (click)="mountTitoButton()"
       ></div>
     } @else if (label) {
       <a
@@ -83,6 +84,10 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
+    this.mountTitoButton();
+  }
+
+  mountTitoButton() {
     this.tito = this.winRef.nativeWindow.tito;
 
     if (this.tito && this.eventID && this.ticketID) {
@@ -92,6 +97,11 @@ export class ButtonComponent implements OnInit {
         releases: this.ticketID,
         buttonLabel: 'REGISTER',
       });
+    } else {
+      console.error('Tito button not mounted');
+      setTimeout(() => {
+        this.mountTitoButton();
+      }, 1000);
     }
   }
 }

@@ -5,14 +5,24 @@ export default defineEventHandler(() => tickets);
 
 enum features {
   Conference = '🎟️ Conference Access In Person',
-  Workshop = '🎟️ In-person Workshop',
-  WorkshopLunch = '🍕 Workshop Lunch ',
-  SpeakerDinner = '🥳 Speaker Dinner ',
   ConferenceBreackfast = '🥐 Conference Welcome Breakfast',
   ConferenceCoffee = '☕ Open Coffee all day',
   ConferenceLunch = '🍝 Conference Lunch ',
   Swag = '😎 NGRome Swag',
+  Workshop = '🎟️ Workshop In Person',
+  WorkshopLunch = '🍕 Workshop Lunch ',
+  SpeakerDinner = '🥳 Speaker Dinner ',
 }
+
+const conferenceFeatures = [
+  features.Conference,
+  features.ConferenceBreackfast,
+  features.ConferenceCoffee,
+  features.ConferenceLunch,
+  features.Swag,
+];
+const workshopFeatures = [features.Workshop, features.WorkshopLunch];
+const vipFeatures = [features.SpeakerDinner];
 
 const tickets: TicketInterface[] = [
   {
@@ -22,13 +32,7 @@ const tickets: TicketInterface[] = [
       'Whether you are a beginner, intermediate, or expert, this will be the best opportunity',
     price: 50,
     realPrice: 155,
-    features: [
-      features.Conference,
-      features.ConferenceBreackfast,
-      features.ConferenceCoffee,
-      features.ConferenceLunch,
-      features.Swag,
-    ],
+    features: conferenceFeatures,
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'fpdqo4sk5fw',
   },
@@ -38,13 +42,7 @@ const tickets: TicketInterface[] = [
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: 110,
     realPrice: 155,
-    features: [
-      features.Conference,
-      features.ConferenceBreackfast,
-      features.ConferenceCoffee,
-      features.ConferenceLunch,
-      features.Swag,
-    ],
+    features: conferenceFeatures,
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'early-bird',
     soldOut: false,
@@ -57,15 +55,8 @@ const tickets: TicketInterface[] = [
     price: '325',
     popular: true,
     realPrice: '465',
-    features: [
-      features.Workshop,
-      features.WorkshopLunch,
-      features.Conference,
-      features.ConferenceBreackfast,
-      features.ConferenceCoffee,
-      features.ConferenceLunch,
-      features.Swag,
-    ],
+    featuresDescription: 'All the features of the Conference Ticket plus:',
+    features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: '6pv0sbo8z5a',
   },
@@ -75,7 +66,7 @@ const tickets: TicketInterface[] = [
     subtitle: 'Modern Angular Architectures Workshop',
     price: 250,
     realPrice: 310,
-    features: [features.Workshop, features.WorkshopLunch],
+    features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: 'u6au8pc1wey',
   },
@@ -87,16 +78,8 @@ const tickets: TicketInterface[] = [
     bestExperience: true,
     price: '375',
     realPrice: '500',
-    features: [
-      features.Workshop,
-      features.WorkshopLunch,
-      features.SpeakerDinner,
-      features.Conference,
-      features.ConferenceBreackfast,
-      features.ConferenceCoffee,
-      features.ConferenceLunch,
-      features.Swag,
-    ],
+    featuresDescription: 'All the features of the Combo Ticket plus:',
+    features: [features.SpeakerDinner],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'sttgjfic3ma',
   },
@@ -106,13 +89,7 @@ const tickets: TicketInterface[] = [
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '75',
     realPrice: '155',
-    features: [
-      features.Conference,
-      features.ConferenceBreackfast,
-      features.ConferenceCoffee,
-      features.ConferenceLunch,
-      features.Swag,
-    ],
+    features: conferenceFeatures,
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'blind-ticket',
     soldOut: true,

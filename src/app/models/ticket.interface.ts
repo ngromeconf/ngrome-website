@@ -4,6 +4,7 @@ export interface TicketInterface {
   subtitle: string;
   price: string | number;
   realPrice?: string | number;
+  featuresDescription?: string;
   features: string[];
   event?: string;
   ticket?: string;
