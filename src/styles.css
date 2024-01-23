@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply font-roboto
+}
 
 analog-markdown,analog-markdown-route{
     @apply container flex flex-col items-center px-5 py-24 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20
