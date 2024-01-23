@@ -27,15 +27,16 @@ const vipFeatures = [features.SpeakerDinner];
 const tickets: TicketInterface[] = [
   {
     visible: true,
-    name: 'NGRome Conference - Student Ticket',
-    subtitle:
-      'Whether you are a beginner, intermediate, or expert, this will be the best opportunity',
-    price: 50,
-    realPrice: 155,
+    name: 'NGRome Conference Blind Ticket',
+    subtitle: 'Get your ticket now, ticket price will increase soon!',
+    price: '75',
+    realPrice: '155',
     features: conferenceFeatures,
     event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'fpdqo4sk5fw',
+    ticket: 'blind-ticket',
+    soldOut: true,
   },
+
   {
     visible: true,
     name: 'NGRome Conference - Early Bird ',
@@ -51,7 +52,7 @@ const tickets: TicketInterface[] = [
   {
     visible: true,
     name: 'Combo Tickets - Early Bird',
-    subtitle: 'Workshop & Conference best value ticket',
+    subtitle: 'Modern Angular Architectures Workshop & Conference',
     price: '325',
     popular: true,
     realPrice: '465',
@@ -59,6 +60,17 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: '6pv0sbo8z5a',
+  },
+  {
+    visible: true,
+    name: 'NGRome Conference - Student Ticket',
+    subtitle:
+      'Whether you are a beginner, intermediate, or expert, this will be the best opportunity',
+    price: 50,
+    realPrice: 155,
+    features: conferenceFeatures,
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
+    ticket: 'fpdqo4sk5fw',
   },
   {
     visible: true,
@@ -83,17 +95,7 @@ const tickets: TicketInterface[] = [
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'sttgjfic3ma',
   },
-  {
-    visible: true,
-    name: 'NGRome Conference Blind Ticket',
-    subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: '75',
-    realPrice: '155',
-    features: conferenceFeatures,
-    event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'blind-ticket',
-    soldOut: true,
-  },
+
   {
     visible: false,
     name: 'NGRome Conference - Regular ',
