@@ -12,12 +12,11 @@ import { Router } from '@angular/router';
   providers: [ToggleService],
   template: `<header class="bg-white" style="height: 89px;">
     <nav
-      class="mx-auto flex items-center justify-between p-6 lg:px-8 border-b"
+      class="mx-auto flex  p-6 lg:px-8 border-b justify-between"
       style="background: white; position: fixed; width: 100%; top: 0; z-index: 9999;"
       aria-label="Global"
     >
-      <!--      style="background: white; position: fixed; width: 100%; top: 0; z-index: 9999;" -->
-      <div class="flex lg:flex-1">
+      <div class="flex lg:flex-1 contents">
         <a href="./" class="focus:outline-none focus:shadow-outline">
           <div class="object-contain h-10">
             <img
@@ -49,12 +48,11 @@ import { Router } from '@angular/router';
         </button>
       </div>
       <div
-        class="hidden lg:flex gap-6"
+        class="hidden lg:flex gap-6 m-auto md:hidden"
         [ngClass]="{
-          flex: toggleService.toggle$ | async,
+          flex: !(toggleService.toggle$ | async),
           hidden: !(toggleService.toggle$ | async)
         }"
-        *ngIf="!(toggleService.toggle$ | async)"
       >
         <a
           *ngFor="let item of NavMenu"
@@ -71,10 +69,6 @@ import { Router } from '@angular/router';
       </div>
     </nav>
     <div
-      [ngClass]="{
-        flex: toggleService.toggle$ | async,
-        hidden: !(toggleService.toggle$ | async)
-      }"
       x-description="Mobile menu, show/hide based on menu open state."
       class="lg:hidden"
       aria-modal="true"
@@ -84,17 +78,22 @@ import { Router } from '@angular/router';
         class="fixed inset-0 z-10"
       ></div>
       <div
-        style="background: white;  z-index: 9999;"
+        [ngStyle]="{
+          transform: !(toggleService.toggle$ | async)
+            ? 'translateX(100%)'
+            : 'translateX(0px)'
+        }"
+        style="background: white;  z-index: 9999; transition: transform .3s ease"
         class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
       >
         <div class="flex items-center justify-between">
           <a href="./" class="focus:outline-none focus:shadow-outline">
             <div class="object-contain h-10">
               <img
-                ngSrc="./logo-horizontal.svg"
+                ngSrc="./only-logo.svg"
                 alt="NGRome Home"
                 class="h-full"
-                width="242"
+                width="40"
                 height="40"
               />
             </div>
