@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   template: `<header class="bg-white" style="height: 89px;">
     <nav
       class="mx-auto flex  p-6 lg:px-8 border-b justify-between"
-      style="background: white; position: fixed; width: 100%; top: 0; z-index: 9999;"
+      style="background: white; position: fixed; width: 100%; top: 0; z-index: 1000;"
       aria-label="Global"
     >
       <div class="flex lg:flex-1 contents">
@@ -68,6 +68,7 @@ import { Router } from '@angular/router';
       aria-modal="true"
     >
       <div
+        *ngIf="toggleService.toggle$ | async"
         x-description="Background backdrop, show/hide based on slide-over state."
         class="fixed inset-0 z-10"
       ></div>
@@ -77,7 +78,7 @@ import { Router } from '@angular/router';
             ? 'translateX(100%)'
             : 'translateX(0px)'
         }"
-        style="background: white;  z-index: 9999; transition: transform .3s ease"
+        style="background: white;  z-index: 1000; transition: transform .3s ease"
         class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
       >
         <div class="flex items-center justify-between">
