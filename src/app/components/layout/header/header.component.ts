@@ -47,13 +47,7 @@ import { Router } from '@angular/router';
           </svg>
         </button>
       </div>
-      <div
-        class="hidden lg:flex gap-6 m-auto md:hidden"
-        [ngClass]="{
-          flex: !(toggleService.toggle$ | async),
-          hidden: !(toggleService.toggle$ | async)
-        }"
-      >
+      <div class="hidden lg:flex gap-6 m-auto md:hidden">
         <a
           *ngFor="let item of NavMenu"
           class="font-semibold leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
