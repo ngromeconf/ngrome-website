@@ -3,13 +3,7 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 export default defineEventHandler(() => sponsors);
 
-const mainSponsor: SponsorInterface[] = [
-  {
-    name: 'Microsoft',
-    image: './sponsors/Microsoft-logo.svg',
-    url: 'https://microsoft.com',
-  },
-];
+const mainSponsor: SponsorInterface[] = [];
 
 const goldSponsors: SponsorInterface[] = [
   {
