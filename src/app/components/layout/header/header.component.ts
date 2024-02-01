@@ -123,7 +123,7 @@ import { Router } from '@angular/router';
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="/src/assets/ngrome-logos/ngrome-red-shield.svg"
+                  ngSrc="/ngrome-logos/ngrome-red-shield.svg"
                   alt="NGRome Home"
                   class="h-full"
                   width="40"
