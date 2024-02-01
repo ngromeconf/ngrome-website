@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => ({
           '/sponsors',
           '/code-of-conduct',
           '/terms-and-privacy',
+          '/media-kit',
           '/workshops',
           '/workshops/angular-architects-signal-ddd-mfe',
           '/workshops/generative-ai-masterclass',
