@@ -64,8 +64,7 @@ import { Router } from '@angular/router';
             <div
               class="pastEdition md:my-0 leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90"
             >
-              <a
-                class="hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana  hover:border-white"
+              <a class="focus:outline-none focus:shadow-none focus:text-mana"
                 >Past Editions</a
               >
               <div
@@ -156,6 +155,7 @@ import { Router } from '@angular/router';
                   *ngFor="let item of NavMenu"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-gray-900 hover:bg-red-ngrome hover:font-semibold hover:text-white"
                   [href]="item.destinationUrl"
+                  [target]="!item?.pastEdition ? '_self' : '_target'"
                   >{{ item.name }}</a
                 >
 
