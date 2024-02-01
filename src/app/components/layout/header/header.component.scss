@@ -1,0 +1,15 @@
+.pastEdition {
+  cursor: default
+}
+
+.pastEdition:hover .popover {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popover,
+.popover:hover {
+  visibility: hidden;
+  opacity: 0;
+}

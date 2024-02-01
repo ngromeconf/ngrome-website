@@ -49,12 +49,14 @@ export const NAV_MENU = [
     visible: true,
   },
   {
+    pastEdition: true,
     name: '2022',
     destinationUrl: 'https://2022.ngrome.io',
     type: 'white',
     visible: true,
   },
   {
+    pastEdition: true,
     name: '2023',
     destinationUrl: 'https://2023.ngrome.io',
     type: 'white',
