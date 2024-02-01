@@ -48,7 +48,7 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
       </div>
 
       @if (Sponsors$ | async; as Sponsors) {
-        <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" />
+        <!-- <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
         <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
         <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
         <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />

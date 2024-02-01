@@ -35,7 +35,7 @@ import { Router } from '@angular/router';
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
             JUNE
-            <span class="font-bold text-red-ngrome">27</span>
+            <span class="font-bold text-red-ngrome">26 - 27</span>
             2024
           </h2>
           <p

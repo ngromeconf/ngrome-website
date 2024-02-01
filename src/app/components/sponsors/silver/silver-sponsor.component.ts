@@ -38,7 +38,7 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
         <!-- Component ends here -->
         <div class="flex flex-center -m-4 items-center">
           <div
-            class="w-full grid lg:grid-cols-[repeat(auto-fit,_23.666666%)] m-auto lg:p-24 justify-center"
+            class="w-full grid lg:grid-cols-[repeat(auto-fit,_33.99%)] m-auto lg:p-24 justify-center"
           >
             @for (item of sponsors; track $index) {
               <div class="p-12 flex items-center justify-center">
