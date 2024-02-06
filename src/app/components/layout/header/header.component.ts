@@ -55,7 +55,7 @@ import { Router } from '@angular/router';
             @for (item of NavMenu; track $index) {
               @if (!item.pastEdition) {
                 <a
-                  class="hover:font-semibold leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
+                  class="leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
                   [href]="item.destinationUrl"
                   >{{ item.name }}</a
                 >
@@ -68,15 +68,15 @@ import { Router } from '@angular/router';
                 >Past Editions</a
               >
               <div
-                class="popover -left-8 absolute bg-white max-w-md overflow-hidden ring-1 ring-gray-900/5 rounded-3xl shadow-lg top-full w-40 z-10"
+                class="popover -left-8 absolute bg-white max-w-md overflow-hidden ring-1 ring-gray-900/5 rounded-md shadow-lg top-full w-40 z-10"
               >
-                <div class="p-4">
+                <div class="py-4">
                   @for (item of NavMenu; track $index) {
                     @if (item.pastEdition) {
                       <a
                         [href]="item.destinationUrl"
                         target="_blank"
-                        class="group relative flex items-center gap-x-6 rounded-lg p-4 leading-6 hover:bg-red-ngrome hover:font-semibold hover:text-white"
+                        class="group relative flex items-center px-4 gap-x-6 p-4 leading-6 hover:bg-red-ngrome  hover:text-white"
                       >
                         <div class="m-auto">
                           {{ item.name }}
@@ -115,14 +115,14 @@ import { Router } from '@angular/router';
               ? 'translateX(100%)'
               : 'translateX(0px)'
           }"
-          style="background: white;  z-index: 1000; transition: transform .3s ease"
-          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          style="z-index: 1000; transition: transform .3s ease"
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-red-ngrome py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
-          <div class="flex items-center justify-between">
+          <div class="pr-6 pl-10 flex items-center justify-between">
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="/ngrome-logos/ngrome-red-shield.svg"
+                  ngSrc="/ngrome-logos/ngrome-white-shield.svg"
                   alt="NGRome Home"
                   class="h-full"
                   width="40"
@@ -130,6 +130,23 @@ import { Router } from '@angular/router';
                 />
               </div>
             </a>
+            <div
+              class="bg-white px-5 py-1 rounded-3xl cursor-pointer flex"
+              style="margin-left: 35%;"
+              (click)="onGoToTicket()"
+            >
+              <a
+                class="text-base  font-semibold  flex   text-red-ngrome hover-ticket"
+                >Tickets
+                <img
+                  ngSrc="/menu/ticket.svg"
+                  alt="NGRome ticket"
+                  class="h-full ml-2"
+                  width="20"
+                  height="20"
+              /></a>
+            </div>
+
             <button
               type="button"
               class="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -138,7 +155,7 @@ import { Router } from '@angular/router';
               *ngIf="toggleService.toggle$ | async"
             >
               <span class="sr-only">Close menu</span>
-              <svg fill="#000000" viewBox="0 0 20 20" class="w-6 h-6">
+              <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
                 <path
                   fill-rule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -148,20 +165,64 @@ import { Router } from '@angular/router';
               </svg>
             </button>
           </div>
+          <div class="flex items-center justify-between pr-6 pl-10 ">
+            <h1 class="mt-2 font-semibold text-white text-2xl">NG ROME</h1>
+          </div>
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a
-                  *ngFor="let item of NavMenu"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-gray-900 hover:bg-red-ngrome hover:font-semibold hover:text-white"
-                  [href]="item.destinationUrl"
-                  [target]="!item?.pastEdition ? '_self' : '_target'"
-                  >{{ item.name }}</a
-                >
-
-                <button class="tito-widget-button" (click)="onGoToTicket()">
-                  Tickets
-                </button>
+              <div class="space-y-2 pt-20 text-left">
+                @for (item of NavMenu; track $index) {
+                  @if (!item.pastEdition && item.visible) {
+                    <a
+                      [href]="item.destinationUrl"
+                      [target]="item?.pageSite ? '_self' : '_target'"
+                      class="pr-6 pl-10 flex hover-white"
+                    >
+                      <div class="w-10" style="margin: auto 0;">
+                        @if (item?.icon) {
+                          <img
+                            [className]="item.icon"
+                            [ngSrc]="'/menu/' + item.icon + '.svg'"
+                            [alt]="item.name"
+                            class="h-full ml-2"
+                            width="20"
+                            height="20"
+                          />
+                        }
+                      </div>
+                      <span
+                        class="-mx-3 block  px-3 py-2 text-base leading-7 font-semibold text-white"
+                        >{{ item.name }}</span
+                      >
+                    </a>
+                  }
+                }
+                <hr class="mr-6 ml-10 " />
+                @for (item of NavMenu; track $index) {
+                  @if (item.pastEdition && item.visible) {
+                    <a
+                      [href]="item.destinationUrl"
+                      [target]="item?.pageSite ? '_self' : '_target'"
+                      class="flex pr-6 pl-10 hover-white"
+                    >
+                      <div class="w-10" style="margin: auto 0;">
+                        @if (item?.icon) {
+                          <img
+                            [ngSrc]="'/menu/' + item.icon + '.svg'"
+                            [alt]="item.name"
+                            class="h-full ml-2"
+                            width="20"
+                            height="20"
+                          />
+                        }
+                      </div>
+                      <span
+                        class="-mx-3 block px-3 py-2 text-base leading-7 font-semibold text-white"
+                        >{{ item.name }}</span
+                      >
+                    </a>
+                  }
+                }
               </div>
             </div>
           </div>
