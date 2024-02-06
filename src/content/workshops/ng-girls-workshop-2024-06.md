@@ -19,7 +19,7 @@ to become trailblazers in technology, fostering an environment where learning, g
 learning and empowerment. Join us in this exciting endeavour and be a part of something truly transformative!'
 date: '2024-06-26'
 authors: '[{"name": "ngGirls team","biography":"","image": "photo/authors/ng-girls.webp","link": "https://www.ng-girls.org"}]'
-location: '{"name": "TBD","mapsLink":""}'
+location: '{"name": "Midas Palace Hotel","mapsLink":"https://maps.app.goo.gl/K9YhwWcrFo1q6rs56"}'
 image: /photo/workshop-ng-girls-20231130.webp
 link: /workshops/ng-girls-workshop-2024-06
 ticket: https://www.ng-girls.org/event/rome-2024
