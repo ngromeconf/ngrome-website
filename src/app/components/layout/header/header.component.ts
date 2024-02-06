@@ -230,66 +230,7 @@ import { Router } from '@angular/router';
       </div>
     </section>
   `,
-  styles: [
-    `
-      .pastEdition {
-        cursor: default;
-      }
-
-      .pastEdition:hover .popover {
-        visibility: visible;
-        opacity: 1;
-      }
-
-      .popover,
-      .popover:hover {
-        visibility: hidden;
-        opacity: 0;
-      }
-
-      .hover-white:hover {
-        background-color: white;
-
-        span {
-          color: #dd0031;
-        }
-
-        img {
-          background-color: #dd0031;
-        }
-
-        img.about {
-          mask: url(/src/assets/menu/about.svg) no-repeat center / contain;
-          -webkit-mask: url(/src/assets/menu/about.svg) no-repeat center /
-            contain;
-        }
-
-        img.speaker {
-          mask: url(/src/assets/menu/speaker.svg) no-repeat center / contain;
-          -webkit-mask: url(/src/assets/menu/speaker.svg) no-repeat center /
-            contain;
-        }
-
-        img.sponsor {
-          mask: url(/src/assets/menu/sponsor.svg) no-repeat center / contain;
-          -webkit-mask: url(/src/assets/menu/sponsor.svg) no-repeat center /
-            contain;
-        }
-
-        img.workshop {
-          mask: url(/src/assets/menu/workshop.svg) no-repeat center / contain;
-          -webkit-mask: url(/src/assets/menu/workshop.svg) no-repeat center /
-            contain;
-        }
-      }
-
-      .hover-ticket:hover img {
-        rotate: 30deg;
-        visibility: visible;
-        transition: rotate 0.3s ease;
-      }
-    `,
-  ],
+  styleUrls: ['./header.component.css'],
   imports: [CommonModule, NgOptimizedImage, TicketComponent],
 })
 export class HeaderComponent {
