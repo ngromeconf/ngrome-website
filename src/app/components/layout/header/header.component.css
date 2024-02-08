@@ -1,48 +1,47 @@
-.pastEdition {
-    cursor: default;
-}
-
 .pastEdition:hover .popover {
     visibility: visible;
     opacity: 1;
 }
 
-.popover,
-.popover:hover {
+.popover{
     visibility: hidden;
-    opacity: 0;
-}
-
-.hover-white:hover {
-    background-color: white;
 }
 
 .hover-white:hover span {
     color: #dd0031;
 }
 
-.hover-white:hover img {
-    background-color: #dd0031;
+div.about {
+    background-image: url(./menu/about.svg);
 }
 
-.hover-white:hover img.about {
-    mask: url(/src/assets/menu/about.svg) no-repeat center / contain;
-    -webkit-mask: url(/src/assets/menu/about.svg) no-repeat center / contain;
+.hover-white:hover div.about {
+    background-image: url(./menu/about-red.svg);
+
 }
 
-.hover-white:hover img.speaker {
-    mask: url(/src/assets/menu/speaker.svg) no-repeat center / contain;
-    -webkit-mask: url(/src/assets/menu/speaker.svg) no-repeat center / contain;
+div.speaker {
+    background-image: url(./menu/speaker.svg);
 }
 
-.hover-white:hover img.sponsor {
-    mask: url(/src/assets/menu/sponsor.svg) no-repeat center / contain;
-    -webkit-mask: url(/src/assets/menu/sponsor.svg) no-repeat center / contain;
+.hover-white:hover div.speaker {
+    background-image: url(./menu/speaker-red.svg);
 }
 
-.hover-white:hover img.workshop {
-    mask: url(/src/assets/menu/workshop.svg) no-repeat center / contain;
-    -webkit-mask: url(/src/assets/menu/workshop.svg) no-repeat center / contain;
+div.sponsor {
+    background-image: url(./menu/sponsor.svg);
+}
+
+.hover-white:hover div.sponsor {
+    background-image: url(./menu/sponsor-red.svg);
+}
+
+div.workshop {
+    background-image: url(./menu/workshop.svg);
+}
+
+.hover-white:hover   div.workshop {
+    background-image: url(./menu/workshop-red.svg);
 }
 
 .hover-ticket:hover img {

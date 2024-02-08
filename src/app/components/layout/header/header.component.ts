@@ -13,13 +13,11 @@ import { Router } from '@angular/router';
   template: `
     <section class="pb-24">
       <nav
-        class="p-6 lg:px-8 border-b bg-white fixed w-full "
+        class="py-6 border-b bg-white fixed w-full "
         style="top: 0; z-index: 1000;"
         aria-label="Global"
       >
-        <div
-          class="container justify-between flex w-full px-8  mx-auto lg:px-4"
-        >
+        <div class="container justify-between flex w-full mx-auto px-4 lg-px-8">
           <div class="flex lg:flex-1 contents">
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
@@ -62,13 +60,13 @@ import { Router } from '@angular/router';
               }
             }
             <div
-              class="pastEdition md:my-0 leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90"
+              class="pastEdition cursor-default md:my-0 leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90"
             >
               <a class="focus:outline-none focus:shadow-none focus:text-mana"
                 >Past Editions</a
               >
               <div
-                class="popover -left-8 absolute bg-white max-w-md overflow-hidden ring-1 ring-gray-900/5 rounded-md shadow-lg top-full w-40 z-10"
+                class="popover opacity-0 -left-8 absolute bg-white max-w-md overflow-hidden ring-1 ring-gray-900/5 rounded-md shadow-lg top-full w-40 z-10"
               >
                 <div class="py-4">
                   @for (item of NavMenu; track $index) {
@@ -76,7 +74,7 @@ import { Router } from '@angular/router';
                       <a
                         [href]="item.destinationUrl"
                         target="_blank"
-                        class="group relative flex items-center px-4 gap-x-6 p-4 leading-6 hover:bg-red-ngrome  hover:text-white"
+                        class="relative flex items-center px-4 gap-x-6 p-4 leading-6 hover:bg-red-ngrome  hover:text-white"
                       >
                         <div class="m-auto">
                           {{ item.name }}
@@ -132,7 +130,7 @@ import { Router } from '@angular/router';
             </a>
             <div
               class="bg-white px-5 py-1 rounded-3xl cursor-pointer flex"
-              style="margin-left: 35%;"
+              style="margin-left: 20%;"
               (click)="onGoToTicket()"
             >
               <a
@@ -142,8 +140,8 @@ import { Router } from '@angular/router';
                   ngSrc="/menu/ticket.svg"
                   alt="NGRome ticket"
                   class="h-full ml-2"
-                  width="20"
-                  height="20"
+                  width="24"
+                  height="24"
               /></a>
             </div>
 
@@ -176,18 +174,14 @@ import { Router } from '@angular/router';
                     <a
                       [href]="item.destinationUrl"
                       [target]="item?.pageSite ? '_self' : '_target'"
-                      class="pr-6 pl-10 flex hover-white"
+                      class="pr-6 pl-10 flex hover:bg-white hover-white"
                     >
                       <div class="w-10" style="margin: auto 0;">
                         @if (item?.icon) {
-                          <img
+                          <div
                             [className]="item.icon"
-                            [ngSrc]="'/menu/' + item.icon + '.svg'"
-                            [alt]="item.name"
-                            class="h-full ml-2"
-                            width="20"
-                            height="20"
-                          />
+                            style="width: 24px; height: 24px;"
+                          ></div>
                         }
                       </div>
                       <span
@@ -203,7 +197,7 @@ import { Router } from '@angular/router';
                     <a
                       [href]="item.destinationUrl"
                       [target]="item?.pageSite ? '_self' : '_target'"
-                      class="flex pr-6 pl-10 hover-white"
+                      class="flex pr-6 pl-10 hover-white hover:bg-white"
                     >
                       <div class="w-10" style="margin: auto 0;">
                         @if (item?.icon) {
