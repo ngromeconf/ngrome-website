@@ -1,8 +1,6 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
-import {
-  injectContentFiles,
-} from '@analogjs/content';
+import { injectContentFiles } from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
 export function injectActiveWorkshops(): WorkshopAttributes[] {
@@ -34,7 +32,9 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
   return [
     {
       name: 'description',
-      content: workshop?.description,
+      content: workshop?.description
+        .replace(/<\/?[^>]+(>|$)/g, '')
+        .replaceAll('&#8217;', "'"),
     },
     {
       property: 'og:url',
@@ -50,7 +50,9 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:description',
-      content: workshop?.description,
+      content: workshop?.description
+        .replace(/<\/?[^>]+(>|$)/g, '')
+        .replaceAll('&#8217;', "'"),
     },
     {
       property: 'og:image',
@@ -74,7 +76,9 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'twitter:description',
-      content: workshop?.description,
+      content: workshop?.description
+        .replace(/<\/?[^>]+(>|$)/g, '')
+        .replaceAll('&#8217;', "'"),
     },
     {
       name: 'twitter:image',
