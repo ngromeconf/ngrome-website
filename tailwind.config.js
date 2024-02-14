@@ -42,6 +42,7 @@ module.exports = {
           '"Segoe UI Symbol"',
         ],
         roboto: ['Roboto', 'sans-serif'],
+        body: ['Roboto', 'sans-serif'],
         // Ensure fonts with spaces have " " surrounding it.
       },
     },

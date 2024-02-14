@@ -49,12 +49,9 @@ import { Router } from '@angular/router';
         </div>
         <div class="flex w-full mt-6  justify-center ">
           <div class="mt-3 rounded-lg sm:mt-0">
-            <a
-              class="inline-flex items-center px-8 py-3 text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2
-              cursor-pointer"
-              (click)="onGoToTicket()"
-              >Tickets</a
-            >
+            <button class="tito-widget-button-large" (click)="onGoToTicket()">
+              Tickets
+            </button>
           </div>
         </div>
       </div>
