@@ -240,6 +240,16 @@ const communityPartners: SponsorInterface[] = [
     image: 'sponsors/community/firenzedev.svg',
     url: 'https://firenze.dev',
   },
+  {
+    name: 'Angular Wroclaw',
+    image: '?',
+    url: 'https://twitter.com/AngularWroclaw',
+  },
+  {
+    name: 'Angular Space',
+    image: '?',
+    url: 'https://www.angularspace.com/',
+  },
 ];
 
 const sponsors: Sponsors = {
