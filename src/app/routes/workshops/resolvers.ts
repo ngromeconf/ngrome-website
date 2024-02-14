@@ -2,6 +2,7 @@ import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
 import { injectContentFiles } from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
+import { LocalizedString } from '@angular/compiler';
 
 export function injectActiveWorkshops(): WorkshopAttributes[] {
   const files = injectContentFiles<WorkshopAttributes>((contentFile) =>
@@ -24,6 +25,11 @@ function injectActiveWorkshopAttributes(
   return file!.attributes;
 }
 
+function textCleaner(text: string): string {
+  // removes tag html and replace &#8217; with '
+  return text?.replace(/<\/?[^>]+(>|$)/g, '')?.replaceAll('&#8217;', "'");
+}
+
 export const postTitleResolver: ResolveFn<string> = (route) =>
   'NG Rome - ' + injectActiveWorkshopAttributes(route).title;
 
@@ -32,9 +38,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
   return [
     {
       name: 'description',
-      content: workshop?.description
-        .replace(/<\/?[^>]+(>|$)/g, '')
-        .replaceAll('&#8217;', "'"),
+      content: textCleaner(workshop?.description),
     },
     {
       property: 'og:url',
@@ -50,9 +54,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:description',
-      content: workshop?.description
-        .replace(/<\/?[^>]+(>|$)/g, '')
-        .replaceAll('&#8217;', "'"),
+      content: textCleaner(workshop?.description),
     },
     {
       property: 'og:image',
@@ -76,9 +78,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'twitter:description',
-      content: workshop?.description
-        .replace(/<\/?[^>]+(>|$)/g, '')
-        .replaceAll('&#8217;', "'"),
+      content: textCleaner(workshop?.description),
     },
     {
       name: 'twitter:image',
