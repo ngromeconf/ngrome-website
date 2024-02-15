@@ -1,4 +1,4 @@
-import { H3Event, defineEventHandler } from 'h3';
+import { defineEventHandler } from 'h3';
 import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 export default defineEventHandler(() => sponsors);
@@ -86,10 +86,10 @@ const communityPartners: SponsorInterface[] = [
     url: 'https://www.wearedevelopers.com/',
   },
   {
-    name: 'https://analogjs.org/',
+    name: 'Analog',
     image:
       'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fanalog-logo.svg?alt=media&token=79f9ac08-9c02-4a84-904d-50f70681a5ea&_gl=1*8dhdph*_ga*NzM2NjU2MDMyLjE2ODkxNjQ2MDY.*_ga_CW55HF8NVT*MTY5NzE5MDQ3NC4xNy4xLjE2OTcxOTA2MzkuMzcuMC4w',
-    url: 'https://www.wearedevelopers.com/',
+    url: 'https://analogjs.org/',
   },
   {
     name: 'GDG Pescara',
@@ -240,14 +240,44 @@ const communityPartners: SponsorInterface[] = [
     image: 'sponsors/community/firenzedev.svg',
     url: 'https://firenze.dev',
   },
+  {
+    name: 'Angular Wroclaw',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular_wroclaw-small.webp?alt=media&token=3074df1f-744e-4b76-a2da-3bf0a1c18252',
+    url: 'https://twitter.com/AngularWroclaw',
+  },
+  {
+    name: 'Angular Space',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular-space-small.webp?alt=media&token=3a61ce50-3459-4518-a728-a044ef3359ea',
+    url: 'https://www.angularspace.com/',
+  },
+  {
+    name: 'Latina in Tech',
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Flatina-in-tech.webp?alt=media&token=5206d8a9-1d68-43f5-b1b4-b96350d666ccs',
+    url: 'https://www.latinaintech.org/',
+  },
 ];
 
 const sponsors: Sponsors = {
-  Main: mainSponsor,
-  Gold: goldSponsors,
-  Silver: silverSponsor,
-  Bronze: bronzeSponsor,
-  Diversity: diversitySponsor,
-  technical: technicalSponsors,
-  Community: communityPartners,
+  Main: sortByName(mainSponsor),
+  Gold: sortByName(goldSponsors),
+  Silver: sortByName(silverSponsor),
+  Bronze: sortByName(bronzeSponsor),
+  Diversity: sortByName(diversitySponsor),
+  technical: sortByName(technicalSponsors),
+  Community: sortByName(communityPartners),
 };
+
+function sortByName(sponsors: SponsorInterface[]) {
+  return sponsors.sort(function (a, b) {
+    if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) {
+      return -1;
+    }
+    if (a.name.toLocaleLowerCase() > b.name.toLocaleLowerCase()) {
+      return 1;
+    }
+    return 0;
+  });
+}

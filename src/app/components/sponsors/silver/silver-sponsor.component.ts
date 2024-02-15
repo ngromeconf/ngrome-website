@@ -49,6 +49,7 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
                 >
                   <img
                     [alt]="item.name"
+                    [title]="item.name"
                     [ngSrc]="item.image"
                     class="flex-shrink-0 object-cover object-center w-full h-25"
                     width="200"
