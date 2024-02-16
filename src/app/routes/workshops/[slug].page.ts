@@ -33,10 +33,12 @@ export const routeMeta: RouteMeta = {
   ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
     <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
+    @if (isWorkshopActive(workshop)) {
       <app-social-share
-        class="transform -translate-y-12"
         [message]="socialMessage(workshop)"
+        class="transform -translate-y-12"
       />
+    }
 
     <app-page-image [image]="workshop.image || ''" />
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
@@ -132,5 +134,10 @@ export default class ProductDetailsPageComponent {
 
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
     return new Date(workshop.date) > new Date();
+  }
+
+  socialMessage(workshop: WorkshopAttributes): string {
+    return encodeURIComponent(`${workshop.socialDescription}
+      ${window.location.href}`);
   }
 }
