@@ -145,36 +145,23 @@ import { FOOTER_MENU } from './constants';
             </svg>
           </a>
           <a
-            href="https://ngrome.slack.com/join/shared_invite/enQtNzIzNTAzNzMzNDI2LTliODkyZmI1ZDNjYmJkNzYyYzIxOTlmNzc2MTRlMTk2NDVhNDllMWU2Y2RjNDFmZGJkNjc2ZDFlMGQxYWViNmU#/shared-invite/email"
+            href="mailto:ngromeconf@gmail.com"
             class="text-white hover-svg-blue-600"
             target="_blank"
           >
-            <span class="sr-only">Slack</span>
+            <span class="sr-only">Email</span>
             <svg
-              width="21"
-              height="21"
-              class="c-nav--footer__svgicon c-slackhash"
-              viewBox="0 0 54 54"
               xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
             >
-              <g fill="none" fill-rule="evenodd">
-                <path
-                  d="M19.712.133a5.381 5.381 0 0 0-5.376 5.387 5.381 5.381 0 0 0 5.376 5.386h5.376V5.52A5.381 5.381 0 0 0 19.712.133m0 14.365H5.376A5.381 5.381 0 0 0 0 19.884a5.381 5.381 0 0 0 5.376 5.387h14.336a5.381 5.381 0 0 0 5.376-5.387 5.381 5.381 0 0 0-5.376-5.386"
-                  fill="#ffffff"
-                ></path>
-                <path
-                  d="M53.76 19.884a5.381 5.381 0 0 0-5.376-5.386 5.381 5.381 0 0 0-5.376 5.386v5.387h5.376a5.381 5.381 0 0 0 5.376-5.387m-14.336 0V5.52A5.381 5.381 0 0 0 34.048.133a5.381 5.381 0 0 0-5.376 5.387v14.364a5.381 5.381 0 0 0 5.376 5.387 5.381 5.381 0 0 0 5.376-5.387"
-                  fill="#ffffff"
-                ></path>
-                <path
-                  d="M34.048 54a5.381 5.381 0 0 0 5.376-5.387 5.381 5.381 0 0 0-5.376-5.386h-5.376v5.386A5.381 5.381 0 0 0 34.048 54m0-14.365h14.336a5.381 5.381 0 0 0 5.376-5.386 5.381 5.381 0 0 0-5.376-5.387H34.048a5.381 5.381 0 0 0-5.376 5.387 5.381 5.381 0 0 0 5.376 5.386"
-                  fill="#ffffff"
-                ></path>
-                <path
-                  d="M0 34.249a5.381 5.381 0 0 0 5.376 5.386 5.381 5.381 0 0 0 5.376-5.386v-5.387H5.376A5.381 5.381 0 0 0 0 34.25m14.336-.001v14.364A5.381 5.381 0 0 0 19.712 54a5.381 5.381 0 0 0 5.376-5.387V34.25a5.381 5.381 0 0 0-5.376-5.387 5.381 5.381 0 0 0-5.376 5.387"
-                  fill="#ffffff"
-                ></path>
-              </g>
+              <path
+                d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"
+              />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"
+              />
             </svg>
           </a>
         </div>
