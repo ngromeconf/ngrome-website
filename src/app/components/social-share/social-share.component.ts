@@ -7,7 +7,7 @@ import { I } from 'vitest/dist/types-198fd1d9';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <span class="z-0 mt-8 lg:inline-flex lg:space-x-4">
+    <span class="z-0 inline-flex gap-4">
       <a
         type="button"
         class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium rounded border text-slate-500 bg-white hover:bg-trueGray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -71,6 +71,6 @@ import { I } from 'vitest/dist/types-198fd1d9';
   styles: [],
 })
 export class SocialShareComponent {
-  @Input() public pageUrl: string;
+  @Input() public pageUrl: string = encodeURIComponent(window.location.href);
   @Input() public message: string;
 }

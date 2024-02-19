@@ -8,6 +8,7 @@ import {
 import { Component } from '@angular/core';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
+import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
 import { ContentFile, injectContent } from '@analogjs/content';
@@ -28,11 +29,17 @@ export const routeMeta: RouteMeta = {
     DatePipe,
     PageHeadComponent,
     PageImageComponent,
-    NgFor,
-    NgIf,
+    SocialShareComponent,
   ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
     <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
+    @if (isWorkshopActive(workshop)) {
+      <app-social-share
+        [message]="socialMessage(workshop)"
+        class="transform -translate-y-12"
+      />
+    }
+
     <app-page-image [image]="workshop.image || ''" />
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
       @for (author of workshop.authors; track $index) {
@@ -127,5 +134,10 @@ export default class ProductDetailsPageComponent {
 
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
     return new Date(workshop.date) > new Date();
+  }
+
+  socialMessage(workshop: WorkshopAttributes): string {
+    return encodeURIComponent(`${workshop.socialDescription}
+      ${window.location.href}`);
   }
 }
