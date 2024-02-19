@@ -13,6 +13,7 @@ export interface WorkshopAttributes {
   link: string;
   ticket: string;
   col: number;
+  socialDescription: string;
   [key: string]: string | number | boolean | Date | undefined | Object;
 }
 

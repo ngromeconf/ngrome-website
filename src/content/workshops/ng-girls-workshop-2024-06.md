@@ -24,4 +24,5 @@ image: /photo/workshop-ng-girls-20231130.webp
 link: /workshops/ng-girls-workshop-2024-06
 ticket: https://www.ng-girls.org/event/rome-2024
 col: 1
+socialDescription: 'Join me for a groundbreaking collaboration between ngGirls & NGRome! One-day workshop is designed for women in web development, offering a chance to dive into Angular and foster diversity in tech. Be part of this transformative journey! #ngGirls #NgRome #WomenInTech'
 ---

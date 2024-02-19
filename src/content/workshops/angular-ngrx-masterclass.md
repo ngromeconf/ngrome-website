@@ -10,4 +10,5 @@ image: /photo/workshop-mastering-NgRx-SignalStore-cover.webp
 link: /workshops/angular-mastering-ngrx-signalstore
 ticket: https://ti.to/ngrome-events/mastering-ngrx-signalstore
 col: 1
+socialDescription: 'Join me at NgRome 2024 for a comprehensive workshop on mastering NgRx Signal Store! Led by NgRx core members Alex Okrushko & Marko Stanimirović, this session offers in-depth insights into reactive state management with Angular Signals. Secure your spot now! #NgRome #NgRx #Workshop'
 ---
