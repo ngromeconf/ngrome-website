@@ -36,7 +36,29 @@ const tickets: TicketInterface[] = [
     ticket: 'blind-ticket',
     soldOut: true,
   },
-
+  {
+    visible: true,
+    name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - EARLY BIRD',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
+    price: 250,
+    realPrice: 310,
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: 'u6au8pc1wey',
+    soldOut: true,
+  },
+  {
+    visible: true,
+    name: 'NGROME CONFERENCE - EARLY BIRD ',
+    subtitle: 'Get your ticket now, ticket price will increase soon!',
+    price: 110,
+    realPrice: 155,
+    features: conferenceFeatures,
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
+    ticket: 'early-bird',
+    soldOut: false,
+  },
   {
     visible: true,
     name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
@@ -76,28 +98,16 @@ const tickets: TicketInterface[] = [
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'sttgjfic3ma',
   },
-  {
-    visible: true,
-    name: 'NGROME CONFERENCE - EARLY BIRD ',
-    subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: 110,
-    realPrice: 155,
-    features: conferenceFeatures,
-    event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'early-bird',
-    soldOut: false,
-  },
 
   {
     visible: true,
-    name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - EARLY BIRD',
+    name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - REGULAR',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
-    price: 250,
-    realPrice: 310,
+    price: 310,
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
-    ticket: 'u6au8pc1wey',
+    ticket: 'fg1il7mh3ys',
   },
 
   {
