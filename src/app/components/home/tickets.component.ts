@@ -101,7 +101,7 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                     </p>
                   }
                   <div>
-                    <h2 class="font-extrabold text-3xl text-center mb-2">
+                    <h2 class="font-extrabold text-2xl text-center mb-2">
                       {{ item.name }}
                     </h2>
                     <p class="opacity-60 text-center">
@@ -109,16 +109,20 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
                     </p>
 
                     <div class="flex flex-col items-center my-8">
-                      <p class="font-extrabold text-4xl">€{{ item.price }}</p>
+                      <p class="font-mono font-semibold text-5xl">
+                        €{{ item.price }}
+                      </p>
                       @if (item.realPrice) {
-                        <span class="line-through">€{{ item.realPrice }}</span>
+                        <span class="line-through font-mono"
+                          >€{{ item.realPrice }}</span
+                        >
                       }
                     </div>
                   </div>
                   <div class="flex justify-center mt-2 mb-8 ">
                     @if (item.soldOut) {
                       <span
-                        class=" text-5xl
+                        class="absolute text-5xl
                         font-extrabold
                         text-transparent
                         bg-clip-text
