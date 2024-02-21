@@ -64,7 +64,7 @@ const tickets: TicketInterface[] = [
     name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
-    price: '325',
+    price: '310',
     popular: true,
     realPrice: '465',
     featuresDescription: 'All the features of the Conference Ticket plus:',
@@ -77,7 +77,7 @@ const tickets: TicketInterface[] = [
     name: 'COMBO TICKETS - MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
     subtitle:
       'MASTERING NGRX SIGNALSTORE: FROM FUNDAMENTALS TO ADVANCED TECHNIQUES - JUNE 26 + NGRome Conference June 27',
-    price: '325',
+    price: '310',
     popular: true,
     realPrice: '465',
     featuresDescription: 'All the features of the Conference Ticket plus:',
