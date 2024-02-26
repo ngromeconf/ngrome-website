@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SilverSponsorComponent } from '../silver/silver-sponsor.component';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-content',
@@ -47,11 +48,11 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
         </div>
       </div>
 
-      @if (Sponsors$ | async; as Sponsors) {
+      @if (sponsors$(); as Sponsors) {
         <!-- <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
         <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
         <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
-        <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
+        <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" [itemsPerRow]=3 />
 
         <div class="mx-auto px-5 container flex flex-col justify-center">
           <h2
@@ -63,6 +64,7 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
             [sponsors]="Sponsors.Community"
             type="Community"
             [showTitle]="false"
+            [itemsPerRow]=5
           />
         </div>
       }
@@ -106,14 +108,10 @@ export class ContentComponent {
    * Observable representing the sponsors data.
    * @type {Observable<Sponsors>}
    */
-  public Sponsors$: Observable<Sponsors>;
+  public sponsors$: Signal<Sponsors> = this.getSponsors();
 
-  constructor(private http: HttpClient) {
-    console.log('ContentComponent');
-    this.getSponsors();
-  }
   getSponsors() {
-    console.log('getSponsors');
-    this.Sponsors$ = this.http.get<Sponsors>('./api/v1/sponsors');
+    const _http = inject(HttpClient);
+    return toSignal(_http.get<Sponsors>('./api/v1/sponsors'), { initialValue: {}});
   }
 }

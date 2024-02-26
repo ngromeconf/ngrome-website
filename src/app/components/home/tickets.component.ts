@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Signal, inject } from '@angular/core';
 import { ButtonComponent } from '../shared/button.component';
 import { TitoService } from '../../services/tito.service';
 import { WindowRef } from '../../services/window.provider';
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TicketInterface } from 'src/app/models/ticket.interface';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-tickets',
@@ -38,11 +39,12 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
           >
         </p>
 
-        @if (ticketsList$ | async; as TicketsList) {
+        
           <div
             class="grid lg:grid-cols-2 xl:grid-cols-3 px-2 gap-10 text-zinc-800 mt-10"
           >
-            @for (item of TicketsList; track $index) {
+          @for (item of ticketsList$(); track $index) {  
+          
               @if (item.visible) {
                 <div
                   class="flex flex-col items-center bg-slate-100 p-4 rounded-lg shadow-lg"
@@ -171,21 +173,20 @@ import { TicketInterface } from 'src/app/models/ticket.interface';
               }
             }
           </div>
-        }
+        
       </div>
     </section>
   `,
   styles: ``,
   imports: [CommonModule, ButtonComponent],
 })
-export class TicketsComponent implements OnInit {
+export class TicketsComponent  {
   private tito: any;
-  public ticketsList$: Observable<TicketInterface[]>;
+  public ticketsList$: Signal<TicketInterface[]> = this.getTickets();
   constructor(
     private titoService: TitoService,
     private winRef: WindowRef,
     private router: Router,
-    private http: HttpClient,
   ) {
     this.titoService.lazyLoadTito().subscribe((res) => {
       this.tito = this.winRef.nativeWindow.tito;
@@ -201,11 +202,10 @@ export class TicketsComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.getTickets();
-  }
+
 
   getTickets() {
-    this.ticketsList$ = this.http.get<TicketInterface[]>('/api/v1/tickets');
+    const _http = inject(HttpClient);
+    return toSignal(_http.get<TicketInterface[]>('/api/v1/tickets'), { initialValue: [] });
   }
 }

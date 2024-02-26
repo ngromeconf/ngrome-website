@@ -38,7 +38,8 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
         <!-- Component ends here -->
         <div class="flex flex-center -m-4 items-center">
           <div
-            class="w-full grid lg:grid-cols-[repeat(auto-fit,_33.99%)] m-auto lg:p-24 justify-center"
+            class="w-full grid  m-auto lg:p-12 justify-center"
+            [ngClass]="{'lg:grid-cols-[repeat(auto-fit,_23.99%)]': itemsPerRow === 4, 'lg:grid-cols-[repeat(auto-fit,_30.99%)]': itemsPerRow === 3, 'lg:grid-cols-[repeat(auto-fit,_49.99%)]': itemsPerRow === 2, 'lg:grid-cols-[repeat(auto-fit,_99.99%)]': itemsPerRow === 1, 'lg:grid-cols-[repeat(auto-fit,_19.99%)]': itemsPerRow === 5}"
           >
             @for (item of sponsors; track $index) {
               <div class="p-12 flex items-center justify-center">
@@ -68,4 +69,5 @@ export class SilverSponsorComponent {
   @Input() sponsors: SponsorInterface[] | undefined;
   @Input() type: string | undefined;
   @Input() showTitle: boolean = true;
+  @Input() itemsPerRow: number = 2;
 }
