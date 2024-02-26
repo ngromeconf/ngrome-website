@@ -7,7 +7,7 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
   standalone: true,
   imports: [DatePipe],
   template: `
-    <a rel="noopener noreferrer" href="{{ workshop.link }}" target="_blank">
+    <a href="{{ workshop.link }}">
       <div
         class="relative flex items-end justify-start w-full text-left bg-top bg-cover h-96 dark:bg-gray-500"
         style="background-image: url(&quot;{{ workshop.image }}&quot;);"
