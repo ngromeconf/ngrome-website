@@ -134,7 +134,7 @@ import { Router } from '@angular/router';
               (click)="onGoToTicket()"
             >
               <a
-                class="text-base  font-semibold  flex   text-red-ngrome hover-ticket"
+                class="text-base  font-semibold  flex text-red-ngrome hover-ticket"
                 >Tickets
                 <img
                   ngSrc="/menu/ticket.svg"

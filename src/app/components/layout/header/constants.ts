@@ -31,6 +31,14 @@ export const NAV_MENU = [
     visible: true,
     icon: 'speaker',
   },
+  {
+    name: 'Speakers',
+    destinationUrl: '/speakers',
+    type: 'white',
+    pageSite: true,
+    visible: true,
+    icon: 'speaker',
+  },
   // {
   //   name: "Venue",
   //   destinationUrl: "/venue",
