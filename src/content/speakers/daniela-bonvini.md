@@ -13,4 +13,5 @@ links:
     twitter: 
     gitHub: https://github.com/daniela-bonvini
     other: 
+visible: false
 ---

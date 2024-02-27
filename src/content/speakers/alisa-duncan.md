@@ -13,4 +13,5 @@ links:
     twitter: https://twitter.com/AlisaDuncan
     gitHub: https://github.com/alisaduncan
     other: https://github.com/alisaduncan
+visible: false
 ---

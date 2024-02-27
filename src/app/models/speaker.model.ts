@@ -9,6 +9,7 @@ export interface Speaker {
   work?: string;
   imageUrl?: string;
   links?: SocialLinks;
+  visible: true;
 }
 
 interface Talk {

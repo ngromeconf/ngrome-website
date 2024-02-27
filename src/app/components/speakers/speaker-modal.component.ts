@@ -63,7 +63,7 @@ import { NgIf } from '@angular/common';
               <img
                 [src]="speaker?.imageUrl"
                 alt=" "
-                class="h-40 w-40 rounded-full xl:w-56 xl:h-56 m-auto mb-2 sm:mb-auto"
+                class="h-40 w-40 rounded-full xl:w-56 xl:h-56 m-auto mb-2 sm:mb-auto object-cover"
               />
               <div class="w-full">
                 <p class="font-bold pb-4 text-2xl">

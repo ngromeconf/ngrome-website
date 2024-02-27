@@ -8,7 +8,7 @@ import { Speaker } from 'src/app/models/speaker.model';
   imports: [NgIf],
   template: `
     <div
-      class="group relative h-96 cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
+      class="group relative h-auto cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
       (click)="speakerDetail(speaker)"
     >
       <span
@@ -19,7 +19,7 @@ import { Speaker } from 'src/app/models/speaker.model';
           <img
             [src]="speaker.imageUrl"
             alt=" "
-            class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+            class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 object-cover"
           />
         </span>
         <div
@@ -33,7 +33,7 @@ import { Speaker } from 'src/app/models/speaker.model';
           class="pt-5 text-base font-semibold leading-7 group-hover:text-slate-200"
           style="overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;"
         >
-          <h2 class="text-2xl">
+          <h2 class="text-2xl" [title]="speaker.talk.title">
             {{ speaker.talk.title }}
           </h2>
         </div>

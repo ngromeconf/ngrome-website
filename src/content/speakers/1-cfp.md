@@ -13,4 +13,5 @@ links:
     twitter: 
     gitHub: 
     other: other
+visible: true
 ---

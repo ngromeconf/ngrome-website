@@ -13,4 +13,5 @@ links:
     twitter: https://twitter.com/sumy92
     gitHub: https://github.com/soumayaerradi
     other: https://www.soumayaerradi.it
+visible: false
 ---

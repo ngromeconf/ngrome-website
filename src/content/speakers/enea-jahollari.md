@@ -13,4 +13,5 @@ links:
     twitter: https://twitter.com/Enea_Jahollari
     gitHub: https://github.com/eneajaho
     other: https://eneajaho.me
+visible: true
 ---
