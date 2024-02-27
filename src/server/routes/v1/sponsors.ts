@@ -45,6 +45,12 @@ const bronzeSponsor: SponsorInterface[] = [
     image: './sponsors/sticker-mule-logo.svg',
     url: 'https://www.stickermule.com/it/adesivi-personalizzati',
   },
+  {
+    name: 'Lascaux',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1708674380/ngrome-sponsors/lascaux-logo_uvvmrp.png',
+    url: 'https://www.lascaux.it/',
+  },
 ];
 const diversitySponsor: SponsorInterface[] = [
   {
