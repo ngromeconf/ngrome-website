@@ -45,8 +45,11 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
           </h2>
         }
         <!-- Component ends here -->
-        <div class="container  pb-24 mx-auto ">
-          <div class="flex flex-wrap -m-4 justify-center">
+        <div class="flex flex-center -m-4 items-center">
+          <div
+            class="w-full grid  m-auto lg:p-12 justify-center"
+            [ngClass]="{'lg:grid-cols-[repeat(auto-fit,_23.99%)]': itemsPerRow === 4, 'lg:grid-cols-[repeat(auto-fit,_30.99%)]': itemsPerRow === 3, 'lg:grid-cols-[repeat(auto-fit,_49.99%)]': itemsPerRow === 2, 'lg:grid-cols-[repeat(auto-fit,_99.99%)]': itemsPerRow === 1, 'lg:grid-cols-[repeat(auto-fit,_19.99%)]': itemsPerRow === 5}"
+          >
             @for (item of sponsors; track $index) {
               <div
                 class="w-full lg:w-1/6 md:w-1/4 sm:w-48 p-4"
@@ -82,4 +85,5 @@ export class SponsorComponent {
   @Input() showTitle: boolean = true;
   @Input() customTitle: string = '';
   @Input() customTitleClass: string = '';
+  @Input() itemsPerRow: number = 2;
 }

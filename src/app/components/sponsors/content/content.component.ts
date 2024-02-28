@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SponsorComponent } from '../sponsor.component';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Sponsors } from 'src/app/models/sponsor.model';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-content',
@@ -47,18 +47,24 @@ import { Sponsors } from 'src/app/models/sponsor.model';
         </div>
       </div>
 
-      @if (Sponsors$ | async; as Sponsors) {
+      @if (sponsors$(); as Sponsors) {
         <!-- <app-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
         <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
         <app-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
-        <app-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
         <app-sponsor
+          [sponsors]="Sponsors.Bronze"
+          type="Bronze"
+          [itemsPerRow]="3"
+        />
+        <app-sponsor
+          [itemsPerRow]="5"
           [sponsors]="Sponsors.Community"
           [showTitle]="false"
           customTitle="WE BELIEVE IN COMMUNITY"
           customTitleClass="mx-auto bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
         />
         <app-sponsor
+          [itemsPerRow]="5"
           [sponsors]="Sponsors.PastEdition"
           [showTitle]="false"
           customTitle="SPONSORS IN THE PAST BELIEVED IN US"
@@ -72,15 +78,15 @@ import { Sponsors } from 'src/app/models/sponsor.model';
 })
 export class ContentComponent {
   /**
-   * Observable representing the sponsors data.
-   * @type {Observable<Sponsors>}
+   * Signal representing the sponsors data.
+   * @type {Signal<Sponsors>}
    */
-  public Sponsors$: Observable<Sponsors>;
+  public sponsors$: Signal<Sponsors> = this.getSponsors();
 
-  constructor(private http: HttpClient) {
-    this.getSponsors();
-  }
   getSponsors() {
-    this.Sponsors$ = this.http.get<Sponsors>('./api/v1/sponsors');
+    const _http = inject(HttpClient);
+    return toSignal(_http.get<Sponsors>('./api/v1/sponsors'), {
+      initialValue: {},
+    });
   }
 }
