@@ -48,29 +48,30 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
         <div class="flex flex-center -m-4 items-center">
           <div
             class="w-full grid  m-auto lg:p-12 justify-center"
-            [ngClass]="{'lg:grid-cols-[repeat(auto-fit,_23.99%)]': itemsPerRow === 4, 'lg:grid-cols-[repeat(auto-fit,_30.99%)]': itemsPerRow === 3, 'lg:grid-cols-[repeat(auto-fit,_49.99%)]': itemsPerRow === 2, 'lg:grid-cols-[repeat(auto-fit,_99.99%)]': itemsPerRow === 1, 'lg:grid-cols-[repeat(auto-fit,_19.99%)]': itemsPerRow === 5}"
+            [ngClass]="{
+              'lg:grid-cols-[repeat(auto-fit,_19.99%)]': itemsPerRow === 5,
+              'lg:grid-cols-[repeat(auto-fit,_23.99%)]': itemsPerRow === 4,
+              'lg:grid-cols-[repeat(auto-fit,_30.99%)]': itemsPerRow === 3,
+              'lg:grid-cols-[repeat(auto-fit,_49.99%)]': itemsPerRow === 2,
+              'lg:grid-cols-[repeat(auto-fit,_99.99%)]': itemsPerRow === 1
+            }"
           >
             @for (item of sponsors; track $index) {
-              <div
-                class="w-full lg:w-1/6 md:w-1/4 sm:w-48 p-4"
-                style="margin-bottom: auto; margin-top:auto;"
-              >
-                <div class="p-4">
-                  <a
-                    class="inline-flex items-center mb-2"
-                    [href]="item.url ? item.url : '/sponsors'"
-                    target="_blank"
-                  >
-                    <img
-                      [alt]="item.name"
-                      [title]="item.name"
-                      [ngSrc]="item.image"
-                      class="flex-shrink-0 object-cover object-center w-full h-25"
-                      width="200"
-                      height="50"
-                    />
-                  </a>
-                </div>
+              <div class="p-12 flex items-center justify-center">
+                <a
+                  class="inline-flex items-center mb-2"
+                  [href]="item.url ? item.url : '/sponsors'"
+                  target="_blank"
+                >
+                  <img
+                    [alt]="item.name"
+                    [title]="item.name"
+                    [ngSrc]="item.image"
+                    class="flex-shrink-0 object-cover object-center w-full h-25"
+                    width="200"
+                    height="50"
+                  />
+                </a>
               </div>
             }
           </div>
