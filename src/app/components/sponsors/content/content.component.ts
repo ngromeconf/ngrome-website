@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SilverSponsorComponent } from '../silver/silver-sponsor.component';
+import { SponsorComponent } from '../sponsor.component';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
+import { Sponsors } from 'src/app/models/sponsor.model';
 
 @Component({
   selector: 'app-content',
@@ -48,60 +48,29 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
       </div>
 
       @if (Sponsors$ | async; as Sponsors) {
-        <!-- <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
-        <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
-        <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
-        <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
-
-        <div class="mx-auto px-5 container flex flex-col justify-center">
-          <h2
-            class="block w-full pb-2 bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
-          >
-            WE BELIEVE IN COMMUNITY
-          </h2>
-          <app-silver-sponsor
-            [sponsors]="Sponsors.Community"
-            type="Community"
-            [showTitle]="false"
-          />
-        </div>
+        <!-- <app-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
+        <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
+        <app-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
+        <app-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
+        <app-sponsor
+          [sponsors]="Sponsors.Community"
+          [showTitle]="false"
+          customTitle="WE BELIEVE IN COMMUNITY"
+          customTitleClass="mx-auto bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
+        />
+        <app-sponsor
+          [sponsors]="Sponsors.PastEdition"
+          [showTitle]="false"
+          customTitle="SPONSORS IN THE PAST BELIEVED IN US"
+          customTitleClass="text-slate-500 text-2xl mx-auto"
+        />
       }
-
-      <div class="container px-5 py-24 mx-auto lg:px-24">
-        <div class="flex flex-col w-full mb-12 text-left lg:text-center">
-          <p class="mx-auto text-lg leading-snug text-slate-500 lg:w-1/2">
-            SPONSORS IN THE PAST BELIEVED IN US
-          </p>
-        </div>
-        <div class="flex flex-wrap -m-4">
-          <div
-            class="w-full p-4 md:w-1/6"
-            *ngFor="let item of pastEditionSponsors"
-          >
-            <div class="p-6 ">
-              <a class="inline-flex items-center mb-2" [href]="item.url">
-                <img
-                  [alt]="item.name"
-                  [src]="item.image"
-                  class="flex-shrink-0 object-cover object-center w-full h-25"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   `,
   styles: [],
-  imports: [CommonModule, SilverSponsorComponent],
+  imports: [CommonModule, SponsorComponent],
 })
 export class ContentComponent {
-  /**
-   * Represents the sponsors for past editions.
-   * @type {SponsorInterface[]}
-   */
-  @Input() pastEditionSponsors: SponsorInterface[] = [];
-
   /**
    * Observable representing the sponsors data.
    * @type {Observable<Sponsors>}
@@ -109,11 +78,9 @@ export class ContentComponent {
   public Sponsors$: Observable<Sponsors>;
 
   constructor(private http: HttpClient) {
-    console.log('ContentComponent');
     this.getSponsors();
   }
   getSponsors() {
-    console.log('getSponsors');
     this.Sponsors$ = this.http.get<Sponsors>('./api/v1/sponsors');
   }
 }

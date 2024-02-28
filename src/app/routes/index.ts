@@ -3,7 +3,7 @@ import { HeaderComponent } from '../components/layout/header/header.component';
 import { HeroComponent } from '../components/home/hero/hero.component';
 import { FeaturesComponent } from '../components/home/features/features.component';
 import { VenueComponent } from '../components/home/venue/venue.component';
-import { SilverSponsorComponent } from '../components/sponsors/silver/silver-sponsor.component';
+import { SponsorComponent } from '../components/sponsors/sponsor.component';
 import { Observable } from 'rxjs';
 import { Sponsors } from '../models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
@@ -29,10 +29,10 @@ export const routeMeta: RouteMeta = {
     <app-tickets />
     <app-call-for-paper id="ticket-section" />
     @if (Sponsors$ | async; as Sponsors) {
-      <!-- <app-silver-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
-      <app-silver-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
-      <app-silver-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
-      <app-silver-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
+      <!-- <app-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
+      <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
+      <app-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
+      <app-sponsor [sponsors]="Sponsors.Bronze" type="Bronze" />
     }
   `,
   imports: [
@@ -41,7 +41,7 @@ export const routeMeta: RouteMeta = {
     HeroComponent,
     FeaturesComponent,
     VenueComponent,
-    SilverSponsorComponent,
+    SponsorComponent,
     TicketsComponent,
     CallForPaperComponent,
   ],
