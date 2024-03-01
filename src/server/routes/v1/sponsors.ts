@@ -45,6 +45,12 @@ const bronzeSponsor: SponsorInterface[] = [
     image: './sponsors/sticker-mule-logo.svg',
     url: 'https://www.stickermule.com/it/adesivi-personalizzati',
   },
+  {
+    name: 'Ineo',
+    image:
+      'https://assets-global.website-files.com/652fb7047cb1f8b74c17f907/653a3462d8987268e60e7cb4_ineo-colored.svg',
+    url: 'https://www.ineo.it/',
+  },
 ];
 const diversitySponsor: SponsorInterface[] = [
   {
