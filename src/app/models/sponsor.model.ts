@@ -10,8 +10,9 @@ export enum sponsorType {
   Silver = 'silver',
   Bronze = 'bronze',
   Diversity = 'diversity',
-  technical = 'technical',
+  Technical = 'technical',
   Community = 'community',
+  PastEdition = 'pastEdition',
 }
 
 export type Sponsors = {
@@ -20,6 +21,7 @@ export type Sponsors = {
   Silver?: SponsorInterface[];
   Bronze?: SponsorInterface[];
   Diversity?: SponsorInterface[];
-  technical?: SponsorInterface[];
+  Technical?: SponsorInterface[];
   Community?: SponsorInterface[];
+  PastEdition?: SponsorInterface[];
 };
