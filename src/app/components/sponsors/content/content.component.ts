@@ -48,23 +48,27 @@ import { toSignal } from '@angular/core/rxjs-interop';
       </div>
 
       @if (sponsors$(); as Sponsors) {
-        <!-- <app-sponsor [sponsors]="Sponsors.Main" type="Main" /> -->
-        <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" />
-        <app-sponsor [sponsors]="Sponsors.Silver" type="Silver" />
+        <!-- <app-sponsor [sponsors]="Sponsors.Main"  [itemsPerRow]="1" type="Main" /> -->
+        <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" [itemsPerRow]="2" />
         <app-sponsor
-          [sponsors]="Sponsors.Bronze"
-          type="Bronze"
+          [sponsors]="Sponsors.Silver"
+          type="Silver"
           [itemsPerRow]="3"
         />
         <app-sponsor
-          [itemsPerRow]="5"
+          [sponsors]="Sponsors.Bronze"
+          type="Bronze"
+          [itemsPerRow]="4"
+        />
+        <app-sponsor
+          [itemsPerRow]="6"
           [sponsors]="Sponsors.Community"
           [showTitle]="false"
           customTitle="WE BELIEVE IN COMMUNITY"
           customTitleClass="mx-auto bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
         />
         <app-sponsor
-          [itemsPerRow]="5"
+          [itemsPerRow]="6"
           [sponsors]="Sponsors.PastEdition"
           [showTitle]="false"
           customTitle="SPONSORS IN THE PAST BELIEVED IN US"

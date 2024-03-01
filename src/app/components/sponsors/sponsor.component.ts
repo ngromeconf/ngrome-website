@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
+import { SponsorInterface } from 'src/app/models/sponsor.model';
 
 @Component({
   selector: 'app-sponsor',
@@ -14,7 +14,7 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
       <div class="mx-auto space-y-6">
         <!-- Component starts here -->
         @if (showTitle) {
-          <h2 class="flex flex-row flex-nowrap items-center my-8">
+          <h2 class="flex flex-row flex-nowrap items-center mt-8">
             <span
               class="flex-grow block border-t border-red"
               aria-hidden="true"
@@ -45,34 +45,28 @@ import { SponsorInterface, sponsorType } from 'src/app/models/sponsor.model';
           </h2>
         }
         <!-- Component ends here -->
-        <div class="flex flex-center -m-4 items-center">
-          <div
-            class="w-full grid  m-auto lg:p-12 justify-center"
-            [ngClass]="{
-              'lg:grid-cols-[repeat(auto-fit,_19.99%)]': itemsPerRow === 5,
-              'lg:grid-cols-[repeat(auto-fit,_23.99%)]': itemsPerRow === 4,
-              'lg:grid-cols-[repeat(auto-fit,_30.99%)]': itemsPerRow === 3,
-              'lg:grid-cols-[repeat(auto-fit,_49.99%)]': itemsPerRow === 2,
-              'lg:grid-cols-[repeat(auto-fit,_99.99%)]': itemsPerRow === 1
-            }"
-          >
+        <div class="container sm:pb-24 pb-12 mx-auto ">
+          <div class="grid grid-cols-12 -m-4 justify-center">
             @for (item of sponsors; track $index) {
-              <div class="p-12 flex items-center justify-center">
-                <a
-                  class="inline-flex items-center mb-2"
-                  [href]="item.url ? item.url : '/sponsors'"
-                  target="_blank"
-                >
-                  <img
-                    [alt]="item.name"
-                    [title]="item.name"
-                    [ngSrc]="item.image"
-                    class="flex-shrink-0 object-cover object-center w-full h-25"
-                    width="200"
-                    height="50"
-                  />
-                </a>
-              </div>
+              <a
+                class="inline-flex items-center mb-2 p-4 col-span-6 sm:col-span-6"
+                [ngClass]="
+                  'lg:col-span-' +
+                  12 / itemsPerRow +
+                  (itemsPerRow > 4 ? ' md:col-span-3' : '')
+                "
+                [href]="item.url ? item.url : '/sponsors'"
+                target="_blank"
+              >
+                <img
+                  [alt]="item.name"
+                  [title]="item.name"
+                  [ngSrc]="item.image"
+                  class="flex-shrink-0 object-cover object-center w-full h-25"
+                  width="200"
+                  height="50"
+                />
+              </a>
             }
           </div>
         </div>
