@@ -17,7 +17,7 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
         >
           <div class="rounded-lg bg-black/80 backdrop-blur">
             <div
-              class="flex w-full flex-wrap items-center justify-between gap-4 px-8 py-10 sm:px-16 lg:flex-nowrap"
+              class="flex w-full flex-wrap items-center justify-center gap-4 px-8 py-10 sm:px-16 lg:flex-nowrap"
             >
               <div class="lg:max-w-xl">
                 <h2
