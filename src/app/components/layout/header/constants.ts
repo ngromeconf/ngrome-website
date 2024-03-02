@@ -8,6 +8,13 @@ export const NAV_MENU = [
     visible: true,
   },
   {
+    name: 'Agenda',
+    destinationUrl: '/agenda',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+  },
+  {
     name: 'About',
     destinationUrl: '/about',
     type: 'white',

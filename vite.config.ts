@@ -30,6 +30,7 @@ export default defineConfig(({ mode }) => ({
         routes: async () => [
           '/',
           '/about',
+          '/agenda',
           '/sponsors',
           '/code-of-conduct',
           '/terms-and-privacy',
@@ -42,6 +43,7 @@ export default defineConfig(({ mode }) => ({
           '/workshops/staying-safe-with-angular',
           '/thank-you',
           '/api/v1/sponsors',
+          '/api/v1/agenda',
           '/api/v1/tickets',
         ],
         sitemap: {
