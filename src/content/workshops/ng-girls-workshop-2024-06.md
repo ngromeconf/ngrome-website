@@ -18,8 +18,14 @@ to become trailblazers in technology, fostering an environment where learning, g
     href="https://forms.gle/FGRUKbigLn8BjePW7" target="_blank" class="text-blue-600 hover:underline" >sponsor</a>, your role is pivotal in this journey of
 learning and empowerment. Join us in this exciting endeavour and be a part of something truly transformative!'
 date: '2024-06-26'
-authors: '[{"name": "ngGirls team","biography":"","image": "photo/authors/ng-girls.webp","link": "https://www.ng-girls.org"}]'
-location: '{"name": "TBD","mapsLink":""}'
+authors: 
+    - name: ngGirls
+      biography: 
+      image: photo/authors/ng-girls.webp
+      link: https://www.ng-girls.org
+location: 
+    name: TBD
+    mapsLink: 
 image: /photo/workshop-ng-girls-20231130.webp
 link: /workshops/ng-girls-workshop-2024-06
 ticket: https://www.ng-girls.org/event/rome-2024
