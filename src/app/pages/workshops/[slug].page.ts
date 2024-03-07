@@ -106,7 +106,7 @@ export const routeMeta: RouteMeta = {
           >
             RESERVE YOUR SEAT
           </a>
-        } @else {
+        } @else if (workshop?.ticket) {
           <a
             class="cursor-no-drop inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-gray-300 focus:outline-none border-2 rounded-lg md:mb-2 lg:mb-0 focus:ring-2 ring-offset-current ring-offset-2"
             >EXPIRED</a
@@ -121,15 +121,10 @@ export default class ProductDetailsPageComponent {
     param: 'slug',
     subdirectory: 'workshops',
   }).pipe(
-    map((workshop: ContentFile<WorkshopAttributes | Record<string, never>>) => {
-      return {
-        ...workshop.attributes,
-        authors: JSON.parse(workshop.attributes?.authors as unknown as string),
-        location: JSON.parse(
-          workshop.attributes?.location as unknown as string,
-        ),
-      } as WorkshopAttributes;
-    }),
+    map(
+      (workshop: ContentFile<WorkshopAttributes | Record<string, never>>) =>
+        workshop.attributes,
+    ),
   );
 
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
