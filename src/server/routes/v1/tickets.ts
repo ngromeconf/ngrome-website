@@ -50,7 +50,7 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
+    name: 'COMBO TICKET - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
     price: '310',
@@ -64,12 +64,12 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'VIP - EARLY BIRD',
+    name: 'VIP TICKET- EARLY BIRD',
     subtitle:
       'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
     bestExperience: false,
     price: '375',
-    realPrice: '500',
+    realPrice: '565',
     featuresDescription: 'All the features of the Combo Ticket plus:',
     features: [features.SpeakerDinner],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
@@ -90,7 +90,7 @@ const tickets: TicketInterface[] = [
   
   {
     visible: true,
-    name: 'COMBO TICKETS - MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
+    name: 'COMBO TICKET - MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
     subtitle:
       'MASTERING NGRX SIGNALSTORE: FROM FUNDAMENTALS TO ADVANCED TECHNIQUES - JUNE 26 + NGRome Conference June 27',
     price: '310',
@@ -103,7 +103,7 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES',
+    name: 'COMBO TICKET - MODERN ANGULAR ARCHITECTURES',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
     price: '465',
@@ -116,7 +116,7 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'VIP',
+    name: 'VIP TICKET',
     subtitle:
       'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
     bestExperience: true,
@@ -178,7 +178,7 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: false,
-    name: 'Combo Tickets - Regular',
+    name: 'Combo Ticket - Regular',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '465',
     features: [
