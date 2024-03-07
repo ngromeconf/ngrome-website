@@ -50,6 +50,34 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
+    name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
+    price: '310',
+    popular: false,
+    realPrice: '465',
+    featuresDescription: 'All the features of the Conference Ticket plus:',
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: '6pv0sbo8z5a',
+    soldOut: true
+  },
+  {
+    visible: true,
+    name: 'VIP - EARLY BIRD',
+    subtitle:
+      'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
+    bestExperience: false,
+    price: '375',
+    realPrice: '500',
+    featuresDescription: 'All the features of the Combo Ticket plus:',
+    features: [features.SpeakerDinner],
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
+    ticket: 'sttgjfic3ma',
+    soldOut: true
+  },
+  {
+    visible: true,
     name: 'NGROME CONFERENCE - EARLY BIRD ',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: 110,
@@ -59,19 +87,7 @@ const tickets: TicketInterface[] = [
     ticket: 'early-bird',
     soldOut: false,
   },
-  {
-    visible: true,
-    name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
-    subtitle:
-      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
-    price: '310',
-    popular: true,
-    realPrice: '465',
-    featuresDescription: 'All the features of the Conference Ticket plus:',
-    features: workshopFeatures,
-    event: 'ngrome-events/modern-angular-architecture',
-    ticket: '6pv0sbo8z5a',
-  },
+  
   {
     visible: true,
     name: 'COMBO TICKETS - MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
@@ -87,16 +103,29 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'VIP - EARLY BIRD',
+    name: 'COMBO TICKETS - MODERN ANGULAR ARCHITECTURES',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
+    price: '465',
+    popular: true,
+    featuresDescription: 'All the features of the Conference Ticket plus:',
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: '3b7bvqzkdym',
+    soldOut: false
+  },
+  {
+    visible: true,
+    name: 'VIP',
     subtitle:
       'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
     bestExperience: true,
-    price: '375',
-    realPrice: '500',
+    price: '565',
     featuresDescription: 'All the features of the Combo Ticket plus:',
     features: [features.SpeakerDinner],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'sttgjfic3ma',
+    ticket: 'bdcszpol8yy',
+    soldOut: false
   },
 
   {
