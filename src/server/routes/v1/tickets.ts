@@ -27,7 +27,7 @@ const vipFeatures = [features.SpeakerDinner];
 const tickets: TicketInterface[] = [
   {
     visible: true,
-    name: 'NGRome Conference Blind Ticket',
+    name: 'NGROME CONFERENCE - BLIND TICKET',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '75',
     realPrice: '155',
@@ -36,10 +36,49 @@ const tickets: TicketInterface[] = [
     ticket: 'blind-ticket',
     soldOut: true,
   },
-
   {
     visible: true,
-    name: 'NGRome Conference - Early Bird ',
+    name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - EARLY BIRD',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
+    price: 250,
+    realPrice: 310,
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: 'u6au8pc1wey',
+    soldOut: true,
+  },
+  {
+    visible: true,
+    name: 'COMBO TICKET - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
+    price: '310',
+    popular: false,
+    realPrice: '465',
+    featuresDescription: 'All the features of the Conference Ticket plus:',
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: '6pv0sbo8z5a',
+    soldOut: true
+  },
+  {
+    visible: true,
+    name: 'VIP TICKET- EARLY BIRD',
+    subtitle:
+      'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
+    bestExperience: false,
+    price: '375',
+    realPrice: '565',
+    featuresDescription: 'All the features of the Combo Ticket plus:',
+    features: [features.SpeakerDinner],
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
+    ticket: 'sttgjfic3ma',
+    soldOut: true
+  },
+  {
+    visible: true,
+    name: 'NGROME CONFERENCE - EARLY BIRD ',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: 110,
     realPrice: 155,
@@ -48,22 +87,72 @@ const tickets: TicketInterface[] = [
     ticket: 'early-bird',
     soldOut: false,
   },
-
+  
   {
     visible: true,
-    name: 'Combo Tickets - Early Bird',
-    subtitle: 'Modern Angular Architectures Workshop & Conference',
-    price: '325',
+    name: 'COMBO TICKET - MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
+    subtitle:
+      'MASTERING NGRX SIGNALSTORE: FROM FUNDAMENTALS TO ADVANCED TECHNIQUES - JUNE 26 + NGRome Conference June 27',
+    price: '310',
     popular: true,
     realPrice: '465',
     featuresDescription: 'All the features of the Conference Ticket plus:',
     features: workshopFeatures,
-    event: 'ngrome-events/modern-angular-architecture',
-    ticket: '6pv0sbo8z5a',
+    event: 'ngrome-events/mastering-ngrx-signalstore',
+    ticket: 'sxcbmgrga8y',
   },
   {
     visible: true,
-    name: 'NGRome Conference - Student Ticket',
+    name: 'COMBO TICKET - MODERN ANGULAR ARCHITECTURES',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
+    price: '465',
+    popular: true,
+    featuresDescription: 'All the features of the Conference Ticket plus:',
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: '3b7bvqzkdym',
+    soldOut: false
+  },
+  {
+    visible: true,
+    name: 'VIP TICKET',
+    subtitle:
+      'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
+    bestExperience: true,
+    price: '565',
+    featuresDescription: 'All the features of the Combo Ticket plus:',
+    features: [features.SpeakerDinner],
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
+    ticket: 'bdcszpol8yy',
+    soldOut: false
+  },
+
+  {
+    visible: true,
+    name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - REGULAR',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
+    price: 310,
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: 'fg1il7mh3ys',
+  },
+
+  {
+    visible: true,
+    name: 'MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
+    subtitle:
+      'MASTERING NGRX SIGNALSTORE: FROM FUNDAMENTALS TO ADVANCED TECHNIQUES - JUNE 26',
+    price: 250,
+    realPrice: 310,
+    features: workshopFeatures,
+    event: 'ngrome-events/mastering-ngrx-signalstore',
+    ticket: 'bm3uyyp6iow',
+  },
+  {
+    visible: true,
+    name: 'NGROME CONFERENCE - STUDENT TICKET',
     subtitle:
       'Whether you are a beginner, intermediate, or expert, this will be the best opportunity',
     price: 50,
@@ -74,38 +163,11 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'Workshop - Early Bird ',
-    subtitle: 'Modern Angular Architectures Workshop',
-    price: 250,
-    realPrice: 310,
-    features: workshopFeatures,
-    event: 'ngrome-events/modern-angular-architecture',
-    ticket: 'u6au8pc1wey',
-  },
-
-  {
-    visible: true,
-    name: 'VIP - Early Bird',
-    subtitle: 'The best experience for your journey in Rome',
-    bestExperience: true,
-    price: '375',
-    realPrice: '500',
-    featuresDescription: 'All the features of the Combo Ticket plus:',
-    features: [features.SpeakerDinner],
-    event: 'ngrome-events/ngrome-conf-mmxxiv',
-    ticket: 'sttgjfic3ma',
-  },
-
-  {
-    visible: false,
-    name: 'NGRome Conference - Regular ',
+    name: 'NGROME CONFERENCE - REGULAR ',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '155',
-    features: [
-      'Access to the conference',
-      'Coffee and Lunch included',
-      'NGRome T-shirt',
-    ],
+    features: conferenceFeatures,
+    saleStart: '2024-02-28T00:00:00Z',
   },
   {
     visible: false,
@@ -116,7 +178,7 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: false,
-    name: 'Combo Tickets - Regular',
+    name: 'Combo Ticket - Regular',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '465',
     features: [

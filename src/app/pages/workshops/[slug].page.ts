@@ -8,6 +8,7 @@ import {
 import { Component } from '@angular/core';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
+import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
 import { ContentFile, injectContent } from '@analogjs/content';
@@ -28,11 +29,17 @@ export const routeMeta: RouteMeta = {
     DatePipe,
     PageHeadComponent,
     PageImageComponent,
-    NgFor,
-    NgIf,
+    SocialShareComponent,
   ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
     <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
+    @if (isWorkshopActive(workshop)) {
+      <app-social-share
+        [message]="socialMessage(workshop)"
+        class="transform -translate-y-12"
+      />
+    }
+
     <app-page-image [image]="workshop.image || ''" />
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
       @for (author of workshop.authors; track $index) {
@@ -99,7 +106,7 @@ export const routeMeta: RouteMeta = {
           >
             RESERVE YOUR SEAT
           </a>
-        } @else {
+        } @else if (workshop?.ticket) {
           <a
             class="cursor-no-drop inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-gray-300 focus:outline-none border-2 rounded-lg md:mb-2 lg:mb-0 focus:ring-2 ring-offset-current ring-offset-2"
             >EXPIRED</a
@@ -114,18 +121,18 @@ export default class ProductDetailsPageComponent {
     param: 'slug',
     subdirectory: 'workshops',
   }).pipe(
-    map((workshop: ContentFile<WorkshopAttributes | Record<string, never>>) => {
-      return {
-        ...workshop.attributes,
-        authors: JSON.parse(workshop.attributes?.authors as unknown as string),
-        location: JSON.parse(
-          workshop.attributes?.location as unknown as string,
-        ),
-      } as WorkshopAttributes;
-    }),
+    map(
+      (workshop: ContentFile<WorkshopAttributes | Record<string, never>>) =>
+        workshop.attributes,
+    ),
   );
 
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
     return new Date(workshop.date) > new Date();
+  }
+
+  socialMessage(workshop: WorkshopAttributes): string {
+    return encodeURIComponent(`${workshop.socialDescription}
+      ${window.location.href}`);
   }
 }

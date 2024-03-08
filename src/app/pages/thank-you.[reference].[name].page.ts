@@ -36,13 +36,17 @@ export const routeMeta: RouteMeta = {
               See you at NGROME MMXXIV!
             </h1>
           </div>
-          <div class="mt">
+          <div class="flex flex-col">
             <p
               class="mt-6 sm:w-80 text-base leading-7 text-center text-gray-800"
             >
               Remember to assign the ticket, and share it on social!
             </p>
-            <app-social-share [pageUrl]="ticketLink" [message]="message" />
+            <app-social-share
+              class="mt-8"
+              [pageUrl]="ticketLink"
+              [message]="message"
+            />
           </div>
         </div>
       </div>

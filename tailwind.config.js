@@ -4,8 +4,12 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   safelist: [
     {
-      pattern: /col-span-(1|2|3)/,
-      variants: ['lg', 'sm'],
+      pattern: /col-span-(1|2|3|4|5|6|7|8|9|10|11|12)/,
+      variants: ['lg', 'md', 'sm'],
+    },
+    {
+      pattern: /pb-(1|2|3|4|5|6|7|8|9|10|11|12)/,
+      variants: ['lg', 'md', 'sm'],
     },
   ],
   theme: {
@@ -19,7 +23,9 @@ module.exports = {
         monotone:
           '0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)',
       },
-
+      margin: {
+        'mx-auto': 'auto',
+      },
       colors: {
         black: '#16171b',
         'red-ngrome': '#DD0031',
@@ -42,6 +48,7 @@ module.exports = {
           '"Segoe UI Symbol"',
         ],
         roboto: ['Roboto', 'sans-serif'],
+        body: ['Roboto', 'sans-serif'],
         // Ensure fonts with spaces have " " surrounding it.
       },
     },

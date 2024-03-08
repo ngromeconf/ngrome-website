@@ -88,6 +88,6 @@ By continuing to access or use our Service after those revisions become effectiv
 
 
 ## Contact Us
-If you have any questions about these Terms, please contact us angularroma@gmail.com.
+If you have any questions about these Terms, please contact us ngromeconf@gmail.com.
 
 
