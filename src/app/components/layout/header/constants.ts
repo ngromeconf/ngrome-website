@@ -23,21 +23,21 @@ export const NAV_MENU = [
     pageSite: true,
     icon: 'sponsor',
   },
-  {
-    name: 'CFP',
-    destinationUrl: '#callForPaper',
-    type: 'white',
-    pageSite: true,
-    visible: true,
-    icon: 'speaker',
-  },
   // {
-  //   name: "Venue",
-  //   destinationUrl: "/venue",
-  //   type: "white",
+  //   name: 'CFP',
+  //   destinationUrl: '#callForPaper',
+  //   type: 'white',
+  //   pageSite: true,
   //   visible: true,
+  //   icon: 'speaker',
   // },
-  // {
+  {
+    name: "Venue",
+    destinationUrl: "/venue",
+    type: "white",
+    visible: true,
+  },
+  //{
   //   name: 'Info',
   //   destinationUrl: '/info',
   //   type: 'white',
