@@ -11,9 +11,9 @@ authors:
       image: photo/authors/gerard-sans.webp
       link: https://gerardsans.com/
 location: 
-    name: TBD
-    mapsLink: 
-image: /photo/workshop-generative-ai-20231204.webp
+    name: Midas Palace Hotel
+    mapsLink: https://maps.app.goo.gl/K9YhwWcrFo1q6rs56
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1709911986/ngrome-workshops/generative-ai-masterclass_d2qg99.jpg?_s=public-apps
 link: /workshops/generative-ai-masterclass-2024-06
 ticket:  'https://ti.to/ngrome-events/generative-ai-masterclass-2024'
 col: 1
