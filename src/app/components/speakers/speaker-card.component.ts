@@ -1,15 +1,16 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Speaker } from 'src/app/models/speaker.model';
 
 @Component({
   selector: 'speaker-card',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, NgClass],
   template: `
     <div
-      class="group relative h-auto cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
-      (click)="speakerDetail(speaker)"
+      class="group relative h-auto overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
+      (click)="speaker.slug === '...' ? null : speakerDetail(speaker)"
+      [ngClass]="speaker.slug === '...' ? 'cursor-default' : 'cursor-pointer'"
     >
       <span
         class="absolute m-auto left-0 right-0 w-40 h-40  xl:w-56 xl:h-56 top-10 z-0  rounded-full  group-hover:bg-red-ngrome bg-red-ngrome bg-white transition-all duration-700 group-hover:scale-[10]"

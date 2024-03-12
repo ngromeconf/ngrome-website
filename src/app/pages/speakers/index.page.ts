@@ -11,6 +11,11 @@ import { Speaker } from 'src/app/models/speaker.model';
 import { SpeakerCardComponent } from '../../components/speakers/speaker-card.component';
 import { SpeakerModalComponent } from '../../components/speakers/speaker-modal.component';
 import { UrlCFP } from '../../components/shared/constant';
+import { RouteMeta } from '@analogjs/router';
+
+export const routeMeta: RouteMeta = {
+  title: 'NG Rome - Speakers',
+};
 
 @Component({
   standalone: true,
@@ -22,8 +27,6 @@ import { UrlCFP } from '../../components/shared/constant';
     PageHeadComponent,
     SpeakerCardComponent,
     SpeakerModalComponent,
-    NgFor,
-    NgIf,
   ],
   template: `
     <div class="flex flex-col">
@@ -47,7 +50,7 @@ import { UrlCFP } from '../../components/shared/constant';
     ></speaker-modal>
   `,
 })
-export default class ProductDetailsPageComponent implements AfterViewInit {
+export default class SpeakerComponent implements AfterViewInit {
   readonly speakers: Speaker[] = injectActiveSpeakers();
   modal: Element | null = null;
   body = document.querySelector('body');
