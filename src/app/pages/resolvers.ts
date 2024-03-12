@@ -27,6 +27,7 @@ export const postTitleResolver: ResolveFn<string> = (route) =>
   'NG Rome - ' + injectActivePageAttributes(route).title;
 
 function getUrl(url: string): string {
+  // checks if url is external
   return url.includes('http') ? url : 'https://ngrome.io' + url;
 }
 
