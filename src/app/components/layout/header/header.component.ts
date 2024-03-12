@@ -51,7 +51,7 @@ import { Router } from '@angular/router';
           </div>
           <div class="hidden lg:flex gap-6 m-auto md:hidden">
             @for (item of NavMenu; track $index) {
-              @if (!item.pastEdition) {
+              @if (!item.pastEdition && item.visible) {
                 <a
                   class="leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
                   [href]="item.destinationUrl"
@@ -70,7 +70,7 @@ import { Router } from '@angular/router';
               >
                 <div class="py-4">
                   @for (item of NavMenu; track $index) {
-                    @if (item.pastEdition) {
+                    @if (item.pastEdition && item.visible) {
                       <a
                         [href]="item.destinationUrl"
                         target="_blank"
@@ -134,7 +134,7 @@ import { Router } from '@angular/router';
               (click)="onGoToTicket()"
             >
               <a
-                class="text-base  font-semibold  flex   text-red-ngrome hover-ticket"
+                class="text-base  font-semibold  flex text-red-ngrome hover-ticket"
                 >Tickets
                 <img
                   ngSrc="/menu/ticket.svg"

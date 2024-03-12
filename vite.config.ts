@@ -41,6 +41,7 @@ export default defineConfig(({ mode }) => ({
           '/workshops/ng-girls-workshop-2023-11',
           '/workshops/ng-girls-workshop-2024-06',
           '/workshops/staying-safe-with-angular',
+          '/speakers',
           '/thank-you',
           '/api/v1/sponsors',
           '/api/v1/agenda',
