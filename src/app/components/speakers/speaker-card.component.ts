@@ -8,7 +8,7 @@ import { Speaker } from 'src/app/models/speaker.model';
   imports: [NgIf, NgClass],
   template: `
     <div
-      class="group relative h-auto overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
+      class="group relative h-full overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-700 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg"
       (click)="speaker.slug === '...' ? null : speakerDetail(speaker)"
       [ngClass]="speaker.slug === '...' ? 'cursor-default' : 'cursor-pointer'"
     >
