@@ -27,11 +27,11 @@ import { Agenda } from 'src/app/models/agenda.model';
         >
           <div class="order-1 w-5/12"></div>
           <div class="order-1 w-5/12 px-1 py-2">
-            <p class="mb-2 text-base text-red-600">{{ item?.hours }}</p>
+            <p class="mb-2 text-base text-red-600">{{ item?.startTime }}</p>
             <h4 class="mb-2 font-semibold text-lg md:text-2xl">
-              {{ item?.title }}
+              {{ item?.title || item?.type }}
             </h4>
-            <span class="mx-2"> {{ item?.author }}</span>
+            <span class="mx-2"> {{ item?.speaker }}</span>
           </div>
         </div>
       }
@@ -41,13 +41,13 @@ import { Agenda } from 'src/app/models/agenda.model';
     `
       .timeline {
         width: 0px;
-        @media (max-width: 400px) {
+        @media (max-width: 425px) {
           right: 10%;
           left: 90%;
         }
       }
 
-      @media (max-width: 400px) {
+      @media (max-width: 425px) {
         .agenda {
           text-align: right;
         }
