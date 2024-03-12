@@ -26,6 +26,10 @@ function injectActivePageAttributes(
 export const postTitleResolver: ResolveFn<string> = (route) =>
   'NG Rome - ' + injectActivePageAttributes(route).title;
 
+function getUrl(url: string): string {
+  return url.includes('http') ? url : 'https://ngrome.io' + url;
+}
+
 export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route, state) => {
   const postAttributes = injectActivePostAttributes(route);
   const metaPage = postMetaPageResolver(route, state);
@@ -48,7 +52,7 @@ export const postMetaPageResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:url',
-      content: 'https://ngrome.io' + page.url,
+      content: getUrl(page.url),
     },
     {
       property: 'og:type',
@@ -65,7 +69,7 @@ export const postMetaPageResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:image',
-      content: 'https://ngrome.io' + page.image,
+      content: getUrl(page.image),
     },
 
     {
@@ -78,7 +82,7 @@ export const postMetaPageResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'twitter:url',
-      content: 'https://ngrome.io' + page.url,
+      content: getUrl(page.url),
     },
     {
       name: 'twitter:title',
@@ -90,7 +94,7 @@ export const postMetaPageResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'twitter:image',
-      content: 'https://ngrome.io' + page.image,
+      content: getUrl(page.image),
     },
   ];
 };
