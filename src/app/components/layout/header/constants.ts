@@ -36,6 +36,8 @@ export const NAV_MENU = [
     destinationUrl: "/venue",
     type: "white",
     visible: true,
+    pageSite: true,
+    icon: 'venue',
   },
   //{
   //   name: 'Info',

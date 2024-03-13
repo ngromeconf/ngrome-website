@@ -3,13 +3,13 @@ import { TeamComponent } from '../about/team/team.component';
 
 
 @Component({
-  selector: 'app-content',
+  selector: 'app-venue-content',
   standalone: true,
   imports: [TeamComponent],
   template: `
-    <div class="relative py-16 overflow-hidden bg-white">
-      <div class="relative px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-3xl">
-        <div class="mx-auto text-lg">
+    <div class="relative overflow-hidden bg-white">
+      <div class="relative mx-auto lg:max-w-3xl">
+        <div class="mx-auto text-lg text-left">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500">
             <span class="font-serif text-6xl text-black"> S</span>ince 1973, the Midas Palace Hotel has historically been an iconic landmark for major events and congresses.
             Located a few kilometers from the center, this prestigious four-star hotel is the perfect combination of business and relaxation.
@@ -48,11 +48,7 @@ import { TeamComponent } from '../about/team/team.component';
         <div class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_3:4/v1710175743/venue/Hotel-Midas---059--Hotel-Midas-Roma_cm5o3e.jpg" alt="Person" />
           <div class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-            <p class="mb-1 text-lg font-bold text-gray-100">Oliver Aguilerra</p>
-            <p class="mb-4 text-xs text-gray-100">Product Manager</p>
-            <p class="mb-4 text-xs tracking-wide text-gray-400">
-              Vincent Van Gogh’s most popular painting, The Starry Night.
-            </p>
+            <p class="mb-1 text-lg font-bold text-gray-100">Immerse yourself in the pleasure</p>
           </div>
         </div>
       </div>
@@ -60,11 +56,7 @@ import { TeamComponent } from '../about/team/team.component';
         <div class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_3:4/v1710175720/venue/Salone-Midas--11---Hotel-Midas-Roma_smjz5h.jpg" alt="Person" />
           <div class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-            <p class="mb-1 text-lg font-bold text-gray-100">Marta Clermont</p>
-            <p class="mb-4 text-xs text-gray-100">Design Team Lead</p>
-            <p class="mb-4 text-xs tracking-wide text-gray-400">
-              Amet I love liquorice jujubes pudding croissant I love pudding.
-            </p>
+            <p class="mb-1 text-lg font-bold text-gray-100">Congress Center</p>
           </div>
         </div>
       </div>
@@ -72,11 +64,7 @@ import { TeamComponent } from '../about/team/team.component';
         <div class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_4:3/v1709832170/venue/kouclpg2l8bkgbsbzkul.jpg" alt="Person" />
           <div class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-            <p class="mb-1 text-lg font-bold text-gray-100">Anthony Geek</p>
-            <p class="mb-4 text-xs text-gray-100">CTO, Lorem Inc.</p>
-            <p class="mb-4 text-xs tracking-wide text-gray-400">
-              Apple pie macaroon toffee jujubes pie tart cookie caramels.
-            </p>
+            <p class="mb-1 text-lg font-bold text-gray-100">Easily accessible</p>
           </div>
         </div>
       </div>
@@ -108,13 +96,12 @@ import { TeamComponent } from '../about/team/team.component';
           </p>
         </div>
       </div>
-    <app-team></app-team>
     </div>
     
   `,
   styles: [
   ]
 })
-export class ContentComponent {
+export class VenueContentComponent {
 
 }
