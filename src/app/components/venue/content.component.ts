@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { TeamComponent } from '../about/team/team.component';
 
 
 @Component({
   selector: 'app-content',
   standalone: true,
-  imports: [],
+  imports: [TeamComponent],
   template: `
     <div class="relative py-16 overflow-hidden bg-white">
       <div class="relative px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-3xl">
@@ -20,7 +21,7 @@ import { Component } from '@angular/core';
         </div>
         <br />
 
-        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Raffaello%20Sardiello,%2022,%2000165%20Roma%20RM+(Midas%20Palace%20Hotel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div>
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Raffaello%20Sardiello,%2022,%2000165%20Roma%20RM+(Midas%20Palace%20Hotel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
 
         <br />
         <br />
