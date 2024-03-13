@@ -30,6 +30,11 @@ function textCleaner(text: string): string {
   return text?.replace(/<\/?[^>]+(>|$)/g, '')?.replaceAll('&#8217;', "'");
 }
 
+function getUrl(url: string): string {
+  // checks if url is external
+  return url.includes('http') ? url : 'https://ngrome.io' + url;
+}
+
 export const postTitleResolver: ResolveFn<string> = (route) =>
   'NG Rome - ' + injectActiveWorkshopAttributes(route).title;
 
@@ -42,7 +47,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:url',
-      content: 'https://ngrome.io' + workshop?.link,
+      content: getUrl(workshop?.link),
     },
     {
       property: 'og:type',
@@ -58,7 +63,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:image',
-      content: 'https://ngrome.io' + workshop?.image,
+      content: getUrl(workshop?.image),
     },
     {
       name: 'twitter:card',
@@ -70,7 +75,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'twitter:url',
-      content: 'https://ngrome.io' + workshop?.link,
+      content: getUrl(workshop?.link),
     },
     {
       name: 'twitter:title',
@@ -82,7 +87,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'twitter:image',
-      content: 'https://ngrome.io' + workshop?.image,
+      content: getUrl(workshop?.image),
     },
   ];
 };

@@ -2,7 +2,6 @@ import { Component, OnInit, Signal, inject } from '@angular/core';
 import { HeaderComponent } from '../components/layout/header/header.component';
 import { HeroComponent } from '../components/home/hero/hero.component';
 import { FeaturesComponent } from '../components/home/features/features.component';
-import { VenueComponent } from '../components/home/venue/venue.component';
 import { SponsorComponent } from '../components/sponsors/sponsor.component';
 import { Sponsors } from '../models/sponsor.model';
 import { CommonModule } from '@angular/common';
@@ -48,7 +47,6 @@ export const routeMeta: RouteMeta = {
     HeaderComponent,
     HeroComponent,
     FeaturesComponent,
-    VenueComponent,
     SponsorComponent,
     TicketsComponent,
     CallForPaperComponent,
