@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "angular.ng-template",
+        "bradlc.vscode-tailwindcss",
+        "github.copilot",
+        "esbenp.prettier-vscode"
+    ]
+}
