@@ -25,7 +25,7 @@ authors:
       link: https://www.ng-girls.org
 location: 
     name: Midas Palace Hotel
-    mapsLink: https://maps.app.goo.gl/K9YhwWcrFo1q6rs56
+    mapsLink: /venue
 image: /photo/workshop-ng-girls-20231130.webp
 link: /workshops/ng-girls-workshop-2024-06
 ticket: https://www.ng-girls.org/event/rome-2024

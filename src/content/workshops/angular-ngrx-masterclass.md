@@ -14,8 +14,8 @@ authors:
       image: photo/authors/marko-stanimirovic.webp
       link: https://twitter.com/MarkoStDev
 location: 
-    name: TBD
-    mapsLink: 
+    name: Midas Palace Hotel
+    mapsLink: /venue
 image: /photo/workshop-mastering-NgRx-SignalStore-cover.webp
 link: /workshops/angular-mastering-ngrx-signalstore
 ticket: https://ti.to/ngrome-events/mastering-ngrx-signalstore

@@ -15,7 +15,7 @@ authors:
       link: "https://www.rainerhahnekamp.com/en/"
 location: 
     name: Midas Palace Hotel
-    mapsLink: https://maps.app.goo.gl/K9YhwWcrFo1q6rs56
+    mapsLink: /venue
 image: /photo/workshop-angular-architects-20240627.webp
 link: /workshops/angular-architects-signal-ddd-mfe
 ticket: https://ti.to/ngrome-events/modern-angular-architecture
