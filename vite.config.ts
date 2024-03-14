@@ -42,6 +42,7 @@ export default defineConfig(({ mode }) => ({
           '/workshops/staying-safe-with-angular',
           '/speakers',
           '/thank-you',
+          '/venue',
           '/api/v1/sponsors',
           '/api/v1/tickets',
         ],

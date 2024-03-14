@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-venue',
+  selector: 'app-venue-content',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -72,6 +72,6 @@ import { CommonModule } from '@angular/common';
   styles: [
   ]
 })
-export class VenueComponent {
+export default class VenueHomeComponent {
 
 }
