@@ -28,7 +28,7 @@ export const NAV_MENU = [
     destinationUrl: '/speakers',
     type: 'white',
     pageSite: true,
-    visible: true,
+    visible: false,
     icon: 'speaker',
   },
   // {
