@@ -8,7 +8,7 @@ import { SocialShareComponent } from '../../../social-share/social-share.compone
   template: `
     <section>
       <div
-        class="container flex flex-col items-center px-5 pb-24 pt-10 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20"
+        class="container flex flex-col items-center px-5 pb-6 pt-10 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20"
       >
         <div
           class="flex flex-col items-center mx-auto text-center lg:flex-grow md:items-start md:text-left lg:max-w-3xl"

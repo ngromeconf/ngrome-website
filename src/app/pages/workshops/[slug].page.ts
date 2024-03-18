@@ -88,7 +88,9 @@ export const routeMeta: RouteMeta = {
             }}</span>
           </p>
           @if (workshop.location?.mapsLink) {
-            <a [href]="workshop.location?.mapsLink" target="_blank"
+            <a
+              [href]="workshop.location?.mapsLink"
+              [target]="workshop.location?.mapsLink?.includes('http') ? '_target' : '_self'"
               >Venue:
               <span class="text-blue-600 hover:underline">{{
                 workshop.location?.name
@@ -120,12 +122,7 @@ export default class ProductDetailsPageComponent {
   readonly workshop$ = injectContent<WorkshopAttributes>({
     param: 'slug',
     subdirectory: 'workshops',
-  }).pipe(
-    map(
-      (workshop: ContentFile<WorkshopAttributes | Record<string, never>>) =>
-        workshop.attributes,
-    ),
-  );
+  }).pipe(map((workshop) => workshop.attributes as WorkshopAttributes));
 
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
     return new Date(workshop.date) > new Date();
