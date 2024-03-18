@@ -3,6 +3,7 @@ export interface Agenda {
   duration: number;
   endTime: string;
   type: string;
-  speaker:string;
+  speaker: string;
   title: string;
+  slug?: string;
 }

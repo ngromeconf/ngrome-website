@@ -1,13 +1,25 @@
 import { injectContentFiles } from '@analogjs/content';
+import { Agenda } from 'src/app/models/agenda.model';
 import { Speaker } from 'src/app/models/speaker.model';
 
 export function injectActiveSpeakers(): Speaker[] {
+  // return agenda
+  const agenda = injectAgenda();
+
+  // return speakers
   let speakers = injectContentFiles<Speaker>((contentFile) =>
     contentFile.filename.includes('/src/content/speakers/'),
   )
-    .map((speaker) => speaker.attributes as unknown as Speaker)
-    .filter((speaker) => speaker.visible);
+    .map((speaker) => speaker.attributes as unknown as Speaker) // return only attributes
+    .filter((speaker) => speaker.visible) // return only visible === true
+    .map((speaker) => {
+      // set agenda in speaker
+      speaker.agenda = agenda?.find((a) => a.slug === speaker.slug);
+      return speaker;
+    });
   const speakerLenght = speakers.length;
+
+  // create fake speaker
   for (let index = 0; index < 12 - speakerLenght; index++) {
     speakers.push({
       name: '...',
@@ -20,4 +32,10 @@ export function injectActiveSpeakers(): Speaker[] {
   }
 
   return speakers;
+}
+
+export function injectAgenda(): Agenda[] {
+  return injectContentFiles<{ agenda: Agenda[] }>().find(
+    (contentFile) => contentFile.filename === `/src/content/agenda.md`,
+  )?.attributes.agenda as Agenda[];
 }

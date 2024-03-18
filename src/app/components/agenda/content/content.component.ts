@@ -1,22 +1,17 @@
-import { Component, Signal, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { HttpClient } from '@angular/common/http';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Agenda } from 'src/app/models/agenda.model';
+import { injectAgenda } from '../../../pages/speakers/resolvers';
 
 @Component({
   selector: 'app-content',
   standalone: true,
   template: ` <section>
-    <div
-      *ngIf="agenda$()"
-      class="relative wrap overflow-hidden p-10 h-full mb-10"
-    >
+    <div *ngIf="agenda" class="relative wrap overflow-hidden p-10 h-full mb-10">
       <div
         class="timeline m-auto absolute border-4 right-0 left-0 border-red-ngrome h-full"
       ></div>
-      @for (item of agenda$(); track $index) {
+      @for (item of agenda; track $index) {
         <div
           class="mb-4 flex justify-between items-center w-full font-semibold agenda"
           [ngClass]="
@@ -67,16 +62,5 @@ import { Agenda } from 'src/app/models/agenda.model';
   imports: [CommonModule],
 })
 export class ContentComponent {
-  /**
-   * Signal representing the agenda data.
-   * @type {Signal<Agenda>}
-   */
-  public agenda$: Signal<Agenda[]> = this.getAgenda();
-
-  getAgenda() {
-    const _http = inject(HttpClient);
-    return toSignal(_http.get<Agenda[]>('./api/v1/agenda'), {
-      initialValue: [],
-    });
-  }
+  public agenda: Agenda[] = injectAgenda();
 }

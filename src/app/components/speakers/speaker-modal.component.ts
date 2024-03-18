@@ -8,23 +8,23 @@ import { NgIf } from '@angular/common';
   standalone: true,
   imports: [SocialLinksComponent, NgIf],
   styles: `
-      .modal-speaker {
-        z-index: 9999;
-        transition: opacity 0.3s;
-      }
+    .modal-speaker {
+      z-index: 9999;
+      transition: opacity 0.3s;
+    }
 
-      .modal-speaker.hidden {
-        opacity: 0;
-        display: block;
-        overflow: hidden;
-        visibility: hidden;
-      }
+    .modal-speaker.hidden {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+    }
 
-      .modal-speaker.show {
-        opacity: 1;
-        visibility: visible;
-      }
-    `,
+    .modal-speaker.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  `,
   template: `
     <div
       class="hidden modal-speaker h-screen w-full fixed left-0 top-0 flex justify-center sm:items-center bg-black bg-opacity-50 py-24 px-8"
@@ -57,6 +57,18 @@ import { NgIf } from '@angular/common';
               class="font-bold  text-left"
               [innerHTML]="speaker?.talk?.description"
             ></p>
+            @if (speaker?.agenda?.startTime) {
+              <p class="text-left pt-3">
+                Starting time:
+                <span class="font-bold">{{ speaker?.agenda?.startTime }}</span>
+                @if (speaker?.agenda?.duration) {
+                  | Duration:
+                  <span class="font-bold"
+                    >{{ speaker?.agenda?.duration }} minutes</span
+                  >
+                }
+              </p>
+            }
           </div>
           <div class="p-10 pb-5 container border-t text-left">
             <div class="sm:inline-flex w-full gap-10">
