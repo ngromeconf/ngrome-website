@@ -34,7 +34,7 @@ agenda:
     duration: 25
     endTime: '10:25'
     speaker: 'Enea Jahollari'
-  - slug: 
+  - slug: christopher-holder
     title: 
     type: Lighting Talk 1
     startTime: '10:25'
@@ -66,12 +66,13 @@ agenda:
     duration: 25
     endTime: '12:00'
     speaker: 'Manfred Steyer'
-  - slug: 
+  - slug: l-talk-2
     title: 
     type: Lighting Talk 2
     startTime: '12:00'
     duration: 10
     endTime: '12:10'
+    speaker: 
   - slug: alisa-duncan
     title: Valuable Component Testing in Angular
     type: Talk 4
@@ -79,12 +80,13 @@ agenda:
     duration: 25
     endTime: '12:35'
     speaker: 'Alisa Duncan'
-  - slug: 
+  - slug: talk-5
     title: 
     type: Talk 5
     startTime: '12:35'
     duration: 25
     endTime: '13:00'
+    speaker: 
   - slug: 
     title: 
     type: Panel
@@ -110,21 +112,21 @@ agenda:
     duration: 25
     endTime: '14:45'
     speaker: 'Natalia Venditto'
-  - slug: 
+  - slug: talk-7
     title: 
     type: Talk 7
     startTime: '14:45'
     duration: 25
     endTime: '15:10'
     speaker: 'Brandon Roberts'
-  - slug: 
+  - slug: daniela-bonvini
     title: 'Angular Signals: what’s all the fuss about?'
     type: Lightning Talk 3
     startTime: '15:10'
     duration: 10
     endTime: '15:20'
     speaker: 'Daniela Bonvini'
-  - slug: daniela-bonvini
+  - slug: alessandro-millucci
     title: 
     type: Talk 8
     startTime: '15:20'
@@ -137,18 +139,21 @@ agenda:
     startTime: '15:45'
     duration: 15
     endTime: '16:00'
+    speaker: 
   - slug: 
     title: 
     type: Coffee break
     startTime: '15:45'
     duration: 40
     endTime: '16:25'
+    speaker: 
   - slug: 
     title: 
     type: Sponsor pitch
     startTime: '16:00'
     duration: 10
     endTime: '16:10'
+    speaker: 
   - slug: soumaya-erradi
     title: State of SSR with Angular
     type: Talk 10
@@ -162,14 +167,15 @@ agenda:
     startTime: '16:35'
     duration: 10
     endTime: '16:45'
-  - slug: 
+    speaker: 
+  - slug: talk-12
     title: 
     type: Talk 12
     startTime: '16:45'
     duration: 25
     endTime: '17:10'
     speaker: 'Mateusz Łędzewicz'
-  - slug: 
+  - slug: mike-ryan
     title: 
     type: Closing Keynote
     startTime: '17:10'

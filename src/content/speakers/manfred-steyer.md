@@ -13,5 +13,5 @@ links:
     twitter: https://twitter.com/ManfredSteyer
     gitHub: https://github.com/manfredsteyer
     other: https://www.angulararchitects.io/en/
-visible: true
+visible: false
 ---

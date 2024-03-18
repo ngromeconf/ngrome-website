@@ -35,7 +35,39 @@ export function injectActiveSpeakers(): Speaker[] {
 }
 
 export function injectAgenda(): Agenda[] {
-  return injectContentFiles<{ agenda: Agenda[] }>().find(
+  // get speaker
+  const speakers = injectContentFiles<Speaker>((contentFile) =>
+    contentFile.filename.includes('/src/content/speakers/'),
+  ).map((speaker) => speaker.attributes as unknown as Speaker);
+
+  // get agenda
+  let agenda = injectContentFiles<{ agenda: Agenda[] }>().find(
     (contentFile) => contentFile.filename === `/src/content/agenda.md`,
   )?.attributes.agenda as Agenda[];
+
+  agenda.forEach((a) => {
+    let check = false;
+    speakers.forEach((speaker) => {
+      // I verify that the agenda is a talk
+      if (a.type.includes('Talk')) {
+        // I recover the speaker next to the talk
+        if (a.slug == speaker.slug) {
+          check = true; // I confirm that I have recovered the talk
+          if (!speaker.visible) {
+            // if it is not visible I hide the data
+            a.title = '';
+            a.speaker = '';
+          }
+          return;
+        }
+      }
+    });
+    if (!check && a.type.includes('Talk')) {
+      // if it is a talk but there is not yet a file for the speaker I hide the data
+      a.title = '';
+      a.speaker = '';
+    }
+  });
+
+  return agenda;
 }
