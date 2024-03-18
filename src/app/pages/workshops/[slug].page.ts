@@ -32,15 +32,8 @@ export const routeMeta: RouteMeta = {
     SocialShareComponent,
   ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
-    <app-page-head [title]="workshop.title" [subtitle]="workshop.description" />
-    @if (isWorkshopActive(workshop)) {
-      <app-social-share
-        [message]="socialMessage(workshop)"
-        class="transform -translate-y-12"
-      />
-    }
+    <app-page-head [title]="workshop.title" />
 
-    <app-page-image [image]="workshop.image || ''" />
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
       @for (author of workshop.authors; track $index) {
         <div class="w-full sm:max-w-full sm:flex">
@@ -73,7 +66,14 @@ export const routeMeta: RouteMeta = {
         </div>
       }
     </section>
-
+    <app-page-image [image]="workshop.image || ''" />
+    <app-page-head [subtitle]="workshop.description" />
+    @if (isWorkshopActive(workshop)) {
+      <app-social-share
+        [message]="socialMessage(workshop)"
+        class="transform -translate-y-12"
+      />
+    }
     <div
       class="sticky bottom-0 w-full bg-white px-20 py-5 rounded-t-lg shadow-xl"
     >
@@ -90,7 +90,11 @@ export const routeMeta: RouteMeta = {
           @if (workshop.location?.mapsLink) {
             <a
               [href]="workshop.location?.mapsLink"
-              [target]="workshop.location?.mapsLink?.includes('http') ? '_target' : '_self'"
+              [target]="
+                workshop.location?.mapsLink?.includes('http')
+                  ? '_target'
+                  : '_self'
+              "
               >Venue:
               <span class="text-blue-600 hover:underline">{{
                 workshop.location?.name
