@@ -1,17 +1,9 @@
-import {
-  AsyncPipe,
-  CommonModule,
-  DatePipe,
-  NgFor,
-  NgIf,
-} from '@angular/common';
+import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
-import { PageImageComponent } from '../../components/layout/pages/main-image/page-image.component';
 import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
-import { ContentFile, injectContent } from '@analogjs/content';
+import { injectContent } from '@analogjs/content';
 import { map } from 'rxjs';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
@@ -22,17 +14,26 @@ export const routeMeta: RouteMeta = {
 
 @Component({
   standalone: true,
-  imports: [
-    NgIf,
-    NgFor,
-    AsyncPipe,
-    DatePipe,
-    PageHeadComponent,
-    PageImageComponent,
-    SocialShareComponent,
-  ],
+  imports: [NgIf, NgFor, AsyncPipe, DatePipe, SocialShareComponent],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
-    <app-page-head [title]="workshop.title" />
+    <div
+      class="sm:flex px-5 pb-6 pt-10 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20 w-full items-center"
+    >
+      <div
+        class="sm:w-[50%] w-full mx-auto text-center lg:flex-grow md:items-start md:text-left lg:max-w-3xl"
+        style="word-wrap: break-word;"
+      >
+        <h1
+          class="font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
+        >
+          {{ workshop.title }}
+        </h1>
+      </div>
+      <div
+        class="h-screen max-h-96 bg-cover bg-center sm:w-[50%] w-full"
+        style="background-image: url({{ workshop.image }});"
+      ></div>
+    </div>
 
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
       @for (author of workshop.authors; track $index) {
@@ -66,13 +67,16 @@ export const routeMeta: RouteMeta = {
         </div>
       }
     </section>
-    <app-page-image [image]="workshop.image || ''" />
-    <app-page-head [subtitle]="workshop.description" />
+    <section
+      class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
+    >
+      <div
+        class="text-lg md:text-left leading-snug text-slate-500"
+        [innerHTML]="workshop.description"
+      ></div>
+    </section>
     @if (isWorkshopActive(workshop)) {
-      <app-social-share
-        [message]="socialMessage(workshop)"
-        class="transform -translate-y-12"
-      />
+      <app-social-share [message]="socialMessage(workshop)" class="pt-5" />
     }
     <div
       class="sticky bottom-0 w-full bg-white px-20 py-5 rounded-t-lg shadow-xl"
