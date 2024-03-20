@@ -13,16 +13,19 @@ import { SocialShareComponent } from '../../../social-share/social-share.compone
         <div
           class="flex flex-col items-center mx-auto text-center lg:flex-grow md:items-start md:text-left lg:max-w-3xl"
         >
-          <h1
-            class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
-          >
-            {{ title }}
-          </h1>
-
-          <p
-            class="text-lg md:text-left leading-snug text-slate-500"
-            [innerHtml]="subtitle"
-          ></p>
+          @if (title) {
+            <h1
+              class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
+            >
+              {{ title }}
+            </h1>
+          }
+          @if (subtitle) {
+            <p
+              class="text-lg md:text-left mb-10 leading-snug text-slate-500"
+              [innerHtml]="subtitle"
+            ></p>
+          }
 
           <!-- <app-social-share /> -->
         </div>
