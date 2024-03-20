@@ -19,7 +19,7 @@ const goldSponsors: SponsorInterface[] = [
   {
     name: 'Cloudinary',
     image:
-      'https://cloudinary-marketing-res.cloudinary.com/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1652806224/cloudinary_logo_blue_0720_svg.jpg?_s=public-apps',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1710957882/ngrome-sponsors/cloudinary_logo_blue_0720_svg_nmxmoq.svg',
     url: 'https://cloudinary.com/',
   },
 ];
