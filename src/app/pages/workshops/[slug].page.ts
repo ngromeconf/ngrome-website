@@ -11,7 +11,7 @@ import { PageImageComponent } from '../../components/layout/pages/main-image/pag
 import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
-import { ContentFile, injectContent } from '@analogjs/content';
+import {  injectContent } from '@analogjs/content';
 import { map } from 'rxjs';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
