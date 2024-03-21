@@ -16,6 +16,12 @@ const goldSponsors: SponsorInterface[] = [
     image: './sponsors/ict-group-logo.svg',
     url: 'https://ict-group.it/',
   },
+  {
+    name: 'Cloudinary',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1710957882/ngrome-sponsors/cloudinary_logo_blue_0720_svg_nmxmoq.svg',
+    url: 'https://cloudinary.com/',
+  },
 ];
 const silverSponsor: SponsorInterface[] = [
   {

@@ -49,7 +49,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           <div class="grid grid-cols-12 -m-4 justify-center">
             @for (item of sponsors; track $index) {
               <a
-                class="inline-flex items-center mb-2 p-8 col-span-6 sm:col-span-6"
+                class="inline-flex items-center mb-2 lg:p-8 p-2 md:p-4 col-span-6 sm:col-span-6"
                 [ngClass]="
                   'lg:col-span-' +
                   12 / itemsPerRow +
