@@ -2,10 +2,10 @@ import { Component, Pipe, PipeTransform } from '@angular/core';
 import { AsyncPipe, JsonPipe, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { WorkshopAttributes } from '../../models/workshop.model';
-import { WorkshopCardComponent } from '../../components/workshops/workshop-card.component';
 import { PageHeadComponent } from '../../components/layout/pages/page-head/page-head.component';
 import { injectActiveWorkshops } from './resolvers';
 import { RouteMeta } from '@analogjs/router';
+import { WorkshopListComponent } from '../../components/workshops/workshop-list.component';
 
 @Pipe({
   name: 'filterByDate',
@@ -30,6 +30,39 @@ export class FilterByDatePipe implements PipeTransform {
   }
 }
 
+@Pipe({
+  name: 'groupByDate',
+  standalone: true,
+})
+export class GroupByDatePipe implements PipeTransform {
+  transform(
+    workshops: WorkshopAttributes[],
+  ): { date: string; events: WorkshopAttributes[] }[] {
+    // Sort events by date
+    workshops.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateA.getTime() - dateB.getTime();
+    });
+
+    // Group events by date
+    const groupedEvents: { [key: string]: WorkshopAttributes[] } = {};
+    workshops.forEach((workshop) => {
+      const date = new Date(workshop.date).toDateString();
+      if (!groupedEvents[date]) {
+        groupedEvents[date] = [];
+      }
+      groupedEvents[date].push(workshop);
+    });
+
+    // Convert grouped object to array of objects { date, events }
+    const result = Object.keys(groupedEvents).map((date) => ({
+      date,
+      events: groupedEvents[date],
+    }));
+    return result;
+  }
+}
 export const routeMeta: RouteMeta = {
   title: 'NG Rome - Workshops',
 };
@@ -43,8 +76,9 @@ export const routeMeta: RouteMeta = {
     RouterLink,
     AsyncPipe,
     PageHeadComponent,
-    WorkshopCardComponent,
+    WorkshopListComponent,
     FilterByDatePipe,
+    GroupByDatePipe,
   ],
   template: `
     <app-page-head
@@ -53,33 +87,30 @@ export const routeMeta: RouteMeta = {
     />
     @if (workshops) {
       <div class="max-w-screen-xl p-5 mx-auto">
-        <div
-          class="grid grid-cols-1 justify-center gap-5 lg:grid-cols-2 sm:grid-cols-2"
-        >
+        <div class="grid grid-cols-1 gap-5 text-left">
           @for (
-            workshop of workshops | filterByDate: 'date' : 'future';
+            workshopDate of workshops
+              | filterByDate: 'date' : 'future'
+              | groupByDate;
             track $index
           ) {
-            <workshop-card
-              [class]="
-                'col-span-1 sm:col-span-' +
-                workshop.col +
-                ' lg:col-span-' +
-                workshop.col
-              "
-              [workshop]="workshop"
-            />
+            <workshop-list [workshopsList]="workshopDate"></workshop-list>
           }
         </div>
         <h2 class="my-5 pt-10 text-xl font-bold">Our Past Workshops</h2>
         <div
-          class="grid grid-cols-1 justify-center gap-5 lg:grid-cols-3 sm:grid-cols-2"
+          class="grid grid-cols-1 gap-5 text-left lg:grid-cols-3 sm:grid-cols-2"
         >
           @for (
-            workshop of workshops | filterByDate: 'date' : 'past';
+            workshopDate of workshops
+              | filterByDate: 'date' : 'past'
+              | groupByDate;
             track $index
           ) {
-            <workshop-card [workshop]="workshop" />
+            <workshop-list
+              [workshopsList]="workshopDate"
+              [past]="true"
+            ></workshop-list>
           }
         </div>
       </div>
