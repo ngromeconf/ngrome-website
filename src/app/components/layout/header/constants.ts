@@ -28,7 +28,7 @@ export const NAV_MENU = [
     destinationUrl: '/speakers',
     type: 'white',
     pageSite: true,
-    visible: false,
+    visible: true,
     icon: 'speaker',
   },
   // {
@@ -40,9 +40,9 @@ export const NAV_MENU = [
   //   icon: 'speaker',
   // },
   {
-    name: "Venue",
-    destinationUrl: "/venue",
-    type: "white",
+    name: 'Venue',
+    destinationUrl: '/venue',
+    type: 'white',
     visible: true,
     pageSite: true,
     icon: 'venue',
