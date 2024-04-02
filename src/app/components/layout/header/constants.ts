@@ -23,6 +23,14 @@ export const NAV_MENU = [
     pageSite: true,
     icon: 'sponsor',
   },
+  {
+    name: 'Speakers',
+    destinationUrl: '/speakers',
+    type: 'white',
+    pageSite: true,
+    visible: true,
+    icon: 'speaker',
+  },
   // {
   //   name: 'CFP',
   //   destinationUrl: '#callForPaper',
@@ -32,9 +40,9 @@ export const NAV_MENU = [
   //   icon: 'speaker',
   // },
   {
-    name: "Venue",
-    destinationUrl: "/venue",
-    type: "white",
+    name: 'Venue',
+    destinationUrl: '/venue',
+    type: 'white',
     visible: true,
     pageSite: true,
     icon: 'venue',
