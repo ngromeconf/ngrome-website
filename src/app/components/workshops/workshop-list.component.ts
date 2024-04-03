@@ -18,7 +18,7 @@ import { WorkshopRowComponent } from './workshop-row.component';
       </div>
       <ul class="flex flex-col divide-y divide">
         @for (workshops of workshopsList.events; track $index) {
-          <workshop-row [workshop]="workshops"></workshop-row>
+          <workshop-row [workshop]="workshops" [past]="past"></workshop-row>
         }
       </ul>
     </div>
