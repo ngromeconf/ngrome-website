@@ -11,9 +11,9 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
     <section>
       <div class="flex flex-row">
         <div
-          class="flex items-center flex-wrap p-4 w-full select-none justify-center"
+          class="flex flex-col md:flex-row items-center flex-wrap p-4 w-full select-none justify-center"
         >
-          <div class="flex flex-col sm:flex-row gap-4">
+          <div class="flex flex-row gap-4 min-w-11">
             @for (author of workshop.authors; track $index) {
               <div class=" flex-row justify-center w-20 h-20">
                 <div class="relative block">
@@ -27,12 +27,12 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
               </div>
             }
           </div>
-          <div class="flex-1 pl-1" style="min-width: 100px;">
-            <div class="font-bold sm:text-lg text-sm dark:text-white">
+          <div class="grow pl-2">
+            <div class="font-bold text-center text-sm pt-5 dark:text-white sm:text-xl  lg:pt-0 ">
               {{ workshop.title }}
             </div>
           </div>
-          <div class="flex  gap-4 m-auto sm:text-lg text-right my-4 mx-2">
+          <div class="flex gap-4 m-auto sm:text-lg text-right my-4 mx-2">
             @if (!past) {
               <button
                 class="tito-widget-button"
