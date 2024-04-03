@@ -91,9 +91,12 @@ export const routeMeta: RouteMeta = {
           <p>
             When:
             <span class="font-semibold"
-              >{{ workshop.date | date: 'MMMM dd, YYYY' }} |
-              {{ workshop.time }}</span
-            >
+              >{{ workshop.date | date: 'MMMM dd, YYYY' }}
+              @if (workshop?.time) {
+                |
+                {{ workshop.time }}
+              }
+            </span>
           </p>
           @if (workshop.location?.mapsLink) {
             <a
