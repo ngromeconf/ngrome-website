@@ -16,6 +16,12 @@ const goldSponsors: SponsorInterface[] = [
     image: './sponsors/ict-group-logo.svg',
     url: 'https://ict-group.it/',
   },
+  {
+    name: 'Cloudinary',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1710957882/ngrome-sponsors/cloudinary_logo_blue_0720_svg_nmxmoq.svg',
+    url: 'https://cloudinary.com/',
+  },
 ];
 const silverSponsor: SponsorInterface[] = [
   {
@@ -26,11 +32,6 @@ const silverSponsor: SponsorInterface[] = [
 ];
 const bronzeSponsor: SponsorInterface[] = [
   {
-    name: 'Packt',
-    image: './sponsors/packt-logo.svg',
-    url: 'https://www.packtpub.com/',
-  },
-  {
     name: 'angular.dev',
     image: './sponsors/angular_wordmark_gradient.png',
     url: 'https://www.angular.dev/',
@@ -40,11 +41,7 @@ const bronzeSponsor: SponsorInterface[] = [
     image: './sponsors/conte-logo.svg',
     url: 'https://www.conte.it/',
   },
-  {
-    name: 'Sticker Mule',
-    image: './sponsors/sticker-mule-logo.svg',
-    url: 'https://www.stickermule.com/it/adesivi-personalizzati',
-  },
+
   {
     name: 'Lascaux',
     image:
@@ -56,6 +53,12 @@ const bronzeSponsor: SponsorInterface[] = [
     image:
       'https://assets-global.website-files.com/652fb7047cb1f8b74c17f907/653a3462d8987268e60e7cb4_ineo-colored.svg',
     url: 'https://www.ineo.it/',
+  },
+  {
+    name: 'Digitouch',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1712159211/ngrome-sponsors/download_peyvpd.jpg?_s=public-apps',
+    url: 'https://www.gruppodigitouch.it/',
   },
 ];
 const diversitySponsor: SponsorInterface[] = [
@@ -71,10 +74,30 @@ const technicalSponsors: SponsorInterface[] = [
     image: './sponsors/slido-logo.svg',
     url: 'https://www.slido.com/',
   },
+  {
+    name: 'Packt',
+    image: './sponsors/packt-logo.svg',
+    url: 'https://www.packtpub.com/',
+  },
+  {
+    name: 'Sticker Mule',
+    image: './sponsors/sticker-mule-logo.svg',
+    url: 'https://www.stickermule.com/it/adesivi-personalizzati',
+  },
 ];
 
 const communityPartners: SponsorInterface[] = [
   {
+    name: 'Coderful',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711105674/ngrome-sponsors/coderful-colore-trasparente_wyi541.png',
+    url: 'https://www.coderful.io/',
+  },{
+    name: 'The Communities Bay',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711096696/ngrome-sponsors/The_Communities_Bay_k1hjzk.png',
+    url: 'https://thecmmbay.com/',
+  },{
     name: 'StopCoding',
     image:
       'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FLOGO_stopcoding_400x400%20-%20Ileana%20Baldassi.jpg?alt=media&amp;token=20921429-a600-4570-aeb9-cb58eed7db0f',
@@ -334,10 +357,10 @@ const pastEditionSponsors: SponsorInterface[] = [
     url: '',
   },
   {
-    name: 'Edgemony',
+    name: 'The Communities Bay',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FLogo-Edgemony01.png?alt=media&token=904aeff4-b737-4661-81be-e41933308987',
-    url: '',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711096696/ngrome-sponsors/The_Communities_Bay_k1hjzk.png',
+    url: 'https://thecmmbay.com/',
   },
   {
     name: 'Jetbrains',
