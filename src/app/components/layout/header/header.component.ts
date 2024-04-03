@@ -59,7 +59,7 @@ import { Router } from '@angular/router';
                 >
               }
             }
-            <div
+            <!--  <div
               class="pastEdition cursor-default md:my-0 leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90"
             >
               <a class="focus:outline-none focus:shadow-none focus:text-mana"
@@ -84,7 +84,7 @@ import { Router } from '@angular/router';
                   }
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="lg:contents hidden lg:contents gap-6 m-auto md:hidden">
             <button
@@ -191,9 +191,9 @@ import { Router } from '@angular/router';
                     </a>
                   }
                 }
-                <hr class="mr-6 ml-10 " />
+                <!--   <hr class="mr-6 ml-10 " />
                 @for (item of NavMenu; track $index) {
-                  @if (item.pastEdition && item.visible) {
+                  @if (item?.pastEdition && item.visible) {
                     <a
                       [href]="item.destinationUrl"
                       [target]="item?.pageSite ? '_self' : '_target'"
@@ -216,7 +216,7 @@ import { Router } from '@angular/router';
                       >
                     </a>
                   }
-                }
+                } -->
               </div>
             </div>
           </div>
