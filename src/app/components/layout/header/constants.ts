@@ -5,7 +5,7 @@ export const NAV_MENU = [
     destinationUrl: '/',
     pageSite: true,
     type: 'white',
-    visible: true,
+    visible: false,
   },
   {
     name: 'About',
@@ -73,14 +73,14 @@ export const NAV_MENU = [
     destinationUrl: 'https://2022.ngrome.io',
     type: 'white',
     pageSite: false,
-    visible: true,
+    visible: false,
   },
   {
     pastEdition: true,
     name: '2023',
     destinationUrl: 'https://2023.ngrome.io',
     type: 'white',
-    visible: true,
+    visible: false,
     pageSite: false,
   },
 ];
