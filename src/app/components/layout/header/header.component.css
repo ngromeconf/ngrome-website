@@ -44,6 +44,13 @@ div.workshop {
     background-image: url(./menu/workshop-red.svg);
 }
 
+div.venue {
+    background-image: url(./menu/venue.svg);
+}
+
+.hover-white:hover   div.venue {
+    background-image: url(./menu/venue-red.svg);
+}
 .hover-ticket:hover img {
     rotate: 30deg;
     visibility: visible;
