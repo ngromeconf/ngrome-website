@@ -1,9 +1,8 @@
-export interface Contributor {
+import { SocialLinks } from '../../shared/social-links.component';
+
+export interface Contributor extends SocialLinks {
   name: string;
   imageUrl: string;
-  linkedIn?: string;
-  twitter?: string;
-  gitHub?: string;
 }
 
 export const CONTRIBUTORS: Contributor[] = [

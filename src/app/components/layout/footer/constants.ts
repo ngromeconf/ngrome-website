@@ -23,12 +23,12 @@ export const FOOTER_MENU = [
     type: 'link',
     visible: true,
   },
-  // {
-  //   name: 'Speakers',
-  //   destinationUrl: './',
-  //   type: 'link',
-  //   visible: true,
-  // },
+  {
+    name: 'Speakers',
+    destinationUrl: './',
+    type: 'link',
+    visible: true,
+  },
   {
     name: 'Workshops',
     destinationUrl: './workshops',
