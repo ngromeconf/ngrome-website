@@ -30,9 +30,14 @@ export const routeMeta: RouteMeta = {
         </h1>
       </div>
       <div
-        class="h-screen max-h-96 bg-cover bg-center sm:w-[50%] w-full"
-        style="background-image: url({{ workshop.image }});"
-      ></div>
+        class="h-screen max-h-96 bg-cover bg-center sm:w-[50%] w-full inline-flex items-center"
+      >
+        <img
+          [src]="workshop.image"
+          alt="workshop.title"
+          [title]="workshop.title"
+        />
+      </div>
     </div>
 
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
@@ -76,20 +81,19 @@ export const routeMeta: RouteMeta = {
       ></div>
     </section>
     @if (isWorkshopActive(workshop)) {
-      <app-social-share [message]="socialMessage(workshop)" class="pt-5" />
+      <app-social-share [message]="socialMessage(workshop)" class="py-5" />
     }
-    <div
-      class="sticky bottom-0 w-full bg-white px-20 py-5 rounded-t-lg shadow-xl"
-    >
+    <div class="sticky bottom-0 w-full bg-gray-50 px-20 py-5 border-t">
       <div
         class="flex flex-col items-center md:items-start md:flex-row gap-5 justify-between max-w-3xl mx-auto"
       >
         <div class="flex flex-col gap-4 text-center md:text-left">
           <p>
             When:
-            <span class="font-semibold">{{
-              workshop.date | date: 'MMMM dd, YYYY'
-            }}</span>
+            <span class="font-semibold"
+              >{{ workshop.date | date: 'MMMM dd, YYYY' }} |
+              {{ workshop.time }}</span
+            >
           </p>
           @if (workshop.location?.mapsLink) {
             <a
