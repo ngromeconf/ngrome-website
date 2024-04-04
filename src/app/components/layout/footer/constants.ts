@@ -41,6 +41,21 @@ export const FOOTER_MENU = [
     type: 'link',
     visible: true,
   },
+  {
+    name: '2022',
+    destinationUrl: 'https://2022.ngrome.io',
+    type: 'link',
+    pageSite: false,
+    visible: true,
+  },
+  {
+    pastEdition: true,
+    name: '2023',
+    destinationUrl: 'https://2023.ngrome.io',
+    type: 'link',
+    visible: true,
+    pageSite: false,
+  },
   // {
   //   name: 'Info',
   //   destinationUrl: './',
