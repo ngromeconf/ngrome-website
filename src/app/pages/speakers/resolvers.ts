@@ -57,6 +57,9 @@ export function injectAgenda(): Agenda[] {
             // if it is not visible I hide the data
             a.title = '';
             a.speaker = '';
+          } else {
+            a.title = speaker.talk.title;
+            a.speaker = speaker.name;
           }
           return;
         }
