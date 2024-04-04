@@ -113,7 +113,7 @@ export class CalculateTimePipe implements PipeTransform {
                       <div class="grid grid-cols-12 items-center gap-4">
                         @for (item of Sponsors.Gold; track $index) {
                           <a
-                            class="inline-flex items-center p-2 sm:col-span-4 col-span-12"
+                            class="inline-flex items-center p-2 sm:col-span-4 col-span-12 md:col-span-12 lg:col-span-4"
                             [href]="item.url ? item.url : '/sponsors'"
                             target="_blank"
                           >
