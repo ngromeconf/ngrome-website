@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Signal, inject } from '@angular/core';
+import { Component, Signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SponsorComponent } from '../sponsor.component';
 

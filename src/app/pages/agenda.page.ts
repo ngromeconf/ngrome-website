@@ -15,8 +15,8 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   template: `
     <app-page-head
-      [title]="'Conference Agenda'"
-      subtitle="<span class='text-4xl text-slate-800'>One track, one love</span><br /><br /><span class='text-2xl'>One day with experts and passionate about Angular</span>"
+      [title]="'Thursday'"
+      subtitle="<span class='text-4xl text-slate-800'>June 27, 2024</span><br /><br /><a href='/venue' class='text-2xl'>Midas Palace Hotel (Rome)</a>"
     />
     <app-content />
   `,

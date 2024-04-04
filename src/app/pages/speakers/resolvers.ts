@@ -14,7 +14,9 @@ export function injectActiveSpeakers(): Speaker[] {
     .filter((speaker) => speaker.visible) // return only visible === true
     .map((speaker) => {
       // set agenda in speaker
-      speaker.agenda = agenda?.find((a) => a.slug === speaker.slug);
+      speaker.agenda = agenda?.map((agenda) =>
+        agenda.events.find((e) => e.slug === speaker.slug),
+      ) as unknown as Event;
       return speaker;
     });
   const speakerLenght = speakers.length;
@@ -46,30 +48,32 @@ export function injectAgenda(): Agenda[] {
   )?.attributes.agenda as Agenda[];
 
   agenda.forEach((a) => {
-    let check = false;
-    speakers.forEach((speaker) => {
-      // I verify that the agenda is a talk
-      if (a.type.includes('Talk')) {
-        // I recover the speaker next to the talk
-        if (a.slug == speaker.slug) {
-          check = true; // I confirm that I have recovered the talk
-          if (!speaker.visible) {
-            // if it is not visible I hide the data
-            a.title = '';
-            a.speaker = '';
-          } else {
-            a.title = speaker.talk.title;
-            a.speaker = speaker.name;
+    a.events.forEach((event) => {
+      let check = false;
+      speakers.forEach((speaker) => {
+        // I verify that the agenda is a talk
+        if (event.type.includes('Talk')) {
+          // I recover the speaker next to the talk
+          if (event.slug == speaker.slug) {
+            check = true; // I confirm that I have recovered the talk
+            if (!speaker.visible) {
+              // if it is not visible I hide the data
+              event.title = '';
+              event.speaker = null as unknown as Speaker;
+            } else {
+              event.title = speaker.talk.title;
+              event.speaker = speaker;
+            }
+            return;
           }
-          return;
         }
+      });
+      if (!check && event.type.includes('Talk')) {
+        // if it is a talk but there is not yet a file for the speaker I hide the data
+        event.title = '';
+        event.speaker = null as unknown as Speaker;
       }
     });
-    if (!check && a.type.includes('Talk')) {
-      // if it is a talk but there is not yet a file for the speaker I hide the data
-      a.title = '';
-      a.speaker = '';
-    }
   });
 
   return agenda;
