@@ -51,6 +51,14 @@ div.venue {
 .hover-white:hover   div.venue {
     background-image: url(./menu/venue-red.svg);
 }
+
+div.agenda {
+    background-image: url(./menu/agenda.svg);
+}
+
+.hover-white:hover   div.agenda {
+    background-image: url(./menu/agenda-red.svg);
+}
 .hover-ticket:hover img {
     rotate: 30deg;
     visibility: visible;

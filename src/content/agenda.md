@@ -40,7 +40,7 @@ agenda:
             type: Panel
             duration: 10
           - slug: 
-            title: Coffee break
+            title: Coffee  & networking
             type: Pause
             duration: 40
           - slug: 

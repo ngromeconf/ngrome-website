@@ -13,6 +13,7 @@ export const NAV_MENU = [
     type: 'white',
     visible: true,
     pageSite: true,
+    icon: 'agenda',
   },
   {
     name: 'About',

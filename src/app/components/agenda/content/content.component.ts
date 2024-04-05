@@ -40,130 +40,147 @@ export class CalculateTimePipe implements PipeTransform {
   selector: 'app-content',
   standalone: true,
   template: ` <section>
-    <div class="md:flex block">
+    <div class="container-agenda grid mt-6 text-left px-4 pb-4">
       @for (a of agenda; track $index) {
-        <div
-          *ngIf="agenda"
-          class="relative wrap overflow-hidden p-4 sm:p-10 md:p-4 h-full"
-        >
-          <div class="text-3xl mb-4 font-bold">{{ a.title }}</div>
-
-          @for (item of a.events | calculateTime: a.start; track $index) {
-            <div class="flex justify-between w-full font-semibold agenda gap-4">
-              <div class="right-timeline text-right w-40 mb-4  hidden sm:block">
-                <div class="order-1 px-1 py-2">
-                  <p class="mb-2 text-base text-red-600">
-                    {{ item?.startTime }} - {{ item?.endTime }}
-                  </p>
-                </div>
-              </div>
-              <div class="timeline  border-2 border-red-ngrome"></div>
-              <div
-                class="flex-row-reverse left-timeline text-left w-full border-4  mb-4"
-                [ngClass]="
-                  item.type.includes('Pause')
-                    ? 'rounded-xl bg-gray-50 border-red-ngrome'
-                    : 'border-white'
-                "
-              >
-                <div class="order-1 w-full px-1 py-2">
-                  <p class="mb-2 text-base text-red-600 sm:hidden block">
-                    {{ item?.startTime }} - {{ item?.endTime }}
-                  </p>
-                  <h4 class="mb-2 font-bold text-lg md:text-2xl">
-                    {{ item?.title || item?.type }}
-                  </h4>
-                  @if (item?.speaker?.talk) {
-                    <p class="mx-2 font-normal">
-                      {{ item?.speaker?.talk?.description }}
-                    </p>
-                  }
-                  @if (item?.speaker?.name) {
-                    <div
-                      class="flex  md:flex-row items-center flex-wrap p-4 w-full select-none justify-center"
-                    >
-                      <div class=" flex-row justify-center w-20 h-20">
-                        <div class="relative block">
-                          <img
-                            [alt]="item?.speaker?.name"
-                            [title]="item?.speaker?.name"
-                            [src]="item?.speaker?.imageUrl"
-                            class="mx-auto object-cover rounded-full h-20 w-20 "
-                          />
-                        </div>
-                      </div>
-                      <div class="grow pl-2">
-                        <div class="text-sm pt-5 sm:text-xl  lg:pt-0 ">
-                          <p class="font-bold">
+        <div *ngIf="agenda">
+          <div class="text-2xl font-bold text-center">{{ a.title }}</div>
+          <div class="margin-2">
+            @for (item of a.events | calculateTime: a.start; track $index) {
+              <div class="flex flex-col gap-4 event">
+                <p
+                  class="flex-shrink-0 font-medium  text-gray-500 text-sm time"
+                >
+                  {{ item?.startTime }} - {{ item?.endTime }}
+                </p>
+                <div class="bg-gray-200 hidden sm:block timeline"></div>
+                <div class="lg:pb-8 pb-12 flex-1-1-0">
+                  <div
+                    [ngClass]="
+                      item.type.includes('Pause')
+                        ? 'rounded-lg bg-gray-100 p-4'
+                        : ''
+                    "
+                  >
+                    <h4 class="font-bold text-lg md:text-2xl">
+                      {{ item?.title || item?.type }}
+                    </h4>
+                    @if (item?.speaker?.talk) {
+                      <p class="font-normal text-gray-500 margin-1">
+                        {{ item?.speaker?.talk?.description }}
+                      </p>
+                    }
+                    @if (item?.speaker?.name) {
+                      <div class="margin-1 gap-3 flex items-center">
+                        <img
+                          [alt]="item?.speaker?.name"
+                          [title]="item?.speaker?.name"
+                          [src]="item?.speaker?.imageUrl"
+                          class="w-12 h-12 object-cover rounded-full  "
+                        />
+                        <div class="">
+                          <p
+                            class="leading-tight font-medium m-0 text-gray-900 text-lg"
+                          >
                             {{ item?.speaker?.name }}
                           </p>
-                          <span class="font-normal text-sm">{{
-                            item?.speaker?.work
-                          }}</span>
+                          <p class="font-normal text-gray-500 text-sm">
+                            {{ item?.speaker?.work }}
+                          </p>
                         </div>
                       </div>
-                    </div>
-                  }
-                  @if (
-                    item.type.includes('Pause') && sponsors$();
-                    as Sponsors
-                  ) {
-                    <div>Sponsors:</div>
-                    <div class="container  mx-auto ">
-                      <div class="grid grid-cols-12 items-center gap-4">
-                        @for (item of Sponsors.Gold; track $index) {
-                          <a
-                            class="inline-flex items-center p-2 sm:col-span-4 col-span-12 md:col-span-12 lg:col-span-4"
-                            [href]="item.url ? item.url : '/sponsors'"
-                            target="_blank"
-                          >
+                    }
+                    @if (
+                      item.type.includes('Pause') && sponsors$();
+                      as Sponsors
+                    ) {
+                      <div class="margin-not-hidden">
+                        <p class="font-medium text-base text-gray-500">
+                          Sponsors:
+                        </p>
+                        <div
+                          class="flex flex-wrap items-center mt-2 container-sponsors"
+                        >
+                          @for (item of Sponsors.Gold; track $index) {
                             <img
+                              class="object-contain img-sponsor"
                               [alt]="item.name"
                               [title]="item.name"
-                              [ngSrc]="item.image"
-                              class="flex-shrink-0 object-cover object-center w-full h-25"
-                              width="200"
-                              height="50"
+                              [src]="item.image"
                             />
-                          </a>
-                        }
+                          }
+                        </div>
                       </div>
-                    </div>
-                  }
+                    }
+                  </div>
                 </div>
               </div>
-            </div>
-          }
+            }
+          </div>
         </div>
       }
     </div>
   </section>`,
   styles: [
     `
-      .timeline {
-        width: 0px;
-        left: 11rem;
-        /*    @media (max-width: 425px) {
-          right: 10%;
-          left: 90%;
-        } */
+      .container-sponsors {
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+      }
+      .flex-1-1-0 {
+        flex: 1 1 0%;
+      }
+      .container-agenda {
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          margin-top: 2rem;
+        }
+        column-gap: 4rem;
+        row-gap: 3rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .event {
+        @media (min-width: 640px) {
+          align-items: stretch;
+          flex-direction: row;
+        }
+
+        .time {
+          @media (min-width: 640px) {
+            text-align: right;
+            width: 8rem;
+          }
+        }
       }
 
-      /*  @media (max-width: 425px) {
-        .agenda {
-          text-align: right;
+      .margin-1 {
+        --tw-space-y-reverse: 0;
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+        margin-top: calc(1rem * (1 - var(--tw-space-y-reverse)));
+      }
+
+      .margin-2 {
+        --tw-space-y-reverse: 0;
+        margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+        margin-top: calc(2rem * (1 - var(--tw-space-y-reverse)));
+      }
+      .container-agenda {
+      }
+
+      .img-sponsor {
+        width: auto;
+        height: 1.75rem;
+        max-width: 100%;
+        display: block;
+        vertical-align: middle;
+        max-width: 150px;
+      }
+      .timeline {
+        width: 1px;
+        @media (min-width: 640px) {
+          display: block;
+          flex-shrink: 0;
         }
-        .order-1 {
-          order: 0;
-        }
-        .order-1:nth-child(odd) {
-          width: 0%;
-        }
-        .order-1:nth-child(even) {
-          width: 100%;
-          margin-right: 1.5rem;
-        }
-      } */
+      }
     `,
   ],
   imports: [
