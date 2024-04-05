@@ -13,5 +13,5 @@ links:
     twitter: https://twitter.com/AnfibiaCreativa
     gitHub: https://github.com/anfibiacreativa
     other: https://microfrontend.dev/
-visible: false
+visible: true
 ---
