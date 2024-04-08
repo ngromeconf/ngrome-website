@@ -11,7 +11,7 @@ agenda:
       events:
           - slug: 
             title: 
-            type: Registration & Welcome coffee
+            type: Registration
             duration: 60
             speaker: 
           - slug: 

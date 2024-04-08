@@ -40,6 +40,34 @@ export class CalculateTimePipe implements PipeTransform {
   selector: 'app-content',
   standalone: true,
   template: ` <section>
+    <div class="text-center max-w-3xl mx-auto">
+      <h2
+        class="tracking-tight text-gray-900 leading-5 text-4xl font-extrabold"
+      >
+        Thursday
+      </h2>
+      <p class="margin-1 text-gray-500 leading-5 font-medium text-lg">
+        June 27, 2024
+      </p>
+      <span
+        class="bg-primary-100 text-primary-800 margin-1 font-medium text-center inline-flex text-xs px-2.5 rounded py-0.5 XklWzT8y98pp042XEQp4 _A6LflweZRUwrcL6M2Tk ay0ziTPUL4Ag5d1DkSY7 neyUwteEn7DOg9pBSJJE cA4BPuqyV1eox6S0acvl AOldjxkjQirRFQcsh_FR YPSoR6AXtPgkmylUmcbT dark:bg-primary-900 dark:text-primary-300"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-3 h-3 mr-1 m-auto"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        Central European Summer Time (GMT+2)
+      </span>
+    </div>
     <div class="container-agenda grid mt-6 text-left px-4 pb-4">
       @for (a of agenda; track $index) {
         <div *ngIf="agenda">
@@ -120,69 +148,7 @@ export class CalculateTimePipe implements PipeTransform {
       }
     </div>
   </section>`,
-  styles: [
-    `
-      .container-sponsors {
-        row-gap: 1rem;
-        column-gap: 1.5rem;
-      }
-      .flex-1-1-0 {
-        flex: 1 1 0%;
-      }
-      .container-agenda {
-        @media (min-width: 1024px) {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          margin-top: 2rem;
-        }
-        column-gap: 4rem;
-        row-gap: 3rem;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-      .event {
-        @media (min-width: 640px) {
-          align-items: stretch;
-          flex-direction: row;
-        }
-
-        .time {
-          @media (min-width: 640px) {
-            text-align: right;
-            width: 8rem;
-          }
-        }
-      }
-
-      .margin-1 {
-        --tw-space-y-reverse: 0;
-        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-        margin-top: calc(1rem * (1 - var(--tw-space-y-reverse)));
-      }
-
-      .margin-2 {
-        --tw-space-y-reverse: 0;
-        margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-        margin-top: calc(2rem * (1 - var(--tw-space-y-reverse)));
-      }
-      .container-agenda {
-      }
-
-      .img-sponsor {
-        width: auto;
-        height: 1.75rem;
-        max-width: 100%;
-        display: block;
-        vertical-align: middle;
-        max-width: 150px;
-      }
-      .timeline {
-        width: 1px;
-        @media (min-width: 640px) {
-          display: block;
-          flex-shrink: 0;
-        }
-      }
-    `,
-  ],
+  styleUrls: ['./content.component.scss'],
   imports: [
     CommonModule,
     NgOptimizedImage,
