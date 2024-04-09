@@ -5,8 +5,8 @@ export default defineEventHandler(() => tickets);
 
 enum features {
   Conference = '🎟️ Conference Access In Person',
-  ConferenceBreackfast = '🥐 Conference Welcome Breakfast',
-  ConferenceCoffee = '☕ Open Coffee all day',
+  ConferenceBreakfast = '🥐 Conference Welcome Breakfast',
+  ConferenceCoffee = '☕ Coffee all day',
   ConferenceLunch = '🍝 Conference Lunch ',
   Swag = '😎 NGRome Swag',
   Workshop = '🎟️ Workshop In Person',
@@ -16,8 +16,6 @@ enum features {
 
 const conferenceFeatures = [
   features.Conference,
-  features.ConferenceBreackfast,
-  features.ConferenceCoffee,
   features.ConferenceLunch,
   features.Swag,
 ];
@@ -27,7 +25,7 @@ const vipFeatures = [features.SpeakerDinner];
 const tickets: TicketInterface[] = [
   {
     visible: true,
-    name: 'NGROME CONFERENCE - BLIND TICKET',
+    name: 'BLIND TICKET',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '75',
     realPrice: '155',
@@ -37,7 +35,7 @@ const tickets: TicketInterface[] = [
     soldOut: true,
   },
   {
-    visible: true,
+    visible: false,
     name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - EARLY BIRD',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
@@ -49,7 +47,7 @@ const tickets: TicketInterface[] = [
     soldOut: true,
   },
   {
-    visible: true,
+    visible: false,
     name: 'COMBO TICKET - MODERN ANGULAR ARCHITECTURES - EARLY BIRD',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
@@ -60,10 +58,10 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: '6pv0sbo8z5a',
-    soldOut: true
+    soldOut: true,
   },
   {
-    visible: true,
+    visible: false,
     name: 'VIP TICKET- EARLY BIRD',
     subtitle:
       'The best experience for your journey in Rome! This ticket is limited to 5 people and give you the possibility to choose one of the available workshops',
@@ -74,11 +72,11 @@ const tickets: TicketInterface[] = [
     features: [features.SpeakerDinner],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'sttgjfic3ma',
-    soldOut: true
+    soldOut: true,
   },
   {
     visible: true,
-    name: 'NGROME CONFERENCE - EARLY BIRD ',
+    name: 'EARLY BIRD ',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: 110,
     realPrice: 155,
@@ -87,9 +85,9 @@ const tickets: TicketInterface[] = [
     ticket: 'early-bird',
     soldOut: false,
   },
-  
+
   {
-    visible: true,
+    visible: false,
     name: 'COMBO TICKET - MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
     subtitle:
       'MASTERING NGRX SIGNALSTORE: FROM FUNDAMENTALS TO ADVANCED TECHNIQUES - JUNE 26 + NGRome Conference June 27',
@@ -102,7 +100,7 @@ const tickets: TicketInterface[] = [
     ticket: 'sxcbmgrga8y',
   },
   {
-    visible: true,
+    visible: false,
     name: 'COMBO TICKET - MODERN ANGULAR ARCHITECTURES',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26 + NGRome Conference June 27',
@@ -112,7 +110,7 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: '3b7bvqzkdym',
-    soldOut: false
+    soldOut: false,
   },
   {
     visible: true,
@@ -125,11 +123,11 @@ const tickets: TicketInterface[] = [
     features: [features.SpeakerDinner],
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'bdcszpol8yy',
-    soldOut: false
+    soldOut: false,
   },
 
   {
-    visible: true,
+    visible: false,
     name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - REGULAR',
     subtitle:
       'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
@@ -140,7 +138,7 @@ const tickets: TicketInterface[] = [
   },
 
   {
-    visible: true,
+    visible: false,
     name: 'MASTERING NGRX SIGNALSTORE WORKSHOP - EARLY BIRD',
     subtitle:
       'MASTERING NGRX SIGNALSTORE: FROM FUNDAMENTALS TO ADVANCED TECHNIQUES - JUNE 26',
@@ -152,7 +150,7 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'NGROME CONFERENCE - STUDENT TICKET',
+    name: 'STUDENT TICKET',
     subtitle:
       'Whether you are a beginner, intermediate, or expert, this will be the best opportunity',
     price: 50,
@@ -163,11 +161,11 @@ const tickets: TicketInterface[] = [
   },
   {
     visible: true,
-    name: 'NGROME CONFERENCE - REGULAR ',
+    name: 'REGULAR TICKET',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '155',
     features: conferenceFeatures,
-    saleStart: '2024-02-28T00:00:00Z',
+    saleStart: '2024-04-15T00:00:00Z',
   },
   {
     visible: false,
