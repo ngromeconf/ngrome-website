@@ -17,7 +17,9 @@ import { tick } from '@angular/core/testing';
 export class FilterTicketByDatePipe implements PipeTransform {
   transform(value: TicketInterface[], ticketTipe: string) {
     console.log(value, ticketTipe);
-    return value.filter((item: any) => (item.category === ticketTipe || ticketTipe === 'all') );
+    return value.filter(
+      (item: any) => item.category === ticketTipe || ticketTipe === 'all',
+    );
   }
 }
 
@@ -86,14 +88,15 @@ export class FilterTicketByDatePipe implements PipeTransform {
           </div>
           <div class="">
             <div class="mt-2 space-y-4 xl:mt-4">
-              @for (
-                item of ticketsList$() | filterTicketByType: filterby;
-                track $index
-              ) {
+              @for (item of ticketsList$(); track $index) {
                 @if (item.visible) {
                   <app-tickets-item
                     [item]="item"
-                    class="px-4 md:px-8"
+                    class="px-4 md:px-8 transition-all ease-in-out delay-150 duration-300"
+                    [ngClass]="{
+                      visible: item.category === filterby,
+                      hidden: item.category !== filterby
+                    }"
                   ></app-tickets-item>
                 }
               }
@@ -114,7 +117,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
 export class TicketsComponent {
   private tito: any;
   public ticketsList$: Signal<TicketInterface[]> = this.getTickets();
-  filterby: string = 'all';
+  filterby: string = 'conference';
   constructor(
     private titoService: TitoService,
     private winRef: WindowRef,
