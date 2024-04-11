@@ -89,7 +89,7 @@ const tickets: TicketInterface[] = [
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'early-bird',
     soldOut: false,
-    remains: 8,
+    remains: 7,
   },
 
   {

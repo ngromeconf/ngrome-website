@@ -8,10 +8,7 @@ import { CommonModule } from '@angular/common';
   imports: [ButtonComponent, CommonModule],
   template: `
     <div
-      class="flex items-center bg-white justify-between max-w-3xl px-4 md:px-8 py-4 mx-auto border rounded-xl dark:border-gray-700"
-      [ngClass]="{
-        'border-1 border-red-ngrome': item.popular || item.bestExperience
-      }"
+      class="flex items-center bg-white justify-between max-w-3xl px-4 md:px-8 py-4 mx-auto border rounded-xl"
     >
       <div class="flex items-center">
         <span class="relative inline-block">

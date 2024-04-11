@@ -54,7 +54,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
             >
           </p>
 
-          <div class="grid grid-cols-3 gap-4 py-8">
+          <div class="w-6/12 mx-auto grid grid-cols-3 gap-4 py-8">
             <button
               class="p-4 rounded shadow-md"
               [ngClass]="{
