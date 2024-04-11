@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 import { TicketInterface } from 'src/app/models/ticket.interface';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TicketsItemComponent } from './tickets-item.component';
+import { tick } from '@angular/core/testing';
 
 @Pipe({
   name: 'filterTicketByType',
@@ -15,8 +16,8 @@ import { TicketsItemComponent } from './tickets-item.component';
 })
 export class FilterTicketByDatePipe implements PipeTransform {
   transform(value: TicketInterface[], ticketTipe: string) {
-    console.log(value, ticketTipe )
-    return value.filter((item: any) => item.category === ticketTipe);
+    console.log(value, ticketTipe);
+    return value.filter((item: any) => (item.category === ticketTipe || ticketTipe === 'all') );
   }
 }
 
@@ -51,55 +52,53 @@ export class FilterTicketByDatePipe implements PipeTransform {
             >
           </p>
 
-          
-            <div class="grid grid-cols-3 gap-4 py-8">
-              <button
-                class="p-4 rounded shadow-md"
-                [ngClass]="{
-                  'bg-red-ngrome text-gray-100': filterby === 'conference',
-                  'bg-white text-red-ngrome': filterby !== 'conference'
-                }"
-                (click)="updateTicketFilter('conference')"
-              >
-                Conference
-              </button>
-              <button
-                class="p-4 rounded shadow-md"
-                [ngClass]="{
-                  'bg-red-ngrome text-gray-100': filterby === 'combo',
-                  'bg-white text-red-ngrome': filterby !== 'combo'
-                }"
-                (click)="updateTicketFilter('combo')"
-              >
-                Combo
-              </button>
-              <button
-                class="p-4 rounded shadow-md"
-                [ngClass]="{
-                  'bg-red-ngrome text-gray-100': filterby === 'workshop',
-                  'bg-white text-red-ngrome': filterby !== 'workshop'
-                }"
-                (click)="updateTicketFilter('workshop')"
-              >
-                Workshop
-              </button>
-            </div>
-            <div class="">
-              <div class="mt-2 space-y-4 xl:mt-4">
-                @for (
-                  item of ticketsList$() | filterTicketByType: filterby;
-                  track $index
-                ) {
-                  @if (item.visible) {
-                    <app-tickets-item
-                      [item]="item"
-                      class="px-4 md:px-8"
-                    ></app-tickets-item>
-                  }
+          <div class="grid grid-cols-3 gap-4 py-8">
+            <button
+              class="p-4 rounded shadow-md"
+              [ngClass]="{
+                'bg-red-ngrome text-gray-100': filterby === 'conference',
+                'bg-white text-red-ngrome': filterby !== 'conference'
+              }"
+              (click)="updateTicketFilter('conference')"
+            >
+              Conference
+            </button>
+            <button
+              class="p-4 rounded shadow-md"
+              [ngClass]="{
+                'bg-red-ngrome text-gray-100': filterby === 'combo',
+                'bg-white text-red-ngrome': filterby !== 'combo'
+              }"
+              (click)="updateTicketFilter('combo')"
+            >
+              Combo
+            </button>
+            <button
+              class="p-4 rounded shadow-md"
+              [ngClass]="{
+                'bg-red-ngrome text-gray-100': filterby === 'workshop',
+                'bg-white text-red-ngrome': filterby !== 'workshop'
+              }"
+              (click)="updateTicketFilter('workshop')"
+            >
+              Workshop
+            </button>
+          </div>
+          <div class="">
+            <div class="mt-2 space-y-4 xl:mt-4">
+              @for (
+                item of ticketsList$() | filterTicketByType: filterby;
+                track $index
+              ) {
+                @if (item.visible) {
+                  <app-tickets-item
+                    [item]="item"
+                    class="px-4 md:px-8"
+                  ></app-tickets-item>
                 }
-              </div>
+              }
             </div>
-          
+          </div>
         </div>
       </section>
     </div>
@@ -115,7 +114,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
 export class TicketsComponent {
   private tito: any;
   public ticketsList$: Signal<TicketInterface[]> = this.getTickets();
-  filterby: string = 'conference';
+  filterby: string = 'all';
   constructor(
     private titoService: TitoService,
     private winRef: WindowRef,

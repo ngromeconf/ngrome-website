@@ -149,6 +149,7 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: 'fg1il7mh3ys',
+    soldOut: true
   },
 
   {
@@ -162,6 +163,18 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/mastering-ngrx-signalstore',
     ticket: 'bm3uyyp6iow',
+  },
+  {
+    category: 'workshop',
+    visible: true,
+    name: 'MODERN ANGULAR ARCHITECTURES WORKSHOP - LAST MINUTE',
+    subtitle:
+      'MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD & MICRO FRONTENDS - JUNE 26',
+    price: 360,
+    features: workshopFeatures,
+    event: 'ngrome-events/modern-angular-architecture',
+    ticket: 'lggiqvvkwv8',
+    soldOut: false
   },
   {
     category: 'conference',
