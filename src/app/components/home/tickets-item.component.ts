@@ -32,7 +32,7 @@ import { CommonModule } from '@angular/common';
           class="flex flex-col items-center mx-5 space-y-1 max-w-12 sm:min-w-64"
         >
           <h2
-            class="text-sm font-semibold text-gray-700 sm:text-2xl dark:text-gray-200"
+            class="text-xs font-semibold text-gray-700 sm:text-2xl dark:text-gray-200"
           >
             {{ item.name }}
           </h2>
