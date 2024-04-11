@@ -1,188 +1,123 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, Signal, inject } from '@angular/core';
+import { Component, Pipe, PipeTransform, Signal, inject } from '@angular/core';
 import { ButtonComponent } from '../shared/button.component';
 import { TitoService } from '../../services/tito.service';
 import { WindowRef } from '../../services/window.provider';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TicketInterface } from 'src/app/models/ticket.interface';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { TicketsItemComponent } from './tickets-item.component';
+import { tick } from '@angular/core/testing';
+
+@Pipe({
+  name: 'filterTicketByType',
+  standalone: true,
+})
+export class FilterTicketByDatePipe implements PipeTransform {
+  transform(value: TicketInterface[], ticketTipe: string) {
+    console.log(value, ticketTipe);
+    return value.filter(
+      (item: any) => item.category === ticketTipe || ticketTipe === 'all',
+    );
+  }
+}
 
 @Component({
   selector: 'app-tickets',
   standalone: true,
   providers: [TitoService, WindowRef],
   template: `
-    <section
-      id="TicketSection"
-      class="py-4 pt-10 md:py-8 bg-gray-200 text-black"
-    >
-      <div class="container px-5 py-32 mx-auto lg:px-24">
-        <h2
-          class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl"
-        >
-          Tickets<br />
-        </h2>
-        <p
-          class="mt-12 font-roboto text-slate-500 sm:text-lg sm:leading-normal lg:text-xl lg:leading-normal xl:text-2xl xl:leading-normal"
-        >
-          Embark on your journey to the next level of Angular right here. Our
-          tickets grant you access to an immersive experience where you'll gain
-          valuable insights, network with experts, and supercharge your Angular
-          skills. <br />
-
-          <span class="italic font-semibold"
-            >* If you're purchasing 3 or more tickets, don't forget to get in
-            touch with us for exclusive discounts and group offers. Join us in
-            shaping the future of Angular!</span
+    <div class="bg-white dark:bg-gray-900">
+      <section
+        id="TicketSection"
+        class="py-4 pt-10 md:py-8 bg-gray-200 text-black"
+      >
+        <div class="container px-5 py-32 mx-auto lg:px-24">
+          <h2
+            class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl"
           >
-        </p>
-
-        
-          <div
-            class="grid lg:grid-cols-2 xl:grid-cols-3 px-2 gap-10 text-zinc-800 mt-10"
+            Tickets<br />
+          </h2>
+          <p
+            class="mt-12 font-roboto text-slate-500 sm:text-lg sm:leading-normal lg:text-xl lg:leading-normal xl:text-2xl xl:leading-normal"
           >
-          @for (item of ticketsList$(); track $index) {  
-          
-              @if (item.visible) {
-                <div
-                  class="flex flex-col items-center bg-slate-100 p-4 rounded-lg shadow-lg"
-                  [ngClass]="{
-                    'bg-gradient-to-br from-white via-gray-200 to-white rounded-lg shadow-lg relative border-4 border-red-ngrome':
-                      item.popular || item.bestExperience
-                  }"
-                >
-                  @if (item.popular) {
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.5"
-                      stroke="white"
-                      class="w-20 h-20 absolute -top-11 -left-11 fill-red-ngrome"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
-                      />
-                    </svg>
+            Embark on your journey to the next level of Angular right here. Our
+            tickets grant you access to an immersive experience where you'll
+            gain valuable insights, network with experts, and supercharge your
+            Angular skills. <br />
 
-                    <p
-                      class="mono text-sm absolute -top-4 bg-red-ngrome text-zinc-100 py-0.5 px-2 font-bold tracking-wider rounded"
-                    >
-                      BEST VALUE!
-                    </p>
-                  }
-                  @if (item.bestExperience) {
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.5"
-                      stroke="white"
-                      class="w-20 h-20 absolute -top-11 -left-11 fill-red-ngrome"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                      />
-                    </svg>
+            <span class="italic font-semibold"
+              >* If you're purchasing 3 or more tickets, don't forget to get in
+              touch with us for exclusive discounts and group offers. Join us in
+              shaping the future of Angular!</span
+            >
+          </p>
 
-                    <p
-                      class="mono text-sm absolute -top-4 bg-red-ngrome text-zinc-100 py-0.5 px-2 font-bold tracking-wider rounded"
-                    >
-                      BEST EXPERIENCE!
-                    </p>
-                  }
-                  <div>
-                    <h2 class="font-extrabold text-2xl text-center mb-2">
-                      {{ item.name }}
-                    </h2>
-                    <p class="opacity-60 text-center">
-                      {{ item.subtitle }}
-                    </p>
-
-                    <div class="flex flex-col items-center my-8">
-                      <p class="font-mono font-semibold text-5xl">
-                        €{{ item.price }}
-                      </p>
-                      @if (item.realPrice) {
-                        <span class="line-through font-mono"
-                          >€{{ item.realPrice }}</span
-                        >
-                      }
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-2 mb-8 ">
-                    @if (item.soldOut) {
-                      <span
-                        class="absolute text-5xl
-                        font-extrabold
-                        text-transparent
-                        bg-clip-text
-                        bg-gradient-to-r
-                        from-red-ngrome
-                        to-pink-600
-                        rotate-12
-                        border-2
-                        border-red-ngrome"
-                      >
-                        SOLD OUT
-                      </span>
-                    } @else if (item.saleStart) {
-                      <span
-                        class="text-1xl
-                        font-extrabold
-                        text-transparent
-                        bg-clip-text
-                        bg-gradient-to-r
-                        from-gray-600
-                        trough-gray-400
-                        to-slate-600"
-                      >
-                        Sales start on
-                        {{ item.saleStart | date: 'dd MMMM yyyy' }}
-                      </span>
-                    } @else {
-                      <app-button
-                        [eventID]="item.event"
-                        [ticketID]="item.ticket"
-                        [label]="'REGISTER'"
-                      />
-                    }
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <b class="text-xs sm:text-sm">{{
-                      item.featuresDescription
-                    }}</b>
-                    @for (feature of item.features; track $index) {
-                      <p class="flex items-center text-xs sm:text-sm">
-                        {{ feature }}
-                      </p>
-                    }
-                  </div>
-                </div>
-              }
-            }
+          <div class="w-full md:w-6/12 mx-auto grid grid-cols-3 gap-4 pt-12">
+            <button
+              class="px-2 py-4 md:p-6 rounded shadow-md"
+              [ngClass]="{
+                'bg-red-ngrome text-gray-100': filterby === 'conference',
+                'bg-white text-red-ngrome': filterby !== 'conference'
+              }"
+              (click)="updateTicketFilter('conference')"
+            >
+              Conference
+            </button>
+            <button
+              class="p-4 rounded shadow-md"
+              [ngClass]="{
+                'bg-red-ngrome text-gray-100': filterby === 'combo',
+                'bg-white text-red-ngrome': filterby !== 'combo'
+              }"
+              (click)="updateTicketFilter('combo')"
+            >
+              Combo
+            </button>
+            <button
+              class="p-4 rounded shadow-md"
+              [ngClass]="{
+                'bg-red-ngrome text-gray-100': filterby === 'workshop',
+                'bg-white text-red-ngrome': filterby !== 'workshop'
+              }"
+              (click)="updateTicketFilter('workshop')"
+            >
+              Workshop
+            </button>
           </div>
-        
-      </div>
-    </section>
+          <div class="">
+            <div class="mt-2 space-y-4 xl:mt-4">
+              @for (item of ticketsList$(); track $index) {
+                @if (item.visible) {
+                  <app-tickets-item
+                    [item]="item"
+                    class="px-4 md:px-8 transition-all ease-in-out delay-150 duration-300"
+                    [ngClass]="{
+                      visible: item.category === filterby,
+                      hidden: item.category !== filterby
+                    }"
+                  ></app-tickets-item>
+                }
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   `,
   styles: ``,
-  imports: [CommonModule, ButtonComponent],
+  imports: [
+    CommonModule,
+    ButtonComponent,
+    TicketsItemComponent,
+    FilterTicketByDatePipe,
+  ],
 })
-export class TicketsComponent  {
+export class TicketsComponent {
   private tito: any;
   public ticketsList$: Signal<TicketInterface[]> = this.getTickets();
+  filterby: string = 'conference';
   constructor(
     private titoService: TitoService,
     private winRef: WindowRef,
@@ -202,10 +137,15 @@ export class TicketsComponent  {
     });
   }
 
-
-
   getTickets() {
     const _http = inject(HttpClient);
-    return toSignal(_http.get<TicketInterface[]>('/api/v1/tickets'), { initialValue: [] });
+    return toSignal(_http.get<TicketInterface[]>('/api/v1/tickets'), {
+      initialValue: [],
+    });
+  }
+
+  updateTicketFilter(filter: string) {
+    this.filterby = filter;
+    console.log(this.filterby);
   }
 }
