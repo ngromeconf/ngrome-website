@@ -54,9 +54,9 @@ export class FilterTicketByDatePipe implements PipeTransform {
             >
           </p>
 
-          <div class="w-6/12 mx-auto grid grid-cols-3 gap-4 py-8">
+          <div class="w-full md:w-6/12 mx-auto grid grid-cols-3 gap-4 pt-12">
             <button
-              class="p-4 rounded shadow-md"
+              class="px-2 py-4 md:p-6 rounded shadow-md"
               [ngClass]="{
                 'bg-red-ngrome text-gray-100': filterby === 'conference',
                 'bg-white text-red-ngrome': filterby !== 'conference'

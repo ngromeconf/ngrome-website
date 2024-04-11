@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
       class="flex items-center bg-white justify-between max-w-3xl px-4 md:px-8 py-4 mx-auto border rounded-xl"
     >
       <div class="flex items-center">
-        <span class="relative inline-block">
+        <span class="relative md:inline-block hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -32,14 +32,14 @@ import { CommonModule } from '@angular/common';
           class="flex flex-col items-center mx-5 space-y-1 max-w-12 sm:min-w-64"
         >
           <h2
-            class="text-sm font-medium text-gray-700 sm:text-2xl dark:text-gray-200"
+            class="text-sm font-semibold text-gray-700 sm:text-2xl dark:text-gray-200"
           >
             {{ item.name }}
           </h2>
           @if (item.remains) {
             <span
-              class="bg-yellow-500 rounded-full text-white px-3 py-1 text-xs uppercase font-medium"
-              >Only {{ item.remains }} available</span
+              class="bg-yellow-500 rounded-full text-white px-3 py-1 text-xs uppercase"
+              >{{ item.remains }} available</span
             >
           }
           <!-- <div
@@ -95,6 +95,7 @@ import { CommonModule } from '@angular/common';
                         bg-gradient-to-r
                         from-gray-600
                         trough-gray-400
+                        py-4
                         to-slate-600"
           >
             Sales start on<br />
