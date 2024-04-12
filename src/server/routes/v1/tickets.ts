@@ -88,8 +88,8 @@ const tickets: TicketInterface[] = [
     features: conferenceFeatures,
     event: 'ngrome-events/ngrome-conf-mmxxiv',
     ticket: 'early-bird',
-    soldOut: false,
-    remains: 7,
+    soldOut: true,
+    remains: 0,
   },
 
   {
@@ -149,7 +149,7 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: 'fg1il7mh3ys',
-    soldOut: true
+    soldOut: true,
   },
 
   {
@@ -174,7 +174,7 @@ const tickets: TicketInterface[] = [
     features: workshopFeatures,
     event: 'ngrome-events/modern-angular-architecture',
     ticket: 'lggiqvvkwv8',
-    soldOut: false
+    soldOut: false,
   },
   {
     category: 'conference',
@@ -193,9 +193,10 @@ const tickets: TicketInterface[] = [
     visible: true,
     name: 'REGULAR TICKET',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
-    price: '155',
+    price: 155,
     features: conferenceFeatures,
-    saleStart: '2024-04-15T00:00:00Z',
+    ticket: 'regular',
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
   },
   {
     category: 'workshop',
@@ -211,9 +212,7 @@ const tickets: TicketInterface[] = [
     name: 'Combo Ticket - Regular',
     subtitle: 'Get your ticket now, ticket price will increase soon!',
     price: '465',
-    features: [
-      
-    ],
+    features: [],
   },
   {
     category: 'combo',
@@ -221,9 +220,7 @@ const tickets: TicketInterface[] = [
     name: 'VIP  - Regular Combo',
     subtitle: 'The best experience for your journey in Rome',
     price: '500',
-    features: [
-      
-    ],
+    features: [],
   },
   {
     category: 'conference',
@@ -231,11 +228,8 @@ const tickets: TicketInterface[] = [
     name: 'LAST MINUTE TICKET',
     subtitle: 'Get your ticket now!',
     price: '200',
-    features: [
-      
-    ],
+    features: [],
     saleStart: '2024-05-20T00:00:00Z',
-
   },
   {
     category: 'workshop',
