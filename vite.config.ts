@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => ({
           '/workshops/angular-mastering-ngrx-signalstore',
           '/workshops/angular-performance-masterclass',
           '/workshops/authentication-step-by-step',
+          '/workshops/cloudnary-for-angular',
           '/workshops/generative-ai-masterclass-2023-12',
           '/workshops/generative-ai-masterclass-2024-06',
           '/workshops/ng-girls-workshop-2023-11',
