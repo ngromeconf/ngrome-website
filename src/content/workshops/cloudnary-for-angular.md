@@ -15,6 +15,6 @@ location:
     mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1710957882/ngrome-sponsors/cloudinary_logo_blue_0720_svg_nmxmoq.svg
 link: /workshops/cloudnary-for-angular
-ticket:  'https://ti.to/ngrome-events'
+ticket:  'https://ti.to/ngrome-events/cloudnary-for-angular-media-mastery-workshop'
 col: 1
 ---
