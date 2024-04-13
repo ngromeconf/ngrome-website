@@ -1,12 +1,14 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, inject } from '@angular/core';
 import { ReplaySubject, Observable, forkJoin } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 const TITO_URL = 'https://js.tito.io/v2/with/inline,';
 //const TITO_DEV_MODE = 'development_mode,';
 const TITO_DEV_MODE = '';
 //const TITO_TEST_MODE = 'test_mode,';
 const TITO_TEST_MODE = '';
+const TITO_KEY = 'public_TobWnmMJc48u15ZAYXxG';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +16,10 @@ const TITO_TEST_MODE = '';
 export class TitoService {
   private _loadedLibraries: { [url: string]: ReplaySubject<any> } = {};
 
-  constructor(@Inject(DOCUMENT) private readonly document: any) {}
+  constructor(
+    @Inject(DOCUMENT) private readonly document: any,
+    private http: HttpClient,
+  ) {}
 
   lazyLoadTito(): Observable<any> {
     return forkJoin([
@@ -41,5 +46,19 @@ export class TitoService {
     this.document.body.appendChild(script);
 
     return this._loadedLibraries[url].asObservable();
+  }
+
+  public getConferenceReleases(): Observable<any> {
+    return this.http.get(
+      'https://api.tito.io/v3/ngrome-events/ngrome-conf-mmxxiv/releases',
+      {
+        headers: { Authorization: `Token token=${TITO_KEY}` },
+      },
+    );
+  }
+  public helloTito(): Observable<any> {
+    return this.http.get('https://api.tito.io/v3/hello', {
+      headers: { Authorization: `Token token=${TITO_KEY}` },
+    });
   }
 }

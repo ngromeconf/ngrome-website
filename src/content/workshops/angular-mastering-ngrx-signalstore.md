@@ -6,13 +6,17 @@ description: Explore the power of NgRx Signal Store in a comprehensive workshop 
 date: '2024-06-26'
 authors: 
     - name: Alex Okrushko
-      biography: Alex is a Principal Architect at Cisco CX - Customer Experience. He is part of the NgRx team, GDE in Angular, Angular Toronto organizer, and co-organizer of the official Angular Discord. In his free time, he loves to learn & share knowledge, provides NgRx workshops and helps with ts.dev/style - the TypeScript style guide.
+      biography: Alex is a Senior Software Engineer at Snowflake. He is part of the NgRx team, GDE in Angular, Angular Toronto organizer, and co-organizer of the official Angular Discord. In his free time, he loves to learn & share knowledge, provides NgRx workshops and helps with ts.dev/style - the TypeScript style guide.
       image: photo/authors/alex-okrushko.webp
       link: https://twitter.com/AlexOkrushko/
     - name: Marko Stanimirović
       biography: Marko is a Principal Frontend Engineer at Swiss Marketplace Group. He is also a core member of the NgRx and AnalogJS teams, a Google Developer Expert in Angular, and an organizer of the Angular Belgrade group. Marko actively contributes to open-source software, shares knowledge through technical articles and talks, and enjoys playing the guitar. He holds a Master of Science in Software Engineering from the University of Belgrade.
       image: photo/authors/marko-stanimirovic.webp
       link: https://twitter.com/MarkoStDev
+    - name: Brandon Roberts
+      biography: Brandon is an Open Source Advocate, focused on community engagement, content creation, and collaboration. He enjoys learning new things, helping other developers be successful, speaking at conferences, and contributing to open source. He is a GDE, technical writer, and a maintainer of the NgRx project, and creator of AnalogJS.
+      image: https://cache.sessionize.com/image/f9d8-400o400o1-9PLBjjd84cKbTHVy9wQnvt.jpeg
+      link: https://twitter.com/brandontroberts
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue
