@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
     >
       <div class="container relative w-full px-8 pt-10 pb-24 mx-auto lg:px-4">
         <div
-          class="flex flex-col w-full mb-12 text-left lg:text-center items-center "
+          class="flex flex-col w-full mb-6 text-left lg:text-center items-center "
         >
           <strong
             class="mb-12 text-xs font-semibold tracking-widest uppercase text-slate-500 text-center"
@@ -39,8 +39,9 @@ import { Router } from '@angular/router';
             2024
             
           </h2>
+          <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <p
-            class="mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center"
+            class="hidden md:block mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center "
           >
             Empower your network and embrace excellence. <br />Join NGRome
             MMXXIV for an Immersive dive into cutting-edge Angular and web tech
@@ -50,13 +51,8 @@ import { Router } from '@angular/router';
             Conference day is June 27th, 2024.
           </p>
         </div>
-        <div class="flex w-full mt-6  justify-center ">
-          <div class="m-3 rounded-lg sm:mt-0">
-            <button class="tito-widget-button-large" (click)="onGoToTicket()">
-              Tickets
-            </button>
-          </div>
-          <div class="m-3 rounded-lg sm:mt-0">
+        <div class="flex w-full mt-4 py-4 justify-center ">
+          <div class="rounded-lg sm:mt-0">
             <button class="tito-widget-button-large" (click)="onGoToTicket()">
               Tickets
             </button>
