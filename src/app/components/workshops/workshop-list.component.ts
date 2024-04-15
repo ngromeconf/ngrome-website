@@ -9,7 +9,8 @@ import { WorkshopRowComponent } from './workshop-row.component';
   imports: [DatePipe, WorkshopRowComponent],
   template: `
     <div
-      class="container flex flex-col w-full mx-auto bg-white rounded-lg shadow dark:bg-gray-800"
+      class="container flex flex-col w-full mx-auto bg-white rounded-lg shadow dark:bg-gray-800 "
+      id="workshops"
     >
       <div class="w-full px-4 py-5 border-b sm:px-6">
         <h3 class="text-2xl font-bold leading-6 text-gray-900 dark:text-white">
