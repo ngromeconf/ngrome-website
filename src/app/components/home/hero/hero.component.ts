@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
     >
       <div class="container relative w-full px-8 pt-10 pb-24 mx-auto lg:px-4">
         <div
-          class="flex flex-col w-full mb-12 text-left lg:text-center items-center "
+          class="flex flex-col w-full mb-6 text-left lg:text-center items-center "
         >
           <strong
             class="mb-12 text-xs font-semibold tracking-widest uppercase text-slate-500 text-center"
@@ -34,21 +34,25 @@ import { Router } from '@angular/router';
           <h2
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
-            JUNE
-            <span class="font-bold text-red-ngrome">26 - 27</span>
+            JUNE 
+            <span class="font-bold text-red-ngrome">27</span>
             2024
+            
           </h2>
+          <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <p
-            class="mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center"
+            class="hidden md:block mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center "
           >
             Empower your network and embrace excellence. <br />Join NGRome
             MMXXIV for an Immersive dive into cutting-edge Angular and web tech
             trends where professionals of all levels thrive in Learning and
-            networking excellence.
+            networking excellence. You will have 3 Days with experts and sprakers for around the world.<br>
+            Workshop days are June 25th and 26th, 2024.<br>
+            Conference day is June 27th, 2024.
           </p>
         </div>
-        <div class="flex w-full mt-6  justify-center ">
-          <div class="mt-3 rounded-lg sm:mt-0">
+        <div class="flex w-full mt-4 py-4 justify-center ">
+          <div class="rounded-lg sm:mt-0">
             <button class="tito-widget-button-large" (click)="onGoToTicket()">
               Tickets
             </button>

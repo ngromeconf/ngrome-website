@@ -1,4 +1,5 @@
 export interface TicketInterface {
+  category: string;
   visible: boolean;
   name: string;
   subtitle: string;
@@ -14,4 +15,5 @@ export interface TicketInterface {
   soldOut?: boolean;
   saleStart?: string;
   saleEnd?: string;
+  remains?: number;
 }

@@ -31,7 +31,6 @@ const silverSponsor: SponsorInterface[] = [
   },
 ];
 const bronzeSponsor: SponsorInterface[] = [
-  
   {
     name: 'angular.dev',
     image: './sponsors/angular_wordmark_gradient.png',
@@ -42,7 +41,7 @@ const bronzeSponsor: SponsorInterface[] = [
     image: './sponsors/conte-logo.svg',
     url: 'https://www.conte.it/',
   },
-  
+
   {
     name: 'Lascaux',
     image:
@@ -54,6 +53,12 @@ const bronzeSponsor: SponsorInterface[] = [
     image:
       'https://assets-global.website-files.com/652fb7047cb1f8b74c17f907/653a3462d8987268e60e7cb4_ineo-colored.svg',
     url: 'https://www.ineo.it/',
+  },
+  {
+    name: 'Digitouch',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1712159211/ngrome-sponsors/download_peyvpd.jpg?_s=public-apps',
+    url: 'https://www.gruppodigitouch.it/',
   },
 ];
 const diversitySponsor: SponsorInterface[] = [
