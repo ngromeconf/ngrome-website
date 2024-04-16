@@ -1,6 +1,8 @@
 ---
 slug: ng-girls-workshop-2024-06
 tag: Diversity
+recipients: Beginners
+time: 9am-17pm
 title: ng-Girls - one-day workshops for beginners!
 description: 'Join Our Exclusive ngGirls & NGRome Workshop! <br /><br /> 🌟 We&#8217;re thrilled to announce a unique collaboration
 between ngGirls and NGRome – a one-day workshop crafted specifically for women who aspire to shape the future of web
