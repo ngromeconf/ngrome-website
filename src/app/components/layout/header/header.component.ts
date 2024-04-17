@@ -50,7 +50,7 @@ import { Router } from '@angular/router';
               </svg>
             </button>
           </div>
-          <div class="hidden lg:flex gap-6 m-auto md:hidden">
+          <div class="hidden lg:flex gap-6 m-auto md:hidden px-6">
             @for (item of NavMenu; track $index) {
               @if (!item.pastEdition && item.visible) {
                 <a
