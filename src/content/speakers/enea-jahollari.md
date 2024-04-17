@@ -7,6 +7,7 @@ talk:
 biography: Enea Jahollari is a Google Developer Expert for Angular, Consultant, Trainer & Senior Software Engineer who builds, audits and optimizes web applications @ Push-Based.io. He loves open source and contributes to it by writing code, content, and tweets! Loves hyping Angular in his free time.
 from: Albania
 work: Push-Based.io
+jobRole: Consulting Software Engineer
 imageUrl: https://eneajaho.me/assets/enea.png
 links:
     linkedIn: https://www.linkedin.com/in/eneajahollari/
