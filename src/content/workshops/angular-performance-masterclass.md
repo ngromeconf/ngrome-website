@@ -10,6 +10,10 @@ authors:
       biography: Is a Google Developer Expert, Microsoft MVP, Nx Champion, trainer, and consultant with a focus on Angular and RxJS. For years he has been helping companies and developers to set up scalable architectures and performant processes enabling teams to keep up with state-of-the-art development.
       image: https://push-based.io/assets/img/michael-hadky.webp
       link: https://push-based.io/founder
+    - name: Christopher Holder
+      biography: I am a Software Engineer with a focus on web performance, aiming to improve user experiences on the web. Outside of work, I enjoy speaking at and attending tech events, contributing to open source projects, and sailing.
+      image: https://media.licdn.com/dms/image/D4D03AQEpe5JRKnyJyw/profile-displayphoto-shrink_200_200/0/1702119188624?e=1718841600&v=beta&t=O2p3i6HpKbjwridXOA_fgO-sdqwZ3Ef043438GknfKg
+      link: https://www.linkedin.com/in/christopher-p-holder/
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue
