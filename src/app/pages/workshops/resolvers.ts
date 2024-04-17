@@ -2,7 +2,6 @@ import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
 import { injectContentFiles } from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
-import { LocalizedString } from '@angular/compiler';
 
 export function injectActiveWorkshops(): WorkshopAttributes[] {
   const files = injectContentFiles<WorkshopAttributes>((contentFile) =>
@@ -19,6 +18,8 @@ function injectActiveWorkshopAttributes(
     (contentFile) =>
       contentFile.filename ===
         `/src/content/workshops/${route.params['slug']}.md` ||
+      contentFile.filename ===
+        `/src/content/workshops/past/${route.params['slug']}.md` ||
       contentFile.slug === route.params['slug'],
   );
 
