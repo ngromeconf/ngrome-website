@@ -29,6 +29,10 @@ import { Speaker } from 'src/app/models/speaker.model';
           <h3 class="text-xl">
             {{ speaker.name }}
           </h3>
+          <span class="text-sm">
+            {{ speaker.jobRole }}
+            - {{ speaker.work }}
+          </span>
         </div>
         <div
           class="pt-5 text-base font-semibold leading-7 group-hover:text-slate-200"

@@ -7,6 +7,7 @@ export interface Speaker {
   biography?: string;
   from?: string;
   work?: string;
+  jobRole?: string;
   imageUrl?: string;
   links?: SocialLinks;
   visible: boolean;

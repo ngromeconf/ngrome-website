@@ -73,10 +73,8 @@ import { NgIf } from '@angular/common';
                   {{ speaker?.name }}
                 </p>
                 <p class="text-slate-500 pb-4">
-                  {{ speaker?.from }}
-                  @if (speaker?.work) {
-                    - {{ speaker?.work }}
-                  }
+                  {{ speaker?.jobRole }}
+                  - {{ speaker?.work }} | {{ speaker?.from }}
                 </p>
                 <p class="text-slate-800">
                   {{ speaker?.biography }}
