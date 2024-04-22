@@ -2,8 +2,8 @@
 slug: soumaya-erradi
 name: Soumaya Erradi
 talk: 
-    title: Boost your Angular app performance
-    description: We often hear about Angular being less performant than other frontend frameworks. Let's identify the issues to the reduced efficiency of our applications. Learn practical tips like improving change detection, lazy loading, reducing bundle size and techniques that you might not have heard about.
+    title: 'Angular PWA: crafting apps that adapt anywhere'
+    description: Ready to boost your Angular App? Take it up a notch by turning it into a Progressive Web App (PWA). With Angular's help, upgrading your app to a PWA and setting up the necessary service worker is easy. The service worker keeps your app accessible even offline, storing all important data. Plus, your PWA can act like a desktop or mobile app, giving users a native app feel. Join us as we explore Angular PWAs, showing you how to set up your app and make it look good on any device.
 biography: I'm an experienced web developer and a passionate IT and electronics instructor. I'm specialized in frontend applications and currently I'm a lead software developer in a blockchain app development team. I spend most of my time exploring what's new in the tech world and helping other developers improve their skills.
 from: Brescia, Italia
 work: Scaling parrots
