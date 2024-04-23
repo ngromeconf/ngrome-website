@@ -2,7 +2,7 @@
 slug: authentication-step-by-step
 tag: Security
 recipients: For all
-time: 9am-18pm
+time: 12pm-18pm
 title: Authentication from Step 0 to Stepped Up
 description: All applications require authentication. How do we add authentication, how does authorization fit in, and how can we prevent hacks? This workshop adds authentication to your Angular application in an interactive, hands-on format.<br /><br />You&#8217;ll learn about authentication and authorization concepts, how to add them to an Angular application using a reputable identity provider, and ways to enforce authentication and access control measures.<br /><br />You&#8217;ll also protect API resources and learn how to step up your authentication within your software system by leveraging new advances in OAuth specs to increase users&#8217; identity assurance.
 date: '2024-06-25'
