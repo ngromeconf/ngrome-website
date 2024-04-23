@@ -6,7 +6,8 @@ talk:
     description: 
 biography: Alex is a Senior Software Engineer at Snowflake. He is part of the NgRx team, GDE in Angular, Angular Toronto organizer, and co-organizer of the official Angular Discord. In his free time, he loves to learn & share knowledge, provides NgRx workshops and helps with ts.dev/style - the TypeScript style guide.
 from: Ontario, Canada 
-work: Senior Software Engineer, Snowflake
+work: Snowflake
+jobRole: Senior Software Engineer
 imageUrl: https://cache.sessionize.com/image/c12c-400o400o1-XrHrLBYhATPDLhuiSrEpXe.jpeg
 links:
     linkedIn: https://www.linkedin.com/in/alex-okrushko-64262a33/

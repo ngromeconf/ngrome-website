@@ -54,7 +54,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
             >
           </p>
 
-          <div class="w-full md:w-6/12 mx-auto grid grid-cols-3 gap-4 pt-12">
+          <div class="w-full md:w-6/12 mx-auto grid grid-cols-2 gap-8 pt-12">
             <button
               class="px-2 py-4 md:p-6 rounded shadow-md"
               [ngClass]="{
@@ -68,20 +68,10 @@ export class FilterTicketByDatePipe implements PipeTransform {
             <button
               class="p-4 rounded shadow-md"
               [ngClass]="{
-                'bg-red-ngrome text-gray-100': filterby === 'combo',
-                'bg-white text-red-ngrome': filterby !== 'combo'
-              }"
-              (click)="updateTicketFilter('combo')"
-            >
-              Combo
-            </button>
-            <button
-              class="p-4 rounded shadow-md"
-              [ngClass]="{
                 'bg-red-ngrome text-gray-100': filterby === 'workshop',
                 'bg-white text-red-ngrome': filterby !== 'workshop'
               }"
-              (click)="updateTicketFilter('workshop')"
+              (click)="goTo('workshops')"
             >
               Workshop
             </button>
@@ -147,5 +137,8 @@ export class TicketsComponent {
   updateTicketFilter(filter: string) {
     this.filterby = filter;
     console.log(this.filterby);
+  }
+  goTo(ticketType: string) {
+    this.router.navigateByUrl(`/${ticketType}?#workshops`,);
   }
 }
