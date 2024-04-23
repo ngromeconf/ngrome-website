@@ -16,6 +16,6 @@ location:
     mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1712129746/ngrome-workshops/_d2ffe5b3-3e5c-4827-bf8d-c0001fcb6fe2_zcqars.jpg?_s=public-apps_s=public-apps
 link: /workshops/authentication-step-by-step
-ticket:  'https://ti.to/ngrome-events/'
+ticket:  'https://ti.to/ngrome-events/authentication-step-by-step'
 col: 1
 ---
