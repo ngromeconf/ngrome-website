@@ -4,6 +4,11 @@ tag: Security
 recipients: For all
 time: 12pm-18pm
 title: Authentication from Step 0 to Stepped Up
+description: "All applications require authentication. How do we add authentication, how does authorization fit in, and how can we best defend against authentication-related breaches?
+
+In this half-day hands-on workshop, you’ll apply best practices to add authentication to an Angular application. Then, you’ll learn about a new OAuth 2.0 specification to increase users’ identity assurance and protect key resources. You’ll implement these techniques in a sample Angular application so you can apply these concepts to your application.
+
+"
 date: '2024-06-25'
 authors: 
     - name: Alisa Duncan
@@ -24,21 +29,19 @@ All applications require authentication. How do we add authentication, how does 
 In this half-day hands-on workshop, you'll apply best practices to add authentication to an Angular application. Then, you'll learn about a new OAuth 2.0 specification to increase users' identity assurance and protect key resources. You'll implement these techniques in a sample Angular application so you can apply these concepts to your application.
 
 ### Our goals for this workshop are
+1. Introduce authorization and authentication using OAuth 2.0 and OpenID Connect
+2. Utilize an Identity Provider to manage authentication and inspect the handshake in the browser
+3. Leverage Angular building blocks for protecting resources
+4. Introduce the OAuth 2.0 Step Up Authentication Challenge
+5. Add step-up authentication to Angular applications
+6. Handle step-up authentication challenges from the backend
+7. Cover the next steps for elevating authentication security
 
-1\. Introduce authorization and authentication using OAuth 2\.0 and OpenID Connect
-2\. Utilize an Identity Provider to manage authentication and inspect the handshake in the browser
-3\. Leverage Angular building blocks for protecting resources
-4\. Introduce the OAuth 2\.0 Step Up Authentication Challenge
-5\. Add step\-up authentication to Angular applications
-6\. Handle step\-up authentication challenges from the backend
-7\. Cover the next steps for elevating authentication security
-<br>
 ### For this workshop, you'll need
-
-1\. Laptop with admin access
-2\. Node LTS version
-3\. Code Editor
-4\. Terminal window
-5\. Browser with good debugging capability
-6\. Git and a GitHub account \(optional\, but highly recommended\)
-7\. Device with an authenticator app or biometrics \(optional\)
+1. Laptop with admin access
+2. Node LTS version
+3. Code Editor
+4. Terminal window
+5. Browser with good debugging capability
+6. Git and a GitHub account (optional, but highly recommended)
+7. Device with an authenticator app or biometrics (optional)

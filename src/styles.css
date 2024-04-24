@@ -17,7 +17,11 @@ analog-markdown-route {
 }
 
 .analog-markdown p {
-    @apply mb-12 font-sans text-sm font-normal tracking-tight text-black md:text-lg;
+    @apply mb-4 font-sans text-sm font-normal tracking-tight text-black md:text-lg;
+}
+
+.analog-markdown li {
+    @apply  font-sans text-sm font-normal tracking-tight text-black md:text-lg;
 }
 
 .analog-markdown h1 {
@@ -30,6 +34,11 @@ analog-markdown-route {
 .analog-markdown h3 {
     @apply mt-12 font-sans uppercase text-xl font-bold tracking-tight text-black md:text-xl;
 }
+
+.analog-markdown h4 {
+    @apply mt-6 font-sans text-lg font-bold tracking-tight text-black md:text-lg;
+}
+
 
 .analog-markdown,
 .analog-markdown-route p code {
@@ -47,6 +56,15 @@ analog-markdown-route {
 .analog-markdown,
 .analog-markdown-route li {
     margin: 16px 0;
+}
+
+
+.analog-markdown ol {
+    list-style: auto;
+}
+
+.analog-markdown ul {
+    list-style: disc;
 }
 
 .scale-1_1:hover {
