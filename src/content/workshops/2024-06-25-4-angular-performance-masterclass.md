@@ -7,9 +7,7 @@ title: High-Speed Angular applications on any device
 description: "Are you tired of performance bottlenecks holding back your Angular apps?
 Want to create a lightning-fast user experience that keeps your users engaged? Look no further! Our intensive hands-on workshop is designed to help you master Angular performance optimization and refining your app’s performance in every way.
 You will gain a deep understanding of running performance tests effectively and utilizing performance metrics to optimize your Angular application.
-Learn about Angular performance optimization with in-depth sessions on optimizing JavaScript code, native rendering performance, and much more. Get ready to supercharge your Angular applications with our engaging and interactive workshop!
-
-"
+Learn about Angular performance optimization with in-depth sessions on optimizing JavaScript code, native rendering performance, and much more. Get ready to supercharge your Angular applications with our engaging and interactive workshop!"
 authors: 
     - name: Michael Hladky
       biography: Is a Google Developer Expert, Microsoft MVP, Nx Champion, trainer, and consultant with a focus on Angular and RxJS. For years he has been helping companies and developers to set up scalable architectures and performant processes enabling teams to keep up with state-of-the-art development.

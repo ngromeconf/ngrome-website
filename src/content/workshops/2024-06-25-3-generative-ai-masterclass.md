@@ -4,9 +4,7 @@ tag: Generative AI
 recipients: For all
 time: 9am-18pm
 title: Google’s latest Generative AI Masterclass using Google AI Studio, Gemini & Angular
-description: "In this full day training, you will learn how to leverage Google’s new Generative AI platform using the new Google AI Studio and the just released Gemini APIs to build the next generation of AI-enabled Applications and powerful chatbots with Angular v17. The workshop is hands-on and practical, but we also give an overview of all the latest advancements and ideas.
-
-"
+description: "In this full day training, you will learn how to leverage Google’s new Generative AI platform using the new Google AI Studio and the just released Gemini APIs to build the next generation of AI-enabled Applications and powerful chatbots with Angular v17. The workshop is hands-on and practical, but we also give an overview of all the latest advancements and ideas."
 date: '2024-06-25'
 authors: 
     - name: Gerard Sans

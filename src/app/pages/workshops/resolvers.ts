@@ -1,11 +1,6 @@
-import {
-  ActivatedRouteSnapshot,
-  ResolveFn,
-} from '@angular/router';
+import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
-import {
-  injectContentFiles,
-} from '@analogjs/content';
+import { injectContentFiles } from '@analogjs/content';
 import {
   WorkshopAttributes,
   WorkshopAuthor,
@@ -48,7 +43,7 @@ function getUrl(url: string): string {
 function addAuthors(description: string, authors: WorkshopAuthor[]): string {
   return (
     textCleaner(description) +
-    'Authors: ' +
+    ' | Authors: ' +
     authors.map((a) => a.name).join(', ')
   );
 }

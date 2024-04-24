@@ -4,9 +4,7 @@ tag: Deep Dive
 recipients: Expert
 time: 9am-18pm
 title: 'Mastering NgRx Signal Store: From Fundamentals to Advanced Techniques'
-description: "Explore the power of NgRx Signal Store in a comprehensive workshop led by core members of the NgRx team by Alex Okrushko and Marko Stanimirović. This workshop offers a deep dive into the world of reactive state management powered by Angular Signals. NgRx SignalStore is a fully-featured state management solution that offers a robust way to manage application state. With its native support for Signals, it provides the ability to define stores in a clear and declarative manner. The simplicity and flexibility of SignalStore, coupled with its opinionated and extensible design, establish it as a versatile solution for effective state management in Angular.
-
-"
+description: "Explore the power of NgRx Signal Store in a comprehensive workshop led by core members of the NgRx team by Alex Okrushko, Marko Stanimirović and Brandon Roberts. This workshop offers a deep dive into the world of reactive state management powered by Angular Signals. NgRx SignalStore is a fully-featured state management solution that offers a robust way to manage application state. With its native support for Signals, it provides the ability to define stores in a clear and declarative manner. The simplicity and flexibility of SignalStore, coupled with its opinionated and extensible design, establish it as a versatile solution for effective state management in Angular."
 date: '2024-06-26'
 authors: 
     - name: Alex Okrushko

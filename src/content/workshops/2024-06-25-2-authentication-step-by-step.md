@@ -6,9 +6,7 @@ time: 12pm-18pm
 title: Authentication from Step 0 to Stepped Up
 description: "All applications require authentication. How do we add authentication, how does authorization fit in, and how can we best defend against authentication-related breaches?
 
-In this half-day hands-on workshop, you’ll apply best practices to add authentication to an Angular application. Then, you’ll learn about a new OAuth 2.0 specification to increase users’ identity assurance and protect key resources. You’ll implement these techniques in a sample Angular application so you can apply these concepts to your application.
-
-"
+In this half-day hands-on workshop, you’ll apply best practices to add authentication to an Angular application. Then, you’ll learn about a new OAuth 2.0 specification to increase users’ identity assurance and protect key resources. You’ll implement these techniques in a sample Angular application so you can apply these concepts to your application."
 date: '2024-06-25'
 authors: 
     - name: Alisa Duncan
