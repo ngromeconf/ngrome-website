@@ -37,11 +37,13 @@ In this half-day hands-on workshop, you'll apply best practices to add authentic
 6. Handle step-up authentication challenges from the backend
 7. Cover the next steps for elevating authentication security
 
+###
+---
 ### For this workshop, you'll need
-1. Laptop with admin access
-2. Node LTS version
-3. Code Editor
-4. Terminal window
-5. Browser with good debugging capability
-6. Git and a GitHub account (optional, but highly recommended)
-7. Device with an authenticator app or biometrics (optional)
+- Laptop with admin access
+- Node LTS version
+- Code Editor
+- Terminal window
+- Browser with good debugging capability
+- Git and a GitHub account (optional, but highly recommended)
+- Device with an authenticator app or biometrics (optional)
