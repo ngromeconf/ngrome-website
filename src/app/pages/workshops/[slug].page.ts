@@ -1,9 +1,10 @@
 import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaSlugResolver, postTitleResolver } from './resolvers';
-import { injectContent } from '@analogjs/content';
+import { injectContent, MarkdownComponent } from '@analogjs/content';
 import { map } from 'rxjs';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 
@@ -14,7 +15,14 @@ export const routeMeta: RouteMeta = {
 
 @Component({
   standalone: true,
-  imports: [NgIf, NgFor, AsyncPipe, DatePipe, SocialShareComponent],
+  imports: [
+    NgIf,
+    NgFor,
+    AsyncPipe,
+    DatePipe,
+    SocialShareComponent,
+    MarkdownComponent,
+  ],
   template: ` <div class="flex flex-col" *ngIf="workshop$ | async as workshop">
     <div
       class="sm:flex px-5 pb-6 pt-10 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20 w-full items-center"
@@ -26,22 +34,22 @@ export const routeMeta: RouteMeta = {
         <h1
           class="font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl"
         >
-          {{ workshop.title }}
+          {{ workshop.attributes.title }}
         </h1>
       </div>
       <div
         class="h-screen max-h-96 bg-cover bg-center sm:w-[50%] w-full inline-flex items-center"
       >
         <img
-          [src]="workshop.image"
+          [src]="workshop.attributes.image"
           alt="workshop.title"
-          [title]="workshop.title"
+          [title]="workshop.attributes.title"
         />
       </div>
     </div>
 
     <section class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto">
-      @for (author of workshop.authors; track $index) {
+      @for (author of workshop.attributes.authors; track $index) {
         <div class="w-full sm:max-w-full sm:flex">
           <div
             class="h-48 sm:h-auto sm:w-48 flex-none bg-no-repeat bg-contain sm:bg-cover  bg-top sm:bg-center rounded-tl sm:rounded-l overflow-hidden border-b border-t border-l border-r sm:border-r-0 border-gray-400"
@@ -75,13 +83,10 @@ export const routeMeta: RouteMeta = {
     <section
       class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
     >
-      <div
-        class="text-lg md:text-left leading-snug text-slate-500"
-        [innerHTML]="workshop.description"
-      ></div>
+      <analog-markdown [content]="workshop.content"></analog-markdown>
     </section>
-    @if (isWorkshopActive(workshop)) {
-      <app-social-share [message]="socialMessage(workshop)" class="py-5" />
+    @if (isWorkshopActive(workshop.attributes)) {
+      <app-social-share [message]="socialMessage(workshop.attributes)" class="py-5" />
     }
     <div class="sticky bottom-0 w-full bg-gray-50 px-20 py-5 border-t">
       <div
@@ -91,39 +96,39 @@ export const routeMeta: RouteMeta = {
           <p>
             When:
             <span class="font-semibold"
-              >{{ workshop.date | date: 'MMMM dd, YYYY' }}
-              @if (workshop?.time) {
+              >{{ workshop.attributes.date | date: 'MMMM dd, YYYY' }}
+              @if (workshop?.attributes?.time) {
                 |
-                {{ workshop.time }}
+                {{ workshop.attributes.time }}
               }
             </span>
           </p>
-          @if (workshop.location?.mapsLink) {
+          @if (workshop.attributes.location?.mapsLink) {
             <a
-              [href]="workshop.location?.mapsLink"
+              [href]="workshop.attributes.location?.mapsLink"
               [target]="
-                workshop.location?.mapsLink?.includes('http')
+                workshop.attributes.location?.mapsLink?.includes('http')
                   ? '_target'
                   : '_self'
               "
               >Venue:
               <span class="text-blue-600 hover:underline">{{
-                workshop.location?.name
+                workshop.attributes.location?.name
               }}</span></a
             >
           } @else {
-            Venue: {{ workshop.location?.name }}
+            Venue: {{ workshop.attributes.location?.name }}
           }
         </div>
-        @if (isWorkshopActive(workshop)) {
+        @if (isWorkshopActive(workshop.attributes)) {
           <a
-            [href]="workshop.ticket"
+            [href]="workshop.attributes.ticket"
             target="_blank"
             class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
           >
             RESERVE YOUR SEAT
           </a>
-        } @else if (workshop?.ticket) {
+        } @else if (workshop?.attributes?.ticket) {
           <a
             class="cursor-no-drop inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-gray-300 focus:outline-none border-2 rounded-lg md:mb-2 lg:mb-0 focus:ring-2 ring-offset-current ring-offset-2"
             >EXPIRED</a
@@ -137,7 +142,16 @@ export default class ProductDetailsPageComponent {
   readonly workshop$ = injectContent<WorkshopAttributes>({
     param: 'slug',
     subdirectory: 'workshops',
-  }).pipe(map((workshop) => workshop.attributes as WorkshopAttributes));
+  }).pipe(
+    map((workshop) => {
+      const workshopData = {
+        content: workshop.content,
+        attributes: workshop.attributes as WorkshopAttributes,
+      };
+      console.log(workshopData);
+      return workshopData;
+    }),
+  );
 
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
     return new Date(workshop.date) > new Date();

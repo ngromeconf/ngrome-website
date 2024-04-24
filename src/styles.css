@@ -16,27 +16,25 @@ analog-markdown-route {
     max-width: 100%;
 }
 
-.analog-markdown,
-.analog-markdown-route p {
-    text-align: left;
-    margin: 40px 0;
-    line-height: 2.5rem;
+.analog-markdown p {
+    @apply mb-12 font-sans text-sm font-normal tracking-tight text-black md:text-lg;
 }
 
-.analog-markdown,
-.analog-markdown-route h1 {
-    @apply mb-12 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl;
+.analog-markdown h1 {
+    @apply mb-12 font-sans uppercase text-2xl font-bold tracking-tight text-black md:text-3xl;
 }
 
-.analog-markdown,
-.analog-markdown-route h2 {
-    @apply mt-12 font-sans uppercase text-2xl font-bold tracking-tight text-black md:text-4xl;
+.analog-markdown h2 {
+    @apply mt-12 font-sans uppercase text-xl font-bold tracking-tight text-black md:text-2xl;
+}
+.analog-markdown h3 {
+    @apply mt-12 font-sans uppercase text-xl font-bold tracking-tight text-black md:text-xl;
 }
 
 .analog-markdown,
 .analog-markdown-route p code {
     padding: 0 8px;
-    background-color: black;
+    background-color: inherit;
 }
 
 .analog-markdown,
