@@ -20,7 +20,7 @@ export interface WorkshopAttributes {
   [key: string]: string | number | boolean | Date | undefined | Object;
 }
 
-interface WorkshopAuthor {
+export interface WorkshopAuthor {
   name: string;
   biography: string;
   image: string;
