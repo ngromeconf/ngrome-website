@@ -33,7 +33,6 @@ export default class PastWorkshopDetailPageComponent {
           content: workshop.content as string,
           attributes: workshop.attributes as WorkshopAttributes,
         };
-        console.log(workshopData);
         return workshopData;
       }),
     );

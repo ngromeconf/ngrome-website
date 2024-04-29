@@ -1,40 +1,11 @@
 import { Component, Signal, inject } from '@angular/core';
 import { CommonModule, NgFor, NgOptimizedImage } from '@angular/common';
-import { Agenda, Event } from 'src/app/models/agenda.model';
+import { Agenda } from 'src/app/models/agenda.model';
 import { injectAgenda } from '../../../pages/speakers/resolvers';
-import { Pipe, PipeTransform } from '@angular/core';
 import { Sponsors } from 'src/app/models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SponsorComponent } from '../../sponsors/sponsor.component';
-
-@Pipe({
-  name: 'calculateTime',
-  standalone: true,
-})
-export class CalculateTimePipe implements PipeTransform {
-  transform(talks: Event[], timeStart: string): Event[] {
-    let startTime = new Date(`2024-04-03T${timeStart}:00`);
-    console.log(talks);
-    return talks.map((talk) => {
-      talk.startTime = startTime.toLocaleTimeString('it-IT', {
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-      const hours = Math.floor(talk.duration / 60);
-      const minutes = talk.duration % 60;
-      const endTime = new Date(startTime);
-      endTime.setHours(endTime.getHours() + hours);
-      endTime.setMinutes(endTime.getMinutes() + minutes);
-      talk.endTime = endTime.toLocaleTimeString('it-IT', {
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-      startTime = endTime;
-      return talk;
-    });
-  }
-}
 
 @Component({
   selector: 'app-content',
@@ -73,7 +44,7 @@ export class CalculateTimePipe implements PipeTransform {
         <div *ngIf="agenda">
           <div class="text-2xl font-bold text-center">{{ a.title }}</div>
           <div class="margin-2">
-            @for (item of a.events | calculateTime: a.start; track $index) {
+            @for (item of a.events; track $index) {
               <div class="flex flex-col gap-4 event">
                 <p
                   class="flex-shrink-0 font-medium  text-gray-500 text-sm time"
@@ -92,30 +63,37 @@ export class CalculateTimePipe implements PipeTransform {
                     <h4 class="font-bold text-lg md:text-2xl">
                       {{ item?.title || item?.type }}
                     </h4>
-                    @if (item?.speaker?.talk) {
+                    @if (item?.subtitle) {
+                      <h3 class="font-semibold text-lg md:text-1xl margin-1">
+                        {{ item?.subtitle }}
+                      </h3>
+                    }
+                    @if (item?.description) {
                       <p class="font-normal text-gray-500 margin-1">
-                        {{ item?.speaker?.talk?.description }}
+                        {{ item?.description }}
                       </p>
                     }
-                    @if (item?.speaker?.name) {
-                      <div class="margin-1 gap-3 flex items-center">
-                        <img
-                          [alt]="item?.speaker?.name"
-                          [title]="item?.speaker?.name"
-                          [src]="item?.speaker?.imageUrl"
-                          class="w-12 h-12 object-cover rounded-full  "
-                        />
-                        <div class="">
-                          <p
-                            class="leading-tight font-medium m-0 text-gray-900 text-lg"
-                          >
-                            {{ item?.speaker?.name }}
-                          </p>
-                          <p class="font-normal text-gray-500 text-sm">
-                            {{ item?.speaker?.work }}
-                          </p>
+                    @for (speaker of item?.speakers; track $index) {
+                      @if (speaker?.name) {
+                        <div class="margin-1 gap-3 flex items-center">
+                          <img
+                            [alt]="speaker?.name"
+                            [title]="speaker?.name"
+                            [src]="speaker?.imageUrl"
+                            class="w-12 h-12 object-cover rounded-full  "
+                          />
+                          <div class="">
+                            <p
+                              class="leading-tight font-medium m-0 text-gray-900 text-lg"
+                            >
+                              {{ speaker?.name }}
+                            </p>
+                            <p class="font-normal text-gray-500 text-sm">
+                              {{ speaker?.work }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      }
                     }
                     @if (
                       item.type.includes('Pause') && sponsors$();
@@ -149,13 +127,7 @@ export class CalculateTimePipe implements PipeTransform {
     </div>
   </section>`,
   styleUrls: ['./content.component.scss'],
-  imports: [
-    CommonModule,
-    NgOptimizedImage,
-    CalculateTimePipe,
-    SponsorComponent,
-    NgFor,
-  ],
+  imports: [CommonModule, NgOptimizedImage, SponsorComponent, NgFor],
 })
 export class ContentComponent {
   public agenda: Agenda[] = injectAgenda();

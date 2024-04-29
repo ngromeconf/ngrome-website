@@ -24,7 +24,7 @@ import { Speaker } from 'src/app/models/speaker.model';
           />
         </span>
         <div
-          class="space-y-6 pt-5 text-base leading-7 text-slate-800 transition-all duration-300 group-hover:text-slate-200"
+          class="pt-5 text-base leading-7 text-slate-800 transition-all duration-300 group-hover:text-slate-200"
         >
           <h3 class="text-xl">
             {{ speaker.name }}

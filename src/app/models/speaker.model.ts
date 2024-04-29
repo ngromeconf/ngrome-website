@@ -19,4 +19,5 @@ interface Talk {
   title: string;
   description: string;
   tag?: string;
+  slug: string;
 }

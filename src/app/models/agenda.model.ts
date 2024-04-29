@@ -10,7 +10,9 @@ export interface Event {
   duration: number;
   endTime: string;
   type: string;
-  speaker?: Speaker;
+  speakers?: Speaker[];
   title: string;
+  subtitle: string;
+  description?: string;
   slug?: string;
 }
