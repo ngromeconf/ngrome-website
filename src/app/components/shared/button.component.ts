@@ -15,7 +15,7 @@ import { WindowRef } from '../../services/window.provider';
     @if (eventID && ticketID) {
       <div
         id="tito-button-{{ ticketID }}"
-        class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-red-ngrome text-white text-sm font-medium rounded-md"
+        class="inline-flex items-center px-2 py-2 bg-green-600 hover:bg-red-ngrome text-white text-xs font-medium rounded-md"
         (click)="mountTitoButton()"
       ></div>
     } @else if (label) {
@@ -91,6 +91,7 @@ export class ButtonComponent implements OnInit {
     this.tito = this.winRef.nativeWindow.tito;
 
     if (this.tito && this.eventID && this.ticketID) {
+      console.log('Mounting Tito button', this.ticketID, this.eventID);
       this.tito('button.mount', {
         el: `#tito-button-${this.ticketID}`,
         event: this.eventID,

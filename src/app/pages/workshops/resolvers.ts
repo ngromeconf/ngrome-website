@@ -1,8 +1,10 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
 import { injectContentFiles } from '@analogjs/content';
-import { WorkshopAttributes } from 'src/app/models/workshop.model';
-import { LocalizedString } from '@angular/compiler';
+import {
+  WorkshopAttributes,
+  WorkshopAuthor,
+} from 'src/app/models/workshop.model';
 
 export function injectActiveWorkshops(): WorkshopAttributes[] {
   const files = injectContentFiles<WorkshopAttributes>((contentFile) =>
@@ -19,6 +21,8 @@ function injectActiveWorkshopAttributes(
     (contentFile) =>
       contentFile.filename ===
         `/src/content/workshops/${route.params['slug']}.md` ||
+      contentFile.filename ===
+        `/src/content/workshops/past/${route.params['slug']}.md` ||
       contentFile.slug === route.params['slug'],
   );
 
@@ -32,10 +36,19 @@ function textCleaner(text: string): string {
 
 function getUrl(url: string): string {
   // checks if url is external
+  if (!url) return '';
   return url.includes('http') ? url : 'https://ngrome.io' + url;
 }
 
-export const postTitleResolver: ResolveFn<string> = (route) =>
+function addAuthors(description: string, authors: WorkshopAuthor[]): string {
+  return (
+    textCleaner(description) +
+    ' | Authors: ' +
+    authors.map((a) => a.name).join(', ')
+  );
+}
+
+export const postTitleResolver: ResolveFn<string> = (route, state) =>
   'NG Rome - ' + injectActiveWorkshopAttributes(route).title;
 
 export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
@@ -43,7 +56,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
   return [
     {
       name: 'description',
-      content: textCleaner(workshop?.description),
+      content: addAuthors(workshop?.description || '', workshop.authors),
     },
     {
       property: 'og:url',
@@ -59,7 +72,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:description',
-      content: textCleaner(workshop?.description),
+      content: addAuthors(workshop?.description || '', workshop.authors),
     },
     {
       property: 'og:image',
@@ -83,7 +96,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       name: 'twitter:description',
-      content: textCleaner(workshop?.description),
+      content: addAuthors(workshop?.description || '', workshop.authors),
     },
     {
       name: 'twitter:image',

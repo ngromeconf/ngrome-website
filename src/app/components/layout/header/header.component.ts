@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
         aria-label="Global"
       >
         <div class="container justify-between flex w-full mx-auto px-4 lg-px-8">
-          <div class="flex lg:flex-1 contents">
+          <div class="flex lg:flex-1">
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
@@ -27,6 +27,7 @@ import { Router } from '@angular/router';
                   class="h-full"
                   width="242"
                   height="40"
+                  priority
                 />
               </div>
             </a>
@@ -49,7 +50,7 @@ import { Router } from '@angular/router';
               </svg>
             </button>
           </div>
-          <div class="hidden lg:flex gap-6 m-auto md:hidden">
+          <div class="hidden lg:flex gap-6 m-auto md:hidden px-6">
             @for (item of NavMenu; track $index) {
               @if (!item.pastEdition && item.visible) {
                 <a
@@ -125,6 +126,7 @@ import { Router } from '@angular/router';
                   class="h-full"
                   width="40"
                   height="40"
+                  priority
                 />
               </div>
             </a>
@@ -142,6 +144,7 @@ import { Router } from '@angular/router';
                   class="h-full ml-2"
                   width="24"
                   height="24"
+                  priority
               /></a>
             </div>
 

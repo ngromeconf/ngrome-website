@@ -1,21 +1,24 @@
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgClass, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
+import { BadgeComponent } from '../shared/badge.component';
+import { COLOR_RECIPIENTS } from '../shared/constant';
 
 @Component({
   selector: 'workshop-row',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, BadgeComponent, NgIf, NgClass],
   template: `
     <section>
       <div class="flex flex-row">
         <div
-          class="flex flex-col md:flex-row items-center flex-wrap p-4 w-full select-none justify-center"
+          class="flex justify-center  flex-col md:flex-row items-center  p-4 w-full select-none justify-center"
+          [ngClass]="past ? 'flex-wrap' : 'sm:flex-nowrap '"
         >
-          <div class="flex flex-row gap-4 min-w-11">
+          <div class="flex flex-row gap-4 min-w-11 ">
             @for (author of workshop.authors; track $index) {
-              <div class=" flex-row justify-center w-20 h-20">
+              <div class=" flex-row w-20 h-20">
                 <div class="relative block">
                   <img
                     [alt]="author.name"
@@ -28,11 +31,15 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
             }
           </div>
           <div class="grow pl-2">
-            <div class="font-bold text-center text-sm pt-5 dark:text-white sm:text-xl  lg:pt-0 ">
+            <div
+              class="font-bold text-center text-sm pt-5 dark:text-white sm:text-xl  lg:pt-0"
+            >
               {{ workshop.title }}
             </div>
           </div>
-          <div class="flex gap-4 m-auto sm:text-lg text-right my-4 mx-2">
+          <div
+            class="flex gap-4 m-auto sm:text-lg text-right my-4  sm:justify-end"
+          >
             @if (!past) {
               <button
                 class="tito-widget-button"
@@ -45,7 +52,7 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
             <button
               class="tito-widget-button "
               target="_blank"
-              (click)="goToWorkshop(workshop.slug)"
+              (click)="goToWorkshop((past ? 'past/' : '') + workshop.slug)"
             >
               Detail
             </button>
@@ -54,18 +61,31 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
       </div>
 
       <div
-        class="flex sm:flex-col sm:text-sm text-xs text-gray-600 dark:text-gray-200 text-right  mx-5 mb-2"
+        class=" overflow-y-auto flex gap-4 sm:justify-end justify-center sm:text-sm text-xs text-gray-600 dark:text-gray-200  sm:text-right text-center  mx-5 mb-2"
       >
-        <span class="">
-          {{ workshop?.tag }}
-        </span>
+        <app-badge
+          *ngIf="workshop?.tag"
+          [title]="workshop.tag"
+          color="blue"
+        ></app-badge>
+        <app-badge
+          *ngIf="workshop?.time"
+          [title]="workshop?.time"
+          color="gray"
+        ></app-badge>
+        <app-badge
+          *ngIf="workshop?.recipients"
+          [title]="workshop?.recipients"
+          [color]="colorRecipients[workshop.recipients]"
+        ></app-badge>
       </div>
     </section>
   `,
 })
 export class WorkshopRowComponent {
-  @Input() workshop: WorkshopAttributes;
+  @Input() workshop!: WorkshopAttributes;
   @Input() past: boolean;
+  colorRecipients = COLOR_RECIPIENTS;
 
   constructor(
     private router: Router,
