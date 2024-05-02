@@ -8,20 +8,20 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
   imports: [CommonModule, NgOptimizedImage],
   template: `<div
     *ngIf="sponsors?.length"
-    class="flex mt-6  items-center justify-center"
+    class="flex my-12  items-center justify-center"
   >
     <div class="w-full px-10 mx-auto bg-white">
       <div class="mx-auto space-y-6">
         <!-- Component starts here -->
         @if (showTitle) {
-          <h2 class="flex flex-row flex-nowrap items-center mt-8">
+          <h2 class="flex flex-row flex-nowrap items-center mt-8 mb-12">
             <span
               class="flex-grow block border-t border-red"
               aria-hidden="true"
               role="presentation"
             ></span>
             <span
-              class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase text-white"
+              class="flex-none block mx-4 px-4 py-2.5 text-lg leading-none font-medium uppercase text-white"
               [ngClass]="{
                 'bg-red-ngrome': type === 'Main',
                 'bg-yellow-400': type === 'Gold',
@@ -45,30 +45,49 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           </h2>
         }
         <!-- Component ends here -->
-        <div class="container sm:pb-24 pb-12 mx-auto ">
-          <div class="grid grid-cols-12 -m-4 justify-center">
-            @for (item of sponsors; track $index) {
-              <a
-                class="inline-flex items-center mb-2 lg:p-8 p-2 md:p-4 col-span-6 sm:col-span-6"
-                [ngClass]="
-                  'lg:col-span-' +
-                  12 / itemsPerRow +
-                  (itemsPerRow > 4 ? ' md:col-span-3' : '')
-                "
-                [href]="item.url ? item.url : '/sponsors'"
-                target="_blank"
-              >
-                <img
-                  [alt]="item.name"
-                  [title]="item.name"
-                  [ngSrc]="item.image"
-                  class="flex-shrink-0 object-cover object-center w-full h-25"
-                  width="200"
-                  height="50"
-                />
-              </a>
-            }
-          </div>
+        <div class="w-full mt-24">
+          @if (itemsPerRow === 3) {
+            <div
+              class="grid place-items-center m-auto gap-6 grid-cols-1 md:grid-cols-3"
+            >
+              @for (item of sponsors; track $index) {
+                <a
+                  class="self-center my-8"
+                  [href]="item.url ? item.url : '/sponsors'"
+                  target="_blank"
+                >
+                  <img
+                    [alt]="item.name"
+                    [title]="item.name"
+                    [ngSrc]="item.image"
+                    class="flex-shrink-0 object-cover object-center w-full h-35"
+                    width="200"
+                    height="50"
+                  />
+                </a>
+              }
+            </div>
+          }
+          @if (itemsPerRow === 6) {
+            <div class="grid m-auto gap-8 grid-cols-5 md:grid-cols-7">
+              @for (item of sponsors; track $index) {
+                <a
+                  class="flex items-center align-middle"
+                  [href]="item.url ? item.url : '/sponsors'"
+                  target="_blank"
+                >
+                  <img
+                    [alt]="item.name"
+                    [title]="item.name"
+                    [ngSrc]="item.image"
+                    class="flex-shrink-0 object-cover object-center w-full h-25"
+                    width="200"
+                    height="50"
+                  />
+                </a>
+              }
+            </div>
+          }
         </div>
       </div>
     </div>

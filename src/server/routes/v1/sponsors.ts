@@ -23,13 +23,7 @@ const goldSponsors: SponsorInterface[] = [
     url: 'https://cloudinary.com/',
   },
 ];
-const silverSponsor: SponsorInterface[] = [
-  {
-    name: 'Fervento',
-    image: './sponsors/fervento-logo.svg',
-    url: 'https://fervento.com',
-  },
-];
+const silverSponsor: SponsorInterface[] = [];
 const bronzeSponsor: SponsorInterface[] = [
   {
     name: 'angular.dev',
@@ -41,7 +35,11 @@ const bronzeSponsor: SponsorInterface[] = [
     image: './sponsors/conte-logo.svg',
     url: 'https://www.conte.it/',
   },
-
+  {
+    name: 'Fervento',
+    image: './sponsors/fervento-logo.svg',
+    url: 'https://fervento.com',
+  },
   {
     name: 'Lascaux',
     image:
@@ -92,12 +90,14 @@ const communityPartners: SponsorInterface[] = [
     image:
       'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711105674/ngrome-sponsors/coderful-colore-trasparente_wyi541.png',
     url: 'https://www.coderful.io/',
-  },{
+  },
+  {
     name: 'The Communities Bay',
     image:
       'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711096696/ngrome-sponsors/The_Communities_Bay_k1hjzk.png',
     url: 'https://thecmmbay.com/',
-  },{
+  },
+  {
     name: 'StopCoding',
     image:
       'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FLOGO_stopcoding_400x400%20-%20Ileana%20Baldassi.jpg?alt=media&amp;token=20921429-a600-4570-aeb9-cb58eed7db0f',
