@@ -8,7 +8,7 @@ export function injectActiveSpeakers(): Speaker[] {
     .map((speaker) => speaker.attributes as unknown as Speaker)
     .filter((speaker) => speaker.visible);
   const speakerLenght = speakers.length;
-  for (let index = 0; index < 12 - speakerLenght; index++) {
+  for (let index = 0; index < 16 - speakerLenght; index++) {
     speakers.push({
       name: '...',
       slug: '...',
