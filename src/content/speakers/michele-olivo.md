@@ -10,7 +10,7 @@ In the free time you can find him playing Lego with his kids or cooking Michelin
 from: Italy
 work: Crispy Bacon
 jobRole: Head of Frontend Web
-imageUrl: https://media.licdn.com/dms/image/C4D03AQHkmSNXgMidcA/profile-displayphoto-shrink_200_200/0/1586208526061?e=1720656000&v=beta&t=h26PKz_A3RzNALqnPsuXdPxIzTFJO4_7lZXU62hlKos
+imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1715096668/FRA_8902_f7b4ai.jpg
 links:
     linkedIn: https://www.linkedin.com/in/michele-olivo-71766653/
     twitter: 
