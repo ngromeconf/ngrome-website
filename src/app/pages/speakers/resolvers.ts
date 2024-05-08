@@ -20,9 +20,7 @@ export function injectActiveSpeakers(): Speaker[] {
       return speaker;
     });
   const speakerLenght = speakers.length;
-
-  // create fake speaker
-  for (let index = 0; index < 12 - speakerLenght; index++) {
+  for (let index = 0; index < 16 - speakerLenght; index++) {
     speakers.push({
       name: '...',
       slug: '...',

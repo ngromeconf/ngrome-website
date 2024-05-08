@@ -7,7 +7,7 @@ talk:
     slug: talk-3
 biography: Trainer, consultant and programming architect with focus on Angular. Google Developer Expert (GDE) and Trusted Collaborator in the Angular team who writes for O'Reilly, the German Java Magazine, and windows.developer. Regularly speaks at conferences.
 from: Austria
-work: ANGULARarchitects.io
+work: Angular Architects
 jobRole: Trainer and Consultant Angular
 imageUrl: https://www.angulararchitects.io/wp-content/uploads/2023/03/steyer-klein.jpg
 links:

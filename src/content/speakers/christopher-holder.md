@@ -9,7 +9,7 @@ biography: Christopher is a Full Stack Engineer at push-based.io. He does consul
 from: Austria
 work: Push Based
 jobRole: Full Stack Software Developer
-imageUrl: https://lh3.googleusercontent.com/drive-viewer/AKGpihaw8o1PSRHRBiHta5dC5uJ50ljhWmXRshenXeLW8DI-FvjqAgrn8WtcDd7_hb4uhDsHFgylNIfObnxJFRb459Lqz6-0X-gtZko=w1912-h932-rw-v1
+imageUrl: https://media.licdn.com/dms/image/D4D03AQEpe5JRKnyJyw/profile-displayphoto-shrink_800_800/0/1702119188624?e=1720051200&v=beta&t=EI5ujDh66px_f6Ay5zjkDawsHm9-ZZBPhAO5KByUxYQ
 links:
     linkedIn: https://www.linkedin.com/in/christopher-p-holder
     twitter: https://twitter.com/ChrisPHolder
