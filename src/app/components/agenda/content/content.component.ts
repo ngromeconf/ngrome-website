@@ -42,7 +42,7 @@ import { SponsorComponent } from '../../sponsors/sponsor.component';
     <div class="container-agenda grid mt-6 text-left px-4 pb-4">
       @for (a of agenda; track $index) {
         <div *ngIf="agenda">
-          <div class="text-2xl font-bold text-center">{{ a.title }}</div>
+          <div class="text-2xl font-bold text-center">{{ a?.title }}</div>
           <div class="margin-2">
             @for (item of a.events; track $index) {
               <div class="flex flex-col gap-4 event">
@@ -89,7 +89,7 @@ import { SponsorComponent } from '../../sponsors/sponsor.component';
                               {{ speaker?.name }}
                             </p>
                             <p class="font-normal text-gray-500 text-sm">
-                              {{ speaker?.work }}
+                              {{ speaker?.jobRole }} - {{ speaker?.work }}
                             </p>
                           </div>
                         </div>

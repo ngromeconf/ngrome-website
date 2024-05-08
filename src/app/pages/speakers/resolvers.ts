@@ -55,15 +55,14 @@ export function injectAgenda(): Agenda[] {
   let agenda = injectContentFiles<{ agenda: Agenda[] }>().find(
     (contentFile) => contentFile.filename === `/src/content/agenda.md`,
   )?.attributes.agenda as Agenda[];
-
-  agenda.forEach((a) => {
+  agenda.forEach((a, i) => {
     a.events = calculateTime(a.events, a.start);
     a.events.forEach((event) => {
       let check = false;
       event.speakers = [];
-      speakers.forEach((speaker) => {
-        // I verify that the agenda is a talk
-        if (event.type.includes('Talk') || event.type.includes('Opening')) {
+      if (event.type.includes('Talk') || event.type.includes('Keynote')) {
+        speakers.forEach((speaker) => {
+          // I verify that the agenda is a talk
           // I recover the speaker next to the talk
           if (event.slug == speaker.talk.slug) {
             check = true; // I confirm that I have recovered the talk
@@ -73,11 +72,12 @@ export function injectAgenda(): Agenda[] {
             event.speakers?.push(speaker);
             return;
           }
-        }
-      });
+        });
+      }
+
       if (
         !check &&
-        (event.type.includes('Talk') || event.type.includes('Opening'))
+        (event.type.includes('Talk') || event.type.includes('Keynote'))
       ) {
         // if it is a talk but there is not yet a file for the speaker I hide the data
         event.title = '';
