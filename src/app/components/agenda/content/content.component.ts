@@ -89,7 +89,10 @@ import { SponsorComponent } from '../../sponsors/sponsor.component';
                               {{ speaker?.name }}
                             </p>
                             <p class="font-normal text-gray-500 text-sm">
-                              {{ speaker?.jobRole }} - {{ speaker?.work }}
+                              {{ speaker?.jobRole }}
+                              @if (speaker?.work) {
+                                - {{ speaker?.work }}
+                              }
                             </p>
                           </div>
                         </div>
