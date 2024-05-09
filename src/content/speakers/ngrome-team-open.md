@@ -1,5 +1,5 @@
 ---
-slug: ngrome-team
+slug: ngrome-team-open
 name: NGRome Team
 talk: 
     title: Opening Remarks

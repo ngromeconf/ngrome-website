@@ -8,14 +8,6 @@ export const NAV_MENU = [
     visible: false,
   },
   {
-    name: 'Agenda',
-    destinationUrl: '/agenda',
-    type: 'white',
-    visible: true,
-    pageSite: true,
-    icon: 'agenda',
-  },
-  {
     name: 'About',
     destinationUrl: '/about',
     type: 'white',
@@ -31,6 +23,15 @@ export const NAV_MENU = [
     pageSite: true,
     icon: 'sponsor',
   },
+  {
+    name: 'Agenda',
+    destinationUrl: '/agenda',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+    icon: 'agenda',
+  },
+
   {
     name: 'CFP',
     destinationUrl: '#callForPaper',

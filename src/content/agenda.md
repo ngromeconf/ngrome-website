@@ -10,7 +10,7 @@ agenda:
       title: 'Morning'
       events:
           - slug: 
-            title: 
+            title: Registration
             type: Registration
             duration: 60
             speakers: 
@@ -112,10 +112,8 @@ agenda:
             title: 
             type: Panel with Brandon, Mateusz, Manfred and Rainer
             duration: 15
-            speakers: 
-          - slug: 
-            title: 
-            type: Closing Remarks
+          - slug: closing-remarks
+            title: Closing Remarks
+            type:  Closing Remarks Keynote
             duration: 10
-            speakers: 
 ---
