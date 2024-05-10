@@ -9,9 +9,9 @@ biography: Senior Frontend Engineer & Tech Speaker at Dynatrace. Angular dev sin
 from: Spain
 work: Dynatrace
 jobRole: Senior Frontend Engineer
-imageUrl: https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ5qo9GKb7MvT5QiJsuAInK9Ddrh5sLeINRh60KzBGqteroED_tUuu0XjJVL9p2ataHrxKVHF2xYSCuqJKV1GDWpzSzct0sUA=w1920-h1080-rw-v1
+imageUrl: https://media.licdn.com/dms/image/D4D03AQFks3YDB05ogg/profile-displayphoto-shrink_400_400/0/1706295023213?e=1720656000&v=beta&t=p6ae80GY6urP1BvZkuUnLVk-Mwm8grTD8y-H11xAGp0
 links:
-    linkedIn:  www.linkedin.com/in/daniel-coll-leal
+    linkedIn:  https://www.linkedin.com/in/daniel-coll-leal
     twitter: 
     gitHub: https://github.com/dani-coll
     other: 
