@@ -128,6 +128,30 @@ import { SponsorComponent } from '../../sponsors/sponsor.component';
         </div>
       }
     </div>
+    <div class="sticky bottom-0 w-full bg-gray-50 px-20 py-5 border-t">
+      <div
+        class="flex flex-col items-center md:items-start md:flex-row gap-5 justify-between max-w-3xl mx-auto"
+      >
+        <div class="flex flex-col gap-4 text-center md:text-left">
+          <p>
+            When:
+            <span class="font-semibold"> June 27, 2024 | 8am-7pm </span>
+          </p>
+          <a href="/venue"
+            >Venue:
+            <span class="text-blue-600 hover:underline"
+              >Midas Palace Hotel</span
+            ></a
+          >
+        </div>
+        <a
+          href="/#TicketSection"
+          class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+        >
+          Tickets
+        </a>
+      </div>
+    </div>
   </section>`,
   styleUrls: ['./content.component.scss'],
   imports: [CommonModule, NgOptimizedImage, SponsorComponent, NgFor],
