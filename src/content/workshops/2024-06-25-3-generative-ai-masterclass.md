@@ -8,13 +8,13 @@ description: "In this full day training, you will learn how to leverage Googleâ€
 date: '2024-06-25'
 authors: 
     - name: Gerard Sans
-      biography: Gerard is a Google Developer Expert in Web Technologies and Angular. He works as a Developer Advocate at AWS and he is the founder of the AngularZone community in London. He loves coding, learning and sharing knowledge.
+      biography: Gerard helps developers succeed in Artificial Intelligence and Web3; Former AWS Amplify Developer Advocate. He is very excited about the future of the Web and JavaScript. Always happy Computer Science Engineer and humble Google Developer Expert. He loves sharing his knowledge by speaking, training and writing about cool technologies. He loves running communities and meetups such as Web3 London, GraphQL London, GraphQL San Francisco, mentoring students and giving back to the community.
       image: photo/authors/gerard-sans.webp
       link: https://gerardsans.com/
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1709911986/ngrome-workshops/generative-ai-masterclass_d2qg99.jpg?_s=public-apps
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1715336734/ngrome-workshops/GEN_AI_Masterclass_w48uou.jpg
 link: /workshops/generative-ai-masterclass
 ticket:  'https://ti.to/ngrome-events/generative-ai-masterclass-2024'
 col: 1
