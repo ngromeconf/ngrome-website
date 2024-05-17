@@ -21,9 +21,18 @@
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 2rem;
+
+    .border-left {
+      border-left-width: 1px;
+      padding-left: 2.5rem;
+    }
+
+    .border-right {
+      border-right-width: 1px;
+      padding-right: 2.5rem;
+    }
   }
 
-  column-gap: 4rem;
   row-gap: 3rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -37,7 +46,7 @@
   .time {
     @media (min-width: 640px) {
       text-align: right;
-      width: 8rem;
+      /*  width: 8rem; */
     }
   }
 }
