@@ -34,10 +34,9 @@ import { Router } from '@angular/router';
           <h2
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
-            JUNE 
+            JUNE
             <span class="font-bold text-red-ngrome">27</span>
             2024
-            
           </h2>
           <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <p
@@ -46,8 +45,9 @@ import { Router } from '@angular/router';
             Empower your network and embrace excellence. <br />Join NGRome
             MMXXIV for an Immersive dive into cutting-edge Angular and web tech
             trends where professionals of all levels thrive in Learning and
-            networking excellence. You will have 3 Days with experts and sprakers for around the world.<br>
-            Workshop days are June 25th and 26th, 2024.<br>
+            networking excellence. You will have 3 Days with experts and
+            speakers from around the world.<br />
+            Workshop days are June 25th and 26th, 2024.<br />
             Conference day is June 27th, 2024.
           </p>
         </div>
