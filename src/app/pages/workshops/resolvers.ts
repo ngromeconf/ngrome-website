@@ -6,9 +6,12 @@ import { Speaker } from 'src/app/models/speaker.model';
 import { injectSpeaker, injectSpeakers } from '../speakers/resolvers';
 import { map } from 'rxjs';
 
-export function injectActiveWorkshops(): WorkshopAttributes[] {
+export function injectActiveWorkshops(past = true): WorkshopAttributes[] {
   return injectContentFiles<WorkshopAttributes>((contentFile) =>
-    contentFile.filename.includes('/src/content/workshops/'),
+    past
+      ? contentFile.filename.includes('/src/content/workshops/')
+      : contentFile.filename.includes('/src/content/workshops/') &&
+        !contentFile.filename.includes('/src/content/workshops/past/'),
   )
     .map((workshop) => workshop.attributes as unknown as WorkshopAttributes)
     .map((workshop) => ({
