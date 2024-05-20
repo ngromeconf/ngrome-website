@@ -171,6 +171,12 @@ import { FOOTER_MENU } from './constants';
             NG ROME © {{ year }} SATYRICON FACTORY LTD All rights reserved.
           </p>
         </div>
+        <div class="mt-8 md:mt-0 md:order-1" x-data="data()">
+          <p class="text-sm text-center text-white">
+            Made with
+            <a href="https://analogjs.org/" target="_blank">AnalogJS</a> ❤️
+          </p>
+        </div>
       </div>
     </footer>
   </section>`,
