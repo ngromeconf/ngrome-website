@@ -56,7 +56,7 @@ agenda:
             type: Sponsor pitch
             duration: 5
           - slug: l-talk-1
-            type: Lighting Talk
+            type: Lightning Talk
             duration: 15
             title: Angular Performance and Core Web Vitals in 2024
             description: 'There are a couple of things that make Angular faster. But what does faster even mean?
@@ -72,7 +72,7 @@ agenda:
             speakers: 
                 - slug: alisa-duncan
           - slug: l-talk-2
-            type: Lighting Talk
+            type: Lightning Talk
             duration: 10 
             title: 5 tips to know before building a design system
             description: Building your own design system sounds like a great idea, but keeping it alive, maintained & useful is a challenge. Let’s explore some ideas to empower your options of success.
@@ -108,7 +108,7 @@ agenda:
             speakers: 
                 - slug: mateusz-łędzewicz
           - slug: l-talk-3
-            type: Lighting Talk
+            type: Lightning Talk
             duration: 15
             title: 'Navigating the Code Maze: Strategies to Tackle Technical Debt in Angular Projects'
             description: Join us on a journey to keep your Angular project afloat as we explore the challenges of technical debt and effective strategies to manage and resolve it. Learn how to build a scalable organization that ensures the longevity and stability of your project over time. Get ready to transform your codebase into a fortress of reliability and long-term success.
@@ -122,7 +122,7 @@ agenda:
             speakers: 
                 - slug: natalia-venditto
           - slug: l-talk-4
-            type: Lightning Talk 4
+            type: Lightning Talk
             duration: 15
             title: Testing Angular Components with Storybook
             description: In this talk we will dive into component testing with Storybook. We will look at how you can set up Visual Regression, User Interaction and Accessibility testing. Then we will focus on what we should test and how thinking about these testing can improve the quality of our code.
