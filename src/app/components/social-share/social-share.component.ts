@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { I } from 'vitest/dist/types-198fd1d9';
 
 @Component({
   selector: 'app-social-share',
