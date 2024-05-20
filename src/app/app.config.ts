@@ -3,13 +3,16 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideFileRouter } from '@analogjs/router';
 import { provideContent, withMarkdownRenderer } from '@analogjs/content';
-import { withInMemoryScrolling } from '@angular/router';
+import { withInMemoryScrolling, withViewTransitions } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     provideClientHydration(),
-    provideFileRouter(withInMemoryScrolling({ anchorScrolling: 'enabled' })),
+    provideFileRouter(
+      withViewTransitions(),
+      withInMemoryScrolling({ anchorScrolling: 'enabled' }),
+    ),
     provideContent(withMarkdownRenderer()),
   ],
 };
