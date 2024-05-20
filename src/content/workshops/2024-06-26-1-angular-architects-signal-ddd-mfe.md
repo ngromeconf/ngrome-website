@@ -11,14 +11,8 @@ We discuss categorizing the individual parts of our application and how to enfor
 Then, we discover how Angular’s new Signals fit our modern architecture. We discuss fine-grained change detection and State Management with the new NGRX Signal Store. We implement some custom features for the Signal Store to cover repeating and complex use cases with just a few lines of code. Finally, we discuss how the new Signal component will help to simplify our architecture further and how they work together with traditional components."
 date: '2024-06-26'
 authors: 
-    - name: Manfred Steyer
-      biography: 'Manfred Steyer is a trainer and consultant with a focus on Angular. Google Developer Expert (GDE) who writes for O’Reilly, the German Java Magazine, and windows.developer. He regularly speaks at conferences.'
-      image: photo/authors/manfred-steyer.webp
-      link: https://www.softwarearchitekt.at/
-    - name: Rainer Hahnekamp
-      biography: Rainer Hahnekamp is a Google Developer Expert, working as a trainer and consultant in the expert network of Angular Architects. Among his responsibilities is providing training sessions on Angular and Spring. In addition, he offers a weekly brief overview of relevant events in the Angular ecosystem on YouTube through ng-news.
-      image: photo/authors/rainer-hahnekamp.webp 
-      link: "https://www.rainerhahnekamp.com/en/"
+    - slug: manfred-steyer
+    - slug: rainer-hahnekamp
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue

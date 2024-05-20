@@ -1,11 +1,17 @@
-import { Component, Signal, inject } from '@angular/core';
-import { CommonModule, NgFor, NgOptimizedImage } from '@angular/common';
+import { AfterViewInit, Component, Signal, inject } from '@angular/core';
+import {
+  CommonModule,
+  NgFor,
+  NgOptimizedImage,
+  ViewportScroller,
+} from '@angular/common';
 import { Agenda } from 'src/app/models/agenda.model';
 import { injectAgenda } from '../../../pages/speakers/resolvers';
 import { Sponsors } from 'src/app/models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SponsorComponent } from '../../sponsors/sponsor.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-content',
@@ -51,7 +57,10 @@ import { SponsorComponent } from '../../sponsors/sponsor.component';
             </div>
             <div class="margin-2">
               @for (item of a.events; track $index) {
-                <div class="flex flex-col sm:gap-4 event">
+                <div
+                  class="flex flex-col sm:gap-4 event"
+                  [id]="'talk-' + item.slug"
+                >
                   <p
                     class="flex-shrink-0 font-medium  text-gray-500 text-sm time"
                   >
@@ -164,7 +173,9 @@ import { SponsorComponent } from '../../sponsors/sponsor.component';
   styleUrls: ['./content.component.scss'],
   imports: [CommonModule, NgOptimizedImage, SponsorComponent, NgFor],
 })
-export class ContentComponent {
+export class ContentComponent implements AfterViewInit {
+  private route: ActivatedRoute = inject(ActivatedRoute);
+
   public agenda: Agenda[] = injectAgenda();
   /**
    * Signal representing the sponsors data.
@@ -172,6 +183,24 @@ export class ContentComponent {
    */
   public sponsors$: Signal<Sponsors> = this.getSponsors();
 
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe((fragment: string | null) => {
+      if (fragment) {
+        this.scrollToCenter(fragment);
+      }
+    });
+  }
+
+  scrollToCenter(fragment: string) {
+    const element = document.getElementById('talk-' + fragment);
+    if (element) {
+      const elementRect = element.getBoundingClientRect();
+      const absoluteElementTop = elementRect.top + window.scrollY;
+      const middle =
+        absoluteElementTop - window.innerHeight / 2 + elementRect.height / 2;
+      window.scrollTo({ top: middle, behavior: 'smooth' });
+    }
+  }
   getSponsors() {
     const _http = inject(HttpClient);
     return toSignal(_http.get<Sponsors>('./api/v1/sponsors'), {

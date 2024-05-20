@@ -111,7 +111,7 @@ import { Router } from '@angular/router';
         <div
           [ngStyle]="{
             transform: !(toggleService.toggle$ | async)
-              ? 'translateX(100%)'
+              ? 'translateX(101%)'
               : 'translateX(0px)'
           }"
           style="z-index: 1000; transition: transform .3s ease"

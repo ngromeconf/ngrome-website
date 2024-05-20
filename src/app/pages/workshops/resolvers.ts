@@ -1,32 +1,81 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
-import { injectContentFiles } from '@analogjs/content';
-import {
-  WorkshopAttributes,
-  WorkshopAuthor,
-} from 'src/app/models/workshop.model';
+import { injectContent, injectContentFiles } from '@analogjs/content';
+import { WorkshopAttributes } from 'src/app/models/workshop.model';
+import { Speaker } from 'src/app/models/speaker.model';
+import { injectSpeaker, injectSpeakers } from '../speakers/resolvers';
+import { map } from 'rxjs';
 
 export function injectActiveWorkshops(): WorkshopAttributes[] {
-  const files = injectContentFiles<WorkshopAttributes>((contentFile) =>
+  return injectContentFiles<WorkshopAttributes>((contentFile) =>
     contentFile.filename.includes('/src/content/workshops/'),
-  ).map((workshop) => workshop.attributes as unknown as WorkshopAttributes);
+  )
+    .map((workshop) => workshop.attributes as unknown as WorkshopAttributes)
+    .map((workshop) => ({
+      ...workshop,
+      authors: workshop.authors.map((author) => injectSpeaker(author?.slug)),
+    }));
+}
 
-  return files;
+export function injectPastWorkshopContent() {
+  const speakers = injectSpeakers();
+  return injectContent<WorkshopAttributes>({
+    param: 'slug',
+    subdirectory: 'workshops/past',
+  }).pipe(
+    map((workshop) => {
+      const workshopData = {
+        content: workshop.content as string,
+        attributes: {
+          ...workshop.attributes,
+          authors: workshop.attributes.authors.map((author) =>
+            speakers.find((speaker) => speaker.slug === author?.slug),
+          ),
+        } as WorkshopAttributes,
+      };
+      return workshopData;
+    }),
+  );
+}
+
+export function injectWorkshopContent() {
+  const speakers = injectSpeakers();
+  return injectContent<WorkshopAttributes>({
+    param: 'slug',
+    subdirectory: 'workshops',
+  }).pipe(
+    map((workshop) => {
+      const workshopData = {
+        content: workshop.content as string,
+        attributes: {
+          ...workshop.attributes,
+          authors: workshop.attributes.authors.map((author) =>
+            speakers.find((speaker) => speaker.slug === author?.slug),
+          ),
+        } as WorkshopAttributes,
+      };
+      return workshopData;
+    }),
+  );
 }
 
 function injectActiveWorkshopAttributes(
   route: ActivatedRouteSnapshot,
 ): WorkshopAttributes {
-  const file = injectContentFiles<WorkshopAttributes>().find(
-    (contentFile) =>
-      contentFile.filename ===
-        `/src/content/workshops/${route.params['slug']}.md` ||
-      contentFile.filename ===
-        `/src/content/workshops/past/${route.params['slug']}.md` ||
-      contentFile.slug === route.params['slug'],
-  );
+  let workshop =
+    injectContentFiles<WorkshopAttributes>().find(
+      (contentFile) =>
+        contentFile.filename ===
+          `/src/content/workshops/${route.params['slug']}.md` ||
+        contentFile.filename ===
+          `/src/content/workshops/past/${route.params['slug']}.md` ||
+        contentFile.slug === route.params['slug'],
+    )!.attributes || null;
 
-  return file!.attributes;
+  return {
+    ...workshop,
+    authors: workshop.authors.map((author) => injectSpeaker(author?.slug)),
+  };
 }
 
 function textCleaner(text: string): string {
@@ -40,7 +89,7 @@ function getUrl(url: string): string {
   return url.includes('http') ? url : 'https://ngrome.io' + url;
 }
 
-function addAuthors(description: string, authors: WorkshopAuthor[]): string {
+function addAuthors(description: string, authors: Speaker[]): string {
   return (
     textCleaner(description) +
     ' | Authors: ' +

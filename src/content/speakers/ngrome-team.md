@@ -1,10 +1,6 @@
 ---
-slug: ngrome-team-open
+slug: ngrome-team
 name: NGRome Team
-talk: 
-    title: Opening Remarks
-    description: 
-    slug: opening-remarks
 biography: 
 from: 
 work: 

@@ -1,10 +1,6 @@
 ---
 slug: manfred-steyer
 name: Manfred Steyer
-talk: 
-    slug: closing-keynote
-    title: 
-    description: 
 biography: Trainer, consultant and programming architect with focus on Angular. Google Developer Expert (GDE) and Trusted Collaborator in the Angular team who writes for O'Reilly, the German Java Magazine, and windows.developer. Regularly speaks at conferences.
 from: Austria
 work: Angular Architects

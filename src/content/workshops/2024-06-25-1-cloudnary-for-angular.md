@@ -9,10 +9,7 @@ date: '2024-06-25'
 time: '9am-1pm'
 recipients: For all
 authors: 
-    - name: Tamas Piros
-      biography: Developer Evangelist with a passion to teach & preach the latest & greatest technologies out there. Speaks 4 languages, plays waterpolo.
-      image: https://media.licdn.com/dms/image/C4E03AQH3S0niykm3Mw/profile-displayphoto-shrink_200_200/0/1519756015728?e=1718841600&v=beta&t=GtgxbX8nYS6A4_0aCW9x2Z_YDAYZURbOVVwTbx3VPfQ
-      link: https://www.linkedin.com/in/tpiros/
+    - slug: tamas-piros
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue

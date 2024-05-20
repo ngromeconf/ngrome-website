@@ -1,10 +1,9 @@
 import { SocialLinks } from '../components/shared/social-links.component';
-import { Event } from './agenda.model';
 
 export interface Speaker {
   name: string;
   slug: string;
-  talk: Talk;
+  talk: Talk[];
   biography?: string;
   from?: string;
   work?: string;
@@ -12,7 +11,13 @@ export interface Speaker {
   imageUrl?: string;
   links?: SocialLinks;
   visible: boolean;
-  agenda?: Partial<Event>;
+  events: {
+    title: string;
+    time: string;
+    date: string;
+    link: string;
+    isTalk: boolean;
+  }[];
 }
 
 interface Talk {

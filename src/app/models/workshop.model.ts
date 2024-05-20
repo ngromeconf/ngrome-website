@@ -1,3 +1,5 @@
+import { Speaker } from './speaker.model';
+
 export interface WorkshopAttributes {
   slug: string;
   tag: string;
@@ -6,7 +8,7 @@ export interface WorkshopAttributes {
   title: string;
   description: string;
   date: string;
-  authors: WorkshopAuthor[];
+  authors: Speaker[];
   location: {
     name: string;
     mapsLink: string;
@@ -25,4 +27,5 @@ export interface WorkshopAuthor {
   biography: string;
   image: string;
   link?: string;
+  slug: string;
 }

@@ -1,10 +1,6 @@
 ---
 slug: rainer-hahnekamp
 name: Rainer Hahnekamp
-talk: 
-    title: 
-    description: 
-    slug: closing-keynote
 biography: Rainer Hahnekamp is a Google Developer Expert, working as a trainer and consultant in the expert network of Angular Architects. Among his responsibilities is providing training sessions on Angular and Spring. In addition, he offers a weekly brief overview of relevant events in the Angular ecosystem on YouTube through ng-news.
 from: Austria
 work: Angular Architects
