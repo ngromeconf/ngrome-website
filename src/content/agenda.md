@@ -139,8 +139,8 @@ agenda:
           - slug: talk-7
             type: Talk 7
             duration: 25
-            title: 'AnalogJS'
-            description:
+            title: 'Building the next meta-framework for Angular with Analog'
+            description: Analog is about building with Angular and extending Angular to new ecosystems. Analog has reached its 1.0, so what's next? Let's take a look at the journey of this meta-framework and where it's headed.
             speakers: 
                 - slug: brandon-roberts
           - slug: talk-8

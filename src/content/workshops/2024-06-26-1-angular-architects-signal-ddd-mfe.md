@@ -2,7 +2,7 @@
 slug: angular-architects-signal-ddd-mfe
 tag: Architecture
 recipients: Expert
-time: 8:30am-6pm
+time: 08:30 AM - 06:00 PM
 title: 'Modern Angular Architectures: Signal Store, NX, DDD & Micro Frontends'
 description: "In this interactive workshop, we use Angular’s latest innovations to build a modern and maintainable architecture. We start with Standalone Components and learn how to structure a large application using a Mono Repo and Strategic Design – a discipline from Domain-driven Design (DDD).  
 

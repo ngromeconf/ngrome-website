@@ -57,7 +57,7 @@ export function injectActiveSpeakers(): Speaker[] {
           if (speaker.slug === agendaSpeaker.slug) {
             speaker.events?.push({
               title: `Talk: ${evento?.subtitle || evento.title}`,
-              time: `${evento.startTime}-${evento.endTime}`,
+              time: `${evento.startTime} - ${evento.endTime}`,
               date: '27 June',
               link: `${evento.slug}`,
               isTalk: true,
@@ -134,20 +134,22 @@ export function injectAgenda(): Agenda[] {
 function calculateTime(talks: Event[], timeStart: string) {
   let startTime = new Date(`2024-04-03T${timeStart}:00`);
   return talks.map((talk) => {
-    talk.startTime = startTime.toLocaleTimeString('it-IT', {
+    talk.startTime = startTime.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
-    });
-    const hours = Math.floor(talk.duration / 60);
-    const minutes = talk.duration % 60;
-    const endTime = new Date(startTime);
-    endTime.setHours(endTime.getHours() + hours);
-    endTime.setMinutes(endTime.getMinutes() + minutes);
-    talk.endTime = endTime.toLocaleTimeString('it-IT', {
+      hour12: true,
+    }); // Converti la data di inizio in formato orario 12h
+    const hours = Math.floor(talk.duration / 60); // Calcola le ore della durata del talk
+    const minutes = talk.duration % 60; // Calcola i minuti della durata del talk
+    const endTime = new Date(startTime); // Clona l'orario di inizio per calcolare l'orario di fine
+    endTime.setHours(endTime.getHours() + hours); // Aggiungi le ore alla data di fine
+    endTime.setMinutes(endTime.getMinutes() + minutes); // Aggiungi i minuti alla data di fine
+    talk.endTime = endTime.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
-    });
-    startTime = endTime;
+      hour12: true,
+    }); // Converti la data di fine in formato orario 12h
+    startTime = endTime; // Imposta l'orario di inizio del prossimo talk
     return talk;
   });
 }

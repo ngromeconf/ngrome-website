@@ -152,7 +152,7 @@ import { ActivatedRoute } from '@angular/router';
         <div class="flex-col gap-4 text-center md:text-left sm:flex hidden">
           <p>
             When:
-            <span class="font-semibold"> June 27, 2024 | 8am-7pm </span>
+            <span class="font-semibold"> June 27, 2024 | 8 AM - 7 PM </span>
           </p>
           <a href="/venue"
             >Venue:

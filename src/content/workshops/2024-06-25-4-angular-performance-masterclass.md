@@ -1,7 +1,7 @@
 ---
 slug: angular-performance-masterclass
 tag: 'Performance'
-time: '9am-5pm'
+time: '09:00 AM - 05:00 PM'
 recipients: For all
 title: High-Speed Angular applications on any device
 description: "Are you tired of performance bottlenecks holding back your Angular apps?

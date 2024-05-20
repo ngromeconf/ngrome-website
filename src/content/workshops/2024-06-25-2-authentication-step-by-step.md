@@ -2,7 +2,7 @@
 slug: authentication-step-by-step
 tag: Security
 recipients: For all
-time: 2pm-6pm
+time: 02:00 PM - 06:00 PM
 title: Authentication from Step 0 to Stepped Up
 description: "All applications require authentication. How do we add authentication, how does authorization fit in, and how can we best defend against authentication-related breaches?
 

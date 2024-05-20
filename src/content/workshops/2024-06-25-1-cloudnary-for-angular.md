@@ -6,7 +6,7 @@ description: "In today’s media-rich digital landscape, efficient and seamless 
 
 Cloudinary’s Angular SDK simplifies the integration of media assets into Angular applications, offering a wide range of capabilities for efficient media management."
 date: '2024-06-25'
-time: '9am-1pm'
+time: '09:00 AM - 01:00 PM'
 recipients: For all
 authors: 
     - slug: tamas-piros

@@ -98,7 +98,10 @@ import { Router } from '@angular/router';
                     <div class="sm:text-left w-full m-auto uppercase">
                       <p>{{ event.title }}</p>
                     </div>
-                    <div class="sm:text-right sm:w-40 mt-2 sm:mt-0">
+                    <div
+                      class="sm:text-right mt-2 sm:mt-0"
+                      style="min-width: fit-content"
+                    >
                       <p>{{ event.date | date: 'd MMM' }}</p>
                       <p>{{ event.time }}</p>
                     </div>
