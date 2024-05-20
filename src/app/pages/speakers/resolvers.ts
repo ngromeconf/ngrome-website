@@ -56,7 +56,7 @@ export function injectActiveSpeakers(): Speaker[] {
         evento?.speakers?.forEach((agendaSpeaker) => {
           if (speaker.slug === agendaSpeaker.slug) {
             speaker.events?.push({
-              title: `Talk: ${evento?.subtitle || evento.title}`,
+              title: `${evento.type}: ${evento?.subtitle || evento.title}`,
               time: `${evento.startTime} - ${evento.endTime}`,
               date: '27 June',
               link: `${evento.slug}`,

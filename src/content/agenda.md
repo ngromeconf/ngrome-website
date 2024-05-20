@@ -30,14 +30,14 @@ agenda:
                 - slug: brandon-roberts
                 - slug: marko-stanimirović
           - slug: talk-1
-            type: Talk 1
+            type: Talk 
             duration: 25
             title: A change detection, zone.js and signals story
             description: Learn about the history of Angular's change detection, how it works today, and how it's going to work in a zoneless world. How observables with async pipe work, and how signals make everything better! 
             speakers: 
                 - slug: enea-jahollari
           - slug: talk-2
-            type: Talk 2
+            type: Talk 
             duration: 25
             title: 'Angular PWA: crafting apps that adapt anywhere'
             description: Ready to boost your Angular App? Take it up a notch by turning it into a Progressive Web App (PWA). With Angular's help, upgrading your app to a PWA and setting up the necessary service worker is easy. The service worker keeps your app accessible even offline, storing all important data. Plus, your PWA can act like a desktop or mobile app, giving users a native app feel. Join us as we explore Angular PWAs, showing you how to set up your app and make it look good on any device.
@@ -56,7 +56,7 @@ agenda:
             type: Sponsor pitch
             duration: 5
           - slug: l-talk-1
-            type: Lighting Talk 1
+            type: Lighting Talk
             duration: 10
             title: Angular Performance and Core Web Vitals in 2024
             description: 'There are a couple of things that make Angular faster. But what does faster even mean?
@@ -65,21 +65,21 @@ agenda:
             speakers: 
                 - slug: michael-hladky
           - slug: talk-3
-            type: Talk 3
+            type: Talk 
             duration: 25
             title: Introducing the Identity Guardians
             description: Authentication and authorization are tricky! What's the best practices to follow for Angular applications? This talk covers OAuth and OIDC at a high level, auth tokens, what each token is for, and how everything fits into your Angular applications.
             speakers: 
                 - slug: alisa-duncan
           - slug: l-talk-2
-            type: Lighting Talk 2
+            type: Lighting Talk
             duration: 10 
             title: Testing Angular Components with Storybook
             description: In this talk we will dive into component testing with Storybook. We will look at how you can set up Visual Regression, User Interaction and Accessibility testing. Then we will focus on what we should test and how thinking about these testing can improve the quality of our code.
             speakers: 
                 - slug: christopher-holder
           - slug: talk-4
-            type: Talk 4
+            type: Talk 
             duration: 25
             title: Concurrent Mode in Angular
             description: JavaScript is single threaded. Keeping execution times short is crucial for the runtime performance of our applications. Long running scripts result in bad Web Vitals like INP & TBT. In this talk, we’ll discuss a strategic approach to mitigate this problem, the Concurrent Mode.
@@ -101,21 +101,21 @@ agenda:
             type: Sponsor pitch
             duration: 5
           - slug: talk-5
-            type: Talk 5
+            type: Talk
             duration: 25
             title: The Angular approach to SSR and hydration
             description: Let's explore together the motivation to shift rendering to the server side, review the Angular approach to hydration and data caching, the infrastructure necessary and the performance gains. We will also review the potential use-cases that benefit from this techniques and mechanisms.
             speakers: 
                 - slug: natalia-venditto
           - slug: l-talk-3
-            type: Lighting Talk 3
+            type: Lighting Talk
             duration: 25
             title: 5 tips to know before building a design system
             description: Building your own design system sounds like a great idea, but keeping it alive, maintained & useful is a challenge. Let’s explore some ideas to empower your options of success.
             speakers: 
                 - slug: dani-coll-leal
           - slug: talk-6
-            type: Talk 6
+            type: Talk 
             duration: 25
             title: Create Performant Angular Applications
             description: Web performance is vital for user retention and engagement. In Angular, enabling specific features can boost app performance. The talk covers techniques and media handling for creating an optimal performance via Angular.
@@ -137,7 +137,7 @@ agenda:
             type: Pause
             duration: 40
           - slug: talk-7
-            type: Talk 7
+            type: Talk 
             duration: 25
             title: 'Building the next meta-framework for Angular with Analog'
             description: Analog is about building with Angular and extending Angular to new ecosystems. Analog has reached its 1.0, so what's next? Let's take a look at the journey of this meta-framework and where it's headed.
@@ -146,7 +146,7 @@ agenda:
           - slug: talk-8
             title: 'Long Road to Reusable Design System in Angular #2'
             description: Nowadays many companies put a lot of effort to create reusable components libraries and eventually it occurs that it is not reusable at all. What is more even tiny change can introduce regression in many places. I would like to show you different perspective on UI reusability in angular projects.
-            type: Talk 8
+            type: Talk 
             duration: 25
             speakers: 
                 - slug: mateusz-łędzewicz
