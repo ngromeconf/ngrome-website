@@ -2,17 +2,14 @@
 slug: authentication-step-by-step
 tag: Security
 recipients: For all
-time: 2pm-6pm
+time: 02:00 PM - 06:00 PM
 title: Authentication from Step 0 to Stepped Up
 description: "All applications require authentication. How do we add authentication, how does authorization fit in, and how can we best defend against authentication-related breaches?
 
 In this half-day hands-on workshop, you’ll apply best practices to add authentication to an Angular application. Then, you’ll learn about a new OAuth 2.0 specification to increase users’ identity assurance and protect key resources. You’ll implement these techniques in a sample Angular application so you can apply these concepts to your application."
 date: '2024-06-25'
 authors: 
-    - name: Alisa Duncan
-      biography: Alisa is a Developer Advocate at Google on the Angular team. She is passionate about helping others learn and improve their lives through technology. She is also a co-organizer of GDG New Orleans and Angular New Orleans.
-      image: photo/authors/alisa-duncan.webp
-      link: https://alisaduncan.dev
+    - slug: alisa-duncan
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue

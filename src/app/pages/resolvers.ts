@@ -28,7 +28,7 @@ export const postTitleResolver: ResolveFn<string> = (route) =>
 
 function getUrl(url: string): string {
   // checks if url is external
-  return url.includes('http') ? url : 'https://ngrome.io' + url;
+  return url?.includes('http') ? url : 'https://ngrome.io' + url;
 }
 
 export const postMetaThankResolver: ResolveFn<MetaTag[]> = (route, state) => {

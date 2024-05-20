@@ -1,9 +1,6 @@
 ---
 slug: brandon-roberts
 name: Brandon Roberts
-talk: 
-    title: 
-    description: 
 biography: Brandon is an Open Source Advocate, focused on community engagement, content creation, and collaboration. He enjoys learning new things, helping other developers be successful, speaking at conferences, and contributing to open source. He is a GDE, technical writer, and a maintainer of the NgRx project, and creator of AnalogJS.
 from: Huntsville, Alabama, US
 work: OpenSauced

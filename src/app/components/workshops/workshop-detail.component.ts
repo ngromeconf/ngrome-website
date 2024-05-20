@@ -46,7 +46,7 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
         <div class="w-full sm:max-w-full sm:flex">
           <div
             class="h-48 sm:h-auto sm:w-48 flex-none bg-no-repeat bg-contain sm:bg-cover  bg-top sm:bg-center rounded-tl sm:rounded-l overflow-hidden border-b border-t border-l border-r sm:border-r-0 border-gray-400"
-            style="background-image: url('{{ author.image }}')"
+            style="background-image: url('{{ author.imageUrl }}')"
             [title]="author.name"
           ></div>
           <div
@@ -60,9 +60,9 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
               <p class="text-gray-700 text-base">
                 {{ author.biography }}
               </p>
-              @if (author.link) {
+              @if (author.links?.other || author.links?.linkedIn) {
                 <a
-                  [href]="author.link"
+                  [href]="author.links?.other || author.links?.linkedIn"
                   target="_blank"
                   class="text-blue-600 hover:underline"
                   >Read more about {{ author.name }}</a

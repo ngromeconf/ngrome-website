@@ -24,6 +24,23 @@ export const NAV_MENU = [
     icon: 'sponsor',
   },
   {
+    name: 'Agenda',
+    destinationUrl: '/agenda',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+    icon: 'agenda',
+  },
+
+  {
+    name: 'CFP',
+    destinationUrl: '#callForPaper',
+    type: 'white',
+    pageSite: true,
+    visible: false,
+    icon: 'speaker',
+  },
+  {
     name: 'Speakers',
     destinationUrl: '/speakers',
     type: 'white',
@@ -31,14 +48,6 @@ export const NAV_MENU = [
     visible: true,
     icon: 'speaker',
   },
-  // {
-  //   name: 'CFP',
-  //   destinationUrl: '#callForPaper',
-  //   type: 'white',
-  //   pageSite: true,
-  //   visible: true,
-  //   icon: 'speaker',
-  // },
   {
     name: 'Venue',
     destinationUrl: '/venue',

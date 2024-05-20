@@ -5,10 +5,7 @@ title: ng-Girls - one-day workshops for beginners!
 description: We are holding a one-day workshops for beginners!
 date: '2023-11-30'
 authors: 
-    - name: ngGirls
-      biography: 
-      image: photo/authors/ng-girls.webp
-      link: https://www.ng-girls.org
+    - slug: ng-girls
 location: 
     name: "Spaces Laurentina - Viale Luca Gaurico 91/93"
     mapsLink: https://maps.app.goo.gl/DHtZNNd8r8DNdmjN8

@@ -1,12 +1,13 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { Speaker } from 'src/app/models/speaker.model';
 import { SocialLinksComponent } from '../shared/social-links.component';
-import { NgIf } from '@angular/common';
+import { DatePipe, NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'speaker-modal',
   standalone: true,
-  imports: [SocialLinksComponent, NgIf],
+  imports: [SocialLinksComponent, NgIf, DatePipe],
   styles: `
     .modal-speaker {
       z-index: 9999;
@@ -34,9 +35,9 @@ import { NgIf } from '@angular/common';
         class="bg-white rounded shadow-lg sm:w-10/12 w-full max-w-3xl sm:h-auto  overflow-y-auto"
       >
         <!-- modal header -->
-        <div class="flex justify-between  p-5 sm:px-20 items-center">
+        <div class="flex justify-between  p-5 sm:px-10 items-center">
           <h3 class="font-semibold text-2xl text-left">
-            {{ speaker?.talk?.title }}
+            {{ speaker?.name }}
           </h3>
           <span class="text-end cursor-pointer" (click)="closeModal()">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -52,16 +53,7 @@ import { NgIf } from '@angular/common';
 
         <!-- modal body -->
         <div class="overflow-y-auto ">
-          @if (speaker?.talk?.description) {
-            <div class="pb-10  px-4 sm:px-20 container">
-              <p
-                class="font-bold  text-left"
-                [innerHTML]="speaker?.talk?.description"
-              ></p>
-            </div>
-          }
-
-          <div class="p-10 pb-5 container border-t text-left">
+          <div class="sm:px-10 px-5 pb-5 container text-left">
             <div class="sm:inline-flex w-full gap-10">
               <img
                 [src]="speaker?.imageUrl"
@@ -69,12 +61,16 @@ import { NgIf } from '@angular/common';
                 class="h-40 w-40 rounded-full xl:w-56 xl:h-56 m-auto mb-2 sm:mb-auto object-cover"
               />
               <div class="w-full">
-                <p class="font-bold pb-4 text-2xl">
-                  {{ speaker?.name }}
-                </p>
                 <p class="text-slate-500 pb-4">
-                  {{ speaker?.jobRole }}
-                  - {{ speaker?.work }} | {{ speaker?.from }}
+                  @if (speaker?.jobRole) {
+                    {{ speaker?.jobRole }}
+                  }
+                  @if (speaker?.work) {
+                    - {{ speaker?.work }}
+                  }
+                  @if (speaker?.from) {
+                    | {{ speaker?.from }}
+                  }
                 </p>
                 <p class="text-slate-800">
                   {{ speaker?.biography }}
@@ -89,6 +85,31 @@ import { NgIf } from '@angular/common';
               </div>
             </div>
           </div>
+          @if (speaker?.events?.length) {
+            <div class="sm:px-10 px-5 pb-5">
+              <div
+                class="grid grid-cols-1 divide-y divide-gray-500/10 container bg-gray-100 rounded text-left text-sm sm:text-base font-bold "
+              >
+                @for (event of speaker?.events; track $index) {
+                  <div
+                    class="sm:flex cursor-pointer sm:px-10 px-5 py-5 hover:underline hover:text-red-ngrome"
+                    (click)="goToEvent(event.link!, event.isTalk)"
+                  >
+                    <div class="sm:text-left w-full m-auto uppercase">
+                      <p>{{ event.title }}</p>
+                    </div>
+                    <div
+                      class="sm:text-right mt-2 sm:mt-0"
+                      style="min-width: fit-content"
+                    >
+                      <p>{{ event.date | date: 'd MMM' }}</p>
+                      <p>{{ event.time }}</p>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          }
         </div>
       </div>
     </div>
@@ -98,7 +119,21 @@ export class SpeakerModalComponent {
   @Input() speaker!: Speaker | null;
   @Output() $closeModal: EventEmitter<void> = new EventEmitter();
 
+  private router = inject(Router);
+
   closeModal() {
     this.$closeModal.emit();
+  }
+
+  goToEvent(url: string, talk: boolean = false) {
+    this.$closeModal.emit();
+    this.router.navigate(
+      [talk ? 'agenda' : url],
+      talk
+        ? {
+            fragment: url,
+          }
+        : {},
+    );
   }
 }

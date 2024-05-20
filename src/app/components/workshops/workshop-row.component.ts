@@ -13,7 +13,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
     <section>
       <div class="flex flex-row">
         <div
-          class="flex justify-center  flex-col md:flex-row items-center  p-4 w-full select-none justify-center"
+          class="flex justify-center  flex-col md:flex-row items-center  p-4 w-full select-none"
           [ngClass]="past ? 'flex-wrap' : 'sm:flex-nowrap '"
         >
           <div class="flex flex-row gap-4 min-w-11 ">
@@ -23,7 +23,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
                   <img
                     [alt]="author.name"
                     [title]="author.name"
-                    [src]="author.image"
+                    [src]="author.imageUrl"
                     class="mx-auto object-cover rounded-full h-20 w-20 "
                   />
                 </div>

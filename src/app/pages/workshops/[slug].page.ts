@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import WorkshopDetailComponent from '../../components/workshops/workshop-detail.component';
 import { WorkshopAttributes } from '../../models/workshop.model';
-import { postMetaSlugResolver, postTitleResolver } from './resolvers';
+import {
+  injectWorkshopContent,
+  postMetaSlugResolver,
+  postTitleResolver,
+} from './resolvers';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaSlugResolver,
@@ -24,16 +28,5 @@ export const routeMeta: RouteMeta = {
 })
 export default class PastWorkshopDetailPageComponent {
   workshop$: Observable<{ content: string; attributes: WorkshopAttributes }> =
-    injectContent<WorkshopAttributes>({
-      param: 'slug',
-      subdirectory: 'workshops',
-    }).pipe(
-      map((workshop) => {
-        const workshopData = {
-          content: workshop.content as string,
-          attributes: workshop.attributes as WorkshopAttributes,
-        };
-        return workshopData;
-      }),
-    );
+    injectWorkshopContent();
 }

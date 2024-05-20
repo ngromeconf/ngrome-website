@@ -2,15 +2,12 @@
 slug: ng-girls-workshop
 tag: Diversity
 recipients: Beginners
-time: 9am-5pm
+time: 09:00 AM - 05:00 PM
 title: ng-Girls - one-day workshops for beginners!
 description: "This workshop isn’t just about coding – it’s a movement. It’s free and perfectly designed for women with a foundational understanding of web development who are eager to advance their skills. We’re not just teaching code; we’re building a bridge towards a more diverse and inclusive IT sector"
 date: '2024-06-26'
 authors: 
-    - name: ngGirls
-      biography: 
-      image: photo/authors/ng-girls.webp
-      link: https://www.ng-girls.org
+    - slug: ng-girls
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue

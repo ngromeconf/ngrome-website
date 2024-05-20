@@ -36,6 +36,12 @@ export const FOOTER_MENU = [
     visible: true,
   },
   {
+    name: 'Agenda',
+    destinationUrl: './agenda',
+    type: 'link',
+    visible: true,
+  },
+  {
     name: 'About',
     destinationUrl: './about',
     type: 'link',

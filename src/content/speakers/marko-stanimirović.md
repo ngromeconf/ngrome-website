@@ -1,9 +1,6 @@
 ---
 slug: marko-stanimirović
 name: Marko Stanimirović
-talk: 
-    title: 
-    description: 
 biography: Marko is a Principal Frontend Engineer at Swiss Marketplace Group. He is a core member of the NgRx and AnalogJS teams, a Google Developer Expert in Angular, and an organizer of the Angular Belgrade group. Marko actively contributes to open-source software, shares knowledge through technical articles and talks, and enjoys playing the guitar. He holds a Master of Science in Software Engineering from the University of Belgrade.
 from: Belgrade, Serbia 
 work: SMG
