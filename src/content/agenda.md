@@ -57,7 +57,7 @@ agenda:
             duration: 5
           - slug: l-talk-1
             type: Lighting Talk
-            duration: 10
+            duration: 15
             title: Angular Performance and Core Web Vitals in 2024
             description: 'There are a couple of things that make Angular faster. But what does faster even mean?
             In this talk you will learn how to understand performance from a user centric perspective and what to do to impact CWV. We will not only apply and measure the latest features like defer blocks of the new control flow, but also a couple of tricks that might surprise you.
@@ -74,20 +74,20 @@ agenda:
           - slug: l-talk-2
             type: Lighting Talk
             duration: 10 
-            title: Testing Angular Components with Storybook
-            description: In this talk we will dive into component testing with Storybook. We will look at how you can set up Visual Regression, User Interaction and Accessibility testing. Then we will focus on what we should test and how thinking about these testing can improve the quality of our code.
+            title: 5 tips to know before building a design system
+            description: Building your own design system sounds like a great idea, but keeping it alive, maintained & useful is a challenge. Let’s explore some ideas to empower your options of success.
             speakers: 
-                - slug: christopher-holder
+                - slug: dani-coll-leal
           - slug: talk-4
             type: Talk 
             duration: 25
-            title: Concurrent Mode in Angular
-            description: JavaScript is single threaded. Keeping execution times short is crucial for the runtime performance of our applications. Long running scripts result in bad Web Vitals like INP & TBT. In this talk, we’ll discuss a strategic approach to mitigate this problem, the Concurrent Mode.
+            title: Create Performant Angular Applications
+            description: Web performance is vital for user retention and engagement. In Angular, enabling specific features can boost app performance. The talk covers techniques and media handling for creating an optimal performance via Angular.
             speakers: 
-                - slug: julian-jandl
+                - slug: tamas-piros
           - slug: 
             title: 
-            type: Panel with Michael, Alisa, Christopher and Julian
+            type: Panel with Michael, Alisa, Dani and Tamas
             duration: 15
     - start: '13:10'
       title: 'Afternoon'
@@ -103,34 +103,34 @@ agenda:
           - slug: talk-5
             type: Talk
             duration: 25
-            title: The Angular approach to SSR and hydration
-            description: Let's explore together the motivation to shift rendering to the server side, review the Angular approach to hydration and data caching, the infrastructure necessary and the performance gains. We will also review the potential use-cases that benefit from this techniques and mechanisms.
+            title: 'Long Road to Reusable Design System in Angular #2'
+            description: Nowadays many companies put a lot of effort to create reusable components libraries and eventually it occurs that it is not reusable at all. What is more even tiny change can introduce regression in many places. I would like to show you different perspective on UI reusability in angular projects.
             speakers: 
-                - slug: natalia-venditto
+                - slug: mateusz-łędzewicz
           - slug: l-talk-3
             type: Lighting Talk
-            duration: 25
-            title: 5 tips to know before building a design system
-            description: Building your own design system sounds like a great idea, but keeping it alive, maintained & useful is a challenge. Let’s explore some ideas to empower your options of success.
-            speakers: 
-                - slug: dani-coll-leal
-          - slug: talk-6
-            type: Talk 
-            duration: 25
-            title: Create Performant Angular Applications
-            description: Web performance is vital for user retention and engagement. In Angular, enabling specific features can boost app performance. The talk covers techniques and media handling for creating an optimal performance via Angular.
-            speakers: 
-                - slug: tamas-piros
-          - slug: l-talk-4
-            type: Lightning Talk 4
-            duration: 10
+            duration: 15
             title: 'Navigating the Code Maze: Strategies to Tackle Technical Debt in Angular Projects'
             description: Join us on a journey to keep your Angular project afloat as we explore the challenges of technical debt and effective strategies to manage and resolve it. Learn how to build a scalable organization that ensures the longevity and stability of your project over time. Get ready to transform your codebase into a fortress of reliability and long-term success.
             speakers: 
                 - slug: michele-olivo
+          - slug: talk-6
+            type: Talk 
+            duration: 25
+            title: The Angular approach to SSR and hydration
+            description: Let's explore together the motivation to shift rendering to the server side, review the Angular approach to hydration and data caching, the infrastructure necessary and the performance gains. We will also review the potential use-cases that benefit from this techniques and mechanisms.
+            speakers: 
+                - slug: natalia-venditto
+          - slug: l-talk-4
+            type: Lightning Talk 4
+            duration: 15
+            title: Testing Angular Components with Storybook
+            description: In this talk we will dive into component testing with Storybook. We will look at how you can set up Visual Regression, User Interaction and Accessibility testing. Then we will focus on what we should test and how thinking about these testing can improve the quality of our code.
+            speakers: 
+                - slug: christopher-holder
           - slug: 
             title: 
-            type: Panel with Natalia, Dani, Tamas and Michele
+            type: Panel with Mateusz, Michele, Natalia and Christopher
             duration: 15
           - slug: 
             title: Coffee break
@@ -144,12 +144,12 @@ agenda:
             speakers: 
                 - slug: brandon-roberts
           - slug: talk-8
-            title: 'Long Road to Reusable Design System in Angular #2'
-            description: Nowadays many companies put a lot of effort to create reusable components libraries and eventually it occurs that it is not reusable at all. What is more even tiny change can introduce regression in many places. I would like to show you different perspective on UI reusability in angular projects.
             type: Talk 
             duration: 25
+            title: Concurrent Mode in Angular
+            description: JavaScript is single threaded. Keeping execution times short is crucial for the runtime performance of our applications. Long running scripts result in bad Web Vitals like INP & TBT. In this talk, we’ll discuss a strategic approach to mitigate this problem, the Concurrent Mode.
             speakers: 
-                - slug: mateusz-łędzewicz
+                - slug: julian-jandl
           - slug: closing-keynote
             title: Closing Keynote
             subtitle: 'Where Do We Go From Here? Advanced Strategies for Signals'
@@ -161,7 +161,7 @@ agenda:
                 - slug: rainer-hahnekamp
           - slug: 
             title: 
-            type: Panel with Brandon, Mateusz, Manfred and Rainer
+            type: Panel with Brandon, Julian, Manfred and Rainer
             duration: 15
           - slug: closing-remarks
             title: Closing Remarks
