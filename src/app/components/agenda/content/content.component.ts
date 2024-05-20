@@ -234,10 +234,11 @@ export class ContentComponent implements AfterViewInit {
   }
 
   speakerDetail(speaker: Speaker) {
+    speaker.events = [];
+    this.speakerSelected.set(speaker);
     this.modal?.classList.remove('hidden');
     this.modal?.classList.add('show');
 
-    this.speakerSelected.set(speaker);
     if (this.body) this.body.style.overflowY = 'hidden';
   }
 
