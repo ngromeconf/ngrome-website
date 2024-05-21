@@ -5,11 +5,20 @@ import {
   OnInit,
 } from '@angular/core';
 import { WindowRef } from '../../services/window.provider';
+import { TitoService } from '../../services/tito.service';
+import { Router } from '@angular/router';
+
+interface TitoButtonConfig {
+  el: string;
+  event: string;
+  releases?: string;
+  buttonLabel: string;
+}
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [],
+  providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     @if (eventID && ticketID) {
@@ -73,13 +82,31 @@ import { WindowRef } from '../../services/window.provider';
 })
 export class ButtonComponent implements OnInit {
   @Input() destinationUrl: string | undefined;
-  @Input() eventID: string | undefined;
-  @Input() ticketID: string | undefined;
-  @Input() label: string | undefined;
+  @Input() eventID: string | undefined; // tickets event
+  @Input() ticketID: string | undefined; // element dom ID for mounting the widget
+  @Input() release: string | undefined; // tito specific button
+  @Input() label: string | undefined; // label for the button
 
   private tito: any;
 
-  constructor(private winRef: WindowRef) {}
+  constructor(
+    private winRef: WindowRef,
+    private titoService: TitoService,
+    private router: Router,
+  ) {
+    this.titoService.lazyLoadTito().subscribe((res) => {
+      this.tito = this.winRef.nativeWindow.tito;
+
+      // this.tito('on:widget:loaded', function (data: any) {
+      //   console.log('Tito widget loaded', data);
+      // });
+      // this.tito('on:registration:started', function (data: any) {});
+      this.tito('on:registration:finished', (data: any) => {
+        console.log('Tito registration finished', data);
+        this.router.navigateByUrl(`/thank-you/${data.reference}/${data.name}`);
+      });
+    });
+  }
 
   ngOnInit() {}
 
@@ -90,18 +117,26 @@ export class ButtonComponent implements OnInit {
   mountTitoButton() {
     this.tito = this.winRef.nativeWindow.tito;
 
+    console.log('mountTitoButton()', this.tito, this.eventID, this.ticketID);
+
     if (this.tito && this.eventID && this.ticketID) {
-      console.log('Mounting Tito button', this.ticketID, this.eventID);
-      this.tito('button.mount', {
+      const titoConfig: TitoButtonConfig = {
         el: `#tito-button-${this.ticketID}`,
         event: this.eventID,
-        releases: this.ticketID,
         buttonLabel: 'REGISTER',
-      });
+      };
+
+      if (this.release) {
+        titoConfig.releases = this.release;
+      }
+
+      console.log('Mounting Tito button', titoConfig);
+
+      this.tito('button.mount', titoConfig);
     } else {
-      console.error('Tito button not mounted');
+      console.error('Tito button not mounted', this.eventID);
       setTimeout(() => {
-        this.mountTitoButton();
+        //this.mountTitoButton();
       }, 1000);
     }
   }

@@ -105,6 +105,7 @@ import { CommonModule } from '@angular/common';
           <app-button
             [eventID]="item.event"
             [ticketID]="item.ticket"
+            [release]="item.ticket"
             [label]="'REGISTER'"
           />
         }

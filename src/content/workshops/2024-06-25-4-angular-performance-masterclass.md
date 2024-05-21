@@ -18,6 +18,8 @@ date: '2024-06-25'
 image: https://images.ctfassets.net/aj48k9r3ciml/43eUlvubxMVwHYqjtkeVaF/34255b1004168cba1be9497d219c237e/Angular_Performance_-_Full_Masterclass.png
 link: /workshops/angular-performance-masterclass
 ticket:  'https://ti.to/ngrome-events/angular-performance-masterclass/'
+ticketID: 'angular-performance-masterclass'
+eventID: 'ngrome-events/angular-performance-masterclass'
 col: 1
 ---
 

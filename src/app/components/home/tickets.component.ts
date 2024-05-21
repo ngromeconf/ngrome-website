@@ -139,6 +139,6 @@ export class TicketsComponent {
     console.log(this.filterby);
   }
   goTo(ticketType: string) {
-    this.router.navigateByUrl(`/${ticketType}?#workshops`,);
+    this.router.navigateByUrl(`/${ticketType}?#workshops`);
   }
 }
