@@ -229,7 +229,7 @@ const tickets: TicketInterface[] = [
     subtitle: 'Get your ticket now!',
     price: '200',
     features: [],
-    saleStart: '2024-05-20T00:00:00Z',
+    saleStart: '2024-06-03T00:00:00Z',
   },
   {
     category: 'workshop',
