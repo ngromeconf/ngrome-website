@@ -16,6 +16,8 @@ export interface WorkshopAttributes {
   image: string;
   link: string;
   ticket: string;
+  ticketID?: string;
+  eventID?: string;
   col: number;
   forWho: string;
   socialDescription: string;

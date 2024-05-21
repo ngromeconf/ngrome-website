@@ -4,11 +4,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { BadgeComponent } from '../shared/badge.component';
 import { COLOR_RECIPIENTS } from '../shared/constant';
+import { ButtonComponent } from '../shared/button.component';
+import { WindowRef } from '../../services/window.provider';
+import { TitoService } from '../../services/tito.service';
 
 @Component({
   selector: 'workshop-row',
   standalone: true,
-  imports: [DatePipe, BadgeComponent, NgIf, NgClass],
+  providers: [TitoService, WindowRef],
   template: `
     <section>
       <div class="flex flex-row">
@@ -41,13 +44,11 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
             class="flex gap-4 m-auto sm:text-lg text-right my-4  sm:justify-end"
           >
             @if (!past) {
-              <button
-                class="tito-widget-button"
-                target="_blank"
-                (click)="goToWorkshop(workshop.ticket)"
-              >
-                Tickets
-              </button>
+              <app-button
+                [ticketID]="workshop.ticketID"
+                [eventID]="workshop.eventID"
+                [label]="'REGISTER'"
+              />
             }
             <button
               class="tito-widget-button "
@@ -81,15 +82,19 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
       </div>
     </section>
   `,
+  imports: [DatePipe, BadgeComponent, NgIf, NgClass, ButtonComponent],
 })
 export class WorkshopRowComponent {
   @Input() workshop!: WorkshopAttributes;
   @Input() past: boolean;
   colorRecipients = COLOR_RECIPIENTS;
 
+  private tito: any;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private winRef: WindowRef,
   ) {}
 
   goToWorkshop(url: string | undefined) {

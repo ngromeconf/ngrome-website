@@ -14,6 +14,8 @@ location:
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1715336734/ngrome-workshops/GEN_AI_Masterclass_w48uou.jpg
 link: /workshops/generative-ai-masterclass
 ticket:  'https://ti.to/ngrome-events/generative-ai-masterclass-2024'
+ticketID: 'generative-ai-masterclass-2024'
+eventID: 'ngrome-events/generative-ai-masterclass-2024'
 col: 1
 ---
 
