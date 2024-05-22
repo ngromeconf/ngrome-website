@@ -1,7 +1,7 @@
 ---
 slug: dani-coll-leal
 name: Dani Coll Leal
-biography: Senior Frontend Engineer & Tech Speaker at Dynatrace. Angular dev since v1.
+biography: Dani is a Senior Software Engineer & Tech Evangelist at Dynatrace specialized in Frontend with extensive experience on Angular since v1. He also enjoys exploring backend, mobile development and product ownership. Based in sunny Barcelona but with his heart on the countryside you can find him on hikes to reach remote landscapes.
 from: Spain
 work: Dynatrace
 jobRole: Senior Frontend Engineer
