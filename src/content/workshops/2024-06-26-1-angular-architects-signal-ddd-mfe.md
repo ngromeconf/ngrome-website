@@ -21,6 +21,7 @@ link: /workshops/angular-architects-signal-ddd-mfe
 ticket: https://ti.to/ngrome-events/modern-angular-architecture
 col: 1
 socialDescription: 'Join me at NgRome 2024 for an interactive workshop on "MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD and MICRO FRONTENDS." Explore cutting-edge strategies for building maintainable Angular applications. Reserve your spot now! #NgRome #Angular #Workshop #Technology'
+soldOut: true
 ---
 
 In this interactive workshop, we use Angular’s latest innovations to build a modern and maintainable architecture. 

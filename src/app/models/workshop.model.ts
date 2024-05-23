@@ -17,6 +17,7 @@ export interface WorkshopAttributes {
   link: string;
   ticket: string;
   col: number;
+  soldOut: boolean;
   forWho: string;
   socialDescription: string;
   [key: string]: string | number | boolean | Date | undefined | Object;

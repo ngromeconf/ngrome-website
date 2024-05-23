@@ -39,6 +39,7 @@ import { Router } from '@angular/router';
             2024
           </h2>
           <span class="text-lg"> Workshops will be on June 25 and 26!</span>
+          <a class="text-lg cursor-pointer" href="venue">Midas Palace Hotel (Rome)</a>
           <p
             class="hidden md:block mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center "
           >

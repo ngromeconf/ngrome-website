@@ -117,13 +117,30 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
           }
         </div>
         @if (isWorkshopActive(workshop.attributes)) {
-          <a
-            [href]="workshop.attributes.ticket"
-            target="_blank"
-            class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-          >
-            RESERVE YOUR SEAT
-          </a>
+          @if (workshop.attributes?.soldOut) {
+            <span
+              class="text-md
+                        font-extrabold
+                        text-transparent
+                        bg-clip-text
+                        bg-gradient-to-r
+                        from-red-ngrome
+                        to-pink-600
+                        rotate-12
+                        border-2
+                        border-red-ngrome"
+            >
+              SOLD OUT
+            </span>
+          } @else {
+            <a
+              [href]="workshop.attributes.ticket"
+              target="_blank"
+              class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+            >
+              RESERVE YOUR SEAT
+            </a>
+          }
         } @else if (workshop?.attributes?.ticket) {
           <a
             class="cursor-no-drop inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-gray-300 focus:outline-none border-2 rounded-lg md:mb-2 lg:mb-0 focus:ring-2 ring-offset-current ring-offset-2"
