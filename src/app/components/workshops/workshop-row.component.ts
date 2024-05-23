@@ -41,13 +41,30 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
             class="flex gap-4 m-auto sm:text-lg text-right my-4  sm:justify-end"
           >
             @if (!past) {
-              <button
-                class="tito-widget-button"
-                target="_blank"
-                (click)="goToWorkshop(workshop.ticket)"
-              >
-                Tickets
-              </button>
+              @if (workshop?.soldOut) {
+                <span
+                  class="text-md
+                        font-extrabold
+                        text-transparent
+                        bg-clip-text
+                        bg-gradient-to-r
+                        from-red-ngrome
+                        to-pink-600
+                        rotate-12
+                        border-2
+                        border-red-ngrome"
+                >
+                  SOLD OUT
+                </span>
+              } @else {
+                <button
+                  class="tito-widget-button"
+                  target="_blank"
+                  (click)="goToWorkshop(workshop.ticket)"
+                >
+                  Tickets
+                </button>
+              }
             }
             <button
               class="tito-widget-button "

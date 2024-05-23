@@ -39,6 +39,11 @@ import { Router } from '@angular/router';
             2024
           </h2>
           <span class="text-lg"> Workshops will be on June 25 and 26!</span>
+          <a class="text-lg" href="venue" target="_self">
+            <span class="text-blue-600 hover:underline">
+              Midas Palace Hotel (Rome)</span
+            ></a
+          >
           <p
             class="hidden md:block mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center "
           >
@@ -71,7 +76,7 @@ import { Router } from '@angular/router';
   imports: [CommonModule, NgOptimizedImage],
 })
 export class HeroComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   onGoToTicket() {
     this.router.navigate([], { fragment: 'TicketSection' });
   }
