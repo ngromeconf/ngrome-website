@@ -41,22 +41,18 @@ import { Router } from '@angular/router';
           <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <a class="text-lg" href="venue" target="_self">
             <span class="text-blue-600 hover:underline">
-              Midas Palace Hotel (Rome)</span
+              📍 Midas Palace Hotel (Rome)</span
             ></a
           >
           <p
-            class="hidden md:block mx-auto text-lg leading-snug py-10 text-slate-500 lg:w-1/2 text-center "
+            class="hidden md:block mx-auto text-lg leading-snug pt-6 text-slate-500 lg:w-1/2 text-center "
           >
-            Empower your network and embrace excellence. <br />Join NGRome
-            MMXXIV for an Immersive dive into cutting-edge Angular and web tech
-            trends where professionals of all levels thrive in Learning and
-            networking excellence. You will have 3 Days with experts and
-            speakers from around the world.<br />
-            Workshop days are June 25th and 26th, 2024.<br />
-            Conference day is June 27th, 2024.
+            Be part of the NGRome MMXXIV experience! Learn, inspire and network
+            <br />
+            3 days of immersive learning.
           </p>
         </div>
-        <div class="flex w-full mt-4 py-4 justify-center ">
+        <div class="flex w-full py-4 justify-center ">
           <div class="rounded-lg sm:mt-0">
             <button class="tito-widget-button-large" (click)="onGoToTicket()">
               Tickets
@@ -76,7 +72,7 @@ import { Router } from '@angular/router';
   imports: [CommonModule, NgOptimizedImage],
 })
 export class HeroComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
   onGoToTicket() {
     this.router.navigate([], { fragment: 'TicketSection' });
   }
