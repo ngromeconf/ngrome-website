@@ -47,9 +47,9 @@ import { Router } from '@angular/router';
           <p
             class="hidden md:block mx-auto text-lg leading-snug pt-6 text-slate-500 lg:w-1/2 text-center "
           >
-            Be part of the NGRome MMXXIV experience! Learn, inspire and network
+            Be part of the NGRome MMXXIV experience!
             <br />
-            3 days of immersive learning.
+            Join us for unique learning and networking opportunities in Rome.
           </p>
         </div>
         <div class="flex w-full py-4 justify-center ">
