@@ -3,7 +3,13 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 export default defineEventHandler(() => sponsors);
 
-const mainSponsor: SponsorInterface[] = [];
+const mainSponsor: SponsorInterface[] = [
+  {
+    name: 'Fabrick',
+    image: './sponsors/fabrick.svg',
+    url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
+  },
+];
 
 const goldSponsors: SponsorInterface[] = [
   {
