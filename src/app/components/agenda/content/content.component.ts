@@ -62,7 +62,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
               <div class="margin-2">
                 @for (item of a.events; track $index) {
                   <div
-                    class="flex flex-col sm:gap-4 event"
+                    class="flex flex-col sm:gap-4 event border-1"
                     [id]="'talk-' + item.slug"
                   >
                     <p
@@ -94,7 +94,11 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                             {{ item?.description }}
                           </p>
                         }
-                        @for (speaker of item?.speakers; track $index) {
+                        @for (
+                          speaker of item?.speakers;
+                          track $index;
+                          let last = $last
+                        ) {
                           @if (speaker?.name) {
                             <div
                               class="margin-1 gap-3 flex items-center cursor-pointer"
@@ -120,6 +124,11 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                 </p>
                               </div>
                             </div>
+                            @if (last) {
+                              <hr
+                                class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+                              />
+                            }
                           }
                         }
                         @if (
