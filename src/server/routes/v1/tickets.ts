@@ -197,6 +197,7 @@ const tickets: TicketInterface[] = [
     features: conferenceFeatures,
     ticket: 'regular',
     event: 'ngrome-events/ngrome-conf-mmxxiv',
+    soldOut: true,
   },
   {
     category: 'workshop',
@@ -228,8 +229,9 @@ const tickets: TicketInterface[] = [
     name: 'LAST MINUTE TICKET',
     subtitle: 'Get your ticket now!',
     price: '200',
+    event: 'ngrome-events/ngrome-conf-mmxxiv',
+    ticket: 'last-minute',
     features: [],
-    saleStart: '2024-06-03T00:00:00Z',
   },
   {
     category: 'workshop',
