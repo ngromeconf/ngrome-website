@@ -28,7 +28,7 @@ export const routeMeta: RouteMeta = {
     <app-tickets />
     <!--  <app-call-for-paper id="ticket-section" /> -->
     @if (sponsors$(); as Sponsors) {
-      <!-- <app-sponsor [sponsors]="Sponsors.Main" type="Main" [itemsPerRow]="1" /> -->
+      <app-sponsor [sponsors]="Sponsors.Main" [itemsPerRow]="1" type="Main" />
       <app-sponsor [sponsors]="Sponsors.Gold" [itemsPerRow]="3" type="Gold" />
       <app-sponsor
         [sponsors]="Sponsors.Silver"

@@ -6,7 +6,7 @@ export default defineEventHandler(() => sponsors);
 const mainSponsor: SponsorInterface[] = [
   {
     name: 'Fabrick',
-    image: './sponsors/fabrick.svg',
+    image: './sponsors/Fabrick-logo.svg',
     url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
   },
 ];

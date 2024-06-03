@@ -23,7 +23,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
             <span
               class="flex-none block mx-4 px-4 py-2.5 text-lg leading-none font-medium uppercase text-white"
               [ngClass]="{
-                'bg-red-ngrome': type === 'Main',
+                'bg-zinc-400': type === 'Main',
                 'bg-yellow-400': type === 'Gold',
                 'bg-yellow-800': type === 'Bronze',
                 'bg-slate-300': type === 'Silver'
@@ -46,6 +46,24 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
         }
         <!-- Component ends here -->
         <div class="w-full mt-24">
+          @if (itemsPerRow === 1) {
+            <div class="flex flex-wrap justify-center gap-2">
+              @for (item of sponsors; track $index) {
+                <div class="w-full md:w-1/2">
+                  <a [href]="item.url ? item.url : '/sponsors'" target="_blank">
+                    <img
+                      [alt]="item.name"
+                      [title]="item.name"
+                      [ngSrc]="item.image"
+                      class="flex-shrink-0 object-cover object-center w-full h-35"
+                      width="200"
+                      height="50"
+                    />
+                  </a>
+                </div>
+              }
+            </div>
+          }
           @if (itemsPerRow === 3) {
             <div
               class="grid place-items-center m-auto gap-6 grid-cols-1 md:grid-cols-3"
