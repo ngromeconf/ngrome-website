@@ -13,9 +13,9 @@ const mainSponsor: SponsorInterface[] = [
 
 const eventSponsor: SponsorInterface[] = [
   {
-    name: 'Gestalt',
+    name: 'Gestalt Group',
     image: './sponsors/Gestalt-Group-logo.svg',
-    url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
+    url: 'https://www.gestalteventi.it/',
   },
 ];
 
