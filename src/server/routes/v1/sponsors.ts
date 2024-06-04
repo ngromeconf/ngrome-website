@@ -6,7 +6,7 @@ export default defineEventHandler(() => sponsors);
 const mainSponsor: SponsorInterface[] = [
   {
     name: 'Fabrick',
-    image: './sponsors/Fabrick-logo.svg',
+    image: './sponsors/logo-FABRICK.svg',
     url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
   },
 ];
@@ -22,18 +22,17 @@ const eventSponsor: SponsorInterface[] = [
 const goldSponsors: SponsorInterface[] = [
   {
     name: 'Key Partner',
-    image: './sponsors/KP_Logo_esteso.png',
+    image: './sponsors/logo-kp.svg',
     url: 'https://www.keypartner.com/',
   },
   {
     name: 'ICT Group',
-    image: './sponsors/ict-group-logo.svg',
+    image: './sponsors/logo-ICT-GROUP.svg',
     url: 'https://ict-group.it/',
   },
   {
     name: 'Cloudinary',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1710957882/ngrome-sponsors/cloudinary_logo_blue_0720_svg_nmxmoq.svg',
+    image: './sponsors/logo-CLOUDINARY.svg',
     url: 'https://cloudinary.com/',
   },
 ];
@@ -41,42 +40,39 @@ const silverSponsor: SponsorInterface[] = [];
 const bronzeSponsor: SponsorInterface[] = [
   {
     name: 'angular.dev',
-    image: './sponsors/angular_wordmark_gradient.png',
+    image: './sponsors/logo-ANGULAR.svg',
     url: 'https://www.angular.dev/',
   },
   {
     name: 'ConTe.it',
-    image: './sponsors/conte-logo.svg',
+    image: './sponsors/logo-CONTE.IT.svg',
     url: 'https://www.conte.it/',
   },
   {
     name: 'Fervento',
-    image: './sponsors/fervento-logo.svg',
+    image: './sponsors/logo-FERVENTO.svg',
     url: 'https://fervento.com',
   },
   {
     name: 'Lascaux',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1708674380/ngrome-sponsors/lascaux-logo_uvvmrp.png',
+    image: './sponsors/logo-LASCAUX.svg',
     url: 'https://www.lascaux.it/',
   },
   {
     name: 'Ineo',
-    image:
-      'https://assets-global.website-files.com/652fb7047cb1f8b74c17f907/653a3462d8987268e60e7cb4_ineo-colored.svg',
+    image: './sponsors/logo-INEO.svg',
     url: 'https://www.ineo.it/',
   },
   {
     name: 'Digitouch',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1712159211/ngrome-sponsors/download_peyvpd.jpg?_s=public-apps',
+    image: './sponsors/logo-DIGITOUCH.svg',
     url: 'https://www.gruppodigitouch.it/',
   },
 ];
 const diversitySponsor: SponsorInterface[] = [
   {
     name: 'ICT Group',
-    image: './sponsors/ict-group-logo.svg',
+    image: './sponsors/logo-ICT-GROUP.svg',
     url: 'https://ict-group.it/',
   },
 ];
