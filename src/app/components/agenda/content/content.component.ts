@@ -140,6 +140,18 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                               Sponsors:
                             </p>
                             <div
+                              class="flex flex-wrap items-center container-sponsors"
+                            >
+                              @for (item of Sponsors.Main; track $index) {
+                                <img
+                                  class="object-contain img-sponsor"
+                                  [alt]="item.name"
+                                  [title]="item.name"
+                                  [src]="item.image"
+                                />
+                              }
+                            </div>
+                            <div
                               class="flex flex-wrap items-center mt-2 container-sponsors"
                             >
                               @for (item of Sponsors.Gold; track $index) {
