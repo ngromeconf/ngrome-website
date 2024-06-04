@@ -40,6 +40,17 @@ export const routeMeta: RouteMeta = {
         [itemsPerRow]="3"
         type="Bronze"
       />
+      <app-sponsor
+        [sponsors]="Sponsors.Diversity"
+        [itemsPerRow]="1"
+        type="Diversity"
+      />
+      <app-sponsor
+        [sponsors]="Sponsors.Technical"
+        [itemsPerRow]="1"
+        type="Technical"
+      />
+      <app-sponsor [sponsors]="Sponsors.Event" [itemsPerRow]="1" type="Event" />
     }
   `,
   imports: [

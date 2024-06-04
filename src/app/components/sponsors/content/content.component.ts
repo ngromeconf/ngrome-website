@@ -61,6 +61,21 @@ import { toSignal } from '@angular/core/rxjs-interop';
           [itemsPerRow]="3"
         />
         <app-sponsor
+          [sponsors]="Sponsors.Diversity"
+          type="Diversity"
+          [itemsPerRow]="1"
+        />
+        <app-sponsor
+          [sponsors]="Sponsors.Technical"
+          type="Technical"
+          [itemsPerRow]="1"
+        />
+        <app-sponsor
+          [sponsors]="Sponsors.Event"
+          type="Event"
+          [itemsPerRow]="1"
+        />
+        <app-sponsor
           [itemsPerRow]="6"
           [sponsors]="Sponsors.Community"
           [showTitle]="false"
