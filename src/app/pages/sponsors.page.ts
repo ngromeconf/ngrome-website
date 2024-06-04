@@ -4,7 +4,6 @@ import { FooterComponent } from '../components/layout/footer/footer.component';
 import { PageHeadComponent } from '../components/layout/pages/page-head/page-head.component';
 import { PageImageComponent } from '../components/layout/pages/main-image/page-image.component';
 import { ContentComponent } from '../components/sponsors/content/content.component';
-import { SponsorInterface } from '../models/sponsor.model';
 import { RouteMeta } from '@analogjs/router';
 import { postMetaPageResolver, postTitleResolver } from './resolvers';
 

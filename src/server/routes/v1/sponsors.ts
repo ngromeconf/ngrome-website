@@ -3,7 +3,21 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 export default defineEventHandler(() => sponsors);
 
-const mainSponsor: SponsorInterface[] = [];
+const mainSponsor: SponsorInterface[] = [
+  {
+    name: 'Fabrick',
+    image: './sponsors/Fabrick-logo.svg',
+    url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
+  },
+];
+
+const eventSponsor: SponsorInterface[] = [
+  {
+    name: 'Gestalt Group',
+    image: './sponsors/Gestalt-Group-logo.svg',
+    url: 'https://www.gestalteventi.it/',
+  },
+];
 
 const goldSponsors: SponsorInterface[] = [
   {
@@ -61,26 +75,16 @@ const bronzeSponsor: SponsorInterface[] = [
 ];
 const diversitySponsor: SponsorInterface[] = [
   {
-    name: 'Okta',
-    image: './sponsors/Okta-logo.svg',
-    url: 'https://www.okta.com/',
+    name: 'ICT Group',
+    image: './sponsors/ict-group-logo.svg',
+    url: 'https://ict-group.it/',
   },
 ];
 const technicalSponsors: SponsorInterface[] = [
   {
-    name: 'Slido',
-    image: './sponsors/slido-logo.svg',
-    url: 'https://www.slido.com/',
-  },
-  {
     name: 'Packt',
     image: './sponsors/packt-logo.svg',
     url: 'https://www.packtpub.com/',
-  },
-  {
-    name: 'Sticker Mule',
-    image: './sponsors/sticker-mule-logo.svg',
-    url: 'https://www.stickermule.com/it/adesivi-personalizzati',
   },
 ];
 
@@ -388,6 +392,7 @@ const sponsors: Sponsors = {
   Silver: sortByName(silverSponsor),
   Bronze: sortByName(bronzeSponsor),
   Diversity: sortByName(diversitySponsor),
+  Event: sortByName(eventSponsor),
   Technical: sortByName(technicalSponsors),
   Community: sortByName(communityPartners),
   PastEdition: sortByName(pastEditionSponsors),
