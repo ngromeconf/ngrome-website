@@ -11,7 +11,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
     class="flex my-12  items-center justify-center"
   >
     <div class="w-full px-10 mx-auto bg-white">
-      <div class="mx-auto space-y-6">
+      <div class="px-4 mx-auto space-y-6">
         <!-- Component starts here -->
         @if (showTitle) {
           <h2 class="flex flex-row flex-nowrap items-center mt-8 mb-12">
