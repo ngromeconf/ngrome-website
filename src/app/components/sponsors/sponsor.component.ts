@@ -11,7 +11,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
     class="flex my-12  items-center justify-center"
   >
     <div class="w-full px-10 mx-auto bg-white">
-      <div class="px-4 mx-auto space-y-6">
+      <div class="md:px-4 mx-auto space-y-6">
         <!-- Component starts here -->
         @if (showTitle) {
           <h2 class="flex flex-row flex-nowrap items-center mt-8 mb-12">
@@ -52,7 +52,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           @if (itemsPerRow === 1) {
             <div class="flex flex-wrap justify-center gap-2">
               @for (item of sponsors; track $index) {
-                <div class="w-2/3 md:w-1/3">
+                <div class="w-full md:w-1/3">
                   <a [href]="item.url ? item.url : '/sponsors'" target="_blank">
                     <img
                       [alt]="item.name"
@@ -70,7 +70,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           @if (itemsPerRow === 3) {
             <div class="flex flex-wrap justify-center gap-2">
               @for (item of sponsors; track $index) {
-                <div class="w-2/5 md:w-1/4">
+                <div class="w-2/3 md:w-1/4">
                   <a
                     class="self-center my-8"
                     [href]="item.url ? item.url : '/sponsors'"
