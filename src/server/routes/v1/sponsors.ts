@@ -14,7 +14,7 @@ const mainSponsor: SponsorInterface[] = [
 const eventSponsor: SponsorInterface[] = [
   {
     name: 'Gestalt Group',
-    image: './sponsors/Gestalt-Group-logo.svg',
+    image: './sponsors/logo-GESTALT.svg',
     url: 'https://www.gestalteventi.it/',
   },
 ];

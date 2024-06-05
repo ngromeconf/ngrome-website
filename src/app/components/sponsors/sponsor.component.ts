@@ -52,7 +52,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           @if (itemsPerRow === 1) {
             <div class="flex flex-wrap justify-center gap-2">
               @for (item of sponsors; track $index) {
-                <div class="w-1/3">
+                <div class="w-2/3 md:w-1/3">
                   <a [href]="item.url ? item.url : '/sponsors'" target="_blank">
                     <img
                       [alt]="item.name"
@@ -70,7 +70,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           @if (itemsPerRow === 3) {
             <div class="flex flex-wrap justify-center gap-2">
               @for (item of sponsors; track $index) {
-                <div class="w-1/4">
+                <div class="w-2/5 md:w-1/4">
                   <a
                     class="self-center my-8"
                     [href]="item.url ? item.url : '/sponsors'"
@@ -92,7 +92,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           @if (itemsPerRow === 5) {
             <div class="flex flex-wrap justify-center gap-2">
               @for (item of sponsors; track $index) {
-                <div class="w-1/5">
+                <div class="w-2/5 md:w-1/5">
                   <a
                     class="flex items-center align-middle"
                     [href]="item.url ? item.url : '/sponsors'"
