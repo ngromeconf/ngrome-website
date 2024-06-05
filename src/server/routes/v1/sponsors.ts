@@ -22,7 +22,7 @@ const eventSponsor: SponsorInterface[] = [
 const goldSponsors: SponsorInterface[] = [
   {
     name: 'Key Partner',
-    image: './sponsors/logo-kp.svg',
+    image: './sponsors/logo-KeyPartner.svg',
     url: 'https://www.keypartner.com/',
   },
   {
@@ -41,7 +41,7 @@ const bronzeSponsor: SponsorInterface[] = [
   {
     name: 'angular.dev',
     image: './sponsors/logo-ANGULAR.svg',
-    url: 'https://www.angular.dev/',
+    url: 'https://angular.dev/',
   },
   {
     name: 'ConTe.it',

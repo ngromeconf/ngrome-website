@@ -59,8 +59,8 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                       [title]="item.name"
                       [ngSrc]="item.image"
                       class="flex-shrink-0 object-cover object-center w-full h-35"
-                      width="200"
-                      height="50"
+                      width="504"
+                      height="250"
                     />
                   </a>
                 </div>
@@ -68,24 +68,46 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
             </div>
           }
           @if (itemsPerRow === 3) {
-            <div
-              class="grid place-items-center m-auto gap-6 grid-cols-1 md:grid-cols-3"
-            >
+            <div class="flex flex-wrap justify-center gap-2">
               @for (item of sponsors; track $index) {
-                <a
-                  class="self-center my-8"
-                  [href]="item.url ? item.url : '/sponsors'"
-                  target="_blank"
-                >
-                  <img
-                    [alt]="item.name"
-                    [title]="item.name"
-                    [ngSrc]="item.image"
-                    class="flex-shrink-0 object-cover object-center w-full h-35"
-                    width="200"
-                    height="50"
-                  />
-                </a>
+                <div class="w-1/4">
+                  <a
+                    class="self-center my-8"
+                    [href]="item.url ? item.url : '/sponsors'"
+                    target="_blank"
+                  >
+                    <img
+                      [alt]="item.name"
+                      [title]="item.name"
+                      [ngSrc]="item.image"
+                      class="flex-shrink-0 object-cover object-center w-full h-35"
+                      width="504"
+                      height="250"
+                    />
+                  </a>
+                </div>
+              }
+            </div>
+          }
+          @if (itemsPerRow === 5) {
+            <div class="flex flex-wrap justify-center gap-2">
+              @for (item of sponsors; track $index) {
+                <div class="w-1/5">
+                  <a
+                    class="flex items-center align-middle"
+                    [href]="item.url ? item.url : '/sponsors'"
+                    target="_blank"
+                  >
+                    <img
+                      [alt]="item.name"
+                      [title]="item.name"
+                      [ngSrc]="item.image"
+                      class="flex-shrink-0 object-cover object-center w-full h-25"
+                      width="504"
+                      height="250"
+                    />
+                  </a>
+                </div>
               }
             </div>
           }
