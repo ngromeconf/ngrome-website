@@ -50,30 +50,30 @@ import { toSignal } from '@angular/core/rxjs-interop';
       @if (sponsors$(); as Sponsors) {
         <app-sponsor [sponsors]="Sponsors.Main" type="Main" [itemsPerRow]="1" />
         <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" [itemsPerRow]="3" />
-        <app-sponsor
+        <!-- <app-sponsor
           [sponsors]="Sponsors.Silver"
           type="Silver"
           [itemsPerRow]="3"
-        />
+        /> -->
         <app-sponsor
           [sponsors]="Sponsors.Bronze"
           type="Bronze"
-          [itemsPerRow]="3"
+          [itemsPerRow]="5"
         />
         <app-sponsor
           [sponsors]="Sponsors.Diversity"
           type="Diversity"
-          [itemsPerRow]="1"
+          [itemsPerRow]="5"
         />
         <app-sponsor
           [sponsors]="Sponsors.Technical"
           type="Technical"
-          [itemsPerRow]="1"
+          [itemsPerRow]="5"
         />
         <app-sponsor
           [sponsors]="Sponsors.Event"
           type="Event"
-          [itemsPerRow]="1"
+          [itemsPerRow]="5"
         />
         <app-sponsor
           [itemsPerRow]="6"
