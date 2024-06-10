@@ -13,7 +13,7 @@ authors:
 location: 
     name: Midas Palace Hotel
     mapsLink: /venue
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1710957882/ngrome-sponsors/cloudinary_logo_blue_0720_svg_nmxmoq.svg
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718007747/ngrome-workshops/Tamas-Piros-Workshop_scwp5v.jpg
 link: /workshops/cloudnary-for-angular
 ticket:  'https://ti.to/ngrome-events/cloudnary-for-angular-media-mastery-workshop'
 col: 1
