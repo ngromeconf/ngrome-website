@@ -82,9 +82,21 @@ const technicalSponsors: SponsorInterface[] = [
     image: './sponsors/packt-logo.svg',
     url: 'https://www.packtpub.com/',
   },
+  {
+    name: 'Qrbro',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/qrbro_dme8gu.png',
+    url: 'app.qrbro.com',
+  },
 ];
 
 const communityPartners: SponsorInterface[] = [
+  {
+    name: 'LABFORWEB',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/labforweb_cgzags.png',
+    url: 'https://www.labfortraining.it/',
+  },
   {
     name: 'Coderful',
     image:
