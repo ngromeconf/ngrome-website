@@ -92,6 +92,19 @@ const technicalSponsors: SponsorInterface[] = [
 
 const communityPartners: SponsorInterface[] = [
   {
+    name: 'grusp',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206271/ngrome-sponsors/grusp-corsivo_sdwhh3.png',
+    url: 'https://www.grusp.org/',
+  },
+  {
+    name: 'The Red Code',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206522/ngrome-sponsors/theRedCode_logo_hbl2ou.png',
+    url: 'https://www.theredcode.it/',
+  },
+
+  {
     name: 'LABFORWEB',
     image:
       'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/labforweb_cgzags.png',
