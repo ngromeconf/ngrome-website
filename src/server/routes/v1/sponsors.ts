@@ -86,7 +86,7 @@ const technicalSponsors: SponsorInterface[] = [
     name: 'Qrbro',
     image:
       'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/qrbro_dme8gu.png',
-    url: 'app.qrbro.com',
+    url: 'https://app.qrbro.com',
   },
 ];
 
