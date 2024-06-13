@@ -90,7 +90,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
             </div>
           }
           @if (itemsPerRow === 5) {
-            <div class="flex flex-wrap justify-center gap-2">
+            <div class="flex flex-wrap justify-center gap-8">
               @for (item of sponsors; track $index) {
                 <div class="w-2/5 md:w-1/5">
                   <a

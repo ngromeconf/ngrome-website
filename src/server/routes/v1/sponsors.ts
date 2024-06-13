@@ -82,9 +82,34 @@ const technicalSponsors: SponsorInterface[] = [
     image: './sponsors/packt-logo.svg',
     url: 'https://www.packtpub.com/',
   },
+  {
+    name: 'Qrbro',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/qrbro_dme8gu.png',
+    url: 'https://app.qrbro.com',
+  },
 ];
 
 const communityPartners: SponsorInterface[] = [
+  {
+    name: 'grusp',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718266374/ngrome-sponsors/grusp_squared_hwc2ap.png',
+    url: 'https://www.grusp.org/',
+  },
+  {
+    name: 'The Red Code',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206522/ngrome-sponsors/theRedCode_logo_hbl2ou.png',
+    url: 'https://www.theredcode.it/',
+  },
+
+  {
+    name: 'LABFORWEB',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/labforweb_cgzags.png',
+    url: 'https://www.labfortraining.it/',
+  },
   {
     name: 'Coderful',
     image:
@@ -243,25 +268,25 @@ const communityPartners: SponsorInterface[] = [
   {
     name: 'AngularDay',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangularday.png?alt=media&amp;token=e82f86bc-cf25-4067-9724-0f0540204651" alt="AngularDay">',
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangularday.png?alt=media&amp;token=e82f86bc-cf25-4067-9724-0f0540204651',
     url: 'http://www.angularday.it',
   },
   {
     name: 'Roma JS',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Froma-js.png?alt=media&amp;token=64b11145-0fd5-45a9-a093-98d0904ac7bf" alt="Roma JS">',
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Froma-js.png?alt=media&amp;token=64b11145-0fd5-45a9-a093-98d0904ac7bf',
     url: 'http://romajs.org/',
   },
   {
     name: 'DotNetCode',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fdotnet-code.png?alt=media&amp;token=45b480a5-32e3-495b-b555-9da8f45e6d5d" alt="DotNetCode">',
+      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fdotnet-code.png?alt=media&amp;token=45b480a5-32e3-495b-b555-9da8f45e6d5d',
     url: 'https://www.meetup.com/it-IT/DotNetCode/',
   },
   {
     name: 'Angular Belgrade',
     image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular-belgrade.jpeg?alt=media&amp;token=9a4409f8-c74d-49c9-adbc-9f62f6172d51" alt="Angular Belgrade">',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206986/ngrome-sponsors/angular-belgrade_kunnnk.svg',
     url: 'https://twitter.com/angularbelgrade',
   },
   {
