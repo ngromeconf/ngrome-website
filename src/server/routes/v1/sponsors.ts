@@ -94,7 +94,7 @@ const communityPartners: SponsorInterface[] = [
   {
     name: 'grusp',
     image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206271/ngrome-sponsors/grusp-corsivo_sdwhh3.png',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718266374/ngrome-sponsors/grusp_squared_hwc2ap.png',
     url: 'https://www.grusp.org/',
   },
   {
