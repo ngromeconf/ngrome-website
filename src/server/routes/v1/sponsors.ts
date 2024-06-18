@@ -98,6 +98,12 @@ const communityPartners: SponsorInterface[] = [
     url: 'https://www.grusp.org/',
   },
   {
+    name: 'learnbydo.ing',
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718734866/ngrome-sponsors/logo-light-mode_mfmfgc.png',
+    url: 'https://learnbydo.ing/',
+  },
+  {
     name: 'The Red Code',
     image:
       'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206522/ngrome-sponsors/theRedCode_logo_hbl2ou.png',
@@ -190,7 +196,7 @@ const communityPartners: SponsorInterface[] = [
   {
     name: "GDG Valle d'Aosta",
     image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fgdg-vda.png?alt=media&amp;token=6654edc8-ca98-4f7c-9ba2-ed95e4a06027',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718735241/ngrome-sponsors/gdgvda_hmaq13.png',
     url: 'https://www.gdgvda.it/',
   },
   {
