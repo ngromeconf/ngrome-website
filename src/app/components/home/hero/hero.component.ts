@@ -8,11 +8,7 @@ import { Router } from '@angular/router';
   providers: [],
   schemas: [],
   template: `
-    <section
-      class="relative w-full h-fit bg-no-repeat bg-cover
-		  bg-[url('/patternMobile.svg')]
-		  md:bg-[url('/patternTop.svg')]"
-    >
+    <section class="relative w-full h-fit bg-no-repeat bg-cover">
       <div class="container relative w-full px-8 pt-10 pb-24 mx-auto lg:px-4">
         <div
           class="flex flex-col w-full mb-6 text-left lg:text-center items-center "
@@ -24,8 +20,8 @@ import { Router } from '@angular/router';
           <div class="lg:flex mb-12">
             <img
               class="w-full md:h-96"
-              ngSrc="./ngrome-hero.svg"
-              alt="NGRome MMXXIV"
+              ngSrc="./ngrome-vertical.svg"
+              alt="NGRome Conferece MMXXIV"
               width="706"
               height="384"
               priority
@@ -40,7 +36,7 @@ import { Router } from '@angular/router';
           </h2>
           <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <a class="text-lg" href="venue" target="_self">
-            <span class="text-blue-600 hover:underline">
+            <span class="text-blue-gradient-start hover:underline">
               📍 Midas Palace Hotel (Rome)</span
             ></a
           >
@@ -62,13 +58,7 @@ import { Router } from '@angular/router';
       </div>
     </section>
   `,
-  styles: [
-    `
-      .bg-patternTop {
-        background-image: url(./patternTop.svg);
-      }
-    `,
-  ],
+  styles: [``],
   imports: [CommonModule, NgOptimizedImage],
 })
 export class HeroComponent {
