@@ -90,9 +90,6 @@ import { NgOptimizedImage } from '@angular/common';
           </div>
           <div class="grid grid-cols-3 grid-flow-row justify-center gap-4 p-12">
             <div>
-              <img ngSrc="./ngrome-b&w-shield.svg" width="200" height="100" />
-            </div>
-            <div>
               <img ngSrc="./ngrome-shield.svg" width="200" height="100" />
             </div>
             <div>
