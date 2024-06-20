@@ -36,7 +36,7 @@ import { Router } from '@angular/router';
           </h2>
           <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <a class="text-lg" href="venue" target="_self">
-            <span class="text-blue-600 hover:underline">
+            <span class="text-blue-gradient-start hover:underline">
               📍 Midas Palace Hotel (Rome)</span
             ></a
           >

@@ -33,6 +33,7 @@ module.exports = {
       colors: {
         black: '#16171b',
         'red-ngrome': '#D83163',
+        'blue-gradient-start': '#194DF2',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],
