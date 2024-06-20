@@ -93,13 +93,10 @@ import { NgOptimizedImage } from '@angular/common';
               <img ngSrc="./ngrome-b&w-shield.svg" width="200" height="100" />
             </div>
             <div>
-              <img ngSrc="./ngrome-red-shield.svg" width="200" height="100" />
+              <img ngSrc="./ngrome-shield.svg" width="200" height="100" />
             </div>
             <div>
-              <img ngSrc="./ngrome-white-shield.svg" width="200" height="100" />
-            </div>
-            <div>
-              <img ngSrc="./ngrome-logo-red.svg" width="300" height="100" />
+              <img ngSrc="./ngrome-vertical.svg" width="300" height="100" />
             </div>
             <div>
               <img ngSrc="./ngrome-full.svg" width="300" height="300" />
