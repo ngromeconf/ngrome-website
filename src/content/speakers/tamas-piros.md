@@ -5,7 +5,7 @@ biography: Tamas is a Google Developer Expert in Web Technologies and a seasoned
 from: Singapore
 work: Cloudinary
 jobRole: Director of Developer Advocacy
-imageUrl: https://media.licdn.com/dms/image/C4E03AQH3S0niykm3Mw/profile-displayphoto-shrink_200_200/0/1519756015728?e=1718841600&v=beta&t=GtgxbX8nYS6A4_0aCW9x2Z_YDAYZURbOVVwTbx3VPfQ
+imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1719212991/ngrome-speaker/PqPDsqtu_400x400_n1wmz0.jpg
 links:
     linkedIn: https://www.linkedin.com/in/tpiros
     twitter: https://twitter.com/tpiros
