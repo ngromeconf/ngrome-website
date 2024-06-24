@@ -5,7 +5,7 @@ biography: NGRome is a non-profit community conference run by a team of voluntee
 from:
 work: 
 jobRole: 
-imageUrl: ./ngrome-logos/ngrome-red-shield.svg
+imageUrl: ./ngrome-shield-with-space.svg
 visible: false
 links:
     linkedIn: https://www.linkedin.com/company/ngromeconf/

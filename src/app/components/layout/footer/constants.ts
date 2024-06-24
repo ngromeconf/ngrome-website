@@ -11,6 +11,12 @@ export const FOOTER_MENU = [
     type: 'link',
     visible: true,
   },
+  {
+    name: 'About',
+    destinationUrl: './about',
+    type: 'link',
+    visible: true,
+  },
   // {
   //   name: 'Diversity',
   //   destinationUrl: './',
@@ -41,9 +47,10 @@ export const FOOTER_MENU = [
     type: 'link',
     visible: true,
   },
+
   {
-    name: 'About',
-    destinationUrl: './about',
+    name: 'Media Kit',
+    destinationUrl: './media-kit',
     type: 'link',
     visible: true,
   },
@@ -62,10 +69,4 @@ export const FOOTER_MENU = [
     visible: true,
     pageSite: false,
   },
-  // {
-  //   name: 'Info',
-  //   destinationUrl: './',
-  //   type: 'link',
-  //   visible: true,
-  // },
 ];

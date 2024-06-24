@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="./logo-horizontal.svg"
+                  ngSrc="./ngrome-full.svg"
                   alt="NGRome Home"
                   class="h-full"
                   width="242"
@@ -121,7 +121,7 @@ import { Router } from '@angular/router';
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="/ngrome-logos/ngrome-white-shield.svg"
+                  ngSrc="/ngrome-white-shield.svg"
                   alt="NGRome Home"
                   class="h-full"
                   width="40"
