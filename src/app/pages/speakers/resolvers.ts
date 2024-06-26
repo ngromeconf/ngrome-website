@@ -31,7 +31,7 @@ export function injectActiveSpeakers(): Speaker[] {
     ...calculateTime(agende[1].events, agende[1].start),
   ];
 
-  const workshops = injectActiveWorkshops(false);
+  const workshops = injectActiveWorkshops();
 
   // return speakers
   let speakers = injectSpeakers()

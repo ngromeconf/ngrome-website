@@ -1,5 +1,5 @@
 ---
-slug: angular-architects-signal-ddd-mfe
+slug: angular-architects-signal-ddd-mfe-2024-06-26
 tag: Architecture
 recipients: Expert
 time: 08:30 AM - 06:00 PM

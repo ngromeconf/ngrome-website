@@ -1,5 +1,5 @@
 ---
-slug: angular-mastering-ngrx-signalstore
+slug: angular-mastering-ngrx-signalstore-2024-06-26
 tag: Deep Dive
 recipients: Expert
 time: 09:00 AM - 06:00 PM

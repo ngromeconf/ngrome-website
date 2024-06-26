@@ -4,41 +4,17 @@ import { injectContent, injectContentFiles } from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { Speaker } from 'src/app/models/speaker.model';
 import { injectSpeaker, injectSpeakers } from '../speakers/resolvers';
-import { map } from 'rxjs';
+import { filter, map } from 'rxjs';
 
-export function injectActiveWorkshops(past = true): WorkshopAttributes[] {
+export function injectActiveWorkshops(): WorkshopAttributes[] {
   return injectContentFiles<WorkshopAttributes>((contentFile) =>
-    past
-      ? contentFile.filename.includes('/src/content/workshops/')
-      : contentFile.filename.includes('/src/content/workshops/') &&
-        !contentFile.filename.includes('/src/content/workshops/past/'),
+    contentFile.filename.includes('/src/content/workshops/'),
   )
     .map((workshop) => workshop.attributes as unknown as WorkshopAttributes)
     .map((workshop) => ({
       ...workshop,
       authors: workshop.authors.map((author) => injectSpeaker(author?.slug)),
     }));
-}
-
-export function injectPastWorkshopContent() {
-  const speakers = injectSpeakers();
-  return injectContent<WorkshopAttributes>({
-    param: 'slug',
-    subdirectory: 'workshops/past',
-  }).pipe(
-    map((workshop) => {
-      const workshopData = {
-        content: workshop.content as string,
-        attributes: {
-          ...workshop.attributes,
-          authors: workshop.attributes.authors.map((author) =>
-            speakers.find((speaker) => speaker.slug === author?.slug),
-          ),
-        } as WorkshopAttributes,
-      };
-      return workshopData;
-    }),
-  );
 }
 
 export function injectWorkshopContent() {
@@ -48,7 +24,7 @@ export function injectWorkshopContent() {
     subdirectory: 'workshops',
   }).pipe(
     map((workshop) => {
-      const workshopData = {
+    const workshopData = {
         content: workshop.content as string,
         attributes: {
           ...workshop.attributes,
@@ -70,8 +46,6 @@ function injectActiveWorkshopAttributes(
       (contentFile) =>
         contentFile.filename ===
           `/src/content/workshops/${route.params['slug']}.md` ||
-        contentFile.filename ===
-          `/src/content/workshops/past/${route.params['slug']}.md` ||
         contentFile.slug === route.params['slug'],
     )!.attributes || null;
 

@@ -1,5 +1,5 @@
 ---
-slug: ng-girls-workshop-2023-11
+slug: ng-girls-workshop-2023-11-30
 tag: Diversity
 title: ng-Girls - one-day workshops for beginners!
 description: We are holding a one-day workshops for beginners!

@@ -69,7 +69,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
             <button
               class="tito-widget-button "
               target="_blank"
-              (click)="goToWorkshop((past ? 'past/' : '') + workshop.slug)"
+              (click)="goToWorkshop(workshop.slug)"
             >
               Detail
             </button>

@@ -14,7 +14,7 @@ import { WorkshopRowComponent } from './workshop-row.component';
     >
       <div class="w-full px-4 py-5 border-b sm:px-6">
         <h3 class="text-2xl font-bold leading-6 text-gray-900 dark:text-white">
-          {{ workshopsList.date | date: (!past ? 'MMM dd' : 'MM-dd-yyyy') }}
+          {{ workshopsList.date | date: (past ? 'MMM dd' : 'MM-dd-yyyy') }}
         </h3>
       </div>
       <ul class="flex flex-col divide-y divide">

@@ -1,5 +1,5 @@
 ---
-slug: generative-ai-masterclass
+slug: generative-ai-masterclass-2024-06-25
 tag: Generative AI
 recipients: For all
 time: 09:00 AM - 05:00 PM

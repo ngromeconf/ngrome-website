@@ -1,5 +1,5 @@
 ---
-slug: staying-safe-with-angular
+slug: staying-safe-with-angular-2023-11-30
 tag: Security
 title: Staying safe and secure with Angular
 description: We love Angular because it’s a best-in-class web framework with top-notch features and capabilities. But did you know Angular also keeps your application safe and secure from web vulnerabilities? Security breaches can impact businesses financially and their reputation, so ensuring we’re following best security practices is essential. The Open Web Application Security Project (OWASP) guides us by identifying the most common and impactful web vulnerabilities.
