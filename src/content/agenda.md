@@ -117,10 +117,10 @@ agenda:
           - slug: talk-6
             type: Talk 
             duration: 25
-            title: The Angular approach to SSR and hydration
-            description: Let's explore together the motivation to shift rendering to the server side, review the Angular approach to hydration and data caching, the infrastructure necessary and the performance gains. We will also review the potential use-cases that benefit from this techniques and mechanisms.
+            title: Concurrent Mode in Angular
+            description: JavaScript is single threaded. Keeping execution times short is crucial for the runtime performance of our applications. Long running scripts result in bad Web Vitals like INP & TBT. In this talk, we’ll discuss a strategic approach to mitigate this problem, the Concurrent Mode.
             speakers: 
-                - slug: natalia-venditto
+                - slug: julian-jandl
           - slug: l-talk-4
             type: Lightning Talk
             duration: 15
@@ -146,10 +146,10 @@ agenda:
           - slug: talk-8
             type: Talk 
             duration: 25
-            title: Concurrent Mode in Angular
-            description: JavaScript is single threaded. Keeping execution times short is crucial for the runtime performance of our applications. Long running scripts result in bad Web Vitals like INP & TBT. In this talk, we’ll discuss a strategic approach to mitigate this problem, the Concurrent Mode.
+            title: The Angular approach to SSR and hydration
+            description: Let's explore together the motivation to shift rendering to the server side, review the Angular approach to hydration and data caching, the infrastructure necessary and the performance gains. We will also review the potential use-cases that benefit from this techniques and mechanisms.
             speakers: 
-                - slug: julian-jandl
+                - slug: natalia-venditto
           - slug: closing-keynote
             title: Closing Keynote
             subtitle: 'Where Do We Go From Here? Advanced Strategies for Signals'
