@@ -118,7 +118,7 @@ export const routeMeta: RouteMeta = {
             }
           }
         </div>
-        <h2 class="my-5 pt-10 text-xl font-bold">Our Past Workshops</h2>
+        <h2 class="my-5 pt-10 text-3xl font-bold">Our Past Workshops</h2>
         @for (
           workshopDate of workshops
             | filterByDate: 'date' : 'past'
@@ -127,7 +127,7 @@ export const routeMeta: RouteMeta = {
         ) {
           <div class="flex flex-col w-full">
             <h2
-              class="text-2xl font-bold leading-6 text-gray-900 dark:text-white my-5"
+              class="text-2xl font-bold leading-6 text-gray-900 dark:text-white my-7"
             >
               {{ workshopDate.year }}
             </h2>
