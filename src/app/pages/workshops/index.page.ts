@@ -37,12 +37,15 @@ export class FilterByDatePipe implements PipeTransform {
 export class GroupByDatePipe implements PipeTransform {
   transform(
     workshops: WorkshopAttributes[],
+    sort: 'asc' | 'desc' = 'asc',
   ): { date: string; events: WorkshopAttributes[] }[] {
     // Sort events by date
     workshops.sort((a, b) => {
       const dateA = new Date(a.date);
       const dateB = new Date(b.date);
-      return dateA.getTime() - dateB.getTime();
+      return sort === 'asc'
+        ? dateA.getTime() - dateB.getTime()
+        : dateB.getTime() - dateA.getTime();
     });
 
     // Group events by date
@@ -104,7 +107,7 @@ export const routeMeta: RouteMeta = {
           @for (
             workshopDate of workshops
               | filterByDate: 'date' : 'past'
-              | groupByDate;
+              | groupByDate: 'desc';
             track $index
           ) {
             <workshop-list
