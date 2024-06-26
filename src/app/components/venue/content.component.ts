@@ -124,8 +124,30 @@ import { TeamComponent } from '../about/team/team.component';
         </h1>
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500 text-left">
-            <span class="font-serif text-6xl text-black"> W</span>e will update
-            soon this section.
+            <p class="mt-6 text-lg text-slate-500">
+              <span class="font-serif text-6xl text-black"> B</span>y Car: The
+              hotel is easily accessible from the Grande Raccordo Anulare (GRA),
+              Exit 1, in the direction of Aurelia/Centro. From Termini Station:
+              Take Metro Line A to Cornelia stop, then Bus 246 or 247 and get
+              off at the Panorama stop. Cross the pedestrian bridge, and the
+              hotel is about 500 meters away. Taxi: You can call +39 06 66 45 or
+              use the "itTAXI" app for a convenient ride. From the Hotel to the
+              Center of Rome.
+            </p>
+            <br />
+            <p class="mt-6 text-lg text-slate-500">
+              <span class="font-serif text-6xl text-black"> B</span>us and
+              Metro: Take Bus 246 or 247 from the Aurelia stop (tickets can be
+              purchased at the kiosk inside the Human Company Camping or via the
+              <a
+                href="https://www.mooneygo.it/"
+                class="mt-6 text-lg text-slate-500 underline"
+                target="_blank"
+                >MooneyGo</a
+              >
+              app) to the Cornelia stop, then use Metro Line A towards Anagnina,
+              and get off at your desired stop.
+            </p>
           </blockquote>
         </div>
 
