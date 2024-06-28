@@ -1,5 +1,5 @@
 ---
-slug: authentication-step-by-step
+slug: authentication-step-by-step-2024-06-25
 tag: Security
 recipients: For all
 time: 02:00 PM - 06:00 PM

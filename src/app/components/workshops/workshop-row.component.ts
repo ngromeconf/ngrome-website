@@ -10,7 +10,13 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
   standalone: true,
   imports: [DatePipe, BadgeComponent, NgIf, NgClass],
   template: `
-    <section>
+    <section
+      [ngClass]="
+        past
+          ? 'container flex flex-col w-full mx-auto bg-white rounded-lg shadow dark:bg-gray-800 my-4'
+          : ''
+      "
+    >
       <div class="flex flex-row">
         <div
           class="flex justify-center  flex-col md:flex-row items-center  p-4 w-full select-none"
@@ -69,7 +75,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
             <button
               class="tito-widget-button "
               target="_blank"
-              (click)="goToWorkshop((past ? 'past/' : '') + workshop.slug)"
+              (click)="goToWorkshop(workshop.slug)"
             >
               Detail
             </button>

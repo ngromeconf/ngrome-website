@@ -1,5 +1,5 @@
 ---
-slug: cloudnary-for-angular
+slug: cloudnary-for-angular-2024-06-25
 tag: Media Transformation
 title: 'Speed-up your media-rich Angular applications'
 description: "In today’s media-rich digital landscape, efficient and seamless media management is crucial for delivering outstanding user experiences. This workshop is designed to provide Angular developers with a comprehensive understanding of Cloudinary’s powerful Angular SDK and its extensive features. We will also spend a lot of time talking about web performance best practices for media heavy applications - making sure that those Core Web Vitals scores are all in the green!

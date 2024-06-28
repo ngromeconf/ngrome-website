@@ -38,7 +38,10 @@ export class GroupByDatePipe implements PipeTransform {
   transform(
     workshops: WorkshopAttributes[],
     sort: 'asc' | 'desc' = 'asc',
-  ): { date: string; events: WorkshopAttributes[] }[] {
+  ): {
+    year: string;
+    dates: { date: string; events: WorkshopAttributes[] }[];
+  }[] {
     // Sort events by date
     workshops.sort((a, b) => {
       const dateA = new Date(a.date);
@@ -49,20 +52,33 @@ export class GroupByDatePipe implements PipeTransform {
     });
 
     // Group events by date
-    const groupedEvents: { [key: string]: WorkshopAttributes[] } = {};
+    const groupedEvents: {
+      [year: string]: { [key: string]: WorkshopAttributes[] };
+    } = {};
     workshops.forEach((workshop) => {
-      const date = new Date(workshop.date).toDateString();
-      if (!groupedEvents[date]) {
-        groupedEvents[date] = [];
+      const date = new Date(workshop.date);
+      const year = date.getFullYear().toString();
+      const dateString = date.toDateString();
+      if (!groupedEvents[year]) {
+        groupedEvents[year] = {};
       }
-      groupedEvents[date].push(workshop);
+      if (!groupedEvents[year][dateString]) {
+        groupedEvents[year][dateString] = [];
+      }
+      groupedEvents[year][dateString].push(workshop);
     });
 
     // Convert grouped object to array of objects { date, events }
-    const result = Object.keys(groupedEvents).map((date) => ({
-      date,
-      events: groupedEvents[date],
+    const result = Object.keys(groupedEvents).map((year) => ({
+      year,
+      dates: Object.keys(groupedEvents[year]).map((date) => ({
+        date,
+        events: groupedEvents[year][date],
+      })),
     }));
+    result.sort((a, b) => {
+      return +b.year - +a.year;
+    });
     return result;
   }
 }
@@ -97,30 +113,42 @@ export const routeMeta: RouteMeta = {
               | groupByDate;
             track $index
           ) {
-            <workshop-list [workshopsList]="workshopDate"></workshop-list>
+            @for (workshopsList of workshopDate.dates; track $index) {
+              <workshop-list [workshopsList]="workshopsList"></workshop-list>
+            }
           }
         </div>
-        <h2 class="my-5 pt-10 text-xl font-bold">Our Past Workshops</h2>
-        <div
-          class="grid grid-cols-1 gap-5 text-left lg:grid-cols-3 sm:grid-cols-2"
-        >
-          @for (
-            workshopDate of workshops
-              | filterByDate: 'date' : 'past'
-              | groupByDate: 'desc';
-            track $index
-          ) {
-            <workshop-list
-              [workshopsList]="workshopDate"
-              [past]="true"
-            ></workshop-list>
-          }
-        </div>
+        <h2 class="my-5 pt-10 text-3xl font-bold">Our Past Workshops</h2>
+        @for (
+          workshopDate of workshops
+            | filterByDate: 'date' : 'past'
+            | groupByDate: 'asc';
+          track $index
+        ) {
+          <div class="flex flex-col w-full">
+            <h2
+              class="text-2xl font-bold leading-6 text-gray-900 dark:text-white my-7"
+            >
+              {{ workshopDate.year }}
+            </h2>
+            <div
+              class="grid grid-cols-1 gap-5 text-left lg:grid-cols-3 sm:grid-cols-2"
+            >
+              @for (workshopList of workshopDate.dates; track $index) {
+                <workshop-list
+                  [workshopsList]="workshopList"
+                  [past]="true"
+                ></workshop-list>
+              }
+            </div>
+          </div>
+        }
       </div>
     }
   `,
 })
 export default class IndexPage {
   public workshops: WorkshopAttributes[] = injectActiveWorkshops();
+  public year: string = new Date().getFullYear().toString();
   constructor() {}
 }

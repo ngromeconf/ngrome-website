@@ -1,5 +1,5 @@
 ---
-slug: angular-performance-masterclass
+slug: angular-performance-masterclass-2024-06-25
 tag: 'Performance'
 time: '09:00 AM - 05:00 PM'
 recipients: For all

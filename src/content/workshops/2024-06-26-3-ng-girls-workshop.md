@@ -1,5 +1,5 @@
 ---
-slug: ng-girls-workshop
+slug: ng-girls-workshop-2024-06-26
 tag: Diversity
 recipients: Beginners
 time: 09:00 AM - 05:00 PM
