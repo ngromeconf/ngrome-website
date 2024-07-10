@@ -5,7 +5,7 @@ biography: Marko is a Principal Frontend Engineer at Swiss Marketplace Group. He
 from: Belgrade, Serbia 
 work: SMG
 jobRole: Principal Frontend Engineer
-imageUrl: https://cache.sessionize.com/image/c9e2-400o400o1-B8AeU3cdLjBdJS1XN1eGv4.jpg
+imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1720601618/ngrome-speaker/Marko_pppx96.jpg?_s=public-apps
 links:
     linkedIn: https://www.linkedin.com/in/markostanimirovic
     twitter: https://twitter.com/MarkoStDev
