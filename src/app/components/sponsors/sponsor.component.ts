@@ -32,7 +32,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                 'bg-orange-400': type === 'Technical'
               }"
             >
-              {{ type }} SPONSOR
+              {{ type }} PARTNER
             </span>
             <span
               class="flex-grow block border-t border-red"

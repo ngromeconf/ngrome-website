@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, Pipe, PipeTransform, Signal, inject } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  Component,
+  Pipe,
+  PipeTransform,
+  Signal,
+  inject,
+} from '@angular/core';
 import { ButtonComponent } from '../shared/button.component';
 import { TitoService } from '../../services/tito.service';
 import { WindowRef } from '../../services/window.provider';
@@ -27,6 +34,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
   selector: 'app-tickets',
   standalone: true,
   providers: [TitoService, WindowRef],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <div class="bg-white dark:bg-gray-900">
       <section
@@ -42,56 +50,21 @@ export class FilterTicketByDatePipe implements PipeTransform {
           <p
             class="mt-12 font-roboto text-slate-500 sm:text-lg sm:leading-normal lg:text-xl lg:leading-normal xl:text-2xl xl:leading-normal"
           >
-            Embark on your journey to the next level of Angular right here. Our
-            tickets grant you access to an immersive experience where you'll
-            gain valuable insights, network with experts, and supercharge your
-            Angular skills. <br />
+            Ready to revolutionize your Angular app? Grab your ticket now and
+            unlock a world of cutting-edge knowledge, unparalleled networking,
+            and hands-on mastery. Don't just attend a conference – be part of
+            the Angular evolution. Your seat to innovation is just a click away!
+            <br />
 
-            <span class="italic font-semibold"
+            <!-- <span class="italic font-semibold"
               >* If you're purchasing 3 or more tickets, don't forget to get in
               touch with us for exclusive discounts and group offers. Join us in
               shaping the future of Angular!</span
-            >
+            > -->
           </p>
 
-          <div class="w-full md:w-6/12 mx-auto grid grid-cols-2 gap-8 pt-12">
-            <button
-              class="px-2 py-4 md:p-6 rounded shadow-md"
-              [ngClass]="{
-                'bg-red-ngrome text-gray-100': filterby === 'conference',
-                'bg-white text-red-ngrome': filterby !== 'conference'
-              }"
-              (click)="updateTicketFilter('conference')"
-            >
-              Conference
-            </button>
-            <button
-              class="p-4 rounded shadow-md"
-              [ngClass]="{
-                'bg-red-ngrome text-gray-100': filterby === 'workshop',
-                'bg-white text-red-ngrome': filterby !== 'workshop'
-              }"
-              (click)="goTo('workshops')"
-            >
-              Workshop
-            </button>
-          </div>
-          <div class="">
-            <div class="mt-2 space-y-4 xl:mt-4">
-              @for (item of ticketsList$(); track $index) {
-                @if (item.visible) {
-                  <app-tickets-item
-                    [item]="item"
-                    class="px-4 md:px-8 transition-all ease-in-out delay-150 duration-300"
-                    [ngClass]="{
-                      visible: item.category === filterby,
-                      hidden: item.category !== filterby
-                    }"
-                  ></app-tickets-item>
-                }
-              }
-            </div>
-          </div>
+          <!-- Place this where you want the widget to appear -->
+          <tito-widget event="ngrome-events/ngrome-conf-mmxxv"></tito-widget>
         </div>
       </section>
     </div>
@@ -139,6 +112,6 @@ export class TicketsComponent {
     console.log(this.filterby);
   }
   goTo(ticketType: string) {
-    this.router.navigateByUrl(`/${ticketType}?#workshops`,);
+    this.router.navigateByUrl(`/${ticketType}?#workshops`);
   }
 }
