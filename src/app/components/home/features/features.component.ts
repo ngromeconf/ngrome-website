@@ -13,10 +13,14 @@ import { featureCardInterface } from 'src/app/models/features.model';
           <h2
             class="mb-6 font-roboto text-4xl font-bold tracking-tighter text-black md:text-8xl lg:text-6xl"
           >
-            7 Years of conference with international speakers
+            7 Years of conference
             <br class="hidden lg:block" />
-            workshop days and communities around you!
+            International speakers
+            <br class="hidden lg:block" />
           </h2>
+          <span class="text-4l text-red-ngrome md:text-6xl lg:text-4xl"
+            >Workshop days and communities around you!</span
+          >
         </div>
         <div
           class="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 bg-white "
