@@ -25,14 +25,16 @@ import { toSignal } from '@angular/core/rxjs-interop';
           <div class="flex flex-wrap items-center justify-center gap-6">
             @if (sponsors$(); as Sponsors) {
               @for (item of Sponsors.PastEdition; track $index) {
-                <img
-                  [alt]="item.name"
-                  [title]="item.name"
-                  [ngSrc]="item.image"
-                  class="max-h-11 h-auto max-w-full grayscale mx-4 transition-all duration-500 ease-in-out hover:grayscale-0 pr-12 mt-6"
-                  width="200"
-                  height="200"
-                />
+                <a [href]="item.url ? item.url : '/sponsors'" target="_blank">
+                  <img
+                    [alt]="item.name"
+                    [title]="item.name"
+                    [ngSrc]="item.image"
+                    class="max-h-11 h-auto max-w-full grayscale mx-4 transition-all duration-500 ease-in-out hover:grayscale-0 pr-12 mt-6"
+                    width="200"
+                    height="44"
+                  />
+                </a>
               }
             }
           </div>
