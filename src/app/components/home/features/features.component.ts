@@ -19,7 +19,7 @@ import { featureCardInterface } from 'src/app/models/features.model';
             <br class="hidden lg:block" />
           </h2>
           <span class="text-4l text-red-ngrome md:text-6xl lg:text-4xl"
-            >Workshop days and communities around you!</span
+            >Workshops days and Communities around you!</span
           >
         </div>
         <div

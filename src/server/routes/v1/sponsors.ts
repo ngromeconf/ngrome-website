@@ -3,13 +3,7 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 export default defineEventHandler(() => sponsors);
 
-const mainSponsor: SponsorInterface[] = [
-  {
-    name: 'Fabrick',
-    image: './sponsors/logo-FABRICK.svg',
-    url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
-  },
-];
+const mainSponsor: SponsorInterface[] = [];
 
 const eventSponsor: SponsorInterface[] = [
   {
@@ -19,56 +13,9 @@ const eventSponsor: SponsorInterface[] = [
   },
 ];
 
-const goldSponsors: SponsorInterface[] = [
-  {
-    name: 'Key Partner',
-    image: './sponsors/logo-KeyPartner.svg',
-    url: 'https://www.keypartner.com/',
-  },
-  {
-    name: 'ICT Group',
-    image: './sponsors/logo-ICT-GROUP.svg',
-    url: 'https://ict-group.it/',
-  },
-  {
-    name: 'Cloudinary',
-    image: './sponsors/logo-CLOUDINARY.svg',
-    url: 'https://cloudinary.com/',
-  },
-];
+const goldSponsors: SponsorInterface[] = [];
 const silverSponsor: SponsorInterface[] = [];
-const bronzeSponsor: SponsorInterface[] = [
-  {
-    name: 'angular.dev',
-    image: './sponsors/logo-ANGULAR.svg',
-    url: 'https://angular.dev/',
-  },
-  {
-    name: 'ConTe.it',
-    image: './sponsors/logo-CONTE.IT.svg',
-    url: 'https://www.conte.it/',
-  },
-  {
-    name: 'Fervento',
-    image: './sponsors/logo-FERVENTO.svg',
-    url: 'https://fervento.com',
-  },
-  {
-    name: 'Lascaux',
-    image: './sponsors/logo-LASCAUX.svg',
-    url: 'https://www.lascaux.it/',
-  },
-  {
-    name: 'Ineo',
-    image: './sponsors/logo-INEO.svg',
-    url: 'https://www.ineo.it/',
-  },
-  {
-    name: 'Digitouch',
-    image: './sponsors/logo-DIGITOUCH.svg',
-    url: 'https://www.gruppodigitouch.it/',
-  },
-];
+const bronzeSponsor: SponsorInterface[] = [];
 const diversitySponsor: SponsorInterface[] = [
   {
     name: 'ICT Group',
@@ -328,6 +275,41 @@ const communityPartners: SponsorInterface[] = [
 
 const pastEditionSponsors: SponsorInterface[] = [
   {
+    name: 'angular.dev',
+    image: './sponsors/logo-ANGULAR.svg',
+    url: 'https://angular.dev/',
+  },
+  {
+    name: 'ConTe.it',
+    image: './sponsors/logo-CONTE.IT.svg',
+    url: 'https://www.conte.it/',
+  },
+  {
+    name: 'Lascaux',
+    image: './sponsors/logo-LASCAUX.svg',
+    url: 'https://www.lascaux.it/',
+  },
+  {
+    name: 'Ineo',
+    image: './sponsors/logo-INEO.svg',
+    url: 'https://www.ineo.it/',
+  },
+  {
+    name: 'Digitouch',
+    image: './sponsors/logo-DIGITOUCH.svg',
+    url: 'https://www.gruppodigitouch.it/',
+  },
+  {
+    name: 'Cloudinary',
+    image: './sponsors/logo-CLOUDINARY.svg',
+    url: 'https://cloudinary.com/',
+  },
+  {
+    name: 'Fabrick',
+    image: './sponsors/logo-FABRICK.svg',
+    url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
+  },
+  {
     name: 'Almaviva Digitaltec',
     image:
       'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/sponsor%2FAlmaviva.svg?alt=media&token=e74b0eee-858a-4ed8-873a-0c526eb041cc',
@@ -380,18 +362,6 @@ const pastEditionSponsors: SponsorInterface[] = [
     image:
       'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FCybersafe.png?alt=media&token=f2ff5743-bc91-4b81-b855-509f9ca9c14c',
     url: '',
-  },
-  {
-    name: 'Codemotion',
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fcodemotion.png?alt=media&token=8e9f3835-b376-47b5-bc0f-16840bf7ef8c',
-    url: '',
-  },
-  {
-    name: 'The Communities Bay',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711096696/ngrome-sponsors/The_Communities_Bay_k1hjzk.png',
-    url: 'https://thecmmbay.com/',
   },
   {
     name: 'Jetbrains',

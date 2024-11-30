@@ -11,6 +11,7 @@ import { postMetaPageResolver, postTitleResolver } from './resolvers';
 import { CallForPaperComponent } from '../components/home/call-for-paper.component';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { PastEditionSponsorsComponent } from '../components/home/features/past-edition-sponsors';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
@@ -23,7 +24,8 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   template: `
     <app-hero />
-    <app-features />
+    <app-past-edition-sponsors />
+    <!-- <app-features /> -->
     <!-- <app-venue /> -->
     <app-tickets />
     <!--  <app-call-for-paper id="ticket-section" /> -->
@@ -61,6 +63,7 @@ export const routeMeta: RouteMeta = {
     SponsorComponent,
     TicketsComponent,
     CallForPaperComponent,
+    PastEditionSponsorsComponent,
   ],
 })
 export default class HomeComponent {
