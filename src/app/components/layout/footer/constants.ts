@@ -27,25 +27,25 @@ export const FOOTER_MENU = [
     name: 'Sponsors',
     destinationUrl: './sponsors',
     type: 'link',
-    visible: true,
+    visible: false,
   },
   {
     name: 'Speakers',
-    destinationUrl: './',
+    destinationUrl: './speakers',
     type: 'link',
-    visible: true,
+    visible: false,
   },
   {
     name: 'Workshops',
     destinationUrl: './workshops',
     type: 'link',
-    visible: true,
+    visible: false,
   },
   {
     name: 'Agenda',
     destinationUrl: './agenda',
     type: 'link',
-    visible: true,
+    visible: false,
   },
 
   {
