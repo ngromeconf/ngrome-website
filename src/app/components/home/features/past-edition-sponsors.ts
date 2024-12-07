@@ -30,9 +30,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
                     [alt]="item.name"
                     [title]="item.name"
                     [ngSrc]="item.image"
-                    class="max-h-11 h-auto max-w-full grayscale mx-4 transition-all duration-500 ease-in-out hover:grayscale-0 pr-12 mt-6"
-                    width="200"
-                    height="44"
+                    class="grayscale mx-4 transition-all duration-500 ease-in-out hover:grayscale-0 pr-12 mt-6"
+                    [width]="item.width"
+                    [height]="item.height"
                   />
                 </a>
               }

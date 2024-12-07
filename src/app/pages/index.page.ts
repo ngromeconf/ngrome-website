@@ -24,7 +24,6 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   template: `
     <app-hero />
-    <app-past-edition-sponsors />
     <!-- <app-features /> -->
     <!-- <app-venue /> -->
     <app-tickets />
@@ -53,6 +52,7 @@ export const routeMeta: RouteMeta = {
         type="Technical"
       /> -->
       <app-sponsor [sponsors]="Sponsors.Event" [itemsPerRow]="1" type="Event" />
+      <app-past-edition-sponsors />
     }
   `,
   imports: [

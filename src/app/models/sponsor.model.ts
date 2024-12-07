@@ -2,6 +2,8 @@ export interface SponsorInterface {
   name: string;
   image: string;
   url: string;
+  width?: number;
+  height?: number;
 }
 
 export enum sponsorType {
