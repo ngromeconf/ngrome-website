@@ -31,10 +31,9 @@ import { Router } from '@angular/router';
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
             JUNE
-            <span class="font-bold text-red-ngrome">27</span>
-            2024
+            <span class="font-bold text-red-ngrome">2025</span>
           </h2>
-          <span class="text-lg"> Workshops will be on June 25 and 26!</span>
+          <!-- <span class="text-lg"> Workshops will be on June 25 and 26!</span>
           <a class="text-lg" href="venue" target="_self">
             <span class="text-blue-gradient-start hover:underline">
               📍 Midas Palace Hotel (Rome)</span
@@ -46,7 +45,7 @@ import { Router } from '@angular/router';
             Be part of the NGRome MMXXIV experience!
             <br />
             Join us for unique learning and networking opportunities in Rome.
-          </p>
+          </p> -->
         </div>
         <div class="flex w-full py-4 justify-center ">
           <div class="rounded-lg sm:mt-0">

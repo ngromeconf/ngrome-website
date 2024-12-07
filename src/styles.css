@@ -83,3 +83,11 @@ analog-markdown-route {
 .tito-widget-button:active {
     scale: 1.1;
 }
+
+
+.tito-widget .tito-form-actions .tito-submit {
+    @apply px-2 py-2 bg-green-600 hover:bg-red-ngrome text-slate-100 text-xs lg:text-sm font-medium rounded-md active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300;
+  } 
+  .tito-widget .tito-widget-form {
+    @apply bg-white px-6 pt-10 pb-8 shadow-xl ring-1 sm:rounded-lg text-left text-slate-800;
+  }
