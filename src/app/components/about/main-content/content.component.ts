@@ -15,7 +15,7 @@ import { TeamComponent } from '../team/team.component';
             the biggest International Angular Conference in Italy, helping bring
             together ideas and developers from all the corners of Italy and
             Europe. The community is born by a group of passionate devs,
-            JavaScript lovers, and enthusiastic developer that use the Angular
+            JavaScript lovers, and enthusiastic developers that use the Angular
             framework. Our mission is to connect Italian developers to the
             global community. Fostering new relationships within Italy, and
             across borders. Simultaneously develop new skills and having moments
