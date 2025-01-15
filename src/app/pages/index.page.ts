@@ -27,6 +27,7 @@ export const routeMeta: RouteMeta = {
     <!-- <app-features /> -->
     <!-- <app-venue /> -->
     <app-tickets />
+    <app-call-for-paper />
     <!--  <app-call-for-paper id="ticket-section" /> -->
     @if (sponsors$(); as Sponsors) {
       <!-- <app-sponsor [sponsors]="Sponsors.Main" [itemsPerRow]="1" type="Main" />

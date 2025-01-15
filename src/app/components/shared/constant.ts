@@ -1,4 +1,4 @@
-export const UrlCFP: string = 'https://forms.gle/45PaWodBEkeAo5Ht6';
+export const UrlCFP: string = 'https://forms.gle/9nToEntiHbg8WrPB8';
 
 export const CLASS_COLOR_BADGE: { [key: string]: string } = {
   red: 'bg-red-100 text-red-800 border-red-400',
