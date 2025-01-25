@@ -60,7 +60,7 @@ import { Router } from '@angular/router';
                 >
               }
             }
-            <!--  <div
+            <div
               class="pastEdition cursor-default md:my-0 leading-6 text-gray-900 p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90"
             >
               <a class="focus:outline-none focus:shadow-none focus:text-mana"
@@ -85,7 +85,7 @@ import { Router } from '@angular/router';
                   }
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
           <div class="lg:contents hidden lg:contents gap-6 m-auto md:hidden">
             <button

@@ -8,7 +8,6 @@ import {
 } from '@angular/core';
 import { CommonModule, NgFor, NgOptimizedImage } from '@angular/common';
 import { Agenda } from 'src/app/models/agenda.model';
-import { injectAgenda } from '../../../pages/speakers/resolvers';
 import { Sponsors } from 'src/app/models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -17,6 +16,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Speaker } from 'src/app/models/speaker.model';
 import SponsorComponent from '../../sponsors.page';
 import { SpeakerModalComponent } from '../../../components/speakers/speaker-modal.component';
+import { injectAgenda } from '../resolvers';
 
 @Component({
   selector: 'app-content',
@@ -30,54 +30,18 @@ import { SpeakerModalComponent } from '../../../components/speakers/speaker-moda
   ],
   template: ` <section>
       <div class="container justify-between w-full mx-auto px-4 lg-px-8">
-        <div class="text-center max-w-3xl mx-auto">
-          <h2
-            class="tracking-tight text-gray-900 leading-5 text-4xl font-extrabold"
-          >
-            Thursday
-          </h2>
-          <p class="margin-1 text-gray-500 leading-5 font-medium text-lg">
-            June 27, 2024
-          </p>
-          <span
-            class="bg-primary-100 text-primary-800 margin-1 font-medium text-center inline-flex text-xs px-2.5 rounded py-0.5 XklWzT8y98pp042XEQp4 _A6LflweZRUwrcL6M2Tk ay0ziTPUL4Ag5d1DkSY7 neyUwteEn7DOg9pBSJJE cA4BPuqyV1eox6S0acvl AOldjxkjQirRFQcsh_FR YPSoR6AXtPgkmylUmcbT dark:bg-primary-900 dark:text-primary-300"
-          >
-            <svg
-              aria-hidden="true"
-              class="w-3 h-3 mr-1 m-auto"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            Central European Summer Time (GMT+2)
-          </span>
-        </div>
         <div class="container-agenda grid mt-6 text-left pb-4">
           @for (a of agenda; track $index) {
             <div
               *ngIf="agenda"
               [ngClass]="$index % 2 ? 'border-left' : 'border-right'"
             >
-              <div class="text-2xl font-bold text-center">
-                {{ a?.title }}
-              </div>
               <div class="margin-2">
                 @for (item of a.events; track $index) {
                   <div
                     class="flex flex-col sm:gap-4 event border-1"
                     [id]="'talk-' + item.slug"
                   >
-                    <p
-                      class="flex-shrink-0 font-medium  text-gray-500 text-sm time"
-                    >
-                      {{ item?.startTime }} - {{ item?.endTime }}
-                    </p>
                     <div class="bg-gray-200 hidden sm:block timeline"></div>
                     <div class="lg:pb-8 pb-12 flex-1-1-0">
                       <div
@@ -101,6 +65,30 @@ import { SpeakerModalComponent } from '../../../components/speakers/speaker-moda
                           <p class="font-normal text-gray-500 margin-1">
                             {{ item?.description }}
                           </p>
+                        }
+                        @if (item?.videoURL) {
+                          <button
+                            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-right"
+                            (click)="openYoutube(item?.videoURL)"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"
+                              />
+                            </svg>
+
+                            <span>&nbsp; Watch now</span>
+                          </button>
+                          <a href="{{ item?.videoURL }}" target="_blank"> </a>
                         }
                         @for (
                           speaker of item?.speakers;
@@ -270,5 +258,9 @@ export class ContentComponent implements AfterViewInit {
     this.modal?.classList.remove('show');
 
     if (this.body) this.body.style.overflowY = 'auto';
+  }
+
+  openYoutube(url: string) {
+    window.open(url, '_blank');
   }
 }

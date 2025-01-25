@@ -7,7 +7,7 @@ import { postMetaPageResolver, postTitleResolver } from './resolvers';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
-  data: { slug: 'agenda' },
+  data: { slug: '2024' },
   title: postTitleResolver,
 };
 
