@@ -133,14 +133,19 @@ export function injectAgenda(): Agenda[] {
 
 function calculateTime(talks: Event[], timeStart: string) {
   let startTime = new Date(`2024-04-03T${timeStart}:00`);
+
   return talks.map((talk) => {
     talk.startTime = startTime.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
       hour12: true,
     }); // Converti la data di inizio in formato orario 12h
-    const hours = Math.floor(talk.duration / 60); // Calcola le ore della durata del talk
-    const minutes = talk.duration % 60; // Calcola i minuti della durata del talk
+    let minutes = 0;
+    let hours = 0;
+    if (talk.duration) {
+      hours = Math.floor(talk.duration / 60); // Calcola le ore della durata del talk
+      minutes = talk.duration % 60; // Calcola i minuti della durata del talk
+    }
     const endTime = new Date(startTime); // Clona l'orario di inizio per calcolare l'orario di fine
     endTime.setHours(endTime.getHours() + hours); // Aggiungi le ore alla data di fine
     endTime.setMinutes(endTime.getMinutes() + minutes); // Aggiungi i minuti alla data di fine

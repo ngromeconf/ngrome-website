@@ -69,4 +69,12 @@ export const FOOTER_MENU = [
     visible: true,
     pageSite: false,
   },
+  {
+    pastEdition: true,
+    name: '2024',
+    destinationUrl: '/2024/agenda',
+    type: 'link',
+    visible: true,
+    pageSite: false,
+  },
 ];
