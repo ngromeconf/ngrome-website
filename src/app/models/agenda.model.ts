@@ -6,13 +6,14 @@ export interface Agenda {
   events: Event[];
 }
 export interface Event {
-  startTime: string;
-  duration: number;
-  endTime: string;
+  startTime?: string;
+  duration?: number;
+  endTime?: string;
   type: string;
   speakers?: Speaker[];
   title: string;
   subtitle: string;
   description?: string;
   slug?: string;
+  videoURL?: string;
 }
