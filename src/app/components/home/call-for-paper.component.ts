@@ -9,9 +9,9 @@ import { UrlCFP } from '../shared/constant';
     <!-- Container for demo purpose -->
     <div class="w-full" id="callForPaper">
       <!-- Section: Design Block -->
-      <section class="mb-32">
+      <section class="">
         <div
-          class="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] bg-[url('/photo/cfp-cover.jpg')] h-[500px]"
+          class="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] bg-[url('https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_16:9/v1740606841/website-assets/cfp-cover_lxffkb.jpg')] h-[500px]"
         >
           <div
             class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed"

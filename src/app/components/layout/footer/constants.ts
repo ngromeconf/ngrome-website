@@ -72,7 +72,7 @@ export const FOOTER_MENU = [
   {
     pastEdition: true,
     name: '2024',
-    destinationUrl: '/2024/agenda',
+    destinationUrl: '/2024',
     type: 'link',
     visible: true,
     pageSite: false,
