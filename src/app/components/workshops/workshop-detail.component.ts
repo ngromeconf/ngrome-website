@@ -6,7 +6,13 @@ import {
   NgIf,
 } from '@angular/common';
 
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { MarkdownComponent } from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
@@ -88,14 +94,9 @@ import { Router } from '@angular/router';
 
     <section
       class="bg-gradient-to-r from-red-ngrome to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
-    >
-      @if (isWorkshopActive(workshop.attributes)) {
-        <tito-widget
-          [event]="workshop.attributes.ticketSlug"
-          [releases]="workshop.attributes.ticket"
-        ></tito-widget>
-      }
-    </section>
+      id="TicketSection"
+      #titoWidget
+    ></section>
 
     <section
       class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
@@ -159,8 +160,7 @@ import { Router } from '@angular/router';
             </span>
           } @else {
             <a
-              [href]="workshop.attributes.ticket"
-              target="_blank"
+              (click)="onGoToTicket()"
               class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
             >
               RESERVE YOUR SEAT
@@ -178,6 +178,7 @@ import { Router } from '@angular/router';
 })
 export default class WorkshopDetailComponent {
   private tito: any;
+  @ViewChild('titoWidget') ticketArea: ElementRef<HTMLInputElement>;
 
   @Input() workshop: {
     content: string;
@@ -188,20 +189,18 @@ export default class WorkshopDetailComponent {
     private titoService: TitoService,
     private winRef: WindowRef,
     private router: Router,
-  ) {
-    console.log('constructor', this.workshop);
-  }
+  ) {}
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit: ', this.workshop);
+    console.log('ngAfterViewInit: workshop: ', this.workshop);
+    this.appendTitoWidget();
+    this.loadTito();
+  }
+
+  loadTito() {
     if (this.workshop.attributes) {
       this.titoService.lazyLoadTito().subscribe((res) => {
         this.tito = this.winRef.nativeWindow.tito;
-
-        // this.tito('on:widget:loaded', function (data: any) {
-        //   console.log('Tito widget loaded', data);
-        // });
-        // this.tito('on:registration:started', function (data: any) {});
         this.tito('on:registration:finished', (data: any) => {
           console.log('Tito registration finished', data);
           this.router.navigateByUrl(
@@ -212,13 +211,27 @@ export default class WorkshopDetailComponent {
     }
   }
 
+  appendTitoWidget() {
+    console.log('appendTitoWidget: DOM: ', this.ticketArea);
+    if (this.ticketArea) {
+      this.ticketArea.nativeElement.innerHTML = `
+      <tito-widget
+        event="${this.workshop.attributes.ticketSlug}"
+        releases="${this.workshop.attributes.ticket}"
+      ></tito-widget>
+      `;
+    }
+  }
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
-    console.log('isWorkshopActive');
     return new Date(workshop.date) > new Date();
   }
 
   socialMessage(workshop: WorkshopAttributes): string {
     return encodeURIComponent(`${workshop.socialDescription}
       ${window.location.href}`);
+  }
+
+  onGoToTicket() {
+    this.router.navigate([], { fragment: 'TicketSection' });
   }
 }

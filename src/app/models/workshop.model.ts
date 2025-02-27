@@ -14,6 +14,7 @@ export interface WorkshopAttributes {
     mapsLink: string;
   };
   image: string;
+  ogImage: string;
   link: string;
   ticket: string;
   ticketSlug: string;
