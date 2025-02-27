@@ -36,6 +36,7 @@ export default defineConfig(({ mode }) => ({
           '/terms-and-privacy',
           '/media-kit',
           '/workshops',
+          '/workshops/angular-architects-signal-ddd-mfe-2024-06-26',
           '/workshops/2024-06-25-cloudnary-for-angular',
           '/workshops/2024-06-25-authentication-step-by-step',
           '/workshops/2024-06-25-generative-ai-masterclass',
