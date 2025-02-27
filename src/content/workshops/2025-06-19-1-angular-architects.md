@@ -18,7 +18,8 @@ location:
     mapsLink: 
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_pad,w_526,h_350/v1740605300/2025/Workshop_Architecture-manfred_rainer_ijpmro.jpg
 link: /workshops/angular-architects-signal-ddd-mfe
-ticket: https://ti.to/ngrome-events/ngrome-conf-mmxxv/with/workshop-architecture
+ticket: workshop-architecture
+ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 socialDescription: 'Join me at NgRome 2024 for an interactive workshop on "MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD and MICRO FRONTENDS." Explore cutting-edge strategies for building maintainable Angular applications. Reserve your spot now! #NgRome #Angular #Workshop #Technology'
 soldOut: false

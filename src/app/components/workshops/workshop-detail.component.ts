@@ -1,14 +1,25 @@
-import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
+import {
+  AsyncPipe,
+  CommonModule,
+  DatePipe,
+  NgFor,
+  NgIf,
+} from '@angular/common';
 
-import { Component, Input } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
 import { SocialShareComponent } from '../../components/social-share/social-share.component';
 import { MarkdownComponent } from '@analogjs/content';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
+import { TitoService } from '../../services/tito.service';
+import { WindowRef } from '../../services/window.provider';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-detail-workshop',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
+    CommonModule,
     NgIf,
     NgFor,
     AsyncPipe,
@@ -16,6 +27,7 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
     SocialShareComponent,
     MarkdownComponent,
   ],
+  providers: [TitoService, WindowRef],
   template: ` <div class="flex flex-col" *ngIf="workshop">
     <div
       class="sm:flex px-5 pb-6 pt-10 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20 w-full items-center"
@@ -73,11 +85,24 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
         </div>
       }
     </section>
+
+    <section
+      class="bg-gradient-to-r from-red-ngrome to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
+    >
+      @if (isWorkshopActive(workshop.attributes)) {
+        <tito-widget
+          [event]="workshop.attributes.ticketSlug"
+          [releases]="workshop.attributes.ticket"
+        ></tito-widget>
+      }
+    </section>
+
     <section
       class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
     >
       <analog-markdown [content]="workshop.content"></analog-markdown>
     </section>
+
     @if (isWorkshopActive(workshop.attributes)) {
       <app-social-share
         [message]="socialMessage(workshop.attributes)"
@@ -152,12 +177,43 @@ import { WorkshopAttributes } from 'src/app/models/workshop.model';
   </div>`,
 })
 export default class WorkshopDetailComponent {
+  private tito: any;
+
   @Input() workshop: {
     content: string;
     attributes: WorkshopAttributes;
   };
 
+  constructor(
+    private titoService: TitoService,
+    private winRef: WindowRef,
+    private router: Router,
+  ) {
+    console.log('constructor', this.workshop);
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit: ', this.workshop);
+    if (this.workshop.attributes) {
+      this.titoService.lazyLoadTito().subscribe((res) => {
+        this.tito = this.winRef.nativeWindow.tito;
+
+        // this.tito('on:widget:loaded', function (data: any) {
+        //   console.log('Tito widget loaded', data);
+        // });
+        // this.tito('on:registration:started', function (data: any) {});
+        this.tito('on:registration:finished', (data: any) => {
+          console.log('Tito registration finished', data);
+          this.router.navigateByUrl(
+            `/thank-you/${data.reference}/${data.name}`,
+          );
+        });
+      });
+    }
+  }
+
   isWorkshopActive(workshop: WorkshopAttributes): boolean {
+    console.log('isWorkshopActive');
     return new Date(workshop.date) > new Date();
   }
 

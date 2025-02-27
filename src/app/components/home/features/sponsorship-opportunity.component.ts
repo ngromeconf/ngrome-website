@@ -1,12 +1,14 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sponsorship-opportunity',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   template: `<!-- Sponsorship CTA Section -->
+
     <section
-      class="bg-gradient-to-r from-purple-600 to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
+      class="bg-gradient-to-r from-red-ngrome to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
     >
       <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-xl shadow-xl overflow-hidden">
@@ -23,48 +25,22 @@ import { Component } from '@angular/core';
                   sizes.
                 </p>
                 <ul class="space-y-2 mb-6">
-                  <li class="flex items-center text-gray-600">
-                    <svg
-                      class="w-5 h-5 text-green-500 mr-2"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    Brand visibility to our community
-                  </li>
-                  <li class="flex items-center text-gray-600">
-                    <svg
-                      class="w-5 h-5 text-green-500 mr-2"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    Access to exclusive events
-                  </li>
-                  <li class="flex items-center text-gray-600">
-                    <svg
-                      class="w-5 h-5 text-green-500 mr-2"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    Co-marketing opportunities
-                  </li>
+                  @for (item of benefits; track $index) {
+                    <li class="flex items-center text-gray-600">
+                      <svg
+                        class="w-5 h-5 text-green-500 mr-2"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      {{ item }}
+                    </li>
+                  }
                 </ul>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfrzLiGk0jkwaVp1RkXlXGB0EJKtEQ30zUaA8Od4h7mgS42iw/viewform"
@@ -95,9 +71,9 @@ import { Component } from '@angular/core';
                     Join our growing list of partners
                   </p>
                   <div class="mt-4 flex justify-center space-x-3">
-                    <span class="w-3 h-3 bg-indigo-600 rounded-full"></span>
+                    <span class="w-3 h-3 bg-red-ngrome rounded-full"></span>
                     <span class="w-3 h-3 bg-purple-600 rounded-full"></span>
-                    <span class="w-3 h-3 bg-pink-600 rounded-full"></span>
+                    <span class="w-3 h-3 bg-indigo-600 rounded-full"></span>
                   </div>
                 </div>
               </div>
@@ -123,4 +99,10 @@ import { Component } from '@angular/core';
 })
 export class SponsorshipOpportunityComponent {
   // Component logic goes here
+  public benefits = [
+    'Brand visibility to our community',
+    'Access to exclusive events',
+    'Engagement with our audience',
+    'Network with potential partners',
+  ];
 }

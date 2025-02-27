@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 const TITO_URL = 'https://js.tito.io/v2/with/inline,';
 //const TITO_DEV_MODE = 'development_mode,';
 const TITO_DEV_MODE = '';
-//const TITO_TEST_MODE = 'test_mode,';
-const TITO_TEST_MODE = '';
+const TITO_TEST_MODE = 'test_mode,';
+//const TITO_TEST_MODE = '';
 const TITO_KEY = 'public_TobWnmMJc48u15ZAYXxG';
 
 @Injectable({
