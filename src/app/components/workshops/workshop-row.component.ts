@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
 import { BadgeComponent } from '../shared/badge.component';
 import { COLOR_RECIPIENTS } from '../shared/constant';
-import { tick } from '@angular/core/testing';
 
 @Component({
   selector: 'workshop-row',
