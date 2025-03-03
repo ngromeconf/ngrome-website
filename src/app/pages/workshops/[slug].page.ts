@@ -1,6 +1,6 @@
 import { RouteMeta } from '@analogjs/router';
-import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import WorkshopDetailComponent from '../../components/workshops/workshop-detail.component';
 import { WorkshopAttributes } from '../../models/workshop.model';
@@ -9,8 +9,6 @@ import {
   postMetaSlugResolver,
   postTitleResolver,
 } from './resolvers';
-import { LoaderService } from '../../services/loader.service';
-import { LoaderComponent } from '../../components/layout/loader.component';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaSlugResolver,
