@@ -12,6 +12,7 @@ import { CallForPaperComponent } from '../components/home/call-for-paper.compone
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { PastEditionSponsorsComponent } from '../components/home/features/past-edition-sponsors';
+import { SponsorshipOpportunityComponent } from '../components/home/features/sponsorship-opportunity.component';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
@@ -28,6 +29,7 @@ export const routeMeta: RouteMeta = {
     <!-- <app-venue /> -->
     <app-tickets />
     <app-call-for-paper />
+    <app-sponsorship-opportunity />
     <!--  <app-call-for-paper id="ticket-section" /> -->
     @if (sponsors$(); as Sponsors) {
       <!-- <app-sponsor [sponsors]="Sponsors.Main" [itemsPerRow]="1" type="Main" />
@@ -65,6 +67,7 @@ export const routeMeta: RouteMeta = {
     TicketsComponent,
     CallForPaperComponent,
     PastEditionSponsorsComponent,
+    SponsorshipOpportunityComponent,
   ],
 })
 export default class HomeComponent {

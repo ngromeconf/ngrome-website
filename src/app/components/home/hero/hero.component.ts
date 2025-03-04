@@ -30,7 +30,7 @@ import { Router } from '@angular/router';
           <h2
             class="text-4xl font-extrabold leading-10 tracking-tight text-slate-800 sm:text-5xl sm:leading-none md:text-6xl"
           >
-            JUNE
+            JUNE 19/20
             <span class="font-bold text-red-ngrome">2025</span>
           </h2>
           <!-- <span class="text-lg"> Workshops will be on June 25 and 26!</span>

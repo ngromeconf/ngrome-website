@@ -66,7 +66,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
                 <button
                   class="tito-widget-button"
                   target="_blank"
-                  (click)="goToWorkshop(workshop.ticket)"
+                  (click)="goToWorkshop(workshop.slug, workshop.ticket)"
                 >
                   Tickets
                 </button>
@@ -75,7 +75,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
             <button
               class="tito-widget-button "
               target="_blank"
-              (click)="goToWorkshop(workshop.slug)"
+              (click)="goToWorkshop(workshop.slug, undefined)"
             >
               Detail
             </button>
@@ -115,11 +115,23 @@ export class WorkshopRowComponent {
     private route: ActivatedRoute,
   ) {}
 
-  goToWorkshop(url: string | undefined) {
-    if (url && url.startsWith('http')) {
-      window.location.href = url;
+  goToWorkshop(url: string | undefined, ticket: string | undefined) {
+    console.log(url, ticket);
+    if (url && ticket) {
+      this.router.navigate([url], {
+        relativeTo: this.route,
+        fragment: 'TicketSection',
+      });
     } else {
       this.router.navigate([url], { relativeTo: this.route });
+    }
+  }
+
+  onGoToTicket() {
+    if (this.router.url === '/') {
+      this.router.navigate([], { fragment: 'TicketSection' });
+    } else {
+      this.router.navigate(['/'], { fragment: 'TicketSection' });
     }
   }
 }

@@ -32,14 +32,14 @@ export const NAV_MENU = [
   //   icon: 'agenda',
   // },
 
-  // {
-  //   name: 'CFP',
-  //   destinationUrl: '#callForPaper',
-  //   type: 'white',
-  //   pageSite: true,
-  //   visible: false,
-  //   icon: 'speaker',
-  // },
+  {
+    name: 'CFP',
+    destinationUrl: '#callForPaper',
+    type: 'white',
+    pageSite: true,
+    visible: false,
+    icon: 'speaker',
+  },
   // {
   //   name: 'Speakers',
   //   destinationUrl: '/speakers',
@@ -68,14 +68,14 @@ export const NAV_MENU = [
   //   type: 'white',
   //   visible: false,
   // },
-  // {
-  //   name: 'Workshops',
-  //   destinationUrl: '/workshops',
-  //   type: 'white',
-  //   pageSite: true,
-  //   visible: true,
-  //   icon: 'workshop',
-  // },
+  {
+    name: 'Workshops',
+    destinationUrl: '/workshops',
+    type: 'white',
+    pageSite: true,
+    visible: true,
+    icon: 'workshop',
+  },
   {
     pastEdition: true,
     name: '2022',

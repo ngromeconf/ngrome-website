@@ -24,7 +24,7 @@ export function injectWorkshopContent() {
     subdirectory: 'workshops',
   }).pipe(
     map((workshop) => {
-    const workshopData = {
+      const workshopData = {
         content: workshop.content as string,
         attributes: {
           ...workshop.attributes,
@@ -102,7 +102,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:image',
-      content: getUrl(workshop?.image),
+      content: getUrl(workshop?.ogImage),
     },
     {
       name: 'twitter:card',

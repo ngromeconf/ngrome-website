@@ -14,8 +14,6 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { TicketInterface } from 'src/app/models/ticket.interface';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { TicketsItemComponent } from './tickets-item.component';
-import { tick } from '@angular/core/testing';
 
 @Pipe({
   name: 'filterTicketByType',
@@ -70,17 +68,11 @@ export class FilterTicketByDatePipe implements PipeTransform {
     </div>
   `,
   styles: ``,
-  imports: [
-    CommonModule,
-    ButtonComponent,
-    TicketsItemComponent,
-    FilterTicketByDatePipe,
-  ],
+  imports: [CommonModule],
 })
 export class TicketsComponent {
   private tito: any;
-  public ticketsList$: Signal<TicketInterface[]> = this.getTickets();
-  filterby: string = 'conference';
+
   constructor(
     private titoService: TitoService,
     private winRef: WindowRef,
@@ -98,20 +90,5 @@ export class TicketsComponent {
         this.router.navigateByUrl(`/thank-you/${data.reference}/${data.name}`);
       });
     });
-  }
-
-  getTickets() {
-    const _http = inject(HttpClient);
-    return toSignal(_http.get<TicketInterface[]>('/api/v1/tickets'), {
-      initialValue: [],
-    });
-  }
-
-  updateTicketFilter(filter: string) {
-    this.filterby = filter;
-    console.log(this.filterby);
-  }
-  goTo(ticketType: string) {
-    this.router.navigateByUrl(`/${ticketType}?#workshops`);
   }
 }
