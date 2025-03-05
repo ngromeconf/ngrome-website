@@ -3,7 +3,16 @@ import { SponsorInterface, Sponsors } from 'src/app/models/sponsor.model';
 
 export default defineEventHandler(() => sponsors);
 
-const mainSponsor: SponsorInterface[] = [];
+const mainSponsor: SponsorInterface[] = [
+  {
+    name: 'angular.dev',
+    width: 230,
+    height: 97,
+    image:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_97,w_230/v1733585406/sponsors/logo-ANGULAR_ubew4u.webp',
+    url: 'https://angular.dev/',
+  },
+];
 
 const eventSponsor: SponsorInterface[] = [
   {
