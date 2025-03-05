@@ -8,10 +8,10 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
   imports: [CommonModule, NgOptimizedImage],
   template: `<div
     *ngIf="sponsors?.length"
-    class="px-5 w-full flex flex-wrap content-center mx-auto lg:px-24"
+    class="px-5 w-full flex flex-wrap content-center mx-auto lg:px-14"
   >
     <section
-      class="py-14 w-full md:py-24 flex flex-wrap content-center bg-white "
+      class="pt-10 w-full md:pt-14 flex flex-wrap content-center bg-white "
     >
       <div class="w-full px-10 mx-auto bg-white">
         <div class="md:px-4 mx-auto space-y-6">
@@ -51,7 +51,7 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
             </h2>
           }
           <!-- Component ends here -->
-          <div class="w-full mt-24">
+          <div class="w-full mt-14">
             @if (itemsPerRow === 1) {
               <div class="flex flex-wrap justify-center gap-2">
                 @for (item of sponsors; track $index) {
