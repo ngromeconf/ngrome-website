@@ -5,6 +5,7 @@ import { SponsorComponent } from '../sponsor.component';
 import { HttpClient } from '@angular/common/http';
 import { Sponsors } from 'src/app/models/sponsor.model';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { PastEditionSponsorsComponent } from '../../shared/past-edition-sponsors';
 
 @Component({
   selector: 'app-content',
@@ -82,18 +83,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
           customTitle="WE BELIEVE IN COMMUNITY"
           customTitleClass="mx-auto bg-gradient-to-b from-white to-red-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl"
         />
-        <app-sponsor
-          [itemsPerRow]="6"
-          [sponsors]="Sponsors.PastEdition"
-          [showTitle]="false"
-          customTitle="SPONSORS IN THE PAST BELIEVED IN US"
-          customTitleClass="text-slate-500 text-2xl mx-auto"
-        />
+
+        <app-past-edition-sponsors />
       }
     </section>
   `,
   styles: [],
-  imports: [CommonModule, SponsorComponent],
+  imports: [CommonModule, SponsorComponent, PastEditionSponsorsComponent],
 })
 export class ContentComponent {
   /**

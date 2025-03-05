@@ -15,14 +15,14 @@ export const NAV_MENU = [
     pageSite: true,
     icon: 'about',
   },
-  // {
-  //   name: 'Sponsors',
-  //   destinationUrl: '/sponsors',
-  //   type: 'white',
-  //   visible: true,
-  //   pageSite: true,
-  //   icon: 'sponsor',
-  // },
+  {
+    name: 'Sponsors',
+    destinationUrl: '/sponsors',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+    icon: 'sponsor',
+  },
   // {
   //   name: 'Agenda',
   //   destinationUrl: '/agenda',

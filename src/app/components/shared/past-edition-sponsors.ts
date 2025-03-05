@@ -1,7 +1,5 @@
 import { Component, inject, Signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { CardComponent } from './card.component';
-import { featureCardInterface } from 'src/app/models/features.model';
 import { Sponsors } from 'src/app/models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
