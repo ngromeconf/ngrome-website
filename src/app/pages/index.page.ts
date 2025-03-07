@@ -11,7 +11,7 @@ import { postMetaPageResolver, postTitleResolver } from './resolvers';
 import { CallForPaperComponent } from '../components/home/call-for-paper.component';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { SponsorshipOpportunityComponent } from '../components/home/features/sponsorship-opportunity.component';
+import { SponsorshipOpportunityComponent } from '../components/shared/sponsorship-opportunity.component';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
