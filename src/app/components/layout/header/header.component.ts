@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="./ngrome-full.svg"
+                  ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_242/v1741331352/website-assets/ngrome-full_sz0bsb.svg"
                   alt="NGRome Home"
                   class="h-full"
                   width="242"
