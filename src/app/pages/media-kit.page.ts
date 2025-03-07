@@ -8,15 +8,14 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [PageHeadComponent, NgOptimizedImage],
   providers: [],
   template: `
-    <app-page-head
-      [title]="'MEDIA KIT'"
-      [subtitle]="'Partners copy kit, feel free to add some personalization'"
-    />
+    <app-page-head [title]="'MEDIA KIT'" [subtitle]="subtitle" />
     <div class="max-w-screen-xl p-6 mx-auto">
       <div class="grid grid-cols-1 justify-center gap-5">
         <div class="max-w-full px-10 my-4 py-6 bg-white rounded-lg shadow-md">
           <div class="flex justify-between items-center">
-            <span class="font-light text-gray-600">Social post</span>
+            <span class="font-light text-gray-600"
+              >Social post example to use:</span
+            >
           </div>
           <div class="mt-2 text-left">
             <h1 class="text-2xl text-gray-700 font-bold hover:text-gray-600">
@@ -135,4 +134,6 @@ import { NgOptimizedImage } from '@angular/common';
   `,
   styles: ``,
 })
-export default class MediaKitComponent {}
+export default class MediaKitComponent {
+  public subtitle = `Thank you for helping us promote NGRome!<br> On this page, you'll find essential information, helpful links, and pre-written copy to make sharing about the conference easy. Let's make NGRome a resounding success together!`;
+}
