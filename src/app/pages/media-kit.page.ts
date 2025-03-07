@@ -23,12 +23,18 @@ import { NgOptimizedImage } from '@angular/common';
               Twitter example post
             </h1>
             <p class="mt-2 text-gray-600">
-              🎉 Get ready for a new season of &commat;ngromeconf The biggest
-              Angular conference in Italy!<br />
-              🗓️ You will get 2 days of coding sessions, networking with
-              professionals and one full day of workshops delivered by proven
-              experts and developers worldwide.<br />
-              <br />🎟️👉 https://ngrome.io <br />#ngrome
+              Angular + Rome = YES, PLEASE! 🇮🇹🍕! <br />
+              Partnering with &#x40;ngromeconf, Italy's biggest Angular bash!
+              <br /><br />
+              Coding, connections & the best food? Yes! 🇮🇹🍕
+              <br /><br />🎟️👉 https://ngrome.io <br />#NGRome #NGRomeMMXXV
+            </p>
+            <p class="mt-2 text-gray-600">
+              <img
+                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
+                width="617"
+                height="323"
+              />
             </p>
           </div>
         </div>
@@ -43,39 +49,48 @@ import { NgOptimizedImage } from '@angular/common';
           </div>
           <div class="mt-2 text-left">
             <h1 class="text-2xl text-gray-700 font-bold hover:text-gray-600">
-              LinkedIn example post
+              LinkedIn / Instagram post
             </h1>
             <p class="mt-2 text-gray-600">
-              🎉 Get ready for a new season of &commat;ngromeconf - The biggest
-              Angular conference in Italy! <br />🗓️ You will get 2 days of
-              coding sessions, networking with professionals and one full day of
-              workshops about building great web applications using Angular -
-              delivered by proven experts and developers worldwide.
-              <br /><br />🎟️ Tickets available here 👉 https://ngrome.io
-              <br /><br />#ngrome
+              Angular in Rome? YES, PLEASE! 🇮🇹🍕 <br /><br />We're SO pumped to
+              be partnering with NGRome, Italy's biggest Angular bash! 🎉 <br />
+              Get ready for coding, connections, and maybe a gelato or two. 🍦
+              <br />
+              Think of it: top-notch Angular workshops + the magic of Rome.
+              What's not to love? 😉 <br /><br />
+              Grab your tickets and join the fun! 🎟️👉
+              <a href="ngrome.io">ngrome.io</a><br /><br />
+              #NGRome #Angular #Rome #TechEvent #WebDev #PartnerLove
+              #CodingAdventures
             </p>
+            <div class="max-w-screen-xl p-6 mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="w-full">
+                  <img
+                    ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
+                    width="617"
+                    height="323"
+                    class="w-full h-auto rounded-lg shadow-md"
+                    alt="Conference preview 1"
+                  />
+                </div>
+                <div class="w-full">
+                  <img
+                    ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,w_598/v1741354095/2025/Conference_social_preview-vertical_v8j54w.jpg"
+                    width="617"
+                    height="323"
+                    class="w-full h-auto rounded-lg shadow-md"
+                    alt="Conference preview 2"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Image Banner -->
-    <div class="max-w-screen-xl p-6 mx-auto">
-      <div class="grid grid-cols-1 justify-center gap-5">
-        <div class="max-w-full px-10 my-4 py-6 bg-white rounded-lg shadow-md">
-          <div class="flex justify-between items-center">
-            <span class="font-light text-gray-600">Image banner</span>
-          </div>
-          <div class="mt-2 text-left">
-            <h1 class="text-2xl text-gray-700 font-bold hover:text-gray-600">
-              Banner image to include in your post
-            </h1>
-            <p class="mt-2 text-gray-600">
-              <img src="/photo/ngrome-cover-mmxxiv-social.jpg" />
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- NGROME Logos -->
     <div class="max-w-screen-xl p-6 mx-auto">
       <div class="grid grid-cols-1 justify-center gap-5">
@@ -90,13 +105,25 @@ import { NgOptimizedImage } from '@angular/common';
           </div>
           <div class="grid grid-cols-3 grid-flow-row justify-center gap-4 p-12">
             <div>
-              <img ngSrc="./ngrome-shield.svg" width="200" height="100" />
+              <img
+                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741331127/website-assets/ngrome-shield_rbvclr.svg"
+                width="200"
+                height="100"
+              />
             </div>
             <div>
-              <img ngSrc="./ngrome-vertical.svg" width="300" height="100" />
+              <img
+                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741331289/website-assets/ngrome-vertical_lwa2zg.svg"
+                width="300"
+                height="100"
+              />
             </div>
             <div>
-              <img ngSrc="./ngrome-full.svg" width="300" height="300" />
+              <img
+                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_300/v1741331352/website-assets/ngrome-full_sz0bsb.svg"
+                width="300"
+                height="66"
+              />
             </div>
           </div>
         </div>

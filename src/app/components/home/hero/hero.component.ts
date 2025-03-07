@@ -20,7 +20,7 @@ import { Router } from '@angular/router';
           <div class="lg:flex mb-12">
             <img
               class="w-full md:h-96"
-              ngSrc="./ngrome-vertical.svg"
+              ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741331289/website-assets/ngrome-vertical_lwa2zg.svg"
               alt="NGRome Conferece MMXXIV"
               width="706"
               height="384"
