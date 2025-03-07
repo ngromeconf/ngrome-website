@@ -23,10 +23,11 @@ import { NgOptimizedImage } from '@angular/common';
               Twitter example post
             </h1>
             <p class="mt-2 text-gray-600">
-              Angular + Rome = YES, PLEASE! 🇮🇹🍕! <br />
+              Angular + Rome = YES, PLEASE! 🇮🇹🍕 <br />
               Partnering with &#x40;ngromeconf, Italy's biggest Angular bash!
               <br /><br />
-              Coding, connections & the best food? Yes! 🇮🇹🍕
+              Get ready for coding, connections, and eat the Italian best food!
+              🇮🇹🍕
               <br /><br />🎟️👉 https://ngrome.io <br />#NGRome #NGRomeMMXXV
             </p>
             <p class="mt-2 text-gray-600">
@@ -54,12 +55,14 @@ import { NgOptimizedImage } from '@angular/common';
             <p class="mt-2 text-gray-600">
               Angular in Rome? YES, PLEASE! 🇮🇹🍕 <br /><br />We're SO pumped to
               be partnering with NGRome, Italy's biggest Angular bash! 🎉 <br />
-              Get ready for coding, connections, and maybe a gelato or two. 🍦
+              Get ready for coding, connections, and eat the Italian best food.
+              🇮🇹🍕
               <br />
-              Think of it: top-notch Angular workshops + the magic of Rome.
-              What's not to love? 😉 <br /><br />
+              Think of it: top-notch Angular workshops and Conference + the
+              magic of Rome. What's not to love? 😉 <br /><br />
               Grab your tickets and join the fun! 🎟️👉
-              <a href="ngrome.io">ngrome.io</a><br /><br />
+              <a href="https://ngrome.io/#TicketSection">ngrome.io</a
+              ><br /><br />
               #NGRome #Angular #Rome #TechEvent #WebDev #PartnerLove
               #CodingAdventures
             </p>
