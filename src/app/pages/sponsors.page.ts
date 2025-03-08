@@ -18,7 +18,11 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   template: `
     <app-page-head [title]="title" [subtitle]="subtitle" />
-    <app-page-image [image]="'/photo/sponsor-cover.jpg'" />
+    <app-page-image
+      [image]="
+        'https://res.cloudinary.com/dp1gwjz5w/image/upload/t_cover-page-image/v1741439284/website-assets/sponsor-cover_ogqlsn.jpg'
+      "
+    />
     <app-content />
   `,
   imports: [
