@@ -1,5 +1,5 @@
 import { Component, Signal, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { SponsorComponent } from '../sponsor.component';
 
 import { HttpClient } from '@angular/common/http';
@@ -27,31 +27,38 @@ import { SponsorshipOpportunityComponent } from '../../shared/sponsorship-opport
             class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100"
           >
             <div class="flex items-center mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8 text-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                [innerHTML]="benefit.icon"
-              ></svg>
-              <h3 class="text-xl font-semibold ml-3">{{ benefit.title }}</h3>
+              <img
+                ngSrc="{{ benefit.icon }}"
+                alt="{{ benefit.title }}"
+                width="60"
+                height="60"
+              />
+              <h3 class="text-xl font-semibold text-left ml-3">
+                {{ benefit.title }}
+              </h3>
             </div>
-            <p class="text-gray-600">{{ benefit.description }}</p>
+            <p class="text-gray-600 text-left">{{ benefit.description }}</p>
           </div>
         }
       </div>
 
       <div class="mt-12 text-center">
-        <p class="text-lg font-medium mb-6">
+        <p class="text-lg font-medium mb-6 flex justify-center items-center">
           Join our growing list of sponsors who have experienced these benefits
           firsthand.
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6 ml-2 animate-bounce"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </p>
-        <button
-          class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-        >
-          Become a Sponsor
-        </button>
       </div>
     </section>
 
@@ -100,7 +107,7 @@ import { SponsorshipOpportunityComponent } from '../../shared/sponsorship-opport
   `,
   styles: [],
   imports: [
-    CommonModule,
+    NgOptimizedImage,
     SponsorComponent,
     PastEditionSponsorsComponent,
     SponsorshipOpportunityComponent,
@@ -117,32 +124,32 @@ export class ContentComponent {
     {
       title: 'Reach a Highly Engaged Audience',
       description: `Showcase your company and products to hundreds of active European developers, creating significant brand exposure and generating genuine interest.`,
-      icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />',
+      icon: 'website-assets/people-multiple-svgrepo-com_m1rjts.svg',
     },
     {
       title: 'Unlock Talent in the Eternal City',
       description: `Rome, with its rich history and growing tech scene, is a hub for talent. NGRome provides an unparalleled opportunity to connect with highly skilled Angular developers actively seeking new opportunities.`,
-      icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />',
+      icon: 'website-assets/grow-growth-hand-svgrepo-com_dlm80o.svg',
     },
     {
       title: 'Forge International Partnerships',
       description: `NGRome attracts a global audience, allowing you to build strategic partnerships and expand your network internationally. Engage with industry leaders and key players in the tech landscape, all against the backdrop of Rome's iconic atmosphere.`,
-      icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />',
+      icon: 'website-assets/partners-solid-svgrepo-com_l7vkmu.svg',
     },
     {
       title: 'Champion Innovation and Leadership',
       description: `Align your brand with NGRome and demonstrate your commitment to cutting-edge Angular solutions. Position your company as a leader in technological innovation and support the growth of the developer community.`,
-      icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />',
+      icon: 'website-assets/invention-idea-svgrepo-com_ozqjyl.svg',
     },
     {
       title: 'Support Inclusivity and Community',
       description: `NGRome is dedicated to fostering an inclusive environment, including supporting initiatives like ngGirls. By sponsoring NGRome, you'll contribute to empowering underrepresented groups in tech and demonstrate your commitment to a more equitable future.`,
-      icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />',
+      icon: 'website-assets/community-svgrepo-com_zzgr6v.svg',
     },
     {
       title: 'Experience the Unique Roman Atmosphere',
       description: `Leverage the unique cultural backdrop of Rome to create a memorable and impactful sponsorship experience. This isn't just an event; it's an opportunity to blend technology with the timeless charm of the Eternal City.`,
-      icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />',
+      icon: 'website-assets/vespa-scooter-svgrepo-com_pr6mpl.svg',
     },
   ];
 
