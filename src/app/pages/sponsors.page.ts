@@ -17,13 +17,12 @@ export const routeMeta: RouteMeta = {
   selector: 'app-sponsor',
   standalone: true,
   template: `
-    <app-page-head
-      [title]="'Sponsors'"
-      [subtitle]="
-        'We want to say thank you to our Sponsors and Community Partners! They help make NG Rome Conference possible. Come and say Ciao the day of the conference.'
+    <app-page-head [title]="title" [subtitle]="subtitle" />
+    <app-page-image
+      [image]="
+        'https://res.cloudinary.com/dp1gwjz5w/image/upload/t_cover-page-image/v1741439284/website-assets/sponsor-cover_ogqlsn.jpg'
       "
     />
-    <app-page-image [image]="'/photo/sponsor-cover.jpg'" />
     <app-content />
   `,
   imports: [
@@ -34,4 +33,8 @@ export const routeMeta: RouteMeta = {
     ContentComponent,
   ],
 })
-export default class SponsorComponent {}
+export default class SponsorComponent {
+  public title =
+    'Become a Sponsor of NGRome: Connect with the Heart of European Angular Development';
+  public subtitle = `NGRome isn't just another Angular conference; it's the premier gathering in the Eternal City, drawing hundreds of passionate developers and tech innovators from across Europe and beyond. By becoming a sponsor, you'll position your company at the forefront of the Angular community, right here in the vibrant heart of Rome.`;
+}

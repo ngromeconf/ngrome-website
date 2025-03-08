@@ -4,6 +4,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideFileRouter } from '@analogjs/router';
 import { provideContent, withMarkdownRenderer } from '@analogjs/content';
 import { withInMemoryScrolling, withViewTransitions } from '@angular/router';
+import { provideCloudinaryLoader } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,5 +15,6 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ anchorScrolling: 'enabled' }),
     ),
     provideContent(withMarkdownRenderer()),
+    provideCloudinaryLoader(`https://res.cloudinary.com/dp1gwjz5w`),
   ],
 };

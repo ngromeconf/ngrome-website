@@ -8,8 +8,7 @@ const mainSponsor: SponsorInterface[] = [
     name: 'angular.dev',
     width: 230,
     height: 97,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_97,w_230/v1733585406/sponsors/logo-ANGULAR_ubew4u.webp',
+    image: 'sponsors/logo-ANGULAR_ubew4u.webp',
     url: 'https://angular.dev/',
   },
 ];
@@ -17,7 +16,7 @@ const mainSponsor: SponsorInterface[] = [
 const eventSponsor: SponsorInterface[] = [
   {
     name: 'Gestalt Group',
-    image: './sponsors/logo-GESTALT.svg',
+    image: 'sponsors/logo-GESTALT_rdflm2.svg',
     url: 'https://www.gestalteventi.it/',
   },
 ];
@@ -25,7 +24,7 @@ const eventSponsor: SponsorInterface[] = [
 const goldSponsors: SponsorInterface[] = [
   {
     name: 'ICT Group',
-    image: './sponsors/logo-ICT-GROUP.svg',
+    image: 'sponsors/logo-ICT-GROUP_shp3js.svg',
     url: 'https://ict-group.it/',
   },
 ];
@@ -268,46 +267,40 @@ const pastEditionSponsors: SponsorInterface[] = [
     name: 'angular.dev',
     width: 230,
     height: 97,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_97,w_230/v1733585406/sponsors/logo-ANGULAR_ubew4u.webp',
+    image: 'sponsors/logo-ANGULAR_ubew4u.webp',
     url: 'https://angular.dev/',
   },
   {
     name: 'ConTe.it',
     width: 230,
     height: 97,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_97,w_230/v1733585419/sponsors/logo-CONTE.IT_przqvc.webp',
+    image: 'sponsors/logo-CONTE.IT_przqvc.webp',
     url: 'https://www.conte.it/',
   },
   {
     name: 'Lascaux',
     width: 220,
     height: 93,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_93,w_220/v1733585472/sponsors/logo-LASCAUX_rz0g7c.webp',
+    image: '/sponsors/logo-LASCAUX_rz0g7c.webp',
     url: 'https://www.lascaux.it/',
   },
   {
     name: 'Ineo',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_93,w_220/v1733585458/sponsors/logo-INEO_dy9ubn.webp',
+    image: 'sponsors/logo-INEO_dy9ubn.webp',
     width: 220,
     height: 93,
     url: 'https://www.ineo.it/',
   },
   {
     name: 'Digitouch',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_105,w_250/v1733585434/sponsors/logo-DIGITOUCH_uoaz8d.webp',
+    image: 'sponsors/logo-DIGITOUCH_uoaz8d.webp',
     width: 250,
     height: 105,
     url: 'https://www.gruppodigitouch.it/',
   },
   {
     name: 'Cloudinary',
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_101,w_240/v1733585354/sponsors/logo-CLOUDINARY_ybyx4r.webp',
+    image: 'sponsors/logo-CLOUDINARY_ybyx4r.webp',
     width: 240,
     height: 101,
     url: 'https://cloudinary.com/',
@@ -316,88 +309,77 @@ const pastEditionSponsors: SponsorInterface[] = [
     name: 'Fabrick',
     width: 220,
     height: 93,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_93,w_220/v1733585325/sponsors/logo-FABRICK_db0ybp.webp',
+    image: 'sponsors/logo-FABRICK_db0ybp.webp',
     url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
   },
   {
     name: 'Almaviva Digitaltec',
     width: 150,
     height: 150,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_pad,w_150,h_150/v1733585510/sponsors/sponsor_2FAlmaviva_qy71bp.svg',
+    image: 'sponsors/sponsor_2FAlmaviva_qy71bp.svg',
     url: 'https://www.almaviva.it/it_IT/Societa-del-gruppo/AlmavivA_Digitaltec',
   },
   {
     name: 'Sap',
     width: 180,
     height: 89,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_89,w_180/v1733585782/sponsors/sponsor_2FSAP_scrn_R_gqt5j7.webp',
+    image: 'sponsors/sponsor_2FSAP_scrn_R_gqt5j7.webp',
     url: 'https://www.sap.com/',
   },
   {
     name: 'Live Love App',
     width: 200,
     height: 134,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_134,w_200/v1733585761/sponsors/sponsor_2FPrimary_20Logo_nyvqei.webp',
+    image: 'sponsors/sponsor_2FPrimary_20Logo_nyvqei.webp',
     url: 'https://liveloveapp.com/',
   },
   {
     name: 'Keypartner',
     width: 250,
     height: 105,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mpad,w_250,h_100/v1733585388/sponsors/logo-KeyPartner_ztyfpd.svg',
+    image: 'sponsors/logo-KeyPartner_ztyfpd.svg',
     url: 'https://www.keypartner.com/',
   },
   {
     name: 'ICT Group',
     height: 105,
     width: 250,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_mfit,h_105,w_250/v1733585371/sponsors/logo-ICT-GROUP_shp3js.webp',
+    image: 'sponsors/logo-ICT-GROUP_shp3js.webp',
     url: 'https://ict-group.it/',
   },
   {
     name: 'Namiral - Bit4ID',
     width: 250,
     height: 51,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,w_250/v1733585772/sponsors/sponsor_2FNamirial_20-_20Bit4Id_jeyama.webp',
+    image: 'sponsors/sponsor_2FNamirial_20-_20Bit4Id_jeyama.webp',
     url: 'https://www.namirial.it/',
   },
   {
     name: 'Fervento',
     width: 230,
     height: 97,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,w_230/v1733585448/sponsors/logo-FERVENTO_xrx3wd.webp',
+    image: 'sponsors/logo-FERVENTO_xrx3wd.webp',
     url: 'https://fervento.com/',
   },
   {
     name: 'Auth0',
     height: 100,
     width: 250,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fill,g_north_east,w_250,h_100/v1733585539/sponsors/sponsor_2Fauth0_xq4cej.png',
+    image: 'sponsors/sponsor_2Fauth0_xq4cej.png',
     url: 'https://auth0.com/',
   },
   {
     name: 'CyberSafe',
     width: 250,
     height: 50,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_50,w_250/v1733585562/sponsors/partner_2FCybersafe_e1mkg5.webp',
+    image: 'sponsors/partner_2FCybersafe_e1mkg5.webp',
     url: 'https://cybersafe.com/',
   },
   {
     name: 'Jetbrains',
     width: 180,
     height: 180,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1733594036/sponsors/partner_2Fjetbrains_p7jquw.webp',
+    image: 'sponsors/partner_2Fjetbrains_p7jquw.webp',
     url: 'https://www.jetbrains.com/',
   },
   {
@@ -405,15 +387,14 @@ const pastEditionSponsors: SponsorInterface[] = [
     width: 180,
     height: 180,
     image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_180,w_180/v1733594065/sponsors/partner_2F02-sticker-mule-logo-light-bg-stacked_zptiif.webp',
+      'sponsors/partner_2F02-sticker-mule-logo-light-bg-stacked_zptiif.webp',
     url: 'https://www.stickermule.com/',
   },
   {
     name: 'Blexin',
     width: 250,
     height: 64,
-    image:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fit,h_64,w_250/v1733594087/sponsors/sponsor_2Fblexin_cropped_nge1n6.webp',
+    image: 'sponsors/sponsor_2Fblexin_cropped_nge1n6.webp',
     url: 'https://blexin.com/en/',
   },
 ];
