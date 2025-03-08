@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   providers: [],
   schemas: [],
   template: `
-    <section class="relative w-full h-fit bgcover">
+    <section class="relative w-full h-fit pt-24">
       <div class="container relative w-full px-8 pt-10 pb-24 mx-auto lg:px-4">
         <div
           class="flex flex-col w-full mb-6 text-left lg:text-center items-center "
@@ -55,13 +55,7 @@ import { Router } from '@angular/router';
       </div>
     </section>
   `,
-  styles: [
-    `
-      .bgcover {
-        background-image: url('./images/bganimated.svg');
-      }
-    `,
-  ],
+  styles: [``],
   imports: [CommonModule, NgOptimizedImage],
 })
 export class HeroComponent {

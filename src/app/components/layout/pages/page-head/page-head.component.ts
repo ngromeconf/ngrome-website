@@ -6,7 +6,7 @@ import { SocialShareComponent } from '../../../social-share/social-share.compone
   selector: 'app-page-head',
   standalone: true,
   template: `
-    <section>
+    <section class="pt-24">
       <div
         class="container flex flex-col items-center px-5 pb-6 pt-10 mx-auto overflow-hidden max-w-7xl md:flex-row lg:px-20"
       >
