@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   providers: [],
   schemas: [],
   template: `
-    <section class="relative w-full h-fit bg-no-repeat bg-cover">
+    <section class="relative w-full h-fit bgcover">
       <div class="container relative w-full px-8 pt-10 pb-24 mx-auto lg:px-4">
         <div
           class="flex flex-col w-full mb-6 text-left lg:text-center items-center "
@@ -19,12 +19,10 @@ import { Router } from '@angular/router';
           >
           <div class="lg:flex mb-12">
             <img
-              class="w-full md:h-96"
-              ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741331289/website-assets/ngrome-vertical_lwa2zg.svg"
+              ngSrc="website-assets/ngrome-vertical_lwa2zg.svg"
               alt="NGRome Conferece MMXXIV"
-              width="706"
-              height="384"
-              priority
+              width="700"
+              height="314"
             />
           </div>
           <h2
@@ -57,7 +55,13 @@ import { Router } from '@angular/router';
       </div>
     </section>
   `,
-  styles: [``],
+  styles: [
+    `
+      .bgcover {
+        background-image: url('./images/bganimated.svg');
+      }
+    `,
+  ],
   imports: [CommonModule, NgOptimizedImage],
 })
 export class HeroComponent {

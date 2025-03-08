@@ -22,11 +22,10 @@ import { Router } from '@angular/router';
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_242/v1741331352/website-assets/ngrome-full_sz0bsb.svg"
+                  ngSrc="/website-assets/ngrome-full_sz0bsb.svg"
                   alt="NGRome Home"
-                  class="h-full"
-                  width="242"
-                  height="40"
+                  width="200"
+                  height="44"
                   priority
                 />
               </div>
@@ -121,7 +120,7 @@ import { Router } from '@angular/router';
             <a href="./" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
-                  ngSrc="/ngrome-white-shield.svg"
+                  ngSrc="/website-assets/ngrome-white-shield_scjivm.svg"
                   alt="NGRome Home"
                   class="h-full"
                   width="40"
@@ -139,7 +138,7 @@ import { Router } from '@angular/router';
                 class="text-base  font-semibold  flex text-red-ngrome hover-ticket"
                 >Tickets
                 <img
-                  ngSrc="/menu/ticket.svg"
+                  ngSrc="website-assets/ticket_cxqaxt.svg"
                   alt="NGRome ticket"
                   class="h-full ml-2"
                   width="24"
