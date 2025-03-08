@@ -1,3 +1,19 @@
+:host {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    height: 86px;
+    background-image: url('https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741446462/website-assets/bganimated_wjmnny.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
 .pastEdition:hover .popover {
     visibility: visible;
     opacity: 1;
