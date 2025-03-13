@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
           >
             <div>
               <span
-                class="inline-block rounded-full bg-gray-300 px-3 py-1 text-sm font-medium text-red-ngrome"
+                class="inline-block rounded-full bg-white px-3 py-1 text-sm font-medium text-gray-900"
               >
                 2025 Edition
               </span>
@@ -154,10 +154,10 @@ import { Router } from '@angular/router';
             </div>
           </div>
 
-          <div class="flex justify-center hidden lg:block">
+          <div class="flex justify-center items-center hidden lg:block">
             <div
-              class="w-full max-w-md bg-[url('https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_400/v1741633787/website-assets/ngrome-gradient-shield_viiy2h.svg')] bg-cover bg-center"
-              style="width: 400px; height: 429px;"
+              class="w-full bg-[url('https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_400/v1741839700/website-assets/ngrome-gradient-shield_wa2ked.svg')] bg-auto bg-center bg-no-repeat"
+              style="width: 100%; height: 439px;"
             ></div>
           </div>
         </div>

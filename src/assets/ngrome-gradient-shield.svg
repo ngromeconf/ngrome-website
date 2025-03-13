@@ -28,22 +28,23 @@
 <defs>
 <linearGradient id='a' gradientUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
     <stop offset='0' stop-color='red'>
-    <animate attributeName="stop-color"
-        values="#5C44E4;#8514F5;#F736E3;#E90464;#F11653" dur="20s" repeatCount="indefinite">
-    </animate>
+        <animate attributeName="stop-color"
+            values="#5C44E4;#8514F5;#F736E3;#E90464;#F11653" dur="20s" repeatCount="indefinite" />
     </stop>
-    <stop offset='.5' stop-color='purple'>
-    <animate attributeName="stop-color"
-        values="#8514F5;#F736E3;#E90464;#F11653;#5C44E4;" dur="20s" repeatCount="indefinite">
-    </animate>
+    <stop offset='.3' stop-color='purple'>
+        <animate attributeName="stop-color"
+            values="#E90464;#F11653;#5C44E4;#8514F5;#F736E3;" dur="20s" repeatCount="indefinite" />
+    </stop>
+    <stop offset='.6' stop-color='blue'>
+        <animate attributeName="stop-color"
+            values="#8514F5;#F736E3;#E90464;#F11653;#5C44E4;" dur="20s" repeatCount="indefinite" />
     </stop>
     <stop offset='1' stop-color='blue'>
-    <animate attributeName="stop-color"
-        values="#F736E3;#E90464;#F11653;#5C44E4;#8514F5;" dur="20s" repeatCount="indefinite">
-    </animate>
+        <animate attributeName="stop-color"
+            values="#8514F5;#F736E3;#E90464;#F11653;#5C44E4;" dur="20s" repeatCount="indefinite" />
     </stop>
     <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5"
-    dur="20s" repeatCount="indefinite" />
+        dur="20s" repeatCount="indefinite" />
 </linearGradient>
 <clipPath id="clip0_2357_2565">
 <rect width="409" height="439" fill="white"/>
