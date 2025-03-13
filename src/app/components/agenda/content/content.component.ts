@@ -147,7 +147,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                   class="object-contain img-sponsor"
                                   [alt]="item.name"
                                   [title]="item.name"
-                                  [src]="item.image"
+                                  [ngSrc]="item.image"
+                                  width="400"
+                                  height="168"
                                 />
                               }
                             </div>
@@ -159,7 +161,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                   class="object-contain img-sponsor"
                                   [alt]="item.name"
                                   [title]="item.name"
-                                  [src]="item.image"
+                                  [ngSrc]="item.image"
+                                  width="400"
+                                  height="168"
                                 />
                               }
                             </div>
