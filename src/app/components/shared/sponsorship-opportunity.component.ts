@@ -4,12 +4,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-sponsorship-opportunity',
   standalone: true,
-  imports: [NgFor],
+  styles: [
+    `
+      .bgGradient {
+        background-image: url('https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741446462/website-assets/bganimated_wjmnny.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    `,
+  ],
+
   template: `<!-- Sponsorship CTA Section -->
 
-    <section
-      class="bg-gradient-to-r from-red-ngrome to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
-    >
+    <section class="bgGradient py-12 px-4 sm:px-6 md:py-16 md:px-8">
       <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-xl shadow-xl overflow-hidden">
           <div class="p-6 sm:p-10">

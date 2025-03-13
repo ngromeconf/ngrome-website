@@ -80,6 +80,11 @@ analog-markdown-route {
     transition: all 0.3s ease;
 }
 
+.button-green {
+    @apply inline-flex items-center px-5 py-2.5 text-sm bg-green-600 hover:bg-red-ngrome text-slate-100 font-medium rounded-md active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300;
+    transition: all 0.3s ease;
+}
+
 .tito-widget-button:active {
     scale: 1.1;
 }
