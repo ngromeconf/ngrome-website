@@ -29,7 +29,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
             Thursday
           </h2>
           <p class="margin-1 text-gray-500 leading-5 font-medium text-lg">
-            June 27, 2024
+            June 20, 2025
           </p>
           <span
             class="bg-primary-100 text-primary-800 margin-1 font-medium text-center inline-flex text-xs px-2.5 rounded py-0.5 XklWzT8y98pp042XEQp4 _A6LflweZRUwrcL6M2Tk ay0ziTPUL4Ag5d1DkSY7 neyUwteEn7DOg9pBSJJE cA4BPuqyV1eox6S0acvl AOldjxkjQirRFQcsh_FR YPSoR6AXtPgkmylUmcbT dark:bg-primary-900 dark:text-primary-300"
