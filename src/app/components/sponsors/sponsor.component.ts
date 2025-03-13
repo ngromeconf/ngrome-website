@@ -8,15 +8,15 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
   imports: [CommonModule, NgOptimizedImage],
   template: `<div
     *ngIf="sponsors?.length"
-    class="px-5 w-full flex flex-wrap content-center mx-auto lg:px-14"
+    class="px-4 py-5 w-full flex flex-wrap content-center mx-auto lg:px-14"
   >
     <section
       class="pt-10 w-full md:pt-14 flex flex-wrap content-center bg-white "
     >
-      <div class="w-full px-10 mx-auto bg-white">
+      <div class="w-full mx-auto bg-white">
         <div class="md:px-4 mx-auto space-y-6">
           <!-- Component starts here -->
-          @if (showTitle) {
+          <ng-container *ngIf="showTitle; else customTitleTemplate">
             <h2 class="flex flex-row flex-nowrap items-center mt-8 mb-12">
               <span
                 class="flex-grow block border-t border-red"
@@ -32,7 +32,8 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                   'bg-slate-300': type === 'Silver',
                   'bg-green-500': type === 'Diversity',
                   'bg-blue-400': type === 'Event',
-                  'bg-orange-400': type === 'Technical'
+                  'bg-orange-400': type === 'Technical',
+                  'bg-teal-500': type === 'Community'
                 }"
               >
                 {{ type }} PARTNER
@@ -43,100 +44,46 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                 role="presentation"
               ></span>
             </h2>
-          } @else if (customTitle) {
+          </ng-container>
+          <ng-template #customTitleTemplate>
             <h2 class="flex flex-row flex-nowrap items-center my-8">
               <span [ngClass]="customTitleClass">
                 {{ customTitle }}
               </span>
             </h2>
-          }
+          </ng-template>
           <!-- Component ends here -->
           <div class="w-full mt-14">
-            @if (itemsPerRow === 1) {
-              <div class="flex flex-wrap justify-center gap-2">
-                @for (item of sponsors; track $index) {
-                  <div class="w-full md:w-1/3">
-                    <a
-                      [href]="item.url ? item.url : '/sponsors'"
-                      target="_blank"
-                    >
-                      <img
-                        [alt]="item.name"
-                        [title]="item.name"
-                        [ngSrc]="item.image"
-                        class="flex-shrink-0 object-cover object-center w-full h-35"
-                        width="504"
-                        height="250"
-                      />
-                    </a>
-                  </div>
-                }
-              </div>
-            }
-            @if (itemsPerRow === 3) {
-              <div class="flex flex-wrap justify-center gap-2">
-                @for (item of sponsors; track $index) {
-                  <div class="w-2/3 md:w-1/4">
-                    <a
-                      class="self-center my-8"
-                      [href]="item.url ? item.url : '/sponsors'"
-                      target="_blank"
-                    >
-                      <img
-                        [alt]="item.name"
-                        [title]="item.name"
-                        [ngSrc]="item.image"
-                        class="flex-shrink-0 object-cover object-center w-full h-35"
-                        width="504"
-                        height="250"
-                      />
-                    </a>
-                  </div>
-                }
-              </div>
-            }
-            @if (itemsPerRow === 5) {
-              <div class="flex flex-wrap justify-center gap-8">
-                @for (item of sponsors; track $index) {
-                  <div class="w-2/5 md:w-1/5">
-                    <a
-                      class="flex items-center align-middle"
-                      [href]="item.url ? item.url : '/sponsors'"
-                      target="_blank"
-                    >
-                      <img
-                        [alt]="item.name"
-                        [title]="item.name"
-                        [ngSrc]="item.image"
-                        class="flex-shrink-0 object-cover object-center w-full h-25"
-                        width="504"
-                        height="250"
-                      />
-                    </a>
-                  </div>
-                }
-              </div>
-            }
-            @if (itemsPerRow === 6) {
-              <div class="grid m-auto gap-8 grid-cols-5 md:grid-cols-7">
-                @for (item of sponsors; track $index) {
-                  <a
-                    class="flex items-center align-middle"
-                    [href]="item.url ? item.url : '/sponsors'"
-                    target="_blank"
-                  >
+            <div
+              [ngClass]="{
+                'flex flex-wrap justify-center gap-2': itemsPerRow !== 6,
+                'grid m-auto gap-2 md:gap-8 grid-cols-3 md:grid-cols-6':
+                  itemsPerRow === 6
+              }"
+            >
+              <ng-container *ngFor="let item of sponsors; let i = index">
+                <div
+                  [ngClass]="{
+                    'w-full md:w-1/3': itemsPerRow === 1,
+                    'w-2/3 md:w-1/4': itemsPerRow === 3,
+                    'w-2/5 md:w-1/5': itemsPerRow === 5,
+                    'flex items-center align-middle': itemsPerRow === 6
+                  }"
+                  [class.mx-auto]="(i + 1) % itemsPerRow !== 0"
+                >
+                  <a [href]="item.url ? item.url : '/sponsors'" target="_blank">
                     <img
                       [alt]="item.name"
                       [title]="item.name"
                       [ngSrc]="item.image"
-                      class="flex-shrink-0 object-cover object-center w-full h-25"
-                      width="200"
-                      height="50"
+                      class="flex-shrink-0 object-cover object-center w-full h-35"
+                      [width]="200"
+                      [height]="44"
                     />
                   </a>
-                }
-              </div>
-            }
+                </div>
+              </ng-container>
+            </div>
           </div>
         </div>
       </div>

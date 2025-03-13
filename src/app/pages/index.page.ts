@@ -31,11 +31,11 @@ export const routeMeta: RouteMeta = {
     @if (sponsors$(); as Sponsors) {
       <app-sponsor [sponsors]="Sponsors.Main" [itemsPerRow]="1" type="Main" />
       <app-sponsor [sponsors]="Sponsors.Gold" [itemsPerRow]="3" type="Gold" />
-      <!-- <app-sponsor
+      <app-sponsor
         [sponsors]="Sponsors.Silver"
         [itemsPerRow]="3"
         type="Silver"
-      /> -->
+      />
       <!-- <app-sponsor
         [sponsors]="Sponsors.Bronze"
         [itemsPerRow]="5"
@@ -52,6 +52,11 @@ export const routeMeta: RouteMeta = {
         type="Technical"
       /> -->
       <app-sponsor [sponsors]="Sponsors.Event" [itemsPerRow]="1" type="Event" />
+      <app-sponsor
+        [sponsors]="Sponsors.Community"
+        [itemsPerRow]="5"
+        type="Community"
+      />
     }
   `,
   imports: [

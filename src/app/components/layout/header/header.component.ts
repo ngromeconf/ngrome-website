@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
         class="py-6 w-full "
         style="top: 0; z-index: 1000;"
         aria-label="Global"
+        x
       >
         <div class="container justify-between flex w-full mx-auto px-4 lg-px-8">
           <div class="flex lg:flex-1">
@@ -54,7 +55,7 @@ import { Router } from '@angular/router';
               *ngIf="!(toggleService.toggle$ | async)"
             >
               <span class="sr-only">Open main menu</span>
-              <svg fill="#000000" viewBox="0 0 20 20" class="w-6 h-6">
+              <svg fill="#fff" viewBox="0 0 20 20" class="w-6 h-6">
                 <path
                   fill-rule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
@@ -151,7 +152,7 @@ import { Router } from '@angular/router';
               type="button"
               class="-m-2.5 rounded-md p-2.5 text-gray-700"
               (click)="toggleService.updateData(false)"
-              aria-label="hidden"
+              aria-label="hamburger-menu"
               *ngIf="toggleService.toggle$ | async"
             >
               <span class="sr-only">Close menu</span>

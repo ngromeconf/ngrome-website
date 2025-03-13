@@ -28,7 +28,15 @@ const goldSponsors: SponsorInterface[] = [
     url: 'https://ict-group.it/',
   },
 ];
-const silverSponsor: SponsorInterface[] = [];
+const silverSponsor: SponsorInterface[] = [
+  {
+    name: 'Cloudinary',
+    image: 'sponsors/logo-CLOUDINARY_ybyx4r.webp',
+    width: 240,
+    height: 101,
+    url: 'https://cloudinary.com/',
+  },
+];
 const bronzeSponsor: SponsorInterface[] = [];
 const diversitySponsor: SponsorInterface[] = [];
 const technicalSponsors: SponsorInterface[] = [];
@@ -61,9 +69,14 @@ const communityPartners: SponsorInterface[] = [
   // {
   //   name: 'Coderful',
   //   image:
-  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1711105674/ngrome-sponsors/coderful-colore-trasparente_wyi541.png',
+  //     't_sponsor-fit-200x44/v1711105674/ngrome-sponsors/coderful-colore-trasparente_wyi541.png',
   //   url: 'https://www.coderful.io/',
   // },
+  {
+    name: 'NGVenice',
+    image: 'c_scale,w_400/v1741837536/ngrome-sponsors/ngvenice_ol9opp.svg',
+    url: 'https://ng-venice.org/',
+  },
   // {
   //   name: 'StopCoding',
   //   image:
@@ -76,23 +89,23 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2F01_develer_main_bicolor_web.png?alt=media&amp;token=405ebfb6-5763-4809-b4ff-031e36499cfd',
   //   url: 'https://twitter.com/develer',
   // },
-  // {
-  //   name: 'Angular Love',
-  //   image: 'sponsors/community/angular-love.svg',
-  //   url: 'https://www.angular.love/',
-  // },
+  {
+    name: 'Angular Love',
+    image:
+      't_sponsor-fit-200x44/v1709385406/ngrome-sponsors/ANGULAR.LOVE_fzlp7p.png',
+    url: 'https://www.angular.love/',
+  },
   // {
   //   name: 'WeAreDevelopers',
   //   image:
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FWeAreDevelopers_Positiv.png?alt=media&token=2becfbee-eeb6-4c3e-a5bf-722f2e45f15f&_gl=1*1upw65f*_ga*NzM2NjU2MDMyLjE2ODkxNjQ2MDY.*_ga_CW55HF8NVT*MTY5NzE5MDQ3NC4xNy4xLjE2OTcxOTA1MjMuMTEuMC4w',
   //   url: 'https://www.wearedevelopers.com/',
   // },
-  // {
-  //   name: 'Analog',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fanalog-logo.svg?alt=media&token=79f9ac08-9c02-4a84-904d-50f70681a5ea&_gl=1*8dhdph*_ga*NzM2NjU2MDMyLjE2ODkxNjQ2MDY.*_ga_CW55HF8NVT*MTY5NzE5MDQ3NC4xNy4xLjE2OTcxOTA2MzkuMzcuMC4w',
-  //   url: 'https://analogjs.org/',
-  // },
+  {
+    name: 'Analog',
+    image: 't_sponsor-fit-200x44/v1709385416/ngrome-sponsors/ANALOG_sf5n0o.svg',
+    url: 'https://analogjs.org/',
+  },
   // {
   //   name: 'GDG Pescara',
   //   image:
@@ -201,12 +214,12 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fmindsharing%201%20-%20Aldo%20Pergjergji%20(1).png?alt=media&amp;token=79a1c729-d4c3-4bbb-abec-c530136a4895',
   //   url: 'https://www.mindsharing.tech',
   // },
-  // {
-  //   name: 'ngGirls',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fnggirls.png?alt=media&amp;token=4f300cae-9b96-402f-bf12-17d37adf63d3',
-  //   url: 'http://ng-girls.org/',
-  // },
+  {
+    name: 'ngGirls',
+    image:
+      't_sponsor-fit-200x44/v1709386617/ngrome-sponsors/ng_girls_s1idtn.png',
+    url: 'http://ng-girls.org/',
+  },
   // {
   //   name: 'AngularDay',
   //   image:
@@ -248,12 +261,12 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular_wroclaw-small.webp?alt=media&token=3074df1f-744e-4b76-a2da-3bf0a1c18252',
   //   url: 'https://twitter.com/AngularWroclaw',
   // },
-  // {
-  //   name: 'Angular Space',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular-space-small.webp?alt=media&token=3a61ce50-3459-4518-a728-a044ef3359ea',
-  //   url: 'https://www.angularspace.com/',
-  // },
+  {
+    name: 'Angular Space',
+    image:
+      't_sponsor-fit-200x44/v1709385405/ngrome-sponsors/ANGULAR_SPACE_j4fl3q.webp',
+    url: 'https://www.angularspace.com/',
+  },
   // {
   //   name: 'Latina in Tech',
   //   image:
