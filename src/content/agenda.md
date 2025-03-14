@@ -26,8 +26,7 @@ agenda:
             type: Opening Keynote
             duration: 40
             speakers: 
-                - slug: 
-                
+                - slug: minko-geckev
           - slug: talk-1
             type: Talk 1
             duration: 25
