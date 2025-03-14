@@ -188,8 +188,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
               When:
               <span class="font-semibold"> June 20, 2025 | 8 AM - 6 PM </span>
             </p>
-            Venue:
-            <span class="text-blue-600 hover:underline">Roma ( Italy )</span>
+            Venue: Roma ( Italy )
           </div>
           <a
             href="/#TicketSection"
