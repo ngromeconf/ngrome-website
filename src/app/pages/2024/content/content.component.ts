@@ -187,12 +187,6 @@ import { injectAgenda } from '../resolvers';
               ></a
             >
           </div>
-          <a
-            href="/#TicketSection"
-            class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
-          >
-            Tickets
-          </a>
         </div>
       </div>
     </section>

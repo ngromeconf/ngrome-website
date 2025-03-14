@@ -23,14 +23,14 @@ export const NAV_MENU = [
     pageSite: true,
     icon: 'sponsor',
   },
-  // {
-  //   name: 'Agenda',
-  //   destinationUrl: '/agenda',
-  //   type: 'white',
-  //   visible: true,
-  //   pageSite: true,
-  //   icon: 'agenda',
-  // },
+  {
+    name: 'Agenda',
+    destinationUrl: '/agenda',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+    icon: 'agenda',
+  },
 
   {
     name: 'CFP',

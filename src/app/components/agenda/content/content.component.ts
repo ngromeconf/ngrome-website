@@ -26,10 +26,10 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
           <h2
             class="tracking-tight text-gray-900 leading-5 text-4xl font-extrabold"
           >
-            Thursday
+            Friday
           </h2>
           <p class="margin-1 text-gray-500 leading-5 font-medium text-lg">
-            June 27, 2024
+            June 20, 2025
           </p>
           <span
             class="bg-primary-100 text-primary-800 margin-1 font-medium text-center inline-flex text-xs px-2.5 rounded py-0.5 XklWzT8y98pp042XEQp4 _A6LflweZRUwrcL6M2Tk ay0ziTPUL4Ag5d1DkSY7 neyUwteEn7DOg9pBSJJE cA4BPuqyV1eox6S0acvl AOldjxkjQirRFQcsh_FR YPSoR6AXtPgkmylUmcbT dark:bg-primary-900 dark:text-primary-300"
@@ -147,7 +147,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                   class="object-contain img-sponsor"
                                   [alt]="item.name"
                                   [title]="item.name"
-                                  [src]="item.image"
+                                  [ngSrc]="item.image"
+                                  width="400"
+                                  height="168"
                                 />
                               }
                             </div>
@@ -159,7 +161,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                   class="object-contain img-sponsor"
                                   [alt]="item.name"
                                   [title]="item.name"
-                                  [src]="item.image"
+                                  [ngSrc]="item.image"
+                                  width="400"
+                                  height="168"
                                 />
                               }
                             </div>
@@ -182,14 +186,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
           <div class="flex-col gap-4 text-center md:text-left sm:flex hidden">
             <p>
               When:
-              <span class="font-semibold"> June 27, 2024 | 8 AM - 7 PM </span>
+              <span class="font-semibold"> June 20, 2025 | 8 AM - 6 PM </span>
             </p>
-            <a href="/venue"
-              >Venue:
-              <span class="text-blue-600 hover:underline"
-                >Midas Palace Hotel</span
-              ></a
-            >
+            Venue: Roma ( Italy )
           </div>
           <a
             href="/#TicketSection"

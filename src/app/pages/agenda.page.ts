@@ -14,11 +14,21 @@ export const routeMeta: RouteMeta = {
 @Component({
   standalone: true,
   template: `
-      <app-page-head
-        [title]="'Conference Agenda'"
-        subtitle="<span class='text-2xl'>One track, one love</span>"
-      />
-      <app-content />
+    <app-page-head
+      [title]="'Conference Agenda'"
+      subtitle="<span class='text-2xl'>🎉
+      Join
+      us
+      for
+      the
+      biggest
+      Angular
+      conference
+      in
+      Italy!
+      🚀</span>"
+    />
+    <app-content />
   `,
   imports: [PageImageComponent, PageHeadComponent, ContentComponent],
 })
