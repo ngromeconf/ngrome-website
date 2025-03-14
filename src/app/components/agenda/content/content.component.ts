@@ -26,7 +26,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
           <h2
             class="tracking-tight text-gray-900 leading-5 text-4xl font-extrabold"
           >
-            Thursday
+            Friday
           </h2>
           <p class="margin-1 text-gray-500 leading-5 font-medium text-lg">
             June 20, 2025
