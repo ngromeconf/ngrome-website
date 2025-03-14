@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => ({
           '/',
           '/about',
           '/agenda',
+          '/2024/agenda',
           '/sponsors',
           '/code-of-conduct',
           '/terms-and-privacy',
