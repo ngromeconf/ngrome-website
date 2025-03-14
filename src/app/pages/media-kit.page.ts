@@ -31,7 +31,7 @@ import { NgOptimizedImage } from '@angular/common';
             </p>
             <p class="mt-2 text-gray-600">
               <img
-                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
+                ngSrc="t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
                 width="617"
                 height="323"
               />
@@ -69,7 +69,7 @@ import { NgOptimizedImage } from '@angular/common';
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="w-full">
                   <img
-                    ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
+                    ngSrc="t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
                     width="617"
                     height="323"
                     class="w-full h-auto rounded-lg shadow-md"
@@ -78,7 +78,7 @@ import { NgOptimizedImage } from '@angular/common';
                 </div>
                 <div class="w-full">
                   <img
-                    ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,w_598/v1741354095/2025/Conference_social_preview-vertical_v8j54w.jpg"
+                    ngSrc="2025/Conference_social_preview-vertical_v8j54w.jpg"
                     width="617"
                     height="323"
                     class="w-full h-auto rounded-lg shadow-md"
@@ -108,21 +108,21 @@ import { NgOptimizedImage } from '@angular/common';
           <div class="grid grid-cols-3 grid-flow-row justify-center gap-4 p-12">
             <div>
               <img
-                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741331127/website-assets/ngrome-shield_rbvclr.svg"
+                ngSrc="v1741331127/website-assets/ngrome-shield_rbvclr.svg"
                 width="200"
                 height="100"
               />
             </div>
             <div>
               <img
-                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1741331289/website-assets/ngrome-vertical_lwa2zg.svg"
+                ngSrc="v1741331289/website-assets/ngrome-vertical_lwa2zg.svg"
                 width="300"
                 height="100"
               />
             </div>
             <div>
               <img
-                ngSrc="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_300/v1741331352/website-assets/ngrome-full_sz0bsb.svg"
+                ngSrc="c_scale,w_300/v1741331352/website-assets/ngrome-full_sz0bsb.svg"
                 width="300"
                 height="66"
               />

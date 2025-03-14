@@ -186,14 +186,10 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
           <div class="flex-col gap-4 text-center md:text-left sm:flex hidden">
             <p>
               When:
-              <span class="font-semibold"> June 27, 2024 | 8 AM - 7 PM </span>
+              <span class="font-semibold"> June 20, 2025 | 8 AM - 6 PM </span>
             </p>
-            <a href="/venue"
-              >Venue:
-              <span class="text-blue-600 hover:underline"
-                >Midas Palace Hotel</span
-              ></a
-            >
+            Venue:
+            <span class="text-blue-600 hover:underline">Roma ( Italy )</span>
           </div>
           <a
             href="/#TicketSection"

@@ -35,48 +35,34 @@ agenda:
             description: 
             speakers: 
                 - slug: 
-          - slug: talk-2
-            type: Talk 2
-            duration: 25
+          - slug: l-talk-1
+            type: Lightning Talk 1
+            duration: 15
             title: ''
             description: 
             speakers: 
                 - slug: 
           - slug: 
             title: 
-            type: Panel 1
-            duration: 15
+            type: Panel I
+            duration: 20
           - slug: 
             title: Coffee & networking
             type: Pause
-            duration: 40
+            duration: 45
           - slug: sponsor-1
             title: 
             type: Sponsor pitch
-            duration: 5
-          - slug: l-talk-1
-            type: Lightning Talk 1
-            duration: 15
+            duration: 10
+          - slug: talk-2
+            type: Talk 2
+            duration: 25
             title: 
             description: ''
             speakers: 
                 - slug: 
           - slug: talk-3
-            type: Talk 
-            duration: 25
-            title: 
-            description: 
-            speakers: 
-                - slug: 
-          - slug: l-talk-2
-            type: Lightning Talk 2
-            duration: 10 
-            title: 
-            description: 
-            speakers: 
-                - slug: 
-          - slug: talk-4
-            type: Talk 
+            type: Talk 3
             duration: 25
             title: 
             description: 
@@ -84,66 +70,53 @@ agenda:
                 - slug: 
           - slug: 
             title: 
-            type: Panel 2
-            duration: 15
-    - start: '13:10'
+            type: Panel II
+            duration: 20
+    - start: '13:00'
       title: 'Afternoon'
       events:
           - slug: 
             title: Lunch
             type: Pause
-            duration: 60
+            duration: 70
           - slug: 
             title: 
             type: Sponsor pitch
-            duration: 5
+            duration: 10
+          - slug: talk-4
+            type: Talk 4
+            duration: 25
+            title: ''
+            description: 
+            speakers: 
+                - slug: 
+          - slug: l-talk-2
+            type: Lightning Talk
+            duration: 15
+            title: ''
+            description: 
+            speakers: 
+                - slug: 
           - slug: talk-5
-            type: Talk
-            duration: 25
-            title: ''
-            description: 
-            speakers: 
-                - slug: 
-          - slug: l-talk-3
-            type: Lightning Talk
-            duration: 15
-            title: ''
-            description: 
-            speakers: 
-                - slug: 
-          - slug: talk-6
-            type: Talk 
+            type: Talk 5
             duration: 25
             title: 
             description: 
             speakers: 
                 - slug: 
-          - slug: l-talk-4
-            type: Lightning Talk
-            duration: 15
-            title: 
-            description: 
-            speakers: 
-                - slug: 
+          
           - slug: 
             title: 
-            type: Panel 
-            duration: 15
+            type: Panel III
+            duration: 20
           - slug: 
             title: Coffee break
             type: Pause
-            duration: 40
-          - slug: talk-7
-            type: Talk 
+            duration: 50
+          - slug: talk-6
+            type: Talk 6
             duration: 25
             title: ''
-            description: 
-            speakers: 
-                - slug: 
-          - slug: talk-8
-            type: Talk 
-            duration: 25
-            title: 
             description: 
             speakers: 
                 - slug: 
@@ -157,7 +130,7 @@ agenda:
                 - slug: 
           - slug: 
             title: 
-            type: Panel with Brandon, Julian, Manfred and Rainer
+            type: Panel IV
             duration: 15
           - slug: closing-remarks
             title: Closing Remarks
