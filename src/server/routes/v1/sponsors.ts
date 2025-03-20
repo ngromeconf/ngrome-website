@@ -48,12 +48,12 @@ const communityPartners: SponsorInterface[] = [
   //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718266374/ngrome-sponsors/grusp_squared_hwc2ap.png',
   //   url: 'https://www.grusp.org/',
   // },
-  // {
-  //   name: 'learnbydo.ing',
-  //   image:
-  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718734866/ngrome-sponsors/logo-light-mode_mfmfgc.png',
-  //   url: 'https://learnbydo.ing/',
-  // },
+  {
+    name: 'learnbydo.ing',
+    image:
+      'c_scale,w_254/v1718734866/ngrome-sponsors/logo-light-mode_mfmfgc.png',
+    url: 'https://learnbydo.ing/',
+  },
   // {
   //   name: 'The Red Code',
   //   image:
@@ -74,7 +74,7 @@ const communityPartners: SponsorInterface[] = [
   // },
   {
     name: 'NGVenice',
-    image: 'c_scale,w_400/v1741837536/ngrome-sponsors/ngvenice_ol9opp.svg',
+    image: 'c_scale,w_254/v1741837536/ngrome-sponsors/ngvenice_ol9opp.svg',
     url: 'https://ng-venice.org/',
   },
   // {
@@ -95,12 +95,12 @@ const communityPartners: SponsorInterface[] = [
       't_sponsor-fit-200x44/v1709385406/ngrome-sponsors/ANGULAR.LOVE_fzlp7p.png',
     url: 'https://www.angular.love/',
   },
-  // {
-  //   name: 'WeAreDevelopers',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FWeAreDevelopers_Positiv.png?alt=media&token=2becfbee-eeb6-4c3e-a5bf-722f2e45f15f&_gl=1*1upw65f*_ga*NzM2NjU2MDMyLjE2ODkxNjQ2MDY.*_ga_CW55HF8NVT*MTY5NzE5MDQ3NC4xNy4xLjE2OTcxOTA1MjMuMTEuMC4w',
-  //   url: 'https://www.wearedevelopers.com/',
-  // },
+  {
+    name: 'WeAreDevelopers',
+    image:
+      't_sponsor-fit-200x44/v1709386610/ngrome-sponsors/WeAreDevelopers_zc70jn.png',
+    url: 'https://www.wearedevelopers.com/',
+  },
   {
     name: 'Analog',
     image: 't_sponsor-fit-200x44/v1709385416/ngrome-sponsors/ANALOG_sf5n0o.svg',
@@ -214,6 +214,12 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fmindsharing%201%20-%20Aldo%20Pergjergji%20(1).png?alt=media&amp;token=79a1c729-d4c3-4bbb-abec-c530136a4895',
   //   url: 'https://www.mindsharing.tech',
   // },
+  {
+    name: 'GDG Roma Città',
+    image:
+      't_sponsor-fit-200x44/v1742475851/ngrome-sponsors/gdg-roma-citta_tpbsil.svg',
+    url: 'https://gdg.community.dev/gdg-roma-citta/',
+  },
   {
     name: 'ngGirls',
     image:
