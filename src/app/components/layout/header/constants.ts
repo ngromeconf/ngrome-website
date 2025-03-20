@@ -48,15 +48,15 @@ export const NAV_MENU = [
   //   visible: true,
   //   icon: 'speaker',
   // },
+  {
+    name: 'Venue',
+    destinationUrl: '/venue',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+    icon: 'venue',
+  },
   // {
-  //   name: 'Venue',
-  //   destinationUrl: '/venue',
-  //   type: 'white',
-  //   visible: true,
-  //   pageSite: true,
-  //   icon: 'venue',
-  // },
-  //{
   //   name: 'Info',
   //   destinationUrl: '/info',
   //   type: 'white',
