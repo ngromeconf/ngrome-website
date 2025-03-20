@@ -30,21 +30,14 @@ agenda:
           - slug: talk-1
             type: Talk 1
             duration: 25
-            title: 
-            description: 
+            title: The Art of Testing
+            description: “I only write unit tests to ease my conscience—real value comes from E2E tests.” You often hear statements like this whispered behind closed doors - or maybe agree with them yourself. Is there a grain of truth to it? The classic testing pyramid suggests the opposite, emphasizing unit tests as the foundation. However, modern approaches tend to shift focus toward the middle of the pyramid—what is commonly referred to as integration testing. At the same time, E2E tests indeed provide the highest value but come with limiting constraints. In this talk, I’ll explore these different perspectives and demonstrate, through concrete examples, which testing strategies work best in various scenarios. Testing isn’t black and white. The real challenge is finding the right balance. In that sense, there is an undeniable element of art involved. But to make the right choices, you need to understand both the strengths and weaknesses of each approach.
             speakers: 
-                - slug: 
-          - slug: l-talk-1
-            type: Lightning Talk 1
-            duration: 15
-            title: ''
-            description: 
-            speakers: 
-                - slug: 
+                - slug: rainer-hahnekamp
           - slug: 
             title: 
             type: Panel I
-            duration: 20
+            duration: 15
           - slug: 
             title: Coffee & networking
             type: Pause
@@ -56,17 +49,25 @@ agenda:
           - slug: talk-2
             type: Talk 2
             duration: 25
-            title: 
-            description: ''
+            title: 'Angular v20 on the server - SSR SSG ISR PR CSR'
+            description: Join Michael for a deep dive into Angular’s game-changing server-side capabilities. Discover how SSR, SSG, ISR, and CSR integrate seamlessly with Angular’s new hydration features—highlighted by ngSkipHydration—to deliver unreached performance and a streamlined loading experience. Learn to configure and optimize your setup for the most advanced server-side rendering in the industry. Get a deep dive into all the latest features and understand your benefits. Let’s dive deep together.
             speakers: 
-                - slug: 
+                - slug: michael-hladky
+          
+          - slug: talk-4
+            type: Talk 4
+            duration: 25
+            title: Angular’s Hybrid Rendering - Choosing the Right Strategy for Every Route
+            description: Hybrid Rendering in Angular 19 introduces a flexible approach to balancing Server-Side Rendering (SSR), Prerendering (SSG), and Client-Side Rendering (CSR). This talk explores how developers can leverage hybrid rendering to optimize performance, improve SEO, and enhance user experience by selecting the right rendering strategy for each route.
+            speakers: 
+                - slug: brygida-fiejdasz
           - slug: talk-3
             type: Talk 3
             duration: 25
-            title: 
-            description: 
+            title: Why State is the Most Important Part of Your Angular Application
+            description: State is the foundation of every modern Angular application. A well-structured state management strategy determines not only how data flows through an application but also how scalable, maintainable, and performant it becomes. Without proper state management, applications quickly become hard to debug, difficult to scale, and prone to inconsistencies. This talk explores why state is the most crucial part of an Angular application, how to choose the right state management approach, and what common pitfalls to avoid. Whether using NgRx, Akita, Signals, or a simple service-based approach, understanding and structuring state effectively is the key to long-term success.
             speakers: 
-                - slug: 
+                - slug: fabian-gosebrink
           - slug: 
             title: 
             type: Panel II
@@ -89,17 +90,17 @@ agenda:
             description: 
             speakers: 
                 - slug: 
-          - slug: l-talk-2
-            type: Lightning Talk
-            duration: 15
+          - slug: talk-5
+            type: Talk 5
+            duration: 25
             title: ''
             description: 
             speakers: 
                 - slug: 
-          - slug: talk-5
-            type: Talk 5
-            duration: 25
-            title: 
+          - slug: l-talk-2
+            type: Lightning Talk
+            duration: 15
+            title: ''
             description: 
             speakers: 
                 - slug: 

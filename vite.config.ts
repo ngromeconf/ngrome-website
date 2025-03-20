@@ -54,7 +54,6 @@ export default defineConfig(({ mode }) => ({
           '/api/v1/sponsors',
           '/api/v1/agenda',
           '/api/v1/tickets',
-          '/api/v1/tito-releases',
         ],
         sitemap: {
           host:
