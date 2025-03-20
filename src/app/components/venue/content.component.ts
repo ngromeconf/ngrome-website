@@ -8,29 +8,62 @@ import { TeamComponent } from '../about/team/team.component';
   template: `
     <div class="relative overflow-hidden bg-white">
       <div class="relative px-4 mx-auto lg:max-w-3xl">
-        <div class="mx-auto text-lg text-left">
-          <blockquote class="mt-8 text-xl leading-8 text-slate-500">
-            Key Features:
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+            Key Features
+          </h2>
 
-            <ul>
-              <li>
-                <b> 🎯 Central Location:</b> Enjoy the convenience of a central
-                location, with excellent transport links and proximity to key
-                landmarks.
-              </li>
-              <li>
-                <b>👨‍💻 Versatile Spaces:</b> Our flexible spaces can accommodate
-                a variety of events, from conferences and meetings to
-                exhibitions and workshops.
-              </li>
-              <li>
-                <b>✨ Modern Facilities:</b> Benefit from state-of-the-art
-                audiovisual equipment, Wi-Fi connectivity, and professional
-                support services.
-              </li>
-            </ul>
-          </blockquote>
-        </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="p-6">
+                <div class="text-4xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Central Location
+                </h3>
+                <p class="text-gray-600">
+                  Enjoy the convenience of a central location, with excellent
+                  transport links and proximity to key landmarks.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="p-6">
+                <div class="text-4xl mb-4">👨‍💻</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Versatile Spaces
+                </h3>
+                <p class="text-gray-600">
+                  Our flexible spaces can accommodate a variety of events, from
+                  conferences and meetings to exhibitions and workshops.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="p-6">
+                <div class="text-4xl mb-4">✨</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Modern Facilities
+                </h3>
+                <p class="text-gray-600">
+                  Benefit from state-of-the-art audiovisual equipment, Wi-Fi
+                  connectivity, and professional support services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <br />
 
         <div style="width: 100%">
@@ -46,36 +79,67 @@ import { TeamComponent } from '../about/team/team.component';
         </div>
 
         <br />
-        <br />
+        <!-- Where to Stay Section -->
+        <section class="mb-16 bg-white rounded-xl shadow-lg p-8">
+          <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">
+            Where to Stay
+          </h2>
 
-        <h1
-          class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl text-left"
-        >
-          Where to Stay
-        </h1>
-        <div class="mx-auto text-lg">
-          <blockquote class="mt-8 text-xl leading-8 text-slate-500 text-left">
-            <span class="font-serif text-6xl text-black"> T</span>he area
-            surrounding the Centro Congressi Frentani offers a wide range of
-            accommodation options to suit all budgets and preferences.
-            <br />Here are some suggestions: <br /><br />
-            <ul class="list-disc">
-              <li>
-                <b>Near Termini Station:</b>This area boasts numerous hotels,
-                from budget-friendly options to upscale establishments,
-                providing excellent connectivity to the rest of the city.
-              </li>
-              <li>
-                <b> University area "La Sapienza":</b> This area also present a
-                lot of Hotel and B&B.
-              </li>
-              <li>
-                <b>Castro Pretorio Area:</b> Here it's possible to find a lot of
-                Hotel and B&B.
-              </li>
-            </ul>
-          </blockquote>
-        </div>
+          <p class="text-gray-600 text-center max-w-3xl mx-auto mb-10">
+            The area surrounding the Centro Congressi Frentani offers a wide
+            range of accommodation options to suit all budgets and preferences.
+            Here are some suggestions:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Location 1 -->
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:border-primary transition-colors duration-300"
+            >
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3 flex items-center"
+              >
+                Repubblica Square
+              </h3>
+              <p class="text-gray-600">
+                This area boasts numerous hotels, from budget-friendly options
+                to upscale establishments, providing excellent connectivity to
+                the rest of the city.
+              </p>
+            </div>
+
+            <!-- Location 2 -->
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:border-primary transition-colors duration-300"
+            >
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3 flex items-center"
+              >
+                University area "La Sapienza"
+              </h3>
+              <p class="text-gray-600">
+                This area also presents a lot of Hotel and B&B options for
+                visitors attending events at our venue.
+              </p>
+            </div>
+
+            <!-- Location 3 -->
+            <div
+              class="border border-gray-200 rounded-lg p-6 hover:border-primary transition-colors duration-300"
+            >
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3 flex items-center"
+              >
+                Castro Pretorio Area
+              </h3>
+              <p class="text-gray-600">
+                Here it's possible to find a lot of Hotel and B&B accommodations
+                within easy reach of the venue.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <br />
       </div>
     </div>
