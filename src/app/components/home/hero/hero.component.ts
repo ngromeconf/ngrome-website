@@ -119,7 +119,9 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>Rome, Italy</span>
+                <a routerLink="/venue" aria-label="Venue"
+                  ><span> Centro Congressi Frentani - Rome, Italy</span></a
+                >
               </div>
               <div class="flex items-center">
                 <svg

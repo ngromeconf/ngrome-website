@@ -10,14 +10,25 @@ import { TeamComponent } from '../about/team/team.component';
       <div class="relative px-4 mx-auto lg:max-w-3xl">
         <div class="mx-auto text-lg text-left">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500">
-            <span class="font-serif text-6xl text-black"> S</span>ince 1973, the
-            Midas Palace Hotel has historically been an iconic landmark for
-            major events and congresses. Located a few kilometers from the
-            center, this prestigious four-star hotel is the perfect combination
-            of business and relaxation. Let yourself be enveloped by its
-            relaxing and informal atmosphere, suitable for both your pleasure
-            trip and your work needs. Select the type of room that best suits
-            your needs, or organize your corporate event in a few steps.
+            Key Features:
+
+            <ul>
+              <li>
+                <b> 🎯 Central Location:</b> Enjoy the convenience of a central
+                location, with excellent transport links and proximity to key
+                landmarks.
+              </li>
+              <li>
+                <b>👨‍💻 Versatile Spaces:</b> Our flexible spaces can accommodate
+                a variety of events, from conferences and meetings to
+                exhibitions and workshops.
+              </li>
+              <li>
+                <b>✨ Modern Facilities:</b> Benefit from state-of-the-art
+                audiovisual equipment, Wi-Fi connectivity, and professional
+                support services.
+              </li>
+            </ul>
           </blockquote>
         </div>
         <br />
@@ -30,7 +41,7 @@ import { TeamComponent } from '../about/team/team.component';
             scrolling="no"
             marginheight="0"
             marginwidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Raffaello%20Sardiello,%2022,%2000165%20Roma%20RM+(Midas%20Palace%20Hotel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Centro Congressi Frentani, Via dei Frentani, 4, 00185 Roma RM&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           ></iframe>
         </div>
 
@@ -40,14 +51,29 @@ import { TeamComponent } from '../about/team/team.component';
         <h1
           class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl text-left"
         >
-          Easily Accessible
+          Where to Stay
         </h1>
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500 text-left">
-            <span class="font-serif text-6xl text-black"> L</span>ocated near
-            Via Aurelia, a few kilometers from Fiumicino Airport, the hotel
-            offers easy access to the center of Rome and its many attractions,
-            including historical monuments, museums and shopping areas.
+            <span class="font-serif text-6xl text-black"> T</span>he area
+            surrounding the Centro Congressi Frentani offers a wide range of
+            accommodation options to suit all budgets and preferences.
+            <br />Here are some suggestions: <br /><br />
+            <ul class="list-disc">
+              <li>
+                <b>Near Termini Station:</b>This area boasts numerous hotels,
+                from budget-friendly options to upscale establishments,
+                providing excellent connectivity to the rest of the city.
+              </li>
+              <li>
+                <b> University area "La Sapienza":</b> This area also present a
+                lot of Hotel and B&B.
+              </li>
+              <li>
+                <b>Castro Pretorio Area:</b> Here it's possible to find a lot of
+                Hotel and B&B.
+              </li>
+            </ul>
           </blockquote>
         </div>
         <br />
@@ -63,14 +89,14 @@ import { TeamComponent } from '../about/team/team.component';
           >
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_3:4/v1710175743/venue/Hotel-Midas---059--Hotel-Midas-Roma_cm5o3e.jpg"
-              alt="Person"
+              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742567416/2025/congressi-frentani-1_sfte12.jpg"
+              alt="Versatile Spaces"
             />
             <div
               class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
             >
               <p class="mb-1 text-lg font-bold text-gray-100">
-                Immerse yourself in the pleasure
+                Modern Facilities
               </p>
             </div>
           </div>
@@ -81,7 +107,7 @@ import { TeamComponent } from '../about/team/team.component';
           >
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_3:4/v1710175720/venue/Salone-Midas--11---Hotel-Midas-Roma_smjz5h.jpg"
+              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742567407/2025/auditorium_htcdff.jpg"
               alt="Person"
             />
             <div
@@ -99,7 +125,7 @@ import { TeamComponent } from '../about/team/team.component';
           >
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_4:3/v1709832170/venue/kouclpg2l8bkgbsbzkul.jpg"
+              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742567411/2025/come_arrivare.2_ugqjnc.jpg"
               alt="Person"
             />
             <div
@@ -125,28 +151,25 @@ import { TeamComponent } from '../about/team/team.component';
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500 text-left">
             <p class="mt-6 text-lg text-slate-500">
-              <span class="font-serif text-6xl text-black"> B</span>y Car: The
-              hotel is easily accessible from the Grande Raccordo Anulare (GRA),
-              Exit 1, in the direction of Aurelia/Centro. From Termini Station:
-              Take Metro Line A to Cornelia stop, then Bus 246 or 247 and get
-              off at the Panorama stop. Cross the pedestrian bridge, and the
-              hotel is about 500 meters away. Taxi: You can call +39 06 66 45 or
-              use the "itTAXI" app for a convenient ride. From the Hotel to the
-              Center of Rome.
+              <b>By Car:</b> <br />From the North: Take the Tiburtina exit from
+              the GRA ring road towards Roma Centro. Continue straight towards
+              "La Sapienza" University (Piazzale Aldo Moro). The Centro
+              Congressi Frentani is 200 meters away. From the South: Take the
+              Prenestina exit from the GRA ring road towards Roma Centro.
+              Continue towards Porta Maggiore, then follow signs to Termini
+              Station. The Centro Congressi is a 5-minute drive from there
             </p>
             <br />
             <p class="mt-6 text-lg text-slate-500">
-              <span class="font-serif text-6xl text-black"> B</span>us and
-              Metro: Take Bus 246 or 247 from the Aurelia stop (tickets can be
-              purchased at the kiosk inside the Human Company Camping or via the
-              <a
-                href="https://www.mooneygo.it/"
-                class="mt-6 text-lg text-slate-500 underline"
-                target="_blank"
-                >MooneyGo</a
-              >
-              app) to the Cornelia stop, then use Metro Line A towards Anagnina,
-              and get off at your desired stop.
+              <b>Bus and Metro:</b> <br />
+              ATAC Bus Lines: 492, 71, 310. <br />
+              Line A: Termini Station stop. <br />
+              Line B: Castro Pretorio stop. <br />
+            </p>
+            <p class="mt-6 text-lg text-slate-500">
+              <b>By Train:</b>
+              <br />
+              From Fiumicino Airport: Metropolitan Railway FM1 <br />
             </p>
           </blockquote>
         </div>
