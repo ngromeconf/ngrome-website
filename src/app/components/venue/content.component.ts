@@ -14,17 +14,17 @@ import { TeamComponent } from '../about/team/team.component';
 
             <ul>
               <li>
-                <b>Central Location:</b> Enjoy the convenience of a central
+                <b> 🎯 Central Location:</b> Enjoy the convenience of a central
                 location, with excellent transport links and proximity to key
                 landmarks.
               </li>
               <li>
-                <b>Versatile Spaces:</b> Our flexible spaces can accommodate a
-                variety of events, from conferences and meetings to exhibitions
-                and workshops.
+                <b>👨‍💻 Versatile Spaces:</b> Our flexible spaces can accommodate
+                a variety of events, from conferences and meetings to
+                exhibitions and workshops.
               </li>
               <li>
-                <b>Modern Facilities:</b> Benefit from state-of-the-art
+                <b>✨ Modern Facilities:</b> Benefit from state-of-the-art
                 audiovisual equipment, Wi-Fi connectivity, and professional
                 support services.
               </li>
@@ -51,14 +51,29 @@ import { TeamComponent } from '../about/team/team.component';
         <h1
           class="mb-8 font-sans uppercase text-4xl font-bold tracking-tight text-black md:text-6xl text-left"
         >
-          Easily Accessible
+          Where to Stay
         </h1>
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500 text-left">
-            <span class="font-serif text-6xl text-black"> L</span>ocated near
-            Via Aurelia, a few kilometers from Fiumicino Airport, the hotel
-            offers easy access to the center of Rome and its many attractions,
-            including historical monuments, museums and shopping areas.
+            <span class="font-serif text-6xl text-black"> T</span>he area
+            surrounding the Centro Congressi Frentani offers a wide range of
+            accommodation options to suit all budgets and preferences.
+            <br />Here are some suggestions: <br /><br />
+            <ul class="list-disc">
+              <li>
+                <b>Near Termini Station:</b>This area boasts numerous hotels,
+                from budget-friendly options to upscale establishments,
+                providing excellent connectivity to the rest of the city.
+              </li>
+              <li>
+                <b> University area "La Sapienza":</b> This area also present a
+                lot of Hotel and B&B.
+              </li>
+              <li>
+                <b>Castro Pretorio Area:</b> Here it's possible to find a lot of
+                Hotel and B&B.
+              </li>
+            </ul>
           </blockquote>
         </div>
         <br />
@@ -74,12 +89,16 @@ import { TeamComponent } from '../about/team/team.component';
           >
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_3:4/v1710175743/venue/Hotel-Midas---059--Hotel-Midas-Roma_cm5o3e.jpg"
-              alt="Person"
+              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742567416/2025/congressi-frentani-1_sfte12.jpg"
+              alt="Versatile Spaces"
             />
             <div
               class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
-            ></div>
+            >
+              <p class="mb-1 text-lg font-bold text-gray-100">
+                Modern Facilities
+              </p>
+            </div>
           </div>
         </div>
         <div>
@@ -88,7 +107,7 @@ import { TeamComponent } from '../about/team/team.component';
           >
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_3:4/v1710175720/venue/Salone-Midas--11---Hotel-Midas-Roma_smjz5h.jpg"
+              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742567407/2025/auditorium_htcdff.jpg"
               alt="Person"
             />
             <div
@@ -106,7 +125,7 @@ import { TeamComponent } from '../about/team/team.component';
           >
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_4:3/v1709832170/venue/kouclpg2l8bkgbsbzkul.jpg"
+              src="https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742567411/2025/come_arrivare.2_ugqjnc.jpg"
               alt="Person"
             />
             <div
@@ -132,25 +151,23 @@ import { TeamComponent } from '../about/team/team.component';
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500 text-left">
             <p class="mt-6 text-lg text-slate-500">
-              <span class="font-serif text-6xl text-black"> B</span>y Car: From
-              the North: Take the Tiburtina exit from the GRA ring road towards
-              Roma Centro. Continue straight towards "La Sapienza" University
-              (Piazzale Aldo Moro). The Centro Congressi Frentani is 200 meters
-              away. From the South: Take the Prenestina exit from the GRA ring
-              road towards Roma Centro. Continue towards Porta Maggiore, then
-              follow signs to Termini Station. The Centro Congressi is a
-              5-minute drive from there
+              <b>By Car:</b> <br />From the North: Take the Tiburtina exit from
+              the GRA ring road towards Roma Centro. Continue straight towards
+              "La Sapienza" University (Piazzale Aldo Moro). The Centro
+              Congressi Frentani is 200 meters away. From the South: Take the
+              Prenestina exit from the GRA ring road towards Roma Centro.
+              Continue towards Porta Maggiore, then follow signs to Termini
+              Station. The Centro Congressi is a 5-minute drive from there
             </p>
             <br />
             <p class="mt-6 text-lg text-slate-500">
-              <span class="font-serif text-6xl text-black"> B</span>us and
-              Metro: <br />
+              <b>Bus and Metro:</b> <br />
               ATAC Bus Lines: 492, 71, 310. <br />
               Line A: Termini Station stop. <br />
               Line B: Castro Pretorio stop. <br />
             </p>
             <p class="mt-6 text-lg text-slate-500">
-              <span class="font-serif text-6xl text-black"> B</span>y Train:
+              <b>By Train:</b>
               <br />
               From Fiumicino Airport: Metropolitan Railway FM1 <br />
             </p>
