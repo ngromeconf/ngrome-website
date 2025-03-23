@@ -13,7 +13,7 @@ import { Sponsors } from 'src/app/models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SponsorComponent } from '../../sponsors/sponsor.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Speaker } from 'src/app/models/speaker.model';
 import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
 
@@ -188,7 +188,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
               When:
               <span class="font-semibold"> June 20, 2025 | 8 AM - 6 PM </span>
             </p>
-            Venue: Roma ( Italy )
+            <a [routerLink]="'/venue'"
+              >Venue: Centro Congresso Frentani - Roma ( Italy )</a
+            >
           </div>
           <a
             href="/#TicketSection"
@@ -210,6 +212,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
     SponsorComponent,
     NgFor,
     SpeakerModalComponent,
+    RouterLink,
   ],
 })
 export class ContentComponent implements AfterViewInit {

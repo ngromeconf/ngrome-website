@@ -7,14 +7,6 @@ export interface Contributor extends SocialLinks {
 
 export const CONTRIBUTORS: Contributor[] = [
   {
-    name: 'Ermanno Battista',
-    gitHub: 'https://github.com/ermannob',
-    imageUrl:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386825/ngrome-team/Ermanno_sxmd9p.jpg?_s=public-apps',
-    linkedIn: 'https://www.linkedin.com/in/ermannobattista/',
-    twitter: 'https://twitter.com/BattistaErmanno',
-  },
-  {
     name: 'Luciano Murruni',
     gitHub: 'https://x.com/MrMurruni?t=rh8waZXkiQWel9l_dUUZbw&s=09',
     twitter: 'https://x.com/MrMurruni?t=rh8waZXkiQWel9l_dUUZbw&s=09',
@@ -31,27 +23,22 @@ export const CONTRIBUTORS: Contributor[] = [
     twitter: 'https://twitter.com/marcomascioli',
   },
   {
-    name: 'Raul Valentini',
+    name: 'Ermanno Battista',
+    gitHub: 'https://github.com/ermannob',
     imageUrl:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386835/ngrome-team/Raul_lzqaya.jpg?_s=public-apps',
-    linkedIn: 'https://www.linkedin.com/in/raul-valentini/',
-    twitter: 'https://twitter.com/RaulValentino',
-    gitHub: 'https://github.com/raulvalentini/',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386825/ngrome-team/Ermanno_sxmd9p.jpg?_s=public-apps',
+    linkedIn: 'https://www.linkedin.com/in/ermannobattista/',
+    twitter: 'https://twitter.com/BattistaErmanno',
   },
+
   {
-    name: 'Giuseppe Ettorre',
+    name: 'Davide Passafaro',
     imageUrl:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386833/ngrome-team/Giuseppe_fo3pwp.jpg?_s=public-apps',
-    linkedIn: 'https://www.linkedin.com/in/gettorre/',
-    gitHub: 'https://github.com/peppoasap',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fill,w_452,h_452,ar_1:1/v1742718493/2025/social-preview_rkiejc.jpg',
+    linkedIn: 'https://www.linkedin.com/in/davide-passafaro/',
+    gitHub: 'https://github.com/DavidePassafaro',
   },
-  {
-    name: 'Valentina Ricci',
-    linkedIn: 'https://www.linkedin.com/in/valentina-ricci/',
-    imageUrl:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386831/ngrome-team/Valentina_ocjkal.jpg?_s=public-apps',
-    gitHub: 'https://github.com/Brittu2016',
-  },
+
   {
     name: 'Claudia Biondi',
     imageUrl:
@@ -59,10 +46,17 @@ export const CONTRIBUTORS: Contributor[] = [
     linkedIn: 'https://www.linkedin.com/in/claudia-biondi-650b39192/',
   },
   {
-    name: 'Giovanni Malacaria',
+    name: 'Giorgio Galassi',
     imageUrl:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386828/ngrome-team/Giovanni_odurgf.jpg?_s=public-apps',
-    linkedIn: 'https://www.linkedin.com/in/giovanni-malacaria-599390129/',
-    gitHub: 'https://github.com/GMalacaria',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fill,w_400,h_400,ar_1:1/v1742718844/2025/profile-big-cut_vvveeh.jpg',
+    linkedIn: 'https://www.linkedin.com/in/giorgiogalassi/',
+  },
+  {
+    name: 'Raul Valentini',
+    imageUrl:
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709386835/ngrome-team/Raul_lzqaya.jpg?_s=public-apps',
+    linkedIn: 'https://www.linkedin.com/in/raul-valentini/',
+    twitter: 'https://twitter.com/RaulValentino',
+    gitHub: 'https://github.com/raulvalentini/',
   },
 ];
