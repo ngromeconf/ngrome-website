@@ -14,8 +14,8 @@ authors:
     - slug: manfred-steyer
     - slug: rainer-hahnekamp
 location: 
-    name: TBC
-    mapsLink: 
+    name: Centro Congressi Frentani - Roma ( Italy )
+    mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,w_1800,h_600/v1741034162/2025/Workshop_Architecture_nsisws.jpg
 ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_pad,b_gen_fill,w_1200,h_630/v1741033068/2025/Workshop_Architecture-social_thsbkz.jpg
 link: /workshops/angular-architects-signal-ddd-mfe
