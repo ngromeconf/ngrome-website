@@ -50,6 +50,7 @@ export const CONTRIBUTORS: Contributor[] = [
     imageUrl:
       'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fill,w_400,h_400,ar_1:1/v1742718844/2025/profile-big-cut_vvveeh.jpg',
     linkedIn: 'https://www.linkedin.com/in/giorgiogalassi/',
+    gitHub: 'https://github.com/giorgiogalassi',
   },
   {
     name: 'Raul Valentini',
