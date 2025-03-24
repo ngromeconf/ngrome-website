@@ -86,7 +86,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'og:url',
-      content: getUrl(workshop?.link),
+      content: getUrl(workshop?.link!),
     },
     {
       property: 'og:type',
@@ -114,7 +114,7 @@ export const postMetaSlugResolver: ResolveFn<MetaTag[]> = (route) => {
     },
     {
       property: 'twitter:url',
-      content: getUrl(workshop?.link),
+      content: getUrl(workshop?.link!),
     },
     {
       name: 'twitter:title',
