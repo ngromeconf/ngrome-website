@@ -10,6 +10,8 @@ location:
     name: Centro Congressi Frentani - Roma ( Italy )
     mapsLink: /venue
 link: https://www.ng-girls.org/event/rome-2025
+ticket: 
+ticketSlug:
 col: 1
 visible: true
 ---
