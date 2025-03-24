@@ -31,7 +31,7 @@ import { NgOptimizedImage } from '@angular/common';
             </p>
             <p class="mt-2 text-gray-600">
               <img
-                ngSrc="t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
+                ngSrc="/v1742854380/2025/NGRome_social_preview_1_1_gdylq4.jpg"
                 width="617"
                 height="323"
               />
@@ -66,10 +66,10 @@ import { NgOptimizedImage } from '@angular/common';
               #CodingAdventures
             </p>
             <div class="max-w-screen-xl p-6 mx-auto">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="w-full">
                   <img
-                    ngSrc="t_cover-page-image/v1741354094/2025/Conference_social_preview-horizontal_vugzap.jpg"
+                    ngSrc="/v1742854380/2025/NGRome_social_preview_1_1_gdylq4.jpg"
                     width="617"
                     height="323"
                     class="w-full h-auto rounded-lg shadow-md"
@@ -78,7 +78,16 @@ import { NgOptimizedImage } from '@angular/common';
                 </div>
                 <div class="w-full">
                   <img
-                    ngSrc="2025/Conference_social_preview-vertical_v8j54w.jpg"
+                    ngSrc="/v1742854380/2025/IG_POST_rqehgg.jpg"
+                    width="617"
+                    height="323"
+                    class="w-full h-auto rounded-lg shadow-md"
+                    alt="Conference preview 2"
+                  />
+                </div>
+                <div class="w-full">
+                  <img
+                    ngSrc="/v1742854382/2025/IG_STORY_zm5i1q.jpg"
                     width="617"
                     height="323"
                     class="w-full h-auto rounded-lg shadow-md"
