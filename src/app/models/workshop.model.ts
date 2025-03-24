@@ -8,6 +8,7 @@ export interface WorkshopAttributes {
   title: string;
   description: string;
   date: string;
+  visible: boolean;
   authors: Speaker[];
   location: {
     name: string;
@@ -15,10 +16,10 @@ export interface WorkshopAttributes {
   };
   image: string;
   ogImage: string;
-  link: string;
-  ticket: string;
-  ticketSlug: string;
-  ticketItem: string;
+  link?: string;
+  ticket?: string;
+  ticketSlug?: string;
+  ticketItem?: string;
   col: number;
   soldOut: boolean;
   forWho: string;

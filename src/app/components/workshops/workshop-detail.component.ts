@@ -81,11 +81,13 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
         }
       </section>
 
-      <section
-        class="bg-gradient-to-r from-red-ngrome to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
-        id="TicketSection"
-        #titoWidget
-      ></section>
+      @if (!workshop.attributes.link) {
+        <section
+          class="bg-gradient-to-r from-red-ngrome to-indigo-700 py-12 px-4 sm:px-6 md:py-16 md:px-8"
+          id="TicketSection"
+          #titoWidget
+        ></section>
+      }
 
       <section
         class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
@@ -132,7 +134,16 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
             }
           </div>
           @if (isWorkshopActive(workshop.attributes)) {
-            @if (workshop.attributes?.soldOut) {
+            @if (!workshop.attributes?.link) {
+              <a
+                [href]="workshop.attributes?.ticket"
+                class="cursor-pointer inline-flex items-center px-8 py-3 text-sm lg:text-lg text-white transition-all duration-500 ease-in-out transform bg-green-600 border-2 rounded-lg md:mb-2 lg:mb-0 hover:border-white hover:bg-red focus:ring-2 ring-offset-current ring-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RESERVE YOUR SEAT
+              </a>
+            } @else if (workshop.attributes?.soldOut) {
               <span
                 class="text-md
                         font-extrabold
@@ -202,7 +213,7 @@ export default class WorkshopDetailComponent {
 
   appendTitoWidget() {
     console.log('appendTitoWidget: DOM: ', this.ticketArea);
-    if (this.ticketArea) {
+    if (this.ticketArea && this.workshop.attributes.ticketSlug) {
       this.ticketArea.nativeElement.innerHTML = `
       <tito-widget
         event="${this.workshop.attributes.ticketSlug}"
