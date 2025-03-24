@@ -14,7 +14,7 @@ location:
     mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742830054/2025/WORKSHOP__BEST_PRACTICE_rlwqnw.jpg
 ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742830054/2025/WORKSHOP__BEST_PRACTICE_rlwqnw.jpg
-ticket: angular-best-practices-in-2025-reactivity-signals-and-resource-based-architecture,85t-peutyli
+ticket: ltivknzsr3o,angular-best-practices-in-2025-reactivity-signals-and-resource-based-architecture,85t-peutyli
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 socialDescription: "🚀 Level up your Angular skills! Join Michael & Julian's workshop: Angular Best Practices in 2025: Reactivity, Signals, and Resource-Based Architecture. Master Signals, build efficient components, go zoneless, and architect like a pro. Learn more & register! #NGRome #Angular #Signals #Workshop"
