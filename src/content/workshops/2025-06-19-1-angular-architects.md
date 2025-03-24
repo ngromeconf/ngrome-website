@@ -18,7 +18,7 @@ location:
     mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742831074/2025/WORKSHOP__ARCHITECTURE_bqjbtp.jpg
 ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742831074/2025/WORKSHOP__ARCHITECTURE_bqjbtp.jpg
-ticket: workshop-architecture,85t-peutyli
+ticket: workshop-architecture,hyyshictstw,hhmwie3o92a,85t-peutyli
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 socialDescription: 'Join me at NgRome 2024 for an interactive workshop on "MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD and MICRO FRONTENDS." Explore cutting-edge strategies for building maintainable Angular applications. Reserve your spot now! #NgRome #Angular #Workshop #Italy'
