@@ -43,7 +43,7 @@ export function injectActiveSpeakers(): Speaker[] {
           if (author.slug === speaker.slug) {
             speaker.events.push({
               date: workshop.date,
-              link: workshop.link,
+              link: workshop.link!,
               title: `Workshop: ${workshop.title}`,
               time: workshop.time,
               isTalk: false,
