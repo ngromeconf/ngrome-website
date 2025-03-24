@@ -34,7 +34,7 @@ export const CONTRIBUTORS: Contributor[] = [
   {
     name: 'Davide Passafaro',
     imageUrl:
-      'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_fill,w_452,h_452,ar_1:1/v1742718493/2025/social-preview_rkiejc.jpg',
+      'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742856537/ngrome-speaker/passafaro_io6koc.jpg',
     linkedIn: 'https://www.linkedin.com/in/davide-passafaro/',
     gitHub: 'https://github.com/DavidePassafaro',
   },
