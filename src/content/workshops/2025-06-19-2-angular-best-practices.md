@@ -17,7 +17,7 @@ ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v174283
 ticket: workshop-architecture,85t-peutyli
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
-socialDescription: 'Join me at NgRome 2024 for an interactive workshop on "" Explore cutting-edge strategies for building maintainable Angular applications. Reserve your spot now! #NgRome #Angular #Workshop #Technology'
+socialDescription: "🚀 Level up your Angular skills! Join Michael & Julian's workshop: Angular Best Practices in 2025: Reactivity, Signals, and Resource-Based Architecture. Master Signals, build efficient components, go zoneless, and architect like a pro. Learn more & register! #NGRome #Angular #Signals #Workshop"
 soldOut: false
 ---
 
