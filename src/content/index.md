@@ -1,8 +1,8 @@
 ---
 slug: index
-description: 'Unleash Your Angular Expertise in the Eternal City! Connect with industry experts and network with fellow enthusiasts. June 19,29 - 2025 / Rome, Italy'
-title: Unleash Your Angular Expertise in the Eternal City
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1740643436/2025/Conference_social_preview_ip87kl.png
+description: '2 days of deep dives into Angular with workshop, talk, networking with experts, and exploring the Eternal City🇮🇹☀️🏛️🍕🍝'
+title: NGRome Conference - The biggest Angular Conference in Italy
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742857350/2025/NGRome_og_social_1200x630_xtznfa.jpg
 sizeImage: summary_large_image
 url: /
 ---

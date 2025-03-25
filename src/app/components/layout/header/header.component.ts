@@ -4,7 +4,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ToggleService } from '../../../services/toggle.service';
 import { NAV_MENU, TICKET_URL } from './constants';
 import { TicketComponent } from '../../shared/ticket.component';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -69,7 +69,7 @@ import { Router } from '@angular/router';
               @if (!item.pastEdition && item.visible) {
                 <a
                   class="leading-6 text-white p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
-                  [href]="item.destinationUrl"
+                  [routerLink]="item.destinationUrl"
                   >{{ item.name }}</a
                 >
               }
@@ -228,7 +228,7 @@ import { Router } from '@angular/router';
     </section>
   `,
   styleUrls: ['./header.component.css'],
-  imports: [CommonModule, NgOptimizedImage, TicketComponent],
+  imports: [CommonModule, NgOptimizedImage, TicketComponent, RouterModule],
 })
 export class HeaderComponent {
   public NavMenu = NAV_MENU;
