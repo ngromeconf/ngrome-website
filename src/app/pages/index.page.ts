@@ -10,6 +10,7 @@ import { CallForPaperComponent } from '../components/home/call-for-paper.compone
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SponsorshipOpportunityComponent } from '../components/shared/sponsorship-opportunity.component';
+import { SpeakerWallComponent } from '../components/home/speaker-wall.component';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
@@ -18,12 +19,11 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home-page',
   standalone: true,
   template: `
     <app-hero />
-    <!-- <app-features /> -->
-    <!-- <app-venue /> -->
+    <app-speaker-wall />
     <app-tickets />
     <app-call-for-paper />
     <app-sponsorship-opportunity />
@@ -66,6 +66,7 @@ export const routeMeta: RouteMeta = {
     TicketsComponent,
     CallForPaperComponent,
     SponsorshipOpportunityComponent,
+    SpeakerWallComponent,
   ],
 })
 export default class HomeComponent {
@@ -73,8 +74,11 @@ export default class HomeComponent {
 
   getSponsors(): Signal<Sponsors> {
     const _http = inject(HttpClient);
-    return toSignal(_http.get<Sponsors>(`/api/v1/sponsors`), {
-      initialValue: {},
-    });
+    return toSignal(
+      _http.get<Sponsors>(`http://localhost:5173/api/v1/sponsors`),
+      {
+        initialValue: {},
+      },
+    );
   }
 }

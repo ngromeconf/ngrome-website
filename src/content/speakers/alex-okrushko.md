@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/alex-okrushko
     other: https://ts.dev/style/
 visible: true
+edition: past
 ---

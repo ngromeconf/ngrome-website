@@ -1,10 +1,12 @@
 ---
 slug: ng-girls-workshop-2025-06-19
 tag: Diversity
-title: ng-Girls - one-day workshops for beginners!
+title: ng-Girls - A FREE, one-day workshops for beginners!
 description: We are holding a one-day workshops for beginners!
 date: '2025-06-19'
+time: '09:30 AM - 5:30 PM'
 authors: 
+    - slug: martina-kraus
     - slug: ng-girls
 location: 
     name: Centro Congressi Frentani - Roma ( Italy )

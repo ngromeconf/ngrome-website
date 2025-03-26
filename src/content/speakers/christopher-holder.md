@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/ChristopherPHolder
     other: https://push-based.io
 visible: true
+edition: 'past'
 ---

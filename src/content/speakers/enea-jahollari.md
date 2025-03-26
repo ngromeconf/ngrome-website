@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/eneajaho
     other: https://eneajaho.me
 visible: true
+edition: 'past'
 ---

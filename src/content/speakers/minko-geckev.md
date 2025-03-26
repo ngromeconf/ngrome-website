@@ -11,4 +11,6 @@ links:
     gitHub: https://github.com/mgechev
     
 visible: true
+edition: 'current'
+featured: true
 ---

@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/alisaduncan
     other: https://github.com/alisaduncan
 visible: true
+edition: 'past'
 ---

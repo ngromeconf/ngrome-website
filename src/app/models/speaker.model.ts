@@ -18,6 +18,8 @@ export interface Speaker {
     link: string;
     isTalk: boolean;
   }[];
+  edition: string;
+  featured?: boolean;
 }
 
 interface Talk {

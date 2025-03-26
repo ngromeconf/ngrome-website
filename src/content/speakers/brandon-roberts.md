@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/brandonroberts
     other: https://dev.to/brandontroberts
 visible: true
+edition: 'past'
 ---

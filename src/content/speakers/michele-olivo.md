@@ -14,4 +14,5 @@ links:
     gitHub: https://github.com/bud-mo
     other: 
 visible: true
+edition: 'past'
 ---

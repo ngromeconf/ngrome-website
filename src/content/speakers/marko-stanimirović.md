@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/markostanimirovic
     other: https://dev.to/markostanimirovic
 visible: true
+edition: 'past'
 ---

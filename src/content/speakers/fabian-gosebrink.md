@@ -12,4 +12,6 @@ links:
     gitHub: https://github.com/FabianGosebrink
     other: 
 visible: true
+edition: 'current'
+featured: false
 ---

@@ -1,7 +1,7 @@
 ---
 slug: 2025-06-19-angular-best-practices
 tag: Best Practices
-recipients: Middle
+recipients: Intermediate
 time: 9:30 AM - 05:30 PM
 title: 'Angular Best Practices in 2025: Reactivity, Signals, and Resource Based Architecture'
 description: ""

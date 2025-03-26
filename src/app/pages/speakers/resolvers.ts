@@ -27,8 +27,8 @@ export function injectActiveSpeakers(): Speaker[] {
   )?.attributes.agenda as Agenda[];
 
   const agenda = [
-    ...calculateTime(agende[0].events, agende[0].start),
-    ...calculateTime(agende[1].events, agende[1].start),
+    ...calculateTime(agende[1].events, agende[0].start), // morning
+    ...calculateTime(agende[2].events, agende[1].start), // afternoon
   ];
 
   const workshops = injectActiveWorkshops();
@@ -52,14 +52,14 @@ export function injectActiveSpeakers(): Speaker[] {
         });
       });
 
-      agenda.forEach((evento) => {
-        evento?.speakers?.forEach((agendaSpeaker) => {
+      agenda.forEach((events) => {
+        events?.speakers?.forEach((agendaSpeaker) => {
           if (speaker.slug === agendaSpeaker.slug) {
             speaker.events?.push({
-              title: `${evento.type}: ${evento?.subtitle || evento.title}`,
-              time: `${evento.startTime} - ${evento.endTime}`,
-              date: '27 June',
-              link: `${evento.slug}`,
+              title: `${events.type}: ${events?.subtitle || events.title}`,
+              time: `${events.startTime} - ${events.endTime}`,
+              date: `June 20`,
+              link: `${events.slug}`,
               isTalk: true,
             });
           }
@@ -78,6 +78,7 @@ export function injectActiveSpeakers(): Speaker[] {
       talk: [],
       events: [],
       visible: true,
+      edition: 'current',
     });
   }
 

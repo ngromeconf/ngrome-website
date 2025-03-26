@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/soumayaerradi
     other: https://www.soumayaerradi.it
 visible: true
+edition: 'past'
 ---
