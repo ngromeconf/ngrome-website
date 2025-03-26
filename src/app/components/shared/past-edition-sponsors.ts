@@ -47,8 +47,11 @@ export class PastEditionSponsorsComponent {
   public sponsors$: Signal<Sponsors> = this.getSponsors();
   private getSponsors(): Signal<Sponsors> {
     const _http = inject(HttpClient);
-    return toSignal(_http.get<Sponsors>(`/api/v1/sponsors`), {
-      initialValue: {},
-    });
+    return toSignal(
+      _http.get<Sponsors>(`http://localhost:5173/api/v1/sponsors`),
+      {
+        initialValue: {},
+      },
+    );
   }
 }
