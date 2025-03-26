@@ -12,7 +12,10 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideFileRouter(
       withViewTransitions(),
-      withInMemoryScrolling({ anchorScrolling: 'enabled' }),
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+      }),
     ),
     provideContent(withMarkdownRenderer()),
     provideCloudinaryLoader(`https://res.cloudinary.com/dp1gwjz5w`),
