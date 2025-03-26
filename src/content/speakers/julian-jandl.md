@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/hoebbelsb
     other: 
 visible: true
+edition: 'current'
 ---

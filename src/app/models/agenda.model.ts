@@ -1,6 +1,7 @@
 import { Speaker } from './speaker.model';
 
 export interface Agenda {
+  date: string;
   title: string;
   start: string;
   events: Event[];

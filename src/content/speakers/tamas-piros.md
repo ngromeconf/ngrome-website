@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/tpiros
     other: https://tpiros.dev
 visible: true
+edition: 'current'
 ---

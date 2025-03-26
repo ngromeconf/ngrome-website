@@ -6,6 +6,7 @@ image: /photo/ngrome-cover-mmxxiv-social.jpg
 sizeImage: summary_large_image
 url: /agenda
 agenda:
+    - date: 2025-06-20
     - start: '08:00'
       title: 'Morning'
       events:
@@ -20,9 +21,9 @@ agenda:
             speakers: 
                 - slug: ngrome-team
           - slug: opening-keynote
-            title: Opening Keynote
-            subtitle: ''
-            description: 
+            title: 'Opening Keynote'
+            subtitle: 'Angular of the Future'
+            description: "Nearly 15 years since its inception, Angular continues to evolve, shaping the landscape of modern web performance and developer experience. Each year, our team embarks on a crucial exercise: reimagining Angular to identify the most significant opportunities for advancing web development. In this talk, we'll delve into the future of Angular, exploring the delicate balance between continuous evolution and unwavering reliability"
             type: Opening Keynote
             duration: 40
             speakers: 

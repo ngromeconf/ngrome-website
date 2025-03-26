@@ -12,4 +12,6 @@ links:
     gitHub: 
     other: 
 visible: true
+edition: 'current'
+featured: true
 ---

@@ -2,7 +2,7 @@
 slug: generative-ai-masterclass-2023-12-04
 tag: Generative AI
 title: Generative AI Masterclass using MakerSuite, PaLM 2 and Angular
-description: In this full day training, you will learn how to leverage Google's new Generative AI platform using MakerSuite and PaLM APIs to build the next generation of AI-enabled Applications and powerful chatbots with Angular. The workshop is hands-on and practical, but we also give an overview of all the latest advancements and ideas. 
+description: In this full day training, you will learn how to leverage Google's new Generative AI platform using MakerSuite and PaLM APIs to build the next generation of AI-enabled Applications and powerful chatbots with Angular. The workshop is hands-on and practical, but we also give an overview of all the latest advancements and ideas."
 date: '2023-12-04'
 authors: 
     - slug: gerard-sans
