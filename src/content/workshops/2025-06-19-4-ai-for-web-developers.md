@@ -14,7 +14,8 @@ location:
     mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718007747/ngrome-workshops/Tamas-Piros-Workshop_scwp5v.jpg
 link: /workshops/cloudnary-for-angular
-ticket:  'https://ti.to/ngrome-events/cloudnary-for-angular-media-mastery-workshop'
+ticket: nezbncp4i20,ylkb4php1eo,85t-peutyli
+ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 ---
 
@@ -24,8 +25,6 @@ He wanted to go beyond the hype and truly understand how these tools can enhance
 
 Now, Tamas is excited to share what he’s learned in a practical, developer-friendly way. His hands-on workshop is designed to empower fellow web developers whether they're just starting their journey or have years of experience. 
 
-As part of this workshop you will have the opportunitiy to dive into AI, showing you how to integrate its powerful features into your projects. Tamas's goal is to make AI approachable, translating complex concepts into something relatable and actionable 
-
-Web developer to web developer. 
+As part of this workshop you will have the opportunitiy to dive into AI, showing you how to integrate its powerful features into your projects. Tamas's goal is to make AI approachable, translating complex concepts into something relatable and actionable Web Developer to Web Developer. 
 
 By the end, attendees will be equipped to create intelligent, cutting-edge web applications that stand out in today’s tech landscape.
