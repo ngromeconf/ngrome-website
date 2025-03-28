@@ -175,7 +175,7 @@ import { Router, RouterModule } from '@angular/router';
                 @for (item of NavMenu; track $index) {
                   @if (!item.pastEdition && item.visible) {
                     <a
-                      [routerLink]="item.destinationUrl"
+                      (click)="onGoToPage(item.destinationUrl)"
                       [target]="item?.pageSite ? '_self' : '_target'"
                       class="pr-6 pl-10 flex hover:bg-white hover-white"
                     >
@@ -237,20 +237,17 @@ export class HeaderComponent {
   constructor(
     public toggleService: ToggleService,
     private router: Router,
-  ) {
-    this.router.events.subscribe((event) => {
-      if (event.constructor.name === 'NavigationStart') {
-        console.log(event.constructor.name);
-        this.toggleService.updateData(false);
-      }
-    });
-  }
+  ) {}
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: HostListener) {
     this.toggleService.updateData(false);
   }
 
+  onGoToPage(page: string) {
+    this.toggleService.updateData(false);
+    this.router.navigate([page]);
+  }
   onGoToTicket() {
     if (this.router.url === '/') {
       this.router.navigate([], { fragment: 'TicketSection' });
