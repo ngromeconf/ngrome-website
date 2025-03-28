@@ -20,7 +20,7 @@ import { Router, RouterModule } from '@angular/router';
       >
         <div class="container justify-between flex w-full mx-auto px-4 lg-px-8">
           <div class="flex lg:flex-1">
-            <a href="./" class="focus:outline-none focus:shadow-outline">
+            <a routerLink="/" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <svg
                   width="220"
@@ -118,7 +118,7 @@ import { Router, RouterModule } from '@angular/router';
           class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-red-ngrome py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
           <div class="pr-6 pl-10 flex items-center justify-between">
-            <a href="./" class="focus:outline-none focus:shadow-outline">
+            <a routerLink="/" class="focus:outline-none focus:shadow-outline">
               <div class="object-contain h-10">
                 <img
                   ngSrc="/website-assets/ngrome-white-shield_scjivm.svg"
@@ -175,7 +175,7 @@ import { Router, RouterModule } from '@angular/router';
                 @for (item of NavMenu; track $index) {
                   @if (!item.pastEdition && item.visible) {
                     <a
-                      [href]="item.destinationUrl"
+                      [routerLink]="item.destinationUrl"
                       [target]="item?.pageSite ? '_self' : '_target'"
                       class="pr-6 pl-10 flex hover:bg-white hover-white"
                     >
@@ -243,6 +243,15 @@ export class HeaderComponent {
   onScroll(event: HostListener) {
     this.toggleService.updateData(false);
   }
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event.constructor.name === 'NavigationEnd') {
+        this.toggleService.updateData(false);
+      }
+    });
+  }
+
   onGoToTicket() {
     if (this.router.url === '/') {
       this.router.navigate([], { fragment: 'TicketSection' });
