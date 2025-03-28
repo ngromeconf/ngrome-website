@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { ToggleService } from '../../../services/toggle.service';
@@ -230,27 +230,25 @@ import { Router, RouterModule } from '@angular/router';
   styleUrls: ['./header.component.css'],
   imports: [CommonModule, NgOptimizedImage, TicketComponent, RouterModule],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   public NavMenu = NAV_MENU;
   public TicketUrl = TICKET_URL;
 
   constructor(
     public toggleService: ToggleService,
     private router: Router,
-  ) {}
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event.constructor.name === 'NavigationStart') {
+        console.log(event.constructor.name);
+        this.toggleService.updateData(false);
+      }
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: HostListener) {
     this.toggleService.updateData(false);
-  }
-
-  ngOnInit() {
-    this.router.events.subscribe((event) => {
-      console.log(event.constructor.name);
-      if (event.constructor.name === 'NavigationStart') {
-        this.toggleService.updateData(false);
-      }
-    });
   }
 
   onGoToTicket() {
