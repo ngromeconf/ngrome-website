@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { ToggleService } from '../../../services/toggle.service';
@@ -230,7 +230,7 @@ import { Router, RouterModule } from '@angular/router';
   styleUrls: ['./header.component.css'],
   imports: [CommonModule, NgOptimizedImage, TicketComponent, RouterModule],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   public NavMenu = NAV_MENU;
   public TicketUrl = TICKET_URL;
 
@@ -246,7 +246,8 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
-      if (event.constructor.name === 'NavigationEnd') {
+      console.log(event.constructor.name);
+      if (event.constructor.name === 'NavigationStart') {
         this.toggleService.updateData(false);
       }
     });
