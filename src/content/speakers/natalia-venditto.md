@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/anfibiacreativa
     other: https://microfrontend.dev/
 visible: true
+edition: 'past'
 ---

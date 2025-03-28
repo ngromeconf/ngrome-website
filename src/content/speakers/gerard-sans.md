@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/gsans
     other: https://gerardsans.com/
 visible: true
+edition: 'past'
 ---

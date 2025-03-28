@@ -11,4 +11,5 @@ links:
     gitHub: https://github.com/daniela-bonvini
     
 visible: true
+edition: 'current'
 ---

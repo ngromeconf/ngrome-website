@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/BioPhoton
     other: https://push-based.io/founder
 visible: true
+edition: 'current'
 ---
