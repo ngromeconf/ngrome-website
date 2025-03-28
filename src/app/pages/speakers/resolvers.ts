@@ -78,6 +78,7 @@ export function injectActiveSpeakers(): Speaker[] {
       talk: [],
       events: [],
       visible: true,
+      edition: '',
     });
   }
 
