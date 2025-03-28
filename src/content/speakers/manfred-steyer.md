@@ -12,4 +12,6 @@ links:
     gitHub: https://github.com/manfredsteyer
     other: https://www.angulararchitects.io/en/
 visible: true
+edition: 'current'
+featured: true
 ---

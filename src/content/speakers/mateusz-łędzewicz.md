@@ -14,4 +14,5 @@ links:
     gitHub: https://github.com/matledzewicz
     other: https://lowgular.io/
 visible: true
+edition: 'past'
 ---

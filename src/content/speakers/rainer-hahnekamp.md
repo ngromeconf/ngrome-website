@@ -12,4 +12,5 @@ links:
     gitHub: https://github.com/rainerhahnekamp
     other: https://www.rainerhahnekamp.com/en/
 visible: true
+edition: 'current'
 ---
