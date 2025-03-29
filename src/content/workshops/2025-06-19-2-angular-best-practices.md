@@ -12,8 +12,8 @@ authors:
 location: 
     name: Centro Congressi Frentani - Roma ( Italy )
     mapsLink: /venue
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742830054/2025/WORKSHOP__BEST_PRACTICE_rlwqnw.jpg
-ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742830054/2025/WORKSHOP__BEST_PRACTICE_rlwqnw.jpg
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240139/2025/WORKSHOP__BEST_PRACTICE__OG_Image_brfagz.jpg
+ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240139/2025/WORKSHOP__BEST_PRACTICE__OG_Image_brfagz.jpg
 ticket: ltivknzsr3o,kgfoeljdbas,angular-best-practices-in-2025-reactivity-signals-and-resource-based-architecture,85t-peutyli
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
