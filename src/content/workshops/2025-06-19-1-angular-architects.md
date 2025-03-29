@@ -16,8 +16,8 @@ authors:
 location: 
     name: Centro Congressi Frentani - Roma ( Italy )
     mapsLink: /venue
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742831074/2025/WORKSHOP__ARCHITECTURE_bqjbtp.jpg
-ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,ar_1:1/v1742831074/2025/WORKSHOP__ARCHITECTURE_bqjbtp.jpg
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240139/2025/WORKSHOP__ARCHITECTURE_OG__IMAGE_pghshb.jpg
+ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240139/2025/WORKSHOP__ARCHITECTURE_OG__IMAGE_pghshb.jpg
 ticket: workshop-architecture,hyyshictstw,hhmwie3o92a,85t-peutyli
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
