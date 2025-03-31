@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-19-ai-for-web-developers
+slug: ai-for-web-developers-2025-06-19
 tag: AI WebDev
 title: 'From Buzzwords to Breakthroughs: Practical AI for Web Developers'
 description: "As a web developer with over two decades in the industry, Tamas has always been curious about the next big thing shaping the field. Recently, he took some time to dive into the rapidly growing world of AI "
@@ -12,9 +12,8 @@ authors:
 location: 
     name: Centro Congressi Frentani - Roma ( Italy )
     mapsLink: /venue
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240138/2025/WORKSHOP__AI_Tamas__OG_Image_kyycpx.jpg
-ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240138/2025/WORKSHOP__AI_Tamas__OG_Image_kyycpx.jpg
-link: /workshops/2025-06-19-ai-for-web-developers
+image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718007747/ngrome-workshops/Tamas-Piros-Workshop_scwp5v.jpg
+link: /workshops/cloudnary-for-angular
 ticket: nezbncp4i20,ylkb4php1eo,85t-peutyli
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
