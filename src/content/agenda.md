@@ -117,10 +117,10 @@ agenda:
           - slug: talk-7
             type: Talk 7
             duration: 25
-            title: ''
-            description: 
+            title: 'Tricks, Strategies and Patterns to create amazing reusable components with latest Angular API'
+            description: "In this talk we create several reusable components typical of each professional UIKIT, using the latest Angular API & TypeScript features. It will be an opportunity to learn new tricks, create abstractions and solve common but often not easy problems by combining several components patterns, directives and dependency injection strategies. We will see how to use composition, create coumpond components, integrate 3rd party libraries, create overlay components such as tootip and modals, create generic (TS) components, build dynamic UI and many other use cases"
             speakers: 
-                - slug: 
+                - slug: fabio-biondi
           - slug: closing-keynote
             title: Closing Keynote
             subtitle: ''

@@ -35,29 +35,29 @@ We discuss fine-grained change detection and State Management with the new NGRX 
 
 
 # Part 1: Vertical Architectures with Nx and Sheriff
-Vertical architectures and Strategic Design (DDD) as the foundation
-Implementing your Strategic Design with Nx
-Enforcing your architecture with Nx & Sheriff
-Incremental builds with Nx
-Visualizing and analyzing your architecture to plan improvements
+- Vertical architectures and Strategic Design (DDD) as the foundation
+- Implementing your Strategic Design with Nx
+- Enforcing your architecture with Nx & Sheriff
+- Incremental builds with Nx
+- Visualizing and analyzing your architecture to plan improvements
 
 # Part 2: From Domains to Micro Frontends
-Module Federation and Native Federation
-Exposing and loading Micro Frontends
-Sharing dependencies
-Communication between Micro Frontends
-Multi-Framework (Version) Scenarios using Web Components
+- Module Federation and Native Federation
+- Exposing and loading Micro Frontends
+- Sharing dependencies
+- Communication between Micro Frontends
+- Multi-Framework (Version) Scenarios using Web Components
 
 # Part 3: Reactive Architectures with Signals
-Reactive thinking with Signals
-Building your reactive graph with computed, linkedSignal, and the Resource API
-Correctly using Effects
-Backgrounds: auto-tracking and glitch-free behavior
-RxJS interoperability with Signals
+- Reactive thinking with Signals
+- Building your reactive graph with computed, linkedSignal, and the Resource API
+- Correctly using Effects
+- Backgrounds: auto-tracking and glitch-free behavior
+- RxJS interoperability with Signals
 
 # Part 4: Streamlining Reactivity with the NGRX Signal Store
-State Management with the new NGRX Signal Store
-Lightweight stores and your architecture
-Using the Resource API inside a Signal Store
-Eventing for a Flux/”Redux”-like architecture
-Building custom features for recurring requirements
+- State Management with the new NGRX Signal Store
+- Lightweight stores and your architecture
+- Using the Resource API inside a Signal Store
+- Eventing for a Flux/”Redux”-like architecture
+- Building custom features for recurring requirements
