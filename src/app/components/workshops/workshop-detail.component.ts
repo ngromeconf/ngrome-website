@@ -47,6 +47,12 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
 
     <div class="flex flex-col" *ngIf="workshop">
       <section
+        class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
+      >
+        <analog-markdown [content]="workshop.content"></analog-markdown>
+      </section>
+
+      <section
         class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto"
       >
         @for (author of workshop.attributes.authors; track $index) {
@@ -88,12 +94,6 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
           #titoWidget
         ></section>
       }
-
-      <section
-        class="container max-w-7xl w-full flex flex-col gap-5 lg:px-0 px-5 mx-auto md:items-start text-left lg:max-w-3xl"
-      >
-        <analog-markdown [content]="workshop.content"></analog-markdown>
-      </section>
 
       @if (isWorkshopActive(workshop.attributes)) {
         <app-social-share

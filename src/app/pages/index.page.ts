@@ -36,11 +36,12 @@ export const routeMeta: RouteMeta = {
         [itemsPerRow]="3"
         type="Silver"
       />
-      <!-- <app-sponsor
+      <app-sponsor
         [sponsors]="Sponsors.Bronze"
         [itemsPerRow]="5"
         type="Bronze"
       />
+      <!--
       <app-sponsor
         [sponsors]="Sponsors.Diversity"
         [itemsPerRow]="3"

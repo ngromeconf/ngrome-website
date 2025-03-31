@@ -37,7 +37,14 @@ const silverSponsor: SponsorInterface[] = [
     url: 'https://cloudinary.com/',
   },
 ];
-const bronzeSponsor: SponsorInterface[] = [];
+const bronzeSponsor: SponsorInterface[] = [
+  {
+    name: 'SparkFabrik',
+    image:
+      '/t_sponsor-fit-200x44/v1743415142/ngrome-sponsors/SparkFabrik_-_Logo_Ufficiale_p08cvf.svg',
+    url: 'https://www.sparkfabrik.com/',
+  },
+];
 const diversitySponsor: SponsorInterface[] = [];
 const technicalSponsors: SponsorInterface[] = [];
 
@@ -77,12 +84,12 @@ const communityPartners: SponsorInterface[] = [
     image: 'c_scale,w_254/v1741837536/ngrome-sponsors/ngvenice_ol9opp.svg',
     url: 'https://ng-venice.org/',
   },
-  // {
-  //   name: 'StopCoding',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FLOGO_stopcoding_400x400%20-%20Ileana%20Baldassi.jpg?alt=media&amp;token=20921429-a600-4570-aeb9-cb58eed7db0f',
-  //   url: 'https://www.meetup.com/stopcoding/',
-  // },
+  {
+    name: 'Angular Development',
+    image:
+      't_sponsor-fit-200x44/v1743414632/ngrome-sponsors/408666703_198986489936632_8899525206807091161_n_1_f7ox2l.png',
+    url: 'https://www.instagram.com/angular_development/',
+  },
   // {
   //   name: 'Develer',
   //   image:

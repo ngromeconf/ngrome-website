@@ -113,7 +113,7 @@ agenda:
           - slug: 
             title: Coffee break
             type: Pause
-            duration: 50
+            duration: 45
           - slug: talk-7
             type: Talk 7
             duration: 25

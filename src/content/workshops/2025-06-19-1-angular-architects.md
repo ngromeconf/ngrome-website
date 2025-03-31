@@ -32,3 +32,32 @@ We start with Standalone Components and learn how to structure a large applicati
 We discuss categorizing the individual parts of our application and how to enforce our architecture with tools such as Nx or Sheriff. On top of our Strategic Design, we implement a Micro Frontend Architecture with Module Federation. Then, we discover how Angular’s new Signals fit our modern architecture. 
 
 We discuss fine-grained change detection and State Management with the new NGRX Signal Store. We implement some custom features for the Signal Store to cover repeating and complex use cases with just a few lines of code. Finally, we discuss how the new Signal component will help to simplify our architecture further and how they work together with traditional components.
+
+
+# Part 1: Vertical Architectures with Nx and Sheriff
+Vertical architectures and Strategic Design (DDD) as the foundation
+Implementing your Strategic Design with Nx
+Enforcing your architecture with Nx & Sheriff
+Incremental builds with Nx
+Visualizing and analyzing your architecture to plan improvements
+
+# Part 2: From Domains to Micro Frontends
+Module Federation and Native Federation
+Exposing and loading Micro Frontends
+Sharing dependencies
+Communication between Micro Frontends
+Multi-Framework (Version) Scenarios using Web Components
+
+# Part 3: Reactive Architectures with Signals
+Reactive thinking with Signals
+Building your reactive graph with computed, linkedSignal, and the Resource API
+Correctly using Effects
+Backgrounds: auto-tracking and glitch-free behavior
+RxJS interoperability with Signals
+
+# Part 4: Streamlining Reactivity with the NGRX Signal Store
+State Management with the new NGRX Signal Store
+Lightweight stores and your architecture
+Using the Resource API inside a Signal Store
+Eventing for a Flux/”Redux”-like architecture
+Building custom features for recurring requirements
