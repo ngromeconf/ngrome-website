@@ -1,7 +1,7 @@
 ---
-slug: 2025-06-19-ng-girls-workshop
+slug: ng-girls-workshop-2025-06-19
 tag: Diversity
-title: ng-Girls - FREE, Oe-Day workshop for beginners!
+title: ng-Girls - A FREE, one-day workshops for beginners!
 description: We are holding a one-day workshops for beginners!
 date: '2025-06-19'
 time: '09:30 AM - 5:30 PM'
@@ -11,10 +11,8 @@ authors:
 location: 
     name: Centro Congressi Frentani - Roma ( Italy )
     mapsLink: /venue
-link: workshop/2025-06-19-ng-girls-workshop
+link: 
 ticket: https://www.ng-girls.org/event/rome-2025
-image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240138/2025/WORKSHOP__NGGIRLS__OG_Image_wuq8hv.jpg
-ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240138/2025/WORKSHOP__NGGIRLS__OG_Image_wuq8hv.jpg
 col: 1
 visible: true
 ---
