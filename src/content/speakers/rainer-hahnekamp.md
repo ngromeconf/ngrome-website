@@ -5,7 +5,7 @@ biography: Rainer Hahnekamp is a Google Developer Expert, working as a trainer a
 from: Austria
 work: Angular Architects
 jobRole: Trainer/Consultant
-imageUrl: photo/authors/rainer-hahnekamp.webp 
+imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1709387668/ngrome-speaker/Rainer_Hahnekamp_et9a9a.webp
 links:
     linkedIn: https://www.linkedin.com/in/rainerhahnekamp/
     twitter: https://twitter.com/rainerhahnekamp

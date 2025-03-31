@@ -5,7 +5,7 @@ biography: Trainer, consultant and programming architect with focus on Angular. 
 from: Austria
 work: Angular Architects
 jobRole: Trainer and Consultant Angular
-imageUrl: https://www.angulararchitects.io/wp-content/uploads/2023/03/steyer-klein.jpg
+imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1709387365/ngrome-speaker/Manfred_Steyer_isjz5s.webp
 links:
     linkedIn: https://www.linkedin.com/in/manfred-steyer-84645821/
     twitter: https://twitter.com/ManfredSteyer
