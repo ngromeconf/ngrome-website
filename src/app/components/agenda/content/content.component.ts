@@ -110,7 +110,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                 [ngSrc]="speaker?.imageUrl"
                                 width="200"
                                 height="200"
-                                class="w-12 h-12 object-cover rounded-full  "
+                                class="w-12 h-12 object-cover rounded-full"
                               />
                               <div class="">
                                 <p
@@ -149,7 +149,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                   class="object-contain img-sponsor"
                                   [alt]="item.name"
                                   [title]="item.name"
-                                  [ngSrc]="item.image"
+                                  [ngSrc]="'ngrome-sponsors/' + item.image"
                                   width="400"
                                   height="168"
                                 />
@@ -163,7 +163,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                                   class="object-contain img-sponsor"
                                   [alt]="item.name"
                                   [title]="item.name"
-                                  [ngSrc]="item.image"
+                                  [ngSrc]="'ngrome-sponsors/' + item.image"
                                   width="400"
                                   height="168"
                                 />
