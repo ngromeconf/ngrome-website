@@ -5,7 +5,7 @@ biography: Is a Google Developer Expert, Microsoft MVP, Nx Champion, trainer, an
 from: Austria
 work: Push-Based.io
 jobRole: Chief Executive Officer
-imageUrl: https://push-based.io/assets/img/michael-hadky.webp
+imageUrl: ngrome-speaker/angular-michael-hladky_vrpgiw
 links:
     linkedIn: https://www.linkedin.com/in/michael-hladky/
     twitter: https://twitter.com/Michael_Hladky

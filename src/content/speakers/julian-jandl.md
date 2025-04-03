@@ -5,7 +5,7 @@ biography: Julian, based in the beautiful city of Vienna, Austria, is an accompl
 from: Austria
 work: Push-Based.io
 jobRole: Lead Performance Engineer
-imageUrl: https://avatars.githubusercontent.com/u/4904455?v=4
+imageUrl: ngrome-speaker/julian_lj716g
 links:
     linkedIn: https://www.linkedin.com/in/julian-jandl-43a2b9125/
     twitter: 

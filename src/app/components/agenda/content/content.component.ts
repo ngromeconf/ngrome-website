@@ -107,7 +107,9 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                               <img
                                 [alt]="speaker?.name"
                                 [title]="speaker?.name"
-                                [src]="speaker?.imageUrl"
+                                [ngSrc]="speaker?.imageUrl"
+                                width="200"
+                                height="200"
                                 class="w-12 h-12 object-cover rounded-full  "
                               />
                               <div class="">

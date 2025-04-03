@@ -4,6 +4,7 @@ import {
   DatePipe,
   NgFor,
   NgIf,
+  NgOptimizedImage,
 } from '@angular/common';
 
 import {
@@ -36,6 +37,7 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
     MarkdownComponent,
     PageHeadComponent,
     PageImageComponent,
+    NgOptimizedImage,
   ],
   providers: [TitoService, WindowRef],
   template: ` <app-page-head
@@ -52,39 +54,41 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
         <analog-markdown [content]="workshop.content"></analog-markdown>
       </section>
 
-      <section
-        class="container max-w-7xl w-full flex flex-col gap-5 p-5 mx-auto"
-      >
-        @for (author of workshop.attributes.authors; track $index) {
-          <div class="w-full sm:max-w-full sm:flex">
-            <div
-              class="h-48 sm:h-auto sm:w-48 flex-none bg-no-repeat bg-contain sm:bg-cover  bg-top sm:bg-center rounded-tl sm:rounded-l overflow-hidden border-b border-t border-l border-r sm:border-r-0 border-gray-400"
-              style="background-image: url('{{ author.imageUrl }}')"
-              [title]="author.name"
-            ></div>
-            <div
-              class="w-full border-r border-b border-l border-gray-400 sm:border-l-0 sm:border-t sm:border-gray-400 bg-white rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal"
-            >
-              <div class="mb-8 text-left">
-                <p class=" text-gray-600 flex items-center">Author</p>
-                <div class="text-gray-900 font-bold text-xl mb-2">
-                  {{ author.name }}
-                </div>
-                <p class="text-gray-700 text-base">
-                  {{ author.biography }}
-                </p>
-                @if (author.links?.other || author.links?.linkedIn) {
-                  <a
-                    [href]="author.links?.other || author.links?.linkedIn"
-                    target="_blank"
-                    class="text-blue-600 hover:underline"
-                    >Read more about {{ author.name }}</a
-                  >
-                }
-              </div>
-            </div>
+      <section class="py-16 px-4 md:px-6 lg:px-8 bg-gray-50">
+        <div class="container mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Meet Our Expert Trainers
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our workshops are led by industry professionals with years of
+              experience in their respective fields.
+            </p>
           </div>
-        }
+
+          <div class="flex flex-wrap justify-center gap-8">
+            @for (author of workshop.attributes.authors; track $index) {
+              <div
+                class="h-50 w-9/12 md:w-5/12 xl:w-3/12 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+              >
+                <div class="aspect-square relative overflow-hidden">
+                  <img
+                    [ngSrc]="author.imageUrl || '/assets/placeholder.svg'"
+                    [alt]="author.name"
+                    width="300"
+                    height="300"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="text-xl font-bold">{{ author.name }}</h3>
+                  <p class="text-sm text-gray-500 mb-3">{{ author.jobRole }}</p>
+                  <p class="text-gray-700">{{ author.biography }}</p>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
       </section>
 
       @if (workshop.attributes.ticket && workshop.attributes.ticketSlug) {

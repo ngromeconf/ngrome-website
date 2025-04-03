@@ -70,6 +70,7 @@ import { Router, RouterModule } from '@angular/router';
                 <a
                   class="leading-6 text-white p-2 transition duration-1000 ease-in-out transform font-base text-opacity-90 hover:text-slate-500 focus:outline-none focus:shadow-none focus:text-mana md:my-0 hover:border-white"
                   [routerLink]="item.destinationUrl"
+                  [fragment]="item.fragment"
                   >{{ item.name }}</a
                 >
               }
@@ -79,7 +80,7 @@ import { Router, RouterModule } from '@angular/router';
             <button
               type="button"
               class="px-5 py-2.5 text-sm font-medium text-black inline-flex items-center bg-white hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center "
-              (click)="onGoToTicket()"
+              ester
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,7 @@ biography: Martina has been active in the world of web development from her earl
 from: Ontario, Canada 
 work: Snowflake
 jobRole: Google Developer Expert Angular / Security Engineer
-imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1742985347/ngrome-speaker/martina-kraus_i2brbb.png
+imageUrl: /ngrome-speaker/martina-kraus_i2brbb.png
 links:
     linkedIn: https://www.linkedin.com/in/martina-kraus-398493108/
 visible: true

@@ -5,7 +5,7 @@ biography: Having studied foreign languages for many years, I stumbled upon HTML
 from: Italy 
 work: SparkFabrik
 jobRole: Frontend Engineer
-imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1709387640/ngrome-speaker/Daniela_Bonvini_apl04m.jpg
+imageUrl: ngrome-speaker/Daniela_Bonvini_apl04m.jpg
 links:
     linkedIn: https://www.linkedin.com/in/daniela-bonvini/
     gitHub: https://github.com/daniela-bonvini
