@@ -12,7 +12,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
         <h2
           class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl my-12"
         >
-          NGRome Speakers<br />
+          Speakers<br />
         </h2>
 
         <div
