@@ -9,9 +9,11 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
   template: `
     <section id="speakers" class="min-h-screen bg-gray-100">
       <div class="container mx-auto px-4 py-12">
-        <h1 class="text-4xl font-bold text-center mb-12">
-          NGRome Conference Speakers
-        </h1>
+        <h2
+          class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl my-12"
+        >
+          NGRome Speakers<br />
+        </h2>
 
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"

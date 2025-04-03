@@ -119,12 +119,11 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Flogo%20-%20GDG%20Pescara.png?alt=media&amp;token=7eb5b338-bb10-404a-8adb-ccfb503f5d8f',
   //   url: 'https://www.meetup.com/GDG-Pescara/',
   // },
-  // {
-  //   name: 'Voxel',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/sponsor%2Fvoxel-community-trento%20-%20Samantha%20Baita%20_%20Revas%20Societ%C3%A0%20Benefit.png?alt=media&amp;token=aee39b62-8ec7-4578-9dcf-60554d4babcd',
-  //   url: 'https://www.voxel.community/',
-  // },
+  {
+    name: 'CityJS',
+    image: 't_sponsor-fit-200x44/v1709385416/ngrome-sponsors/cityjs_dqdutg',
+    url: 'https://ti.to/cityjs-conference/cityjs-athens-2025/discount/ngrome',
+  },
   // {
   //   name: 'Angular Birmingham',
   //   image:
