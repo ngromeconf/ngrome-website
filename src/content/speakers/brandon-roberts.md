@@ -5,7 +5,7 @@ biography: Brandon is an Open Source Advocate, focused on community engagement, 
 from: Huntsville, Alabama, US
 work: OpenSauced
 jobRole: Head of Engineering
-imageUrl: https://cache.sessionize.com/image/f9d8-400o400o1-9PLBjjd84cKbTHVy9wQnvt.jpeg
+imageUrl: ngrome-speaker/brandon-roberts_osv7mv
 links:
     linkedIn: https://www.linkedin.com/in/brandontroberts/
     twitter: https://twitter.com/brandontroberts

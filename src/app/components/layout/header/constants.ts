@@ -34,7 +34,8 @@ export const NAV_MENU = [
 
   {
     name: 'CFP',
-    destinationUrl: '#callForPaper',
+    destinationUrl: '/',
+    fragment: 'cfp',
     type: 'white',
     pageSite: true,
     visible: false,
@@ -48,14 +49,15 @@ export const NAV_MENU = [
     visible: true,
     icon: 'workshop',
   },
-  // {
-  //   name: 'Speakers',
-  //   destinationUrl: '/speakers',
-  //   type: 'white',
-  //   pageSite: true,
-  //   visible: true,
-  //   icon: 'speaker',
-  // },
+  {
+    name: 'Speakers',
+    destinationUrl: '/',
+    fragment: 'speakers',
+    type: 'white',
+    pageSite: true,
+    visible: true,
+    icon: 'speaker',
+  },
   {
     name: 'Venue',
     destinationUrl: '/venue',

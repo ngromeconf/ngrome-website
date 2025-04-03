@@ -10,6 +10,7 @@ import { CallForPaperComponent } from '../components/home/call-for-paper.compone
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SponsorshipOpportunityComponent } from '../components/shared/sponsorship-opportunity.component';
+import { SpeakerWallComponent } from '../components/home/speaker-wall.component';
 
 export const routeMeta: RouteMeta = {
   meta: postMetaPageResolver,
@@ -22,6 +23,7 @@ export const routeMeta: RouteMeta = {
   standalone: true,
   template: `
     <app-hero />
+    <app-speaker-wall />
     <!-- <app-features /> -->
     <!-- <app-venue /> -->
     <app-tickets />
@@ -67,6 +69,7 @@ export const routeMeta: RouteMeta = {
     TicketsComponent,
     CallForPaperComponent,
     SponsorshipOpportunityComponent,
+    SpeakerWallComponent,
   ],
 })
 export default class HomeComponent {

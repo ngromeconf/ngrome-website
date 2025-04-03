@@ -5,7 +5,7 @@ biography: Fabian Gosebrink is Microsoft MVP, Google Developer Expert, Pluralsig
 from: Switzerland
 work: Offering Solutions Software
 jobRole: Microsoft MVP | GDE for Angular | Nx Champion | Founder
-imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/t_speaker-image/v1742456768/ngrome-speaker/fabian-gosebrink-profile_yvilxt.jpg
+imageUrl: ngrome-speaker/fabian-gosebrink-profile_yvilxt.jpg
 links:
     linkedIn: https://www.linkedin.com/in/fabian-gosebrink
     twitter: https://x.com/FabianGosebrink

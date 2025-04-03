@@ -5,7 +5,7 @@ biography: She started her journey in software development as a Full Stack Devel
 from: Poland
 work: Avenga
 jobRole: Angular expert🅰️🧑‍💻| NG KATO organizer🔥 | Senior Frontend Developer
-imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/t_speaker-image/v1742481275/ngrome-speaker/brygida-fiejdasz_f2m0bj.jpg
+imageUrl: ngrome-speaker/brygida-fiejdasz_f2m0bj
 links:
     linkedIn: https://www.linkedin.com/in/brygidafiejdasz/
     twitter: https://x.com/brydziaf

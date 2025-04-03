@@ -8,7 +8,7 @@ const mainSponsor: SponsorInterface[] = [
     name: 'angular.dev',
     width: 230,
     height: 97,
-    image: 'sponsors/logo-ANGULAR_ubew4u.webp',
+    image: 'logo-ANGULAR_ubew4u',
     url: 'https://angular.dev/',
   },
 ];
@@ -16,7 +16,7 @@ const mainSponsor: SponsorInterface[] = [
 const eventSponsor: SponsorInterface[] = [
   {
     name: 'Gestalt Group',
-    image: 'sponsors/logo-GESTALT_rdflm2.svg',
+    image: 'logo-GESTALT_rdflm2',
     url: 'https://www.gestalteventi.it/',
   },
 ];
@@ -24,14 +24,14 @@ const eventSponsor: SponsorInterface[] = [
 const goldSponsors: SponsorInterface[] = [
   {
     name: 'ICT Group',
-    image: 'sponsors/logo-ICT-GROUP_shp3js.svg',
+    image: 'logo-ICT-GROUP_shp3js',
     url: 'https://ict-group.it/',
   },
 ];
 const silverSponsor: SponsorInterface[] = [
   {
     name: 'Cloudinary',
-    image: 'sponsors/logo-CLOUDINARY_ybyx4r.webp',
+    image: 'logo-CLOUDINARY_ybyx4r',
     width: 240,
     height: 101,
     url: 'https://cloudinary.com/',
@@ -40,8 +40,7 @@ const silverSponsor: SponsorInterface[] = [
 const bronzeSponsor: SponsorInterface[] = [
   {
     name: 'SparkFabrik',
-    image:
-      '/t_sponsor-fit-200x44/v1743415142/ngrome-sponsors/SparkFabrik_-_Logo_Ufficiale_p08cvf.svg',
+    image: 'SparkFabrik_-_Logo_Ufficiale_p08cvf',
     url: 'https://www.sparkfabrik.com/',
   },
 ];
@@ -57,8 +56,7 @@ const communityPartners: SponsorInterface[] = [
   // },
   {
     name: 'learnbydo.ing',
-    image:
-      'c_scale,w_254/v1718734866/ngrome-sponsors/logo-light-mode_mfmfgc.png',
+    image: 'logo-light-mode_mfmfgc',
     url: 'https://learnbydo.ing/',
   },
   // {
@@ -81,13 +79,12 @@ const communityPartners: SponsorInterface[] = [
   // },
   {
     name: 'NGVenice',
-    image: 'c_scale,w_254/v1741837536/ngrome-sponsors/ngvenice_ol9opp.svg',
+    image: 'ngvenice_ol9opp',
     url: 'https://ng-venice.org/',
   },
   {
     name: 'Angular Development',
-    image:
-      't_sponsor-fit-200x44/v1743414632/ngrome-sponsors/408666703_198986489936632_8899525206807091161_n_1_f7ox2l.png',
+    image: '408666703_198986489936632_8899525206807091161_n_1_f7ox2l',
     url: 'https://www.instagram.com/angular_development/',
   },
   // {
@@ -98,19 +95,17 @@ const communityPartners: SponsorInterface[] = [
   // },
   {
     name: 'Angular Love',
-    image:
-      't_sponsor-fit-200x44/v1709385406/ngrome-sponsors/ANGULAR.LOVE_fzlp7p.png',
+    image: 'ANGULAR.LOVE_fzlp7p',
     url: 'https://www.angular.love/',
   },
   {
     name: 'WeAreDevelopers',
-    image:
-      't_sponsor-fit-200x44/v1709386610/ngrome-sponsors/WeAreDevelopers_zc70jn.png',
+    image: 'WeAreDevelopers_zc70jn',
     url: 'https://www.wearedevelopers.com/',
   },
   {
     name: 'Analog',
-    image: 't_sponsor-fit-200x44/v1709385416/ngrome-sponsors/ANALOG_sf5n0o.svg',
+    image: 'ANALOG_sf5n0o',
     url: 'https://analogjs.org/',
   },
   // {
@@ -119,12 +114,11 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Flogo%20-%20GDG%20Pescara.png?alt=media&amp;token=7eb5b338-bb10-404a-8adb-ccfb503f5d8f',
   //   url: 'https://www.meetup.com/GDG-Pescara/',
   // },
-  // {
-  //   name: 'Voxel',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/sponsor%2Fvoxel-community-trento%20-%20Samantha%20Baita%20_%20Revas%20Societ%C3%A0%20Benefit.png?alt=media&amp;token=aee39b62-8ec7-4578-9dcf-60554d4babcd',
-  //   url: 'https://www.voxel.community/',
-  // },
+  {
+    name: 'CityJS',
+    image: 'cityjs_dqdutg',
+    url: 'https://ti.to/cityjs-conference/cityjs-athens-2025/discount/ngrome',
+  },
   // {
   //   name: 'Angular Birmingham',
   //   image:
@@ -223,14 +217,12 @@ const communityPartners: SponsorInterface[] = [
   // },
   {
     name: 'GDG Roma Città',
-    image:
-      't_sponsor-fit-200x44/v1742475851/ngrome-sponsors/gdg-roma-citta_tpbsil.svg',
+    image: 'gdg-roma-citta_tpbsil',
     url: 'https://gdg.community.dev/gdg-roma-citta/',
   },
   {
     name: 'ngGirls',
-    image:
-      't_sponsor-fit-200x44/v1709386617/ngrome-sponsors/ng_girls_s1idtn.png',
+    image: 'ng_girls_s1idtn',
     url: 'http://ng-girls.org/',
   },
   // {
@@ -276,8 +268,7 @@ const communityPartners: SponsorInterface[] = [
   // },
   {
     name: 'Angular Space',
-    image:
-      't_sponsor-fit-200x44/v1709385405/ngrome-sponsors/ANGULAR_SPACE_j4fl3q.webp',
+    image: 'ANGULAR_SPACE_j4fl3q',
     url: 'https://www.angularspace.com/',
   },
   // {
@@ -293,40 +284,40 @@ const pastEditionSponsors: SponsorInterface[] = [
     name: 'angular.dev',
     width: 230,
     height: 97,
-    image: 'sponsors/logo-ANGULAR_ubew4u.webp',
+    image: 'logo-ANGULAR_ubew4u',
     url: 'https://angular.dev/',
   },
   {
     name: 'ConTe.it',
     width: 230,
     height: 97,
-    image: 'sponsors/logo-CONTE.IT_przqvc.webp',
+    image: 'logo-CONTE.IT_przqvc',
     url: 'https://www.conte.it/',
   },
   {
     name: 'Lascaux',
     width: 220,
     height: 93,
-    image: '/sponsors/logo-LASCAUX_rz0g7c.webp',
+    image: 'logo-LASCAUX_rz0g7c',
     url: 'https://www.lascaux.it/',
   },
   {
     name: 'Ineo',
-    image: 'sponsors/logo-INEO_dy9ubn.webp',
+    image: 'logo-INEO_dy9ubn',
     width: 220,
     height: 93,
     url: 'https://www.ineo.it/',
   },
   {
     name: 'Digitouch',
-    image: 'sponsors/logo-DIGITOUCH_uoaz8d.webp',
+    image: 'logo-DIGITOUCH_uoaz8d',
     width: 250,
     height: 105,
     url: 'https://www.gruppodigitouch.it/',
   },
   {
     name: 'Cloudinary',
-    image: 'sponsors/logo-CLOUDINARY_ybyx4r.webp',
+    image: 'logo-CLOUDINARY_ybyx4r',
     width: 240,
     height: 101,
     url: 'https://cloudinary.com/',
@@ -335,92 +326,91 @@ const pastEditionSponsors: SponsorInterface[] = [
     name: 'Fabrick',
     width: 220,
     height: 93,
-    image: 'sponsors/logo-FABRICK_db0ybp.webp',
+    image: 'logo-FABRICK_db0ybp',
     url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
   },
   {
     name: 'Almaviva Digitaltec',
     width: 150,
     height: 150,
-    image: 'sponsors/sponsor_2FAlmaviva_qy71bp.svg',
+    image: 'sponsor_2FAlmaviva_qy71bp',
     url: 'https://www.almaviva.it/it_IT/Societa-del-gruppo/AlmavivA_Digitaltec',
   },
   {
     name: 'Sap',
     width: 180,
     height: 89,
-    image: 'sponsors/sponsor_2FSAP_scrn_R_gqt5j7.webp',
+    image: 'sponsor_2FSAP_scrn_R_gqt5j7',
     url: 'https://www.sap.com/',
   },
   {
     name: 'Live Love App',
     width: 200,
     height: 134,
-    image: 'sponsors/sponsor_2FPrimary_20Logo_nyvqei.webp',
+    image: 'sponsor_2FPrimary_20Logo_nyvqei',
     url: 'https://liveloveapp.com/',
   },
   {
     name: 'Keypartner',
     width: 250,
     height: 105,
-    image: 'sponsors/logo-KeyPartner_ztyfpd.svg',
+    image: 'logo-KeyPartner_ztyfpd',
     url: 'https://www.keypartner.com/',
   },
   {
     name: 'ICT Group',
     height: 105,
     width: 250,
-    image: 'sponsors/logo-ICT-GROUP_shp3js.webp',
+    image: 'logo-ICT-GROUP_shp3js',
     url: 'https://ict-group.it/',
   },
   {
     name: 'Namiral - Bit4ID',
     width: 250,
     height: 51,
-    image: 'sponsors/sponsor_2FNamirial_20-_20Bit4Id_jeyama.webp',
+    image: 'sponsor_2FNamirial_20-_20Bit4Id_jeyama',
     url: 'https://www.namirial.it/',
   },
   {
     name: 'Fervento',
     width: 230,
     height: 97,
-    image: 'sponsors/logo-FERVENTO_xrx3wd.webp',
+    image: 'logo-FERVENTO_xrx3wd',
     url: 'https://fervento.com/',
   },
   {
     name: 'Auth0',
     height: 100,
     width: 250,
-    image: 'sponsors/sponsor_2Fauth0_xq4cej.png',
+    image: 'sponsor_2Fauth0_xq4cej',
     url: 'https://auth0.com/',
   },
   {
     name: 'CyberSafe',
     width: 250,
     height: 50,
-    image: 'sponsors/partner_2FCybersafe_e1mkg5.webp',
+    image: 'partner_2FCybersafe_e1mkg5',
     url: 'https://cybersafe.com/',
   },
   {
     name: 'Jetbrains',
     width: 180,
     height: 180,
-    image: 'sponsors/partner_2Fjetbrains_p7jquw.webp',
+    image: 'partner_2Fjetbrains_p7jquw',
     url: 'https://www.jetbrains.com/',
   },
   {
     name: 'Stickermule',
     width: 180,
     height: 180,
-    image:
-      'sponsors/partner_2F02-sticker-mule-logo-light-bg-stacked_zptiif.webp',
+    image: 'partner_2F02-sticker-mule-logo-light-bg-stacked_zptiif',
     url: 'https://www.stickermule.com/',
   },
   {
     name: 'Blexin',
     width: 250,
     height: 64,
-    image: 'sponsors/sponsor_2Fblexin_cropped_nge1n6.webp',
+    image: 'sponsor_2Fblexin_cropped_nge1n6',
     url: 'https://blexin.com/en/',
   },
 ];

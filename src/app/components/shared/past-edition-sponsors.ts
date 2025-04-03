@@ -27,10 +27,19 @@ import { toSignal } from '@angular/core/rxjs-interop';
                   <img
                     [alt]="item.name"
                     [title]="item.name"
-                    [ngSrc]="item.image"
-                    class="grayscale mx-4 transition-all duration-500 ease-in-out hover:grayscale-0 pr-12 mt-6"
-                    [width]="item.width"
-                    [height]="item.height"
+                    [ngSrc]="'ngrome-sponsors/' + item.image"
+                    class="w-6/12 flex-shrink-0 object-cover object-center h-auto mx-auto grayscale transition-all duration-500 ease-in-out hover:grayscale-0"
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                    sizes="(max-width: 640px) 100vw,
+                        (max-width: 768px) 50vw,
+                        (max-width: 1024px) 33vw,
+                        (max-width: 1280px) 25vw,
+                        (max-width: 1536px) 20vw,
+                        20vw"
                   />
                 </a>
               }

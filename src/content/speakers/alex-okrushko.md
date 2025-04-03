@@ -5,7 +5,7 @@ biography: Alex is a Senior Software Engineer at Snowflake. He is part of the Ng
 from: Ontario, Canada 
 work: Snowflake
 jobRole: Senior Software Engineer
-imageUrl: https://cache.sessionize.com/image/c12c-400o400o1-XrHrLBYhATPDLhuiSrEpXe.jpeg
+imageUrl: ngrome-speaker/alex-okrushko_ipovde
 links:
     linkedIn: https://www.linkedin.com/in/alex-okrushko-64262a33/
     twitter: https://twitter.com/AlexOkrushko

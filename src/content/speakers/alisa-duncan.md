@@ -5,7 +5,7 @@ biography: Alisa Duncan is a Senior Developer Advocate at Okta, a full-stack dev
 from: USA
 work: Okta
 jobRole: Senior Developer Advocate
-imageUrl: https://sessionize.com/image/6e3f-400o400o2-GBA7yccZwvsc9a2DrpHypG.jpg
+imageUrl: ngrome-speaker/alisa-duncan_lsqhgf
 links:
     linkedIn: https://www.linkedin.com/in/jalisaduncan/
     twitter: https://twitter.com/AlisaDuncan

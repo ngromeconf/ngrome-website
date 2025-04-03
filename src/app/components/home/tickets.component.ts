@@ -43,15 +43,15 @@ export class FilterTicketByDatePipe implements PipeTransform {
           <h2
             class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl"
           >
-            Tickets<br />
+            Ticket
+            <br />
           </h2>
           <p
             class="mt-12 font-roboto text-slate-500 sm:text-lg sm:leading-normal lg:text-xl lg:leading-normal xl:text-2xl xl:leading-normal"
           >
-            Ready to revolutionize your Angular app? Grab your ticket now and
-            unlock a world of cutting-edge knowledge, unparalleled networking,
-            and hands-on mastery. Don't just attend a conference – be part of
-            the Angular evolution. Your seat to innovation is just a click away!
+            Join a vibrant community of Angular developers and elevate your
+            expertise. <br />Invest in your career and experience the future of
+            Angular in the heart of Rome.
             <br />
 
             <!-- <span class="italic font-semibold"

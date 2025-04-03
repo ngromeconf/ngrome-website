@@ -7,7 +7,7 @@ Currently I am Principal Consultant and Trainer at Lowgular, where I am teaching
 from: Poland
 work: Lowgular
 jobRole: Principal Angular Consultant
-imageUrl: https://ng-poland.pl/images/speakers/angular-mateusz-ledziewicz.webp
+imageUrl: ngrome-speaker/mateusz-łędzewicz_voifvq
 links:
     linkedIn: https://www.linkedin.com/in/mateusz-%C5%82%C4%99dzewicz-36197080/
     twitter: https://twitter.com/mat_ledzewicz

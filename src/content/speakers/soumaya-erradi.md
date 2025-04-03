@@ -5,7 +5,7 @@ biography: I'm an experienced web developer and a passionate IT and electronics 
 from: Brescia, Italia
 work: Atlantis S.R.L.
 jobRole: Senior Software Developer
-imageUrl: https://www.soumayaerradi.it/assets/images/foto.jpg
+imageUrl: ngrome-speaker/soumaya-erradi_r0gblb
 links:
     linkedIn: https://www.linkedin.com/in/soumaya-erradi
     twitter: https://twitter.com/sumy92

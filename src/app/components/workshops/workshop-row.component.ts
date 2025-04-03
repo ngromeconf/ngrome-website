@@ -1,4 +1,4 @@
-import { DatePipe, NgClass, NgIf } from '@angular/common';
+import { DatePipe, NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WorkshopAttributes } from 'src/app/models/workshop.model';
@@ -8,7 +8,7 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
 @Component({
   selector: 'workshop-row',
   standalone: true,
-  imports: [DatePipe, BadgeComponent, NgIf, NgClass],
+  imports: [DatePipe, BadgeComponent, NgIf, NgClass, NgOptimizedImage],
   template: `
     <section
       [ngClass]="
@@ -29,7 +29,9 @@ import { COLOR_RECIPIENTS } from '../shared/constant';
                   <img
                     [alt]="author.name"
                     [title]="author.name"
-                    [src]="author.imageUrl"
+                    [ngSrc]="author.imageUrl"
+                    height="80"
+                    width="80"
                     class="mx-auto object-cover rounded-full h-20 w-20 "
                   />
                 </div>

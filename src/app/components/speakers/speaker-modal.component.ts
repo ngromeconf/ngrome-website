@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { Speaker } from 'src/app/models/speaker.model';
 import { SocialLinksComponent } from '../shared/social-links.component';
-import { DatePipe, NgIf } from '@angular/common';
+import { DatePipe, NgIf, NgOptimizedImage } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'speaker-modal',
   standalone: true,
-  imports: [SocialLinksComponent, NgIf, DatePipe],
+  imports: [SocialLinksComponent, NgIf, DatePipe, NgOptimizedImage],
   styles: `
     .modal-speaker {
       z-index: 9999;
@@ -56,7 +56,7 @@ import { Router } from '@angular/router';
           <div class="sm:px-10 px-5 pb-5 container text-left">
             <div class="sm:inline-flex w-full gap-10">
               <img
-                [src]="speaker?.imageUrl"
+                [ngSrc]="speaker?.imageUrl"
                 alt=" "
                 class="h-40 w-40 rounded-full xl:w-56 xl:h-56 m-auto mb-2 sm:mb-auto object-cover"
               />

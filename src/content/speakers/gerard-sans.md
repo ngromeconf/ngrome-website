@@ -5,7 +5,7 @@ biography: Gerard helps developers succeed in Artificial Intelligence and Web3; 
 from: London
 work: 
 jobRole: Developer Evangelist for Web, Cloud and AI
-imageUrl: photo/authors/gerard-sans.webp
+imageUrl: ngrome-speaker/gerard_sans_cmf6qv
 links:
     linkedIn: 
     twitter: https://x.com/gerardsans
