@@ -75,10 +75,22 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                     <img
                       [alt]="item.name"
                       [title]="item.name"
-                      [ngSrc]="item.image"
-                      class="flex-shrink-0 object-cover object-center w-full h-35"
-                      [width]="200"
-                      [height]="44"
+                      [ngSrc]="'ngrome-sponsors/' + item.image"
+                      class="flex-shrink-0 object-cover object-center h-auto mx-auto"
+                      width="400"
+                      height="400"
+                      [ngClass]="{
+                        'w-8/12': itemsPerRow === 5
+                      }"
+                      loading="lazy"
+                      decoding="async"
+                      fetchpriority="low"
+                      sizes="(max-width: 640px) 100vw,
+                        (max-width: 768px) 50vw,
+                        (max-width: 1024px) 33vw,
+                        (max-width: 1280px) 25vw,
+                        (max-width: 1536px) 20vw,
+                        20vw"
                     />
                   </a>
                 </div>
