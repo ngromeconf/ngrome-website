@@ -5,7 +5,7 @@ biography: Enea Jahollari is a Google Developer Expert for Angular, Consultant, 
 from: Albania
 work: Push-Based.io
 jobRole: Consulting Software Engineer
-imageUrl: https://res.cloudinary.com/dp1gwjz5w/image/upload/fl_preserve_transparency/v1709387639/ngrome-speaker/Enea_Jahollari_xz72yg.jpg?_s=public-apps
+imageUrl: ngrome-speaker/Enea_Jahollari_xz72yg.jpg?_s=public-apps
 links:
     linkedIn: https://www.linkedin.com/in/eneajahollari/
     twitter: https://twitter.com/Enea_Jahollari

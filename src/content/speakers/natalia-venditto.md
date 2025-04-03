@@ -5,7 +5,7 @@ biography: Natalia has worked in the roles of frontend developer, full-stack dev
 from: Spain
 work: Azure
 jobRole: Principal Program Manager FE
-imageUrl: https://microfrontend.dev/images/nataliavendittocard.jpeg
+imageUrl: ngrome-speaker/Natalia_Venditto_ijlbpi
 links:
     linkedIn: https://www.linkedin.com/in/anfibiacreativa/
     twitter: https://twitter.com/AnfibiaCreativa
