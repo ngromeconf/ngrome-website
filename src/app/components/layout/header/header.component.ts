@@ -176,7 +176,7 @@ import { Router, RouterModule } from '@angular/router';
                 @for (item of NavMenu; track $index) {
                   @if (!item.pastEdition && item.visible) {
                     <a
-                      (click)="onGoToPage(item.destinationUrl)"
+                      (click)="onGoToPage(item.destinationUrl, item.fragment)"
                       [target]="item?.pageSite ? '_self' : '_target'"
                       class="pr-6 pl-10 flex hover:bg-white hover-white"
                     >
@@ -245,9 +245,9 @@ export class HeaderComponent {
     this.toggleService.updateData(false);
   }
 
-  onGoToPage(page: string) {
+  onGoToPage(page: string, fragment: string) {
     this.toggleService.updateData(false);
-    this.router.navigate([page]);
+    this.router.navigate([page], { fragment: fragment });
   }
   onGoToTicket() {
     if (this.router.url === '/') {
