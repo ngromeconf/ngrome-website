@@ -65,6 +65,18 @@ export class FilterTicketByDatePipe implements PipeTransform {
           <tito-widget event="ngrome-events/ngrome-conf-mmxxv"></tito-widget>
         </div>
       </section>
+
+      <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4">Stay Updated</h2>
+          <p class="text-xl text-gray-600 mb-8">
+            Don't miss any updates about ngRome 2024!
+          </p>
+          <tito-register-interest
+            event="ngrome-events/ngrome-conf-mmxxv"
+          ></tito-register-interest>
+        </div>
+      </section>
     </div>
   `,
   styles: ``,

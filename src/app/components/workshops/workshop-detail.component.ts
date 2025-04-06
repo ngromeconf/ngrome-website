@@ -105,19 +105,15 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
           class="py-5"
         />
       }
-      <div class="sticky bottom-0 w-full bg-gray-50 px-20 py-5 border-t">
+      <div class="sticky bottom-0 w-full bg-gray-50 px-10 py-5 border-t">
         <div
-          class="flex flex-col items-center md:items-start md:flex-row gap-5 justify-between max-w-3xl mx-auto"
+          class="flex flex-col items-center md:items-start md:flex-row gap-3 justify-between max-w-3xl mx-auto"
         >
-          <div class="flex flex-col gap-4 text-center md:text-left">
+          <div class="flex flex-col gap-2 text-center md:text-left">
             <p>
               When:
               <span class="font-semibold"
                 >{{ workshop.attributes.date | date: 'MMMM dd, YYYY' }}
-                @if (workshop?.attributes?.time) {
-                  |
-                  {{ workshop.attributes.time }}
-                }
               </span>
             </p>
             @if (workshop.attributes.location?.mapsLink) {
@@ -128,7 +124,7 @@ import { PageImageComponent } from '../layout/pages/main-image/page-image.compon
                     ? '_target'
                     : '_self'
                 "
-                >Venue:
+              >
                 <span class="text-blue-600 hover:underline">{{
                   workshop.attributes.location?.name
                 }}</span></a

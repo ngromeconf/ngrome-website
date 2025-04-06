@@ -1,4 +1,9 @@
-import { Component, OnInit, Signal, inject } from '@angular/core';
+import {
+  Component,
+  Signal,
+  inject,
+  CUSTOM_ELEMENTS_SCHEMA,
+} from '@angular/core';
 import { HeroComponent } from '../components/home/hero/hero.component';
 import { SponsorComponent } from '../components/sponsors/sponsor.component';
 import { Sponsors } from '../models/sponsor.model';
@@ -21,12 +26,14 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-home',
   standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <app-hero />
     <app-speaker-wall />
     <!-- <app-features /> -->
     <!-- <app-venue /> -->
     <app-tickets />
+
     <app-call-for-paper />
     <app-sponsorship-opportunity />
     <!--  <app-call-for-paper id="ticket-section" /> -->

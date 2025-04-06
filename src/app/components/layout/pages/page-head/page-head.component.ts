@@ -22,7 +22,7 @@ import { SocialShareComponent } from '../../../social-share/social-share.compone
           }
           @if (subtitle) {
             <p
-              class="text-lg md:text-left mb-10 leading-snug text-slate-500"
+              class="text-lg md:text-left leading-snug text-slate-500"
               [innerHtml]="subtitle"
             ></p>
           }

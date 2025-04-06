@@ -3,7 +3,7 @@ import { ReplaySubject, Observable, forkJoin } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
-const TITO_URL = 'https://js.tito.io/v2/with/inline,';
+const TITO_URL = 'https://js.tito.io/v2';
 //const TITO_DEV_MODE = 'development_mode,';
 const TITO_DEV_MODE = '';
 //const TITO_TEST_MODE = 'test_mode,';
