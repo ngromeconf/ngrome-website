@@ -80,7 +80,7 @@ import { Router, RouterModule } from '@angular/router';
             <button
               type="button"
               class="px-5 py-2.5 text-sm font-medium text-black inline-flex items-center bg-white hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center "
-              ester
+              (click)="onGoToTicket()"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { TitoService } from '../../services/tito.service';
 import { WindowRef } from '../../services/window.provider';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TicketInterface } from 'src/app/models/ticket.interface';
 
 @Pipe({
@@ -158,7 +158,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
                   >
                   Workshops are filling up quickly.
                 </div>
-                <a routerLink="/workshops" class="button-green">
+                <a [routerLink]="'/workshops'" class="button-green">
                   Explore Workshops
                   <!-- Arrow right icon -->
                   <svg
@@ -269,7 +269,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
       }
     `,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class TicketsComponent {
   private tito: any;
