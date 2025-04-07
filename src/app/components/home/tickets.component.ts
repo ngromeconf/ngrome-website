@@ -128,12 +128,18 @@ export class FilterTicketByDatePipe implements PipeTransform {
           border-radius: 0.375rem;
           font-weight: 500;
           margin-top: 1rem;
+          justify-content: center;
         }
 
         .svg-inline--fa {
+          display: none;
           width: 1rem;
           height: 1rem;
           color: #6a7280;
+
+          @media (min-width: 640px) {
+            display: block;
+          }
         }
       }
     `,
