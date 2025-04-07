@@ -80,7 +80,7 @@ import { Router, RouterModule } from '@angular/router';
             <button
               type="button"
               class="px-5 py-2.5 text-sm font-medium text-black inline-flex items-center bg-white hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center "
-              ester
+              (click)="onGoToTicket()"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +176,7 @@ import { Router, RouterModule } from '@angular/router';
                 @for (item of NavMenu; track $index) {
                   @if (!item.pastEdition && item.visible) {
                     <a
-                      (click)="onGoToPage(item.destinationUrl)"
+                      (click)="onGoToPage(item.destinationUrl, item.fragment)"
                       [target]="item?.pageSite ? '_self' : '_target'"
                       class="pr-6 pl-10 flex hover:bg-white hover-white"
                     >
@@ -245,9 +245,9 @@ export class HeaderComponent {
     this.toggleService.updateData(false);
   }
 
-  onGoToPage(page: string) {
+  onGoToPage(page: string, fragment: string) {
     this.toggleService.updateData(false);
-    this.router.navigate([page]);
+    this.router.navigate([page], { fragment: fragment });
   }
   onGoToTicket() {
     if (this.router.url === '/') {
