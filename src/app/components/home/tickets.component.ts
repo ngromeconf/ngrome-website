@@ -86,26 +86,32 @@ export class FilterTicketByDatePipe implements PipeTransform {
 
         .tito-register-interest-form label {
           display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: 0.5rem;
           margin-bottom: 1rem;
           color: #4b5563;
           font-size: 0.875rem;
-
-          /* New flex container properties */
           width: 100%;
-          justify-content: space-between;
+
+          @media (min-width: 640px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
         }
 
         .tito-register-interest-form input {
-          width: 70%;
+          width: 100%;
           padding: 0.75rem;
           border: 1px solid #e5e7eb;
           border-radius: 0.375rem;
           font-size: 1rem;
           transition: border-color 0.2s;
-          margin-top: 0;
-          margin-left: auto;
+
+          @media (min-width: 640px) {
+            width: 70%;
+            margin-left: auto;
+          }
 
           &:focus {
             outline: none;
@@ -115,7 +121,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
         }
 
         .tito-register-interest-form button {
-          @apply: button-green;
+          @apply inline-flex items-center px-5 py-2.5 text-sm bg-green-600 hover:bg-red-ngrome text-slate-100 font-medium rounded-md active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300;
           width: 100%;
           color: white;
           padding: 0.75rem 1.5rem;
