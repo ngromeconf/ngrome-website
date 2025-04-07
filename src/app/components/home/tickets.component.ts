@@ -53,15 +53,8 @@ export class FilterTicketByDatePipe implements PipeTransform {
             expertise. <br />Invest in your career and experience the future of
             Angular in the heart of Rome.
             <br />
-
-            <!-- <span class="italic font-semibold"
-              >* If you're purchasing 3 or more tickets, don't forget to get in
-              touch with us for exclusive discounts and group offers. Join us in
-              shaping the future of Angular!</span
-            > -->
           </p>
 
-          <!-- Place this where you want the widget to appear -->
           <tito-widget event="ngrome-events/ngrome-conf-mmxxv"></tito-widget>
         </div>
       </section>
@@ -79,7 +72,66 @@ export class FilterTicketByDatePipe implements PipeTransform {
       </section>
     </div>
   `,
-  styles: ``,
+  styles: [
+    `
+      :host ::ng-deep {
+        .tito-register-interest-form {
+          background: white;
+          padding: 2rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .tito-register-interest-form label {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+          color: #4b5563;
+          font-size: 0.875rem;
+        }
+
+        .tito-register-interest-form input {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #e5e7eb;
+          border-radius: 0.375rem;
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          transition: border-color 0.2s;
+
+          &:focus {
+            outline: none;
+            border-color: #6366f1;
+            ring: 2px rgba(99, 102, 241, 0.2);
+          }
+        }
+
+        .tito-register-interest-form button {
+          width: 100%;
+          background-color: #6366f1;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.375rem;
+          font-weight: 500;
+          margin-top: 1rem;
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: #4f46e5;
+          }
+        }
+
+        .svg-inline--fa {
+          width: 1rem;
+          height: 1rem;
+          color: #6366f1;
+        }
+      }
+    `,
+  ],
   imports: [CommonModule],
 })
 export class TicketsComponent {
@@ -92,14 +144,9 @@ export class TicketsComponent {
   ) {
     this.titoService.lazyLoadTito().subscribe((res) => {
       this.tito = this.winRef.nativeWindow.tito;
-
-      // this.tito('on:widget:loaded', function (data: any) {
-      //   console.log('Tito widget loaded', data);
-      // });
-      // this.tito('on:registration:started', function (data: any) {});
       this.tito('on:registration:finished', (data: any) => {
         console.log('Tito registration finished', data);
-        this.router.navigateByUrl(`/thank-you/${data.reference}/${data.name}`);
+        //this.router.navigateByUrl(`/thank-you/${data.reference}/${data.name}`);
       });
     });
   }
