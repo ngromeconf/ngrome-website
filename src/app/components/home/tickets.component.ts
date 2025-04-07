@@ -91,43 +91,43 @@ export class FilterTicketByDatePipe implements PipeTransform {
           margin-bottom: 1rem;
           color: #4b5563;
           font-size: 0.875rem;
+
+          /* New flex container properties */
+          width: 100%;
+          justify-content: space-between;
         }
 
         .tito-register-interest-form input {
-          width: 100%;
+          width: 70%;
           padding: 0.75rem;
           border: 1px solid #e5e7eb;
           border-radius: 0.375rem;
-          margin-top: 0.5rem;
           font-size: 1rem;
           transition: border-color 0.2s;
+          margin-top: 0;
+          margin-left: auto;
 
           &:focus {
             outline: none;
-            border-color: #6366f1;
+            border-color: #6a7280;
             ring: 2px rgba(99, 102, 241, 0.2);
           }
         }
 
         .tito-register-interest-form button {
+          @apply: button-green;
           width: 100%;
-          background-color: #6366f1;
           color: white;
           padding: 0.75rem 1.5rem;
           border-radius: 0.375rem;
           font-weight: 500;
           margin-top: 1rem;
-          transition: background-color 0.2s;
-
-          &:hover {
-            background-color: #4f46e5;
-          }
         }
 
         .svg-inline--fa {
           width: 1rem;
           height: 1rem;
-          color: #6366f1;
+          color: #6a7280;
         }
       }
     `,
