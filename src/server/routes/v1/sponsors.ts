@@ -32,8 +32,6 @@ const silverSponsor: SponsorInterface[] = [
   {
     name: 'Cloudinary',
     image: 'logo-CLOUDINARY_ybyx4r',
-    width: 240,
-    height: 101,
     url: 'https://cloudinary.com/',
   },
 ];
