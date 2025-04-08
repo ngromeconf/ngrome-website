@@ -75,7 +75,11 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                     <img
                       [alt]="item.name"
                       [title]="item.name"
-                      [ngSrc]="'ngrome-sponsors/' + item.image"
+                      [ngSrc]="
+                        'c_pad,g_center,h_600,w_600/v1709386635/ngrome-sponsors/' +
+                        item.image +
+                        '.webp'
+                      "
                       class="flex-shrink-0 object-cover object-center h-auto mx-auto"
                       width="400"
                       height="400"

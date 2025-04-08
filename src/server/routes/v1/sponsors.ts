@@ -32,8 +32,6 @@ const silverSponsor: SponsorInterface[] = [
   {
     name: 'Cloudinary',
     image: 'logo-CLOUDINARY_ybyx4r',
-    width: 240,
-    height: 101,
     url: 'https://cloudinary.com/',
   },
 ];
@@ -59,12 +57,11 @@ const communityPartners: SponsorInterface[] = [
     image: 'logo-light-mode_mfmfgc',
     url: 'https://learnbydo.ing/',
   },
-  // {
-  //   name: 'The Red Code',
-  //   image:
-  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206522/ngrome-sponsors/theRedCode_logo_hbl2ou.png',
-  //   url: 'https://www.theredcode.it/',
-  // },
+  {
+    name: 'The Red Code',
+    image: 'theRedCode_logo_hbl2ou',
+    url: 'https://www.theredcode.it/',
+  },
   // {
   //   name: 'LABFORWEB',
   //   image:
@@ -155,12 +152,11 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Flogo%20wtm%20italia%20-%20Michela%20Bertaina.jpg?alt=media&amp;token=034fb5d6-96d8-4cdf-8f08-8590c1b8e5f7',
   //   url: 'https://twitter.com/wtmitalia',
   // },
-  // {
-  //   name: 'Codemotion',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fcodemotion.png?alt=media&token=4d49a06c-418a-48c1-bedb-16fb67ddee87&_gl=1*1v0ni3d*_ga*NzM2NjU2MDMyLjE2ODkxNjQ2MDY.*_ga_CW55HF8NVT*MTY5NjYxNTA4Ny4xNS4xLjE2OTY2MTUxMDMuNDQuMC4w',
-  //   url: 'http://codemotion.com',
-  // },
+  {
+    name: 'Codemotion',
+    image: 'codemotion_hac6ns',
+    url: 'http://codemotion.com',
+  },
   // {
   //   name: 'MilanoJS',
   //   image:
@@ -237,12 +233,11 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Froma-js.png?alt=media&amp;token=64b11145-0fd5-45a9-a093-98d0904ac7bf',
   //   url: 'http://romajs.org/',
   // },
-  // {
-  //   name: 'DotNetCode',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fdotnet-code.png?alt=media&amp;token=45b480a5-32e3-495b-b555-9da8f45e6d5d',
-  //   url: 'https://www.meetup.com/it-IT/DotNetCode/',
-  // },
+  {
+    name: 'DotNetCode',
+    image: 'dotnet_code_k8ygr9',
+    url: 'https://www.meetup.com/it-IT/DotNetCode/',
+  },
   // {
   //   name: 'Angular Belgrade',
   //   image:
