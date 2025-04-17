@@ -107,6 +107,11 @@ const communityPartners: SponsorInterface[] = [
     url: 'https://www.wearedevelopers.com/',
   },
   {
+    name: 'NG Asia',
+    image: 'NG_Asia_bsmu5s',
+    url: '',
+  },
+  {
     name: 'Analog',
     image: 'ANALOG_sf5n0o',
     url: 'https://analogjs.org/',
