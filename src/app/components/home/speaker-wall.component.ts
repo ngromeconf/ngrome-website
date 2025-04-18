@@ -10,14 +10,12 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
     <section id="speakers" class="min-h-screen bg-gray-100">
       <div class="container mx-auto px-4 py-12">
         <h2
-          class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl my-12"
+          class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-6xl my-12"
         >
-          Speakers<br />
+          NGRome MMXXV Speakers<br />
         </h2>
 
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-        >
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           @for (speaker of speakers; track $index) {
             @if (speaker.imageUrl) {
               <div
