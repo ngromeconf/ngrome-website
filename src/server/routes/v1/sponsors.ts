@@ -53,6 +53,13 @@ const communityPartners: SponsorInterface[] = [
   //   url: 'https://www.grusp.org/',
   // },
   {
+    name: 'angular.dev',
+    width: 230,
+    height: 97,
+    image: 'logo-ANGULAR_ubew4u',
+    url: 'https://angular.dev/',
+  },
+  {
     name: 'learnbydo.ing',
     image: 'logo-light-mode_mfmfgc',
     url: 'https://learnbydo.ing/',
@@ -64,8 +71,7 @@ const communityPartners: SponsorInterface[] = [
   },
   // {
   //   name: 'LABFORWEB',
-  //   image:
-  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718204382/ngrome-sponsors/labforweb_cgzags.png',
+  //   image: 'labforweb_cgzags',
   //   url: 'https://www.labfortraining.it/',
   // },
   // {
@@ -101,6 +107,11 @@ const communityPartners: SponsorInterface[] = [
     url: 'https://www.wearedevelopers.com/',
   },
   {
+    name: 'NG Asia',
+    image: 'NG_Asia_bsmu5s',
+    url: '',
+  },
+  {
     name: 'Analog',
     image: 'ANALOG_sf5n0o',
     url: 'https://analogjs.org/',
@@ -115,6 +126,11 @@ const communityPartners: SponsorInterface[] = [
     name: 'CityJS',
     image: 'cityjs_dqdutg',
     url: 'https://ti.to/cityjs-conference/cityjs-athens-2025/discount/ngrome',
+  },
+  {
+    name: 'Developer Nation',
+    image: 'Dn_logo_2025_powered_reg_hi-res_b0wk2e',
+    url: 'https://www.developernation.net/',
   },
   // {
   //   name: 'Angular Birmingham',
@@ -187,12 +203,11 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fgdg-bari.jpg?alt=media&amp;token=085a7614-dafa-47f8-ba65-40d21073230e',
   //   url: 'https://gdg.community.dev/gdg-bari/',
   // },
-  // {
-  //   name: 'House of Angular',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fhouse-of-angular.png?alt=media&amp;token=0cdf6bd4-ccda-43b5-a333-a235ffe94e42',
-  //   url: 'https://twitter.com/houseofangular',
-  // },
+  {
+    name: 'House of Angular',
+    image: 'house_of_angular_mf0hvj',
+    url: 'https://twitter.com/houseofangular',
+  },
   // {
   //   name: 'Django Girls',
   //   image:
