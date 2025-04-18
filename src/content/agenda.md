@@ -123,12 +123,13 @@ agenda:
                 - slug: fabio-biondi
           - slug: closing-keynote
             title: Closing Keynote
-            subtitle: ''
-            description: ''
+            subtitle: 'Live the Golden Life with AI and Angular'
+            description: 'As an Angular developer, you know that Angular’s reactive primitives are fresh, hot, crispy, and cooked just right. And to be honest, we’ve had enough of the hype, the fear, and the confusion around AI. In our closing keynote, Mike Ryan and Brian Love will be cooking with a new open-source library that combines Angular Signals and the Resource API to bring LLMs—and joy—into your app in meaningful ways. We’ll show you how to stream responses, handle tool calls, and build contextual UIs that feel intelligent—without abandoning the Angular patterns you already know. Expect live demos, real-world use cases, and a fresh take on what it means to ship meaningful AI features in modern frontend apps.'
             type: Closing Keynote
             duration: 40
             speakers: 
-                - slug: 
+                - slug: mike-ryan
+                - slug: brian-love
           - slug: 
             title: 
             type: Panel IV
