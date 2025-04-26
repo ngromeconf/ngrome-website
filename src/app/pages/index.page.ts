@@ -64,7 +64,7 @@ export const routeMeta: RouteMeta = {
       <app-sponsor [sponsors]="Sponsors.Event" [itemsPerRow]="1" type="Event" />
       <app-sponsor
         [sponsors]="Sponsors.Community"
-        [itemsPerRow]="5"
+        [itemsPerRow]="6"
         type="Community"
       />
     }
