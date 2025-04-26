@@ -224,6 +224,16 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fgdg-trento.png?alt=media&amp;token=45ef0614-5355-4a7c-821e-9d90974b7f20',
   //   url: 'https://gdgtrento.it/',
   // },
+  {
+    name: 'GDG Torino',
+    image: 'logoGDGTorinofull_transparent_-_Loredana_Frontino_nkxw95',
+    url: 'https://gdg.community.dev/gdg-torino/',
+  },
+  {
+    name: 'Velletri.dev',
+    image: 'IMG_7633_-_DANIELE_MARIO_AREDDU_rddrgl',
+    url: 'https://www.linkedin.com/company/velletri-dev/',
+  },
   // {
   //   name: 'Mindsharing.tech',
   //   image:
