@@ -116,12 +116,16 @@ const communityPartners: SponsorInterface[] = [
     image: 'ANALOG_sf5n0o',
     url: 'https://analogjs.org/',
   },
-  // {
-  //   name: 'GDG Pescara',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Flogo%20-%20GDG%20Pescara.png?alt=media&amp;token=7eb5b338-bb10-404a-8adb-ccfb503f5d8f',
-  //   url: 'https://www.meetup.com/GDG-Pescara/',
-  // },
+  {
+    name: 'GDG Campobasso',
+    image: 'gdg_nuovo_logo_-_Nicola_Noviello_kt5xyz',
+    url: 'https://gdg.community.dev/gdg-campobasso/',
+  },
+  {
+    name: 'GDG Venezia',
+    image: 'gdg_venezia_-_Fabio_Catinella_tms8dr',
+    url: 'https://gdg.community.dev/gdg-venezia/',
+  },
   {
     name: 'CityJS',
     image: 'cityjs_dqdutg',
