@@ -12,7 +12,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
       <section
         class="py-14 w-full md:py-24 flex flex-wrap content-center bg-white "
       >
-        <div class="w-full px-16 md:px-8 lg:px-28 ">
+        <div class="w-full ">
           <div class="grid grid-cols-12 mb-6 md:mb-12">
             <div class="col-span-12 text-center">
               <h2 class="text-[25px] leading-none font-bold">
@@ -28,7 +28,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
                     [alt]="item.name"
                     [title]="item.name"
                     [ngSrc]="'ngrome-sponsors/' + item.image"
-                    class="w-6/12 flex-shrink-0 object-cover object-center h-auto mx-auto grayscale transition-all duration-500 ease-in-out hover:grayscale-0"
+                    class="w-5/12 flex-shrink-0 object-cover object-center h-auto mx-auto grayscale transition-all duration-500 ease-in-out hover:grayscale-0"
                     width="400"
                     height="400"
                     loading="lazy"

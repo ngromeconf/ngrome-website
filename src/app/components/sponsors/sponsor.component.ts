@@ -54,20 +54,14 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
           </ng-template>
           <!-- Component ends here -->
           <div class="w-full mt-14">
-            <div
-              [ngClass]="{
-                'flex flex-wrap justify-center gap-2': itemsPerRow !== 6,
-                'grid m-auto gap-2 md:gap-8 grid-cols-3 md:grid-cols-6':
-                  itemsPerRow === 6
-              }"
-            >
+            <div class="flex flex-wrap justify-center gap-2">
               <ng-container *ngFor="let item of sponsors; let i = index">
                 <div
                   [ngClass]="{
                     'w-full md:w-1/3': itemsPerRow === 1,
                     'w-2/3 md:w-1/4': itemsPerRow === 3,
-                    'w-2/5 md:w-1/5': itemsPerRow === 5,
-                    'flex items-center align-middle': itemsPerRow === 6
+                    'w-3/5 md:w-1/5': itemsPerRow === 5,
+                    'w-2/6 md:w-1/6': itemsPerRow === 6
                   }"
                   [class.mx-auto]="(i + 1) % itemsPerRow !== 0"
                 >
@@ -84,7 +78,8 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                       width="400"
                       height="400"
                       [ngClass]="{
-                        'w-8/12': itemsPerRow === 5
+                        'w-8/12': itemsPerRow === 5,
+                        'w-8/12': itemsPerRow === 6
                       }"
                       loading="lazy"
                       decoding="async"
