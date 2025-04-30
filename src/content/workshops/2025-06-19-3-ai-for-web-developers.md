@@ -20,12 +20,34 @@ ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 ---
 
-As a web developer with over two decades in the industry, Tamas has always been curious about the next big thing shaping the field. Recently, he took some time to dive into the rapidly growing world of AI unpacking buzzwords like multimodality, agents, RAG, large language models (LLMs), tokens, and embeddings amongst others. 
+In this interactive workshop, we leverage the latest innovations in AI to build intelligent and scalable web applications using developer-friendly techniques and tools.
 
-He wanted to go beyond the hype and truly understand how these tools can enhance the way we build. 
+We start by demystifying core AI concepts including multimodality, model parameters, Retrieval-Augmented Generation (RAG), large language models (LLMs), tokens, and embeddings, creating a strong foundational understanding.
 
-Now, Tamas is excited to share what he’s learned in a practical, developer-friendly way. His hands-on workshop is designed to empower fellow web developers whether they're just starting their journey or have years of experience. 
+We explore practical architectures and patterns for integrating AI seamlessly into web projects. We'll cover structuring applications for optimal AI integration, focusing on simplicity and maintainability.
 
-As part of this workshop you will have the opportunitiy to dive into AI, showing you how to integrate its powerful features into your projects. Tamas's goal is to make AI approachable, translating complex concepts into something relatable and actionable Web Developer to Web Developer. 
+We discuss how to categorize AI-driven components effectively and enforce best practices using modern tooling, ensuring robust and clean implementation.
 
-By the end, attendees will be equipped to create intelligent, cutting-edge web applications that stand out in today’s tech landscape.
+## PART 1: DEMYSTIFYING AI FOR DEVELOPERS
+
+- Understanding model parameters, multimodality, RAG, LLMs, tokens, and embeddings
+
+- Breaking down complex AI concepts into actionable insights
+
+- Essential tools and libraries for practical AI integration
+
+## PART 2: ARCHITECTING INTELLIGENT WEB APPLICATIONS
+
+- Integrating AI capabilities with Angular
+
+- Structuring your project for seamless AI integration
+
+- Ensuring maintainability and scalability of AI-driven web applications
+
+# PART 3: ENFORCING BEST PRACTICES WITH AI
+
+- Categorising and organising AI-driven components
+
+- Best practices for data management and AI interaction
+
+- Tools and techniques to enforce AI architecture quality and consistency
