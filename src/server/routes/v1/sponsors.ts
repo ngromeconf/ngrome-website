@@ -166,12 +166,16 @@ const communityPartners: SponsorInterface[] = [
   //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718735241/ngrome-sponsors/gdgvda_hmaq13.png',
   //   url: 'https://www.gdgvda.it/',
   // },
-  // {
-  //   name: 'Women Tech Maker - Italia',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Flogo%20wtm%20italia%20-%20Michela%20Bertaina.jpg?alt=media&amp;token=034fb5d6-96d8-4cdf-8f08-8590c1b8e5f7',
-  //   url: 'https://twitter.com/wtmitalia',
-  // },
+  {
+    name: 'GDG Pescara',
+    image: 'GDG_Pescara_c1ou7q',
+    url: 'https://gdg.community.dev/gdg-pescara/',
+  },
+  {
+    name: 'Women Tech Maker - Italia',
+    image: 'wtm_italia_tbcyha',
+    url: 'https://twitter.com/wtmitalia',
+  },
   {
     name: 'Codemotion',
     image: 'codemotion_hac6ns',
@@ -189,12 +193,11 @@ const communityPartners: SponsorInterface[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2FBeJS_Impression%20-%20Aymen%20Ben%20Amor.png?alt=media&amp;token=616dc877-296f-40fd-b093-f6b136656df1',
   //   url: 'https://www.bejs.io/',
   // },
-  // {
-  //   name: 'Angular Hamburg',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular-hamburg.jpeg?alt=media&amp;token=3c5d0cb9-2ba8-42a1-8ccb-874179d73f7b',
-  //   url: 'https://twitter.com/angular_hamburg',
-  // },
+  {
+    name: 'Angular Kenia',
+    image: 'angular_kenya_logo_black_-_Wayne_Gakuo_1_p7pgtq',
+    url: 'https://ng-kenya.com/home',
+  },
   // {
   //   name: 'GDG Nebrodi ',
   //   image:
@@ -267,12 +270,11 @@ const communityPartners: SponsorInterface[] = [
     image: 'dotnet_code_k8ygr9',
     url: 'https://www.meetup.com/it-IT/DotNetCode/',
   },
-  // {
-  //   name: 'Angular Belgrade',
-  //   image:
-  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718206986/ngrome-sponsors/angular-belgrade_kunnnk.svg',
-  //   url: 'https://twitter.com/angularbelgrade',
-  // },
+  {
+    name: 'Angular Belgrade',
+    image: 'angular-belgrade_kunnnk',
+    url: 'https://twitter.com/angularbelgrade',
+  },
   // {
   //   name: 'ng-de',
   //   image:
