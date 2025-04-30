@@ -75,8 +75,8 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                         '.webp'
                       "
                       class="flex-shrink-0 object-cover object-center h-auto mx-auto"
-                      width="400"
-                      height="400"
+                      width="600"
+                      height="600"
                       [ngClass]="{
                         'w-8/12': itemsPerRow === 5,
                         'w-8/12': itemsPerRow === 6
