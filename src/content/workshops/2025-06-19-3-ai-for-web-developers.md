@@ -15,7 +15,7 @@ location:
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240138/2025/WORKSHOP__AI_Tamas__OG_Image_kyycpx.jpg
 ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240138/2025/WORKSHOP__AI_Tamas__OG_Image_kyycpx.jpg
 link: /workshops/2025-06-19-ai-for-web-developers
-ticket: nezbncp4i20,ylkb4php1eo,85t-peutyli
+ticket: nezbncp4i20,ylkb4php1eo,ngrome-in-person-regular-june-27-2024
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 ---
