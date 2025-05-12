@@ -286,16 +286,20 @@ const communityPartners: SponsorInterface[] = [
   //   image: 'sponsors/community/firenzedev.svg',
   //   url: 'https://firenze.dev',
   // },
-  // {
-  //   name: 'Angular Wroclaw',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fangular_wroclaw-small.webp?alt=media&token=3074df1f-744e-4b76-a2da-3bf0a1c18252',
-  //   url: 'https://twitter.com/AngularWroclaw',
-  // },
+  {
+    name: 'PLUG',
+    image: 'PLUG_logo_logo_transparent_-_Paolo_Rizzello_sjfxar',
+    url: 'https://www.pignolalug.it/',
+  },
   {
     name: 'Angular Space',
     image: 'ANGULAR_SPACE_j4fl3q',
     url: 'https://www.angularspace.com/',
+  },
+  {
+    name: 'devdojo',
+    image: 'Logo_DevDojo_With_Background_-_Emiliano_Pisu_cncv2l',
+    url: 'https://www.devdojo.it/',
   },
   // {
   //   name: 'Latina in Tech',
