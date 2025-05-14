@@ -27,6 +27,11 @@ const goldSponsors: SponsorInterface[] = [
     image: 'logo-ICT-GROUP_shp3js',
     url: 'https://ict-group.it/',
   },
+  {
+    name: 'Keypartner',
+    image: 'logo-KeyPartner_ztyfpd',
+    url: 'https://www.keypartner.com/',
+  },
 ];
 const silverSponsor: SponsorInterface[] = [
   {
