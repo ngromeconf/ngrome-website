@@ -17,4 +17,5 @@ export interface Event {
   description?: string;
   slug?: string;
   videoURL?: string;
+  track?: string;
 }

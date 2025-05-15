@@ -143,7 +143,9 @@ function calculateTime(talks: Event[], timeStart: string) {
       minute: '2-digit',
       hour12: true,
     }); // Converti la data di fine in formato orario 12h
-    startTime = endTime; // Imposta l'orario di inizio del prossimo talk
+    if (talk.track !== 'Main Stage') {
+      startTime = endTime; // Imposta l'orario di inizio del prossimo talk
+    }
     return talk;
   });
 }
