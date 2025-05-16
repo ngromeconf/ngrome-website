@@ -72,7 +72,16 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
                       class="flex-shrink-0 font-medium  text-gray-500 text-sm time"
                     >
                       {{ item?.startTime }} - {{ item?.endTime }}<br />
-                      {{ item.track }}
+                      <span
+                        class=" w-content text-xs font-medium px-2.5 py-0.5 rounded-full break-all nowrap"
+                        [ngClass]="
+                          item.track?.includes('Community')
+                            ? 'bg-red-100 text-red-800 border-red-400'
+                            : 'bg-blue-100 text-blue-800 border-blue-400'
+                        "
+                      >
+                        {{ item.track }}
+                      </span>
                     </p>
                     <div class="bg-gray-200 hidden sm:block timeline"></div>
                     <div class="lg:pb-8 pb-12 flex-1-1-0">
