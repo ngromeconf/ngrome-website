@@ -49,11 +49,19 @@ agenda:
           - slug: talk-2
             type: Talk 2
             duration: 30
+            track: Main Stage
             title: 'Angular v20 on the server - SSR SSG ISR PR CSR'
             description: Join Michael for a deep dive into Angular’s game-changing server-side capabilities. Discover how SSR, SSG, ISR, and CSR integrate seamlessly with Angular’s new hydration features—highlighted by ngSkipHydration—to deliver unreached performance and a streamlined loading experience. Learn to configure and optimize your setup for the most advanced server-side rendering in the industry. Get a deep dive into all the latest features and understand your benefits. Let’s dive deep together.
             speakers: 
                 - slug: michael-hladky
-          
+          - slug: talk-2
+            type: Talk 2
+            duration: 30
+            track: Community Track
+            title: 'Secure Angular Applications: Best Practices for Web Security'
+            description: The growing complexity of web applications and the constantly evolving threats make web security a critical component of modern software development. Security in Angular applications is essential, yet often neglected. In this talk, you will learn along with Google Developer Expert Martina Kraus how to recognize common security risks and protect your applications against a variety of attack vectors. This is all fed with a multitude of practical examples, including the integration of security testing into the development process. Ideal for developers and security enthusiasts who want to take their Angular apps to the next level of security.
+            speakers: 
+                - slug: martina-kraus
           - slug: talk-4
             type: Talk 4
             duration: 30
@@ -95,8 +103,8 @@ agenda:
             type: Talk 4
             track: Community Track
             duration: 30
-            title: "The future is deferrable: Mastering Angular’s @defer and Incremental Hydration"
-            description: "Performance and user experience are critical in modern web development, and Angular’s @defer directive is here to revolutionize content loading. In this talk, we’ll explore the powerful combination of Deferrable Views and Incremental Hydration introduced in Angular v19. You’ll learn: - Different types of rendering (CSR, SSR, SSG) - How you can decide the rendering system for specific pages - Use @defer to optimize content rendering with triggers - Leverage Incremental Hydration to deliver seamless interactivity for SSR applications - Avoid common pitfalls and embrace best practices to maximize performance Through real-world examples, this session will give you actionable insights to enhance both developer experience and application efficiency."
+            title: "Dependency Injection and the Order of Micro-Frontends"
+            description: "When it comes to Angular, Dependency Injection is one of its most underrated superpowers. But what happens when multiple Angular apps need to live on the same page? In this talk, we’ll start from the basics of Angular's DI to understand how it works, how it helps reduce complexity—and how it can turn into a trap when misused in distributed scenarios. We’ll walk through a practical pattern for sharing services and state across multiple Angular apps, while keeping full isolation in local environments. All of this using Angular’s native features, no external libraries, and the power of resolution modifiers. 🎁 What you’ll walk away with: - A solid understanding of how Dependency Injection works in Angular - The core principles (and pitfalls) of micro-frontend architecture - A practical and scalable approach to share state and services across multiple Angular MF apps"
             speakers: 
                 - slug: giorgio-galassi
           - slug: talk-5
