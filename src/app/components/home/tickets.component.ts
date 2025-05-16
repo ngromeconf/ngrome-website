@@ -52,7 +52,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
 
           <tito-widget
             event="ngrome-events/ngrome-conf-mmxxv"
-            releases="zt7azhmk2mc,wyzmmiwne0u,85t-peutyli,ngrome-in-person-regular-june-27-2024"
+            releases="zt7azhmk2mc,wyzmmiwne0u,85t-peutyli,ngrome-in-person-regular-june-27-2024,hc62nqsi8uk"
           ></tito-widget>
 
           <!-- Workshop CTA -->
