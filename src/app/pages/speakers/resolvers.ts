@@ -123,7 +123,7 @@ export function injectAgenda(): Agenda[] {
 function calculateTime(talks: Event[], timeStart: string) {
   let startTime = new Date(`2024-04-03T${timeStart}:00`);
 
-  return talks.map((talk) => {
+  return talks.map((talk, index) => {
     talk.startTime = startTime.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
@@ -136,14 +136,21 @@ function calculateTime(talks: Event[], timeStart: string) {
       minutes = talk.duration % 60; // Calcola i minuti della durata del talk
     }
     const endTime = new Date(startTime); // Clona l'orario di inizio per calcolare l'orario di fine
+
     endTime.setHours(endTime.getHours() + hours); // Aggiungi le ore alla data di fine
     endTime.setMinutes(endTime.getMinutes() + minutes); // Aggiungi i minuti alla data di fine
+
     talk.endTime = endTime.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
       hour12: true,
     }); // Converti la data di fine in formato orario 12h
-    startTime = endTime; // Imposta l'orario di inizio del prossimo talk
+
+    // Check if the next item has "Community Track" for the track property
+    if (talks[index + 1]?.track !== 'Community Track') {
+      startTime = endTime; // Imposta l'orario di inizio del prossimo talk
+    }
+
     return talk;
   });
 }

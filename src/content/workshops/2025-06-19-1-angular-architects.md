@@ -18,7 +18,7 @@ location:
     mapsLink: /venue
 image: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240139/2025/WORKSHOP__ARCHITECTURE_OG__IMAGE_pghshb.jpg
 ogImage: https://res.cloudinary.com/dp1gwjz5w/image/upload/v1743240139/2025/WORKSHOP__ARCHITECTURE_OG__IMAGE_pghshb.jpg
-ticket: workshop-architecture,hyyshictstw,hhmwie3o92a,ngrome-in-person-regular-june-27-2024
+ticket: workshop-architecture,hyyshictstw,hhmwie3o92a,ngrome-in-person-regular-june-27-2024,hc62nqsi8uk
 ticketSlug: ngrome-events/ngrome-conf-mmxxv
 col: 1
 socialDescription: 'Join Manfred and Rainer workshop at NgRome 2024 for an interactive workshop on "MODERN ANGULAR ARCHITECTURES: SIGNAL STORE, NX, DDD and MICRO FRONTENDS." Explore cutting-edge strategies for building maintainable Angular applications. Reserve your spot now! #NgRome #Angular #Workshop #Italy'
