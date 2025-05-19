@@ -11,6 +11,13 @@ const mainSponsor: SponsorInterface[] = [
     image: 'logo-ANGULAR_ubew4u',
     url: 'https://angular.dev/',
   },
+  {
+    name: 'Fabrick',
+    width: 230,
+    height: 97,
+    image: 'logo-FABRICK_db0ybp',
+    url: 'https://www.linkedin.com/company/fabrickfinance/mycompany/',
+  },
 ];
 
 const eventSponsor: SponsorInterface[] = [
