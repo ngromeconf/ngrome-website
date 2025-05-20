@@ -124,7 +124,14 @@ agenda:
             description: 'The realm of Angular is vast, but with great applications comes an even greater burden—state management. Many have set out to tame it, yet countless projects have fallen to the dark forces of spaghetti state, uncontrolled mutations, and chaotic side effects. But hope is not lost: three Stores have emerged, forged in the depths of NgRx to bring order and scalability: Global Store, vast and unifying; Component Store, swift and precise; Signal Store, reactive and efficient. Yet power alone is not enough, as without wisdom, these tools can lead even the noblest developer astray. In this talk, we embark on a Lord of The Rings inspired journey to understand the strengths and trade-offs of each store, learn how to choose the right one for different scenarios, and explore small examples to see them in action. The fate of Angular state management now rests in your hands; for the time will soon come when stores will shape the fortunes of all devs.'
             speakers: 
                 - slug: daniela-bonvini
-          
+          - slug: talk-5
+            type: Talk 5
+            duration: 30
+            track: Community Track
+            title: 'Veni, Vidi, Optimised: Conquering Image Performance'
+            description: "Images are essential to the web, but they are also one of the biggest culprits of slow performance. Load the wrong image, and your users wait. Load too many, and your site struggles. Load the right one at the right time, and you create a seamless experience. This talk explores the delicate balance between speed and quality in modern web performance by looking at Angular's Breakpoint Observer and ngOptimizedImage. We will uncover how to deliver perfectly optimised images that enhance user experience without unnecessary weight."
+            speakers: 
+                - slug: tamas-piros
           - slug: 
             title: 
             type: Panel III

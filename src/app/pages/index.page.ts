@@ -34,7 +34,7 @@ export const routeMeta: RouteMeta = {
     <!-- <app-venue /> -->
     <app-tickets />
 
-    <app-call-for-paper />
+    <!-- <app-call-for-paper /> -->
     <app-sponsorship-opportunity />
     <!--  <app-call-for-paper id="ticket-section" /> -->
     @if (sponsors$(); as Sponsors) {
