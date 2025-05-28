@@ -68,11 +68,7 @@ import { SponsorshipOpportunityComponent } from '../../shared/sponsorship-opport
       @if (sponsors$(); as Sponsors) {
         <app-sponsor [sponsors]="Sponsors.Main" type="Main" [itemsPerRow]="1" />
         <app-sponsor [sponsors]="Sponsors.Gold" type="Gold" [itemsPerRow]="3" />
-        <!-- <app-sponsor
-          [sponsors]="Sponsors.Silver"
-          type="Silver"
-          [itemsPerRow]="3"
-        /> -->
+        <app-sponsor [sponsors]="Sponsors.Silver" type="Silver" [itemsPerRow]="3" />
         <app-sponsor
           [sponsors]="Sponsors.Bronze"
           type="Bronze"
