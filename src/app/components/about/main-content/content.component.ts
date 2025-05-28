@@ -11,15 +11,26 @@ import { TeamComponent } from '../team/team.component';
       <div class="relative px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-3xl">
         <div class="mx-auto text-lg">
           <blockquote class="mt-8 text-xl leading-8 text-slate-500">
-            <span class="font-serif text-6xl text-black"> NG</span>Rome event is
-            the biggest International Angular Conference in Italy, helping bring
-            together ideas and developers from all the corners of Italy and
-            Europe. The community is born by a group of passionate devs,
-            JavaScript lovers, and enthusiastic developers that use the Angular
-            framework. Our mission is to connect Italian developers to the
-            global community. Fostering new relationships within Italy, and
-            across borders. Simultaneously develop new skills and having moments
-            of fun.
+            <span class="font-serif text-6xl text-black">O</span>ur mission goes
+            beyond code – we're building bridges. We connect Italian and
+            International developers to the global Angular ecosystem, fostering
+            relationships that span cities, countries, and continents. Through
+            NGRome, we're cultivating a tight-knit network of professionals who
+            share knowledge, inspire innovation, and grow together. NGRome is
+            more than just an event; it's the heart of Italy's Angular
+            community. <br />As the largest international Angular conference in
+            the country, NGRome serves as a vibrant hub where ideas flourish and
+            developers from every corner of Italy and Europe converge. <br />
+
+            Born from the passion of devoted JavaScript enthusiasts and Angular
+            aficionados, our community is the driving force behind this
+            extraordinary gathering. At NGRome, you'll find more than just
+            technical sessions. You'll discover a welcoming family of
+            like-minded individuals, all eager to learn, share, and have fun. We
+            believe in the power of community to elevate skills, spark
+            creativity, and create lasting friendships. <br />Join us in this
+            exciting journey as we shape the future of Angular development, one
+            connection at a time.
           </blockquote>
         </div>
         <div class="mx-auto mt-24 prose prose-lg text-slate-500 prose-indigo">
