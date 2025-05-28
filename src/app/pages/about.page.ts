@@ -21,7 +21,11 @@ export const routeMeta: RouteMeta = {
         'NGRome is a non-profit community conference run by a team of volunteers. We are all active members of the tech community, and run or contribute to various free local meetups, workshops, and education initiatives.'
       "
     />
-    <app-page-image [image]="'/photo/about-stage.jpg'" />
+    <app-page-image
+      [image]="
+        'https://res.cloudinary.com/dp1gwjz5w/image/upload/c_crop,g_face:center,h_334,w_1800/v1748414518/website-assets/NG_ROME_24-727_zspban.jpg'
+      "
+    />
     <app-content />
   `,
   imports: [PageHeadComponent, PageImageComponent, ContentComponent],
