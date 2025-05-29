@@ -75,6 +75,14 @@ agenda:
             track: Main Stage
             speakers: 
                 - slug: brygida-fiejdasz
+          - slug: talk-4
+            type: Talk 4
+            duration: 30
+            title: wcagUI, an accessible UI kit based on WCAG patterns
+            description: Learn how wcagUI, an open-source, zero-dependency UI kit, simplifies building accessible web interfaces. Discover how it automatically handles WAI-ARIA and aligns with WCAG, making compliance with regulations like the European Accessibility Act effortless. This talk equips you to create inclusive, future-ready projects by integrating accessibility seamlessly into any tech stack.
+            track: Community Track
+            speakers: 
+                - slug: emiliano-pisu
           - slug: talk-3
             type: Talk 3
             duration: 30
