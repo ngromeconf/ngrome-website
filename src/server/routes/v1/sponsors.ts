@@ -254,12 +254,11 @@ const communityPartners: SponsorInterface[] = [
     image: 'IMG_7633_-_DANIELE_MARIO_AREDDU_rddrgl',
     url: 'https://www.linkedin.com/company/velletri-dev/',
   },
-  // {
-  //   name: 'Mindsharing.tech',
-  //   image:
-  //     'https://firebasestorage.googleapis.com/v0/b/ngrome-79ce3.appspot.com/o/partner%2Fmindsharing%201%20-%20Aldo%20Pergjergji%20(1).png?alt=media&amp;token=79a1c729-d4c3-4bbb-abec-c530136a4895',
-  //   url: 'https://www.mindsharing.tech',
-  // },
+  {
+    name: 'packtpub.com',
+    image: 'Packt_Logo-01_ejdi5e',
+    url: 'https://www.packtpub.com',
+  },
   {
     name: 'GDG Roma Città',
     image: 'gdg-roma-citta_tpbsil',
