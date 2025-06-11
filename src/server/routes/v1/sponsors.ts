@@ -51,6 +51,13 @@ const silverSponsor: SponsorInterface[] = [
     image: 'logo-CLOUDINARY_ybyx4r',
     url: 'https://cloudinary.com/',
   },
+  {
+    name: 'Fervento',
+    image: 'logo-FERVENTO_xrx3wd',
+    url: 'https://fervento.com/',
+    width: 230,
+    height: 97,
+  },
 ];
 const bronzeSponsor: SponsorInterface[] = [
   {
@@ -180,7 +187,7 @@ const communityPartners: SponsorInterface[] = [
   // {
   //   name: "GDG Valle d'Aosta",
   //   image:
-  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload/v1718735241/ngrome-sponsors/gdgvda_hmaq13.png',
+  //     'https://res.cloudinary.com/dp1gwjz5w/image/upload_v1718735241/ngrome-sponsors/gdgvda_hmaq13.png',
   //   url: 'https://www.gdgvda.it/',
   // },
   {
