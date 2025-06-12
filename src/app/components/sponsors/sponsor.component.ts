@@ -63,7 +63,6 @@ import { SponsorInterface } from 'src/app/models/sponsor.model';
                     'w-3/5 md:w-1/5': itemsPerRow === 5,
                     'w-2/6 md:w-1/6': itemsPerRow === 6
                   }"
-                  [class.mx-auto]="(i + 1) % itemsPerRow !== 0"
                 >
                   <a [href]="item.url ? item.url : '/sponsors'" target="_blank">
                     <img
