@@ -38,8 +38,8 @@ agenda:
             speakers: 
                 - slug: manfred-steyer
           - slug: 
-            title: 
-            type: Panel I
+            title: Panel with Minko, Manfred 
+            type: Panel
             track: Main Stage
             duration: 15
           - slug: 
@@ -47,7 +47,7 @@ agenda:
             type: Pause
             duration: 45
           - slug: sponsor-1
-            title: 
+            title: Sponsor pitch by Fabrick
             track: Main Stage
             type: Sponsor pitch
             duration: 10
@@ -92,8 +92,8 @@ agenda:
             speakers: 
                 - slug: fabian-gosebrink
           - slug: 
-            title: 
-            type: Panel II
+            title: Panel with Michael, Brygida, Fabian 
+            type: Panel
             track: Main Stage
             duration: 15
     - start: '13:10'
@@ -104,10 +104,10 @@ agenda:
             type: Pause
             duration: 70
           - slug: 
-            title: 
+            title: Sponsor pitch by Keypartner
             type: Sponsor pitch
             track: Main Stage
-            duration: 10
+            duration: 5
           - slug: talk-4
             type: Talk 4
             track: Main Stage
@@ -141,8 +141,13 @@ agenda:
             speakers: 
                 - slug: tamas-piros
           - slug: 
-            title: 
-            type: Panel III
+            title: Sponsor pitch by ICT Group
+            type: Sponsor pitch
+            track: Main Stage
+            duration: 5
+          - slug: 
+            title: Panel with Rainer, Daniela
+            type: Panel
             track: Main Stage
             duration: 15
           - slug: 
@@ -168,8 +173,8 @@ agenda:
                 - slug: mike-ryan
                 - slug: brian-love
           - slug: 
-            title: 
-            type: Panel IV
+            title: Panel with Fabio, Mike, Brian 
+            type: Panel
             track: Main Stage
             duration: 15
           - slug: closing-remarks
