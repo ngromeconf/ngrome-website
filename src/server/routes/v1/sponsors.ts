@@ -65,6 +65,12 @@ const bronzeSponsor: SponsorInterface[] = [
     image: 'SparkFabrik_-_Logo_Ufficiale_p08cvf',
     url: 'https://www.sparkfabrik.com/',
   },
+  {
+    name: 'QRBro',
+    image: 'qrbro_dme8gu',
+    url: 'https://qrbro.com/',
+  },
+  
 ];
 const diversitySponsor: SponsorInterface[] = [];
 const technicalSponsors: SponsorInterface[] = [];
