@@ -26,11 +26,11 @@ const eventSponsor: SponsorInterface[] = [
     image: 'logo-GESTALT_rdflm2',
     url: 'https://www.gestalteventi.it/',
   },
-  {
-    name: 'Nosotros Group',
-    image: 'NOSOTROS_wb_logo_n8pycw',
-    url: 'https://www.nosotrosgroup.it/',
-  },
+  // {
+  //   name: 'Nosotros Group',
+  //   image: 'NOSOTROS_wb_logo_n8pycw',
+  //   url: 'https://www.nosotrosgroup.it/',
+  // },
 ];
 
 const goldSponsors: SponsorInterface[] = [
@@ -70,7 +70,6 @@ const bronzeSponsor: SponsorInterface[] = [
     image: 'qrbro_dme8gu',
     url: 'https://qrbro.com/',
   },
-  
 ];
 const diversitySponsor: SponsorInterface[] = [];
 const technicalSponsors: SponsorInterface[] = [];

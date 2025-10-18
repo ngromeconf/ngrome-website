@@ -50,10 +50,8 @@ export class FilterTicketByDatePipe implements PipeTransform {
             <br />
           </p>
 
-          <tito-widget
-            event="ngrome-events/ngrome-conf-mmxxv"
-            releases="zt7azhmk2mc,wyzmmiwne0u,85t-peutyli,ngrome-in-person-regular-june-27-2024,hc62nqsi8uk"
-          ></tito-widget>
+          <!--releases="zt7azhmk2mc,wyzmmiwne0u,85t-peutyli,ngrome-in-person-regular-june-27-2024,hc62nqsi8uk"-->
+          <tito-widget event="ngrome-events/ngrome-conf-mmxxvi"></tito-widget>
 
           <!-- Workshop CTA -->
           <div class="w-full py-12 px-4 md:px-6">

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EVENT_YEAR } from '../../../config/site.constants';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
@@ -23,7 +24,7 @@ import { Router } from '@angular/router';
               <span
                 class="inline-block rounded-full bg-white px-3 py-1 text-sm font-medium text-gray-900"
               >
-                2025 Edition
+                {{ EVENT_YEAR }} Edition
               </span>
               <h1
                 class="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
@@ -84,7 +85,7 @@ import { Router } from '@angular/router';
             </div>
 
             <div
-              class="flex flex-col space-y-3 sm:flex-row sm:space-x-6 sm:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center lg:justify-start"
+              class="flex flex-col space-y-3 lg:flex-row lg:space-x-6 lg:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center lg:justify-start"
             >
               <div class="flex items-center">
                 <svg
@@ -103,7 +104,45 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>June 19-20, 2025</span>
+                <span>Workshop: June 17, {{ EVENT_YEAR }}</span>
+              </div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <span>Js Conference: June 18 {{ EVENT_YEAR }}</span>
+              </div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <span>NG Conference: June 19 {{ EVENT_YEAR }}</span>
               </div>
               <div class="flex items-center">
                 <svg
@@ -137,7 +176,7 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>300+ Attendees</span>
+                <span>400+ Attendees</span>
               </div>
               <div class="flex items-center content-center justify-center py-8">
                 <svg
@@ -169,6 +208,7 @@ import { Router } from '@angular/router';
   imports: [CommonModule, NgOptimizedImage, RouterModule],
 })
 export class HeroComponent {
+  public readonly EVENT_YEAR = EVENT_YEAR;
   constructor(private router: Router) {}
   onGoToTicket() {
     this.router.navigate([], { fragment: 'TicketSection' });
