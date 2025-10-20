@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   schemas: [],
   template: `
     <section
-      class="relative pt-24 bg-gradient-to-b from-white to-gray-200 dark:from-gray-800 dark:to-gray-950 h-dvh flex items-center"
+      class="relative pt-24 bg-gradient-to-b from-white to-gray-200 dark:from-gray-800 dark:to-gray-950 min-h-64 flex items-center"
     >
       <div
         class="container relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
@@ -36,8 +36,10 @@ import { Router } from '@angular/router';
             <p
               class="max-w-lg mx-auto sm:mx-0 text-xl text-gray-500 dark:text-gray-400"
             >
-              Join the biggest Angular conference in Italy. Two days of
-              workshops, talks, and networking with the Angular community.
+              Join the largest Angular conference in Italy. In
+              {{ EVENT_YEAR }} , we're adding an extra day to include JSConf — a
+              dedicated day of JavaScript talks. Enjoy three days of workshops,
+              talks, and networking with the Angular and JS communities.
             </p>
 
             <div
@@ -85,7 +87,7 @@ import { Router } from '@angular/router';
             </div>
 
             <div
-              class="flex flex-col space-y-3 lg:flex-row lg:space-x-6 lg:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center lg:justify-start"
+              class="flex flex-col space-y-3 lg:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center"
             >
               <div class="flex items-center">
                 <svg
@@ -104,45 +106,7 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>Workshop: June 17, {{ EVENT_YEAR }}</span>
-              </div>
-              <div class="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-
-                <span>Js Conference: June 18 {{ EVENT_YEAR }}</span>
-              </div>
-              <div class="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-
-                <span>NG Conference: June 19 {{ EVENT_YEAR }}</span>
+                <span>June 17-19 {{ EVENT_YEAR }}</span>
               </div>
               <div class="flex items-center">
                 <svg
@@ -176,21 +140,7 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>400+ Attendees</span>
-              </div>
-              <div class="flex items-center content-center justify-center py-8">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 ml-2 animate-bounce"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <span>500+ Attendees</span>
               </div>
             </div>
           </div>
@@ -201,6 +151,20 @@ import { Router } from '@angular/router';
               style="width: 100%; height: 439px;"
             ></div>
           </div>
+        </div>
+        <div class="flex items-center content-center justify-center py-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6 ml-2 animate-bounce"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </div>
       </div>
     </section>
