@@ -16,7 +16,10 @@ import { Component } from '@angular/core';
 
   template: `<!-- Sponsorship CTA Section -->
 
-    <section class="bgGradient py-12 px-4 sm:px-6 md:py-16 md:px-8">
+    <section
+      class="bgGradient py-12 px-4 sm:px-6 md:py-16 md:px-8"
+      id="sponsorsItem"
+    >
       <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-xl shadow-xl overflow-hidden">
           <div class="p-6 sm:p-10">
