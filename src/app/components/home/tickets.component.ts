@@ -34,7 +34,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
         id="TicketSection"
         class="py-4 pt-10 md:py-8 bg-gray-200 text-black"
       >
-        <div class="container px-5 py-32 mx-auto lg:px-24">
+        <div class="container px-5 py-16 mx-auto lg:px-24">
           <h2
             class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl"
           >

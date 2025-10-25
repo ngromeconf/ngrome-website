@@ -37,9 +37,10 @@ import { Router } from '@angular/router';
               class="max-w-lg mx-auto sm:mx-0 text-xl text-gray-500 dark:text-gray-400"
             >
               Join the largest Angular conference in Italy. In
-              {{ EVENT_YEAR }} , we're adding an extra day to include JSConf — a
-              dedicated day of JavaScript talks. Enjoy three days of workshops,
-              talks, and networking with the Angular and JS communities.
+              {{ EVENT_YEAR }}, we're adding an extra day to include JSConf —
+              <br />A dedicated day of JavaScript talks. Enjoy three days of
+              workshops, talks, and networking with the Angular and JS
+              communities.
             </p>
 
             <div

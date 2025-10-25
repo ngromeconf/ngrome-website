@@ -6,13 +6,18 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { CommonModule, NgFor, NgOptimizedImage } from '@angular/common';
+
+import { CommonModule } from '@angular/common';
+import { EVENT_YEAR } from '../../../config/site.constants';
 import { Agenda } from 'src/app/models/agenda.model';
-import { injectAgenda } from '../../../pages/speakers/resolvers';
+import {
+  injectJSAgenda,
+  injectNGAgenda,
+} from '../../../pages/speakers/resolvers';
 import { Sponsors } from 'src/app/models/sponsor.model';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { SponsorComponent } from '../../sponsors/sponsor.component';
+import { EventItemComponent } from '../event-item.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Speaker } from 'src/app/models/speaker.model';
 import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
@@ -29,7 +34,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
             Friday
           </h2>
           <p class="margin-1 text-gray-500 leading-5 font-medium text-lg">
-            June 20, 2025
+            June 18,19, {{ EVENT_YEAR }}
           </p>
           <span
             class="bg-primary-100 text-primary-800 margin-1 font-medium text-center inline-flex text-xs px-2.5 rounded py-0.5 XklWzT8y98pp042XEQp4 _A6LflweZRUwrcL6M2Tk ay0ziTPUL4Ag5d1DkSY7 neyUwteEn7DOg9pBSJJE cA4BPuqyV1eox6S0acvl AOldjxkjQirRFQcsh_FR YPSoR6AXtPgkmylUmcbT dark:bg-primary-900 dark:text-primary-300"
@@ -50,147 +55,45 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
             Central European Summer Time (GMT+2)
           </span>
         </div>
-        <div class="container-agenda grid mt-6 text-left pb-4">
-          @for (a of agenda; track $index) {
-            <div
-              *ngIf="agenda"
-              [ngClass]="$index % 2 ? 'border-left' : 'border-right'"
-            >
-              <div class="text-2xl font-bold text-center">
-                {{ a?.title }}
+        <div class="container-agenda grid mt-6 text-left pb-4 gap-8">
+          <div class="grid grid-cols-1 gap-8">
+            @if (jsAgenda) {
+              <div>
+                <div class="text-2xl font-bold text-center">
+                  JSConf — June 18 {{ EVENT_YEAR }}
+                </div>
+                <div class="margin-2">
+                  @for (a of jsAgenda; track $index) {
+                    @for (item of a.events; track $index) {
+                      <app-event-item
+                        [item]="item"
+                        (selectSpeaker)="speakerDetail($event)"
+                      ></app-event-item>
+                    }
+                  }
+                </div>
               </div>
-              <div class="margin-2">
-                @for (item of a.events; track $index) {
-                  <div
-                    class="flex flex-col sm:gap-4 event border-1"
-                    [ngClass]="
-                      item.track?.includes('Community') ? 'bg-gray-100' : ''
-                    "
-                    [id]="'talk-' + item.slug"
-                  >
-                    <p
-                      class="flex-shrink-0 font-medium  text-gray-500 text-sm time"
-                    >
-                      {{ item?.startTime }} - {{ item?.endTime }}<br />
-                      <span
-                        class=" w-content text-xs font-medium px-2.5 py-0.5 rounded-full break-all nowrap"
-                        [ngClass]="
-                          item.track?.includes('Community')
-                            ? 'bg-red-100 text-red-800 border-red-400'
-                            : 'bg-blue-100 text-blue-800 border-blue-400'
-                        "
-                      >
-                        {{ item.track }}
-                      </span>
-                    </p>
-                    <div class="bg-gray-200 hidden sm:block timeline"></div>
-                    <div class="lg:pb-8 pb-12 flex-1-1-0">
-                      <div
-                        [ngClass]="
-                          item.type.includes('Pause')
-                            ? 'rounded-lg bg-gray-100 p-4'
-                            : ''
-                        "
-                      >
-                        <h4 class="font-bold text-lg md:text-1xl">
-                          {{ item?.title || item?.type }}
-                        </h4>
-                        @if (item?.subtitle) {
-                          <h3
-                            class="font-semibold text-lg md:text-1xl margin-1"
-                          >
-                            {{ item?.subtitle }}
-                          </h3>
-                        }
-                        @if (item?.description) {
-                          <p class="font-normal text-gray-500 margin-1">
-                            {{ item?.description }}
-                          </p>
-                        }
-                        @for (
-                          speaker of item?.speakers;
-                          track $index;
-                          let last = $last
-                        ) {
-                          @if (speaker?.name) {
-                            <div
-                              class="margin-1 gap-3 flex items-center cursor-pointer"
-                              (click)="speakerDetail(speaker)"
-                            >
-                              <img
-                                [alt]="speaker?.name"
-                                [title]="speaker?.name"
-                                [ngSrc]="speaker?.imageUrl"
-                                width="200"
-                                height="200"
-                                class="w-12 h-12 object-cover rounded-full"
-                              />
-                              <div class="">
-                                <p
-                                  class="leading-tight font-medium m-0 text-gray-900 text-lg"
-                                >
-                                  {{ speaker?.name }}
-                                </p>
-                                <p class="font-normal text-gray-500 text-sm">
-                                  {{ speaker?.jobRole }}
-                                  @if (speaker?.work) {
-                                    - {{ speaker?.work }}
-                                  }
-                                </p>
-                              </div>
-                            </div>
-                            @if (last) {
-                              <hr
-                                class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
-                              />
-                            }
-                          }
-                        }
-                        @if (
-                          item.type.includes('Pause') && sponsors$();
-                          as Sponsors
-                        ) {
-                          <div class="margin-not-hidden">
-                            <p class="font-medium text-base text-gray-500">
-                              Sponsors:
-                            </p>
-                            <div
-                              class="flex flex-wrap items-center container-sponsors"
-                            >
-                              @for (item of Sponsors.Main; track $index) {
-                                <img
-                                  class="object-contain img-sponsor"
-                                  [alt]="item.name"
-                                  [title]="item.name"
-                                  [ngSrc]="'ngrome-sponsors/' + item.image"
-                                  width="400"
-                                  height="168"
-                                />
-                              }
-                            </div>
-                            <div
-                              class="flex flex-wrap items-center mt-2 container-sponsors"
-                            >
-                              @for (item of Sponsors.Gold; track $index) {
-                                <img
-                                  class="object-contain img-sponsor"
-                                  [alt]="item.name"
-                                  [title]="item.name"
-                                  [ngSrc]="'ngrome-sponsors/' + item.image"
-                                  width="400"
-                                  height="168"
-                                />
-                              }
-                            </div>
-                          </div>
-                        }
-                      </div>
-                    </div>
-                  </div>
-                }
+            }
+          </div>
+          <div class="grid grid-cols-1 gap-8">
+            @if (ngAgenda) {
+              <div>
+                <div class="text-2xl font-bold text-center">
+                  Angular — June 19, {{ EVENT_YEAR }}
+                </div>
+                <div class="margin-2">
+                  @for (a of ngAgenda; track $index) {
+                    @for (item of a.events; track $index) {
+                      <app-event-item
+                        [item]="item"
+                        (selectSpeaker)="speakerDetail($event)"
+                      ></app-event-item>
+                    }
+                  }
+                </div>
               </div>
-            </div>
-          }
+            }
+          </div>
         </div>
       </div>
 
@@ -201,7 +104,7 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
           <div class="flex-col gap-4 text-center md:text-left sm:flex hidden">
             <p>
               When:
-              <span class="font-semibold"> June 20, 2025 | 8 AM - 6 PM </span>
+              <span class="font-semibold"> June 18,19 2026 | 8 AM - 6 PM </span>
             </p>
             <a [routerLink]="'/venue'"
               >Venue: Centro Congresso Frentani - Roma ( Italy )</a
@@ -223,17 +126,17 @@ import { SpeakerModalComponent } from '../../speakers/speaker-modal.component';
   styleUrls: ['./content.component.scss'],
   imports: [
     CommonModule,
-    NgOptimizedImage,
-    SponsorComponent,
-    NgFor,
     SpeakerModalComponent,
     RouterLink,
+    EventItemComponent,
   ],
 })
 export class ContentComponent implements AfterViewInit {
   private route: ActivatedRoute = inject(ActivatedRoute);
 
-  public agenda: Agenda[] = injectAgenda();
+  public jsAgenda: Agenda[] = injectJSAgenda();
+  public ngAgenda: Agenda[] = injectNGAgenda();
+  public readonly EVENT_YEAR = EVENT_YEAR;
   /**
    * Signal representing the sponsors data.
    * @type {Signal<Sponsors>}
