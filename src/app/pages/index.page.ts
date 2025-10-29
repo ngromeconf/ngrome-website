@@ -29,38 +29,15 @@ export const routeMeta: RouteMeta = {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <app-hero />
-    <app-speaker-wall />
     <!-- <app-features /> -->
     <!-- <app-venue /> -->
     <app-tickets />
 
-    <!-- <app-call-for-paper /> -->
+    <app-call-for-paper />
     <app-sponsorship-opportunity />
     <!--  <app-call-for-paper id="ticket-section" /> -->
     @if (sponsors$(); as Sponsors) {
-      <app-sponsor [sponsors]="Sponsors.Main" [itemsPerRow]="1" type="Main" />
-      <app-sponsor [sponsors]="Sponsors.Gold" [itemsPerRow]="3" type="Gold" />
-      <app-sponsor
-        [sponsors]="Sponsors.Silver"
-        [itemsPerRow]="3"
-        type="Silver"
-      />
-      <app-sponsor
-        [sponsors]="Sponsors.Bronze"
-        [itemsPerRow]="5"
-        type="Bronze"
-      />
-      <!--
-      <app-sponsor
-        [sponsors]="Sponsors.Diversity"
-        [itemsPerRow]="3"
-        type="Diversity"
-      /> -->
-      <!-- <app-sponsor
-        [sponsors]="Sponsors.Technical"
-        [itemsPerRow]="3"
-        type="Technical"
-      /> -->
+      <!-- Only show Event partners on the homepage -->
       <app-sponsor [sponsors]="Sponsors.Event" [itemsPerRow]="1" type="Event" />
       <app-sponsor
         [sponsors]="Sponsors.Community"
@@ -76,7 +53,6 @@ export const routeMeta: RouteMeta = {
     TicketsComponent,
     CallForPaperComponent,
     SponsorshipOpportunityComponent,
-    SpeakerWallComponent,
   ],
 })
 export default class HomeComponent {

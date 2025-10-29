@@ -34,7 +34,7 @@ export class FilterTicketByDatePipe implements PipeTransform {
         id="TicketSection"
         class="py-4 pt-10 md:py-8 bg-gray-200 text-black"
       >
-        <div class="container px-5 py-32 mx-auto lg:px-24">
+        <div class="container px-5 py-16 mx-auto lg:px-24">
           <h2
             class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-9xl"
           >
@@ -50,10 +50,8 @@ export class FilterTicketByDatePipe implements PipeTransform {
             <br />
           </p>
 
-          <tito-widget
-            event="ngrome-events/ngrome-conf-mmxxv"
-            releases="zt7azhmk2mc,wyzmmiwne0u,85t-peutyli,ngrome-in-person-regular-june-27-2024,hc62nqsi8uk"
-          ></tito-widget>
+          <!--releases="zt7azhmk2mc,wyzmmiwne0u,85t-peutyli,ngrome-in-person-regular-june-27-2024,hc62nqsi8uk"-->
+          <tito-widget event="ngrome-events/ngrome-conf-mmxxvi"></tito-widget>
 
           <!-- Workshop CTA -->
           <div class="w-full py-12 px-4 md:px-6">

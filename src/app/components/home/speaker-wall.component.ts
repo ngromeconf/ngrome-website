@@ -1,4 +1,5 @@
 import { Component, signal, WritableSignal } from '@angular/core';
+import { EVENT_YEAR } from '../../config/site.constants';
 import { Speaker } from 'src/app/models/speaker.model';
 import { injectActiveSpeakers } from '../../pages/speakers/resolvers';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
@@ -12,7 +13,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
         <h2
           class="leading-none font-roboto tracking-tight text-4xl sm:text-5xl md:text-7xl xl:text-6xl my-12"
         >
-          NGRome MMXXV Speakers<br />
+          NGRome {{ EVENT_YEAR }} Speakers<br />
         </h2>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -57,6 +58,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
   standalone: true,
 })
 export class SpeakerWallComponent {
+  public readonly EVENT_YEAR = EVENT_YEAR;
   readonly speakers: Speaker[] = injectActiveSpeakers();
   modal: Element | null = null;
   speakerSelected: WritableSignal<Speaker | null> = signal(null);

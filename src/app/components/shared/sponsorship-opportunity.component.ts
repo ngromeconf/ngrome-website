@@ -16,7 +16,10 @@ import { Component } from '@angular/core';
 
   template: `<!-- Sponsorship CTA Section -->
 
-    <section class="bgGradient py-12 px-4 sm:px-6 md:py-16 md:px-8">
+    <section
+      class="bgGradient py-12 px-4 sm:px-6 md:py-16 md:px-8"
+      id="sponsorsItem"
+    >
       <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-xl shadow-xl overflow-hidden">
           <div class="p-6 sm:p-10">
@@ -52,6 +55,7 @@ import { Component } from '@angular/core';
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfrzLiGk0jkwaVp1RkXlXGB0EJKtEQ30zUaA8Od4h7mgS42iw/viewform"
                   class="inline-block px-6 py-3 tito-widget-button-large font-medium rounded-lg text-center transition duration-150 ease-in-out shadow-md hover:shadow-lg"
+                  target="_blank"
                 >
                   Become a Sponsor
                 </a>

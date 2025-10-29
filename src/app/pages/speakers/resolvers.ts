@@ -84,7 +84,7 @@ export function injectActiveSpeakers(): Speaker[] {
   });
 }
 
-export function injectAgenda(): Agenda[] {
+export function injectJSAgenda(): Agenda[] {
   // get speaker
   const speakers = injectContentFiles<Speaker>((contentFile) =>
     contentFile.filename.includes('/src/content/speakers/'),
@@ -92,7 +92,43 @@ export function injectAgenda(): Agenda[] {
 
   // get agenda
   let agenda = injectContentFiles<{ agenda: Agenda[] }>().find(
-    (contentFile) => contentFile.filename === `/src/content/agenda.md`,
+    (contentFile) => contentFile.filename === `/src/content/agenda_js.md`,
+  )?.attributes.agenda as Agenda[];
+
+  agenda.forEach((a, i) => {
+    a.events = calculateTime(a.events, a.start);
+    a.events.forEach((event) => {
+      let check = false;
+      if (
+        (event.type.includes('Talk') || event.type.includes('Keynote')) &&
+        event.speakers?.length
+      ) {
+        event.speakers.forEach((speaker, index) => {
+          // I verify that the agenda is a talk
+          // I recover the speaker next to the talk
+          const author = speakers?.find((s) => s.slug == speaker.slug);
+          if (author) {
+            check = true; // I confirm that I have recovered the talk
+            event.speakers![index] = author as any;
+            return;
+          }
+        });
+      }
+    });
+  });
+
+  return agenda;
+}
+
+export function injectNGAgenda(): Agenda[] {
+  // get speaker
+  const speakers = injectContentFiles<Speaker>((contentFile) =>
+    contentFile.filename.includes('/src/content/speakers/'),
+  ).map((speaker) => speaker.attributes as unknown as Speaker);
+
+  // get agenda
+  let agenda = injectContentFiles<{ agenda: Agenda[] }>().find(
+    (contentFile) => contentFile.filename === `/src/content/agenda_ng.md`,
   )?.attributes.agenda as Agenda[];
 
   agenda.forEach((a, i) => {

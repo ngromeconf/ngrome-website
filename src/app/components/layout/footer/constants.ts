@@ -77,4 +77,12 @@ export const FOOTER_MENU = [
     visible: true,
     pageSite: false,
   },
+  {
+    pastEdition: true,
+    name: '2025',
+    destinationUrl: '/2025',
+    type: 'link',
+    visible: true,
+    pageSite: false,
+  },
 ];

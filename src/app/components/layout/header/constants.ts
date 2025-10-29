@@ -17,19 +17,22 @@ export const NAV_MENU = [
   },
   {
     name: 'Sponsors',
-    destinationUrl: '/sponsors',
+    destinationUrl: '/',
     type: 'white',
     visible: true,
+    fragment: 'sponsorsItem',
     pageSite: true,
+
     icon: 'sponsor',
   },
   {
     name: 'Agenda',
-    destinationUrl: '/agenda',
     type: 'white',
+    destinationUrl: '/',
     visible: true,
     pageSite: true,
     icon: 'agenda',
+    fragment: 'cfpTitle',
   },
 
   {
@@ -46,7 +49,7 @@ export const NAV_MENU = [
     destinationUrl: '/workshops',
     type: 'white',
     pageSite: true,
-    visible: true,
+    visible: false,
     icon: 'workshop',
   },
   {
@@ -55,7 +58,7 @@ export const NAV_MENU = [
     fragment: 'speakers',
     type: 'white',
     pageSite: true,
-    visible: true,
+    visible: false,
     icon: 'speaker',
   },
   {
@@ -99,6 +102,14 @@ export const NAV_MENU = [
     pastEdition: true,
     name: '2024',
     destinationUrl: '/2024',
+    type: 'white',
+    visible: true,
+    pageSite: true,
+  },
+  {
+    pastEdition: true,
+    name: '2025',
+    destinationUrl: '/2025',
     type: 'white',
     visible: true,
     pageSite: true,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EVENT_YEAR } from '../../../config/site.constants';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
   schemas: [],
   template: `
     <section
-      class="relative pt-24 bg-gradient-to-b from-white to-gray-200 dark:from-gray-800 dark:to-gray-950 h-dvh flex items-center"
+      class="relative pt-24 bg-gradient-to-b from-white to-gray-200 dark:from-gray-800 dark:to-gray-950 min-h-64 flex items-center"
     >
       <div
         class="container relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
@@ -23,7 +24,7 @@ import { Router } from '@angular/router';
               <span
                 class="inline-block rounded-full bg-white px-3 py-1 text-sm font-medium text-gray-900"
               >
-                2025 Edition
+                {{ EVENT_YEAR }} Edition
               </span>
               <h1
                 class="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
@@ -35,8 +36,11 @@ import { Router } from '@angular/router';
             <p
               class="max-w-lg mx-auto sm:mx-0 text-xl text-gray-500 dark:text-gray-400"
             >
-              Join the biggest Angular conference in Italy. Two days of
-              workshops, talks, and networking with the Angular community.
+              Join the largest Angular conference in Italy. In
+              {{ EVENT_YEAR }}, we're adding an extra day to include JSConf —
+              <br />A dedicated day of JavaScript talks. Enjoy three days of
+              workshops, talks, and networking with the Angular and JS
+              communities.
             </p>
 
             <div
@@ -84,7 +88,7 @@ import { Router } from '@angular/router';
             </div>
 
             <div
-              class="flex flex-col space-y-3 sm:flex-row sm:space-x-6 sm:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center lg:justify-start"
+              class="flex flex-col space-y-3 lg:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center"
             >
               <div class="flex items-center">
                 <svg
@@ -103,7 +107,7 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>June 19-20, 2025</span>
+                <span>June 17-19 {{ EVENT_YEAR }}</span>
               </div>
               <div class="flex items-center">
                 <svg
@@ -137,21 +141,7 @@ import { Router } from '@angular/router';
                   />
                 </svg>
 
-                <span>300+ Attendees</span>
-              </div>
-              <div class="flex items-center content-center justify-center py-8">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 ml-2 animate-bounce"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <span>500+ Attendees</span>
               </div>
             </div>
           </div>
@@ -163,12 +153,27 @@ import { Router } from '@angular/router';
             ></div>
           </div>
         </div>
+        <div class="flex items-center content-center justify-center py-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6 ml-2 animate-bounce"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </section>
   `,
   imports: [CommonModule, NgOptimizedImage, RouterModule],
 })
 export class HeroComponent {
+  public readonly EVENT_YEAR = EVENT_YEAR;
   constructor(private router: Router) {}
   onGoToTicket() {
     this.router.navigate([], { fragment: 'TicketSection' });
