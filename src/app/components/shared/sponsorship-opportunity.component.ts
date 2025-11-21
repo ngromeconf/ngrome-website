@@ -96,13 +96,13 @@ import { Component } from '@angular/core';
             class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center"
           >
             <p class="text-sm text-gray-500 mb-2 sm:mb-0"></p>
-            <a
+            <!-- <a
               href="https://docs.google.com/presentation/d/e/2PACX-1vRIbPluuyv_vvjRYr5-HS0pwLxFbbV_DbUarfxEB4A2dg5bbLOFnqocITf0Y-eVk1tILjJ73eDzexbR/pub?start=true&loop=true&delayms=5000&slide=id.g31e2e9c24f5_1_0"
               target="_blank"
               class="text-sm font-medium text-indigo-600 hover:text-indigo-500"
             >
               View sponsorship packages →
-            </a>
+            </a> -->
           </div>
         </div>
       </div>

@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
   schemas: [],
   template: `
     <section
-      class="relative pt-24 bg-gradient-to-b from-white to-gray-200 dark:from-gray-800 dark:to-gray-950 min-h-64 flex items-center"
+      class="relative flex flex-col justify-between pt-24 bg-gradient-to-b from-white to-gray-200 dark:from-gray-800 dark:to-gray-950 min-h-screen"
     >
       <div
-        class="container relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
+        class="flex items-start relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8 h-full"
       >
-        <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 h-full">
           <div
             class="flex flex-col space-y-8 items-center lg:items-start text-center lg:text-left"
           >
@@ -29,7 +29,7 @@ import { Router } from '@angular/router';
               <h1
                 class="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
               >
-                <span class="block">NGRome Conference</span>
+                <span class="block">NGRome Conference +1</span>
               </h1>
             </div>
 
@@ -37,7 +37,7 @@ import { Router } from '@angular/router';
               class="max-w-lg mx-auto sm:mx-0 text-xl text-gray-500 dark:text-gray-400"
             >
               Join the largest Angular conference in Italy. In
-              {{ EVENT_YEAR }}, we're adding an extra day to include JSConf —
+              {{ EVENT_YEAR }}, we're adding an extra day to include JSRome —
               <br />A dedicated day of JavaScript talks. Enjoy three days of
               workshops, talks, and networking with the Angular and JS
               communities.
@@ -65,30 +65,10 @@ import { Router } from '@angular/router';
                 </svg>
                 &nbsp; Get your ticket
               </button>
-              <button
-                type="button"
-                class="button-green"
-                [routerLink]="'/workshops'"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-
-                &nbsp; Join workshops
-              </button>
             </div>
 
             <div
-              class="flex flex-col space-y-3 lg:space-y-0 text-sm text-gray-500 dark:text-gray-400 justify-center"
+              class="flex flex-col space-y-3 lg:space-y-4 text-sm text-gray-500 dark:text-gray-400 justify-center"
             >
               <div class="flex items-center">
                 <svg
@@ -146,27 +126,27 @@ import { Router } from '@angular/router';
             </div>
           </div>
 
-          <div class="flex justify-center items-center hidden lg:block">
+          <div class="flex justify-end items-end hidden lg:flex h-full">
             <div
               class="w-full bg-[url('https://res.cloudinary.com/dp1gwjz5w/image/upload/c_scale,w_400/v1741839700/website-assets/ngrome-gradient-shield_wa2ked.svg')] bg-auto bg-center bg-no-repeat"
               style="width: 100%; height: 439px;"
             ></div>
           </div>
         </div>
-        <div class="flex items-center content-center justify-center py-8">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="size-6 ml-2 animate-bounce"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
+      </div>
+      <div class="flex items-end content-center justify-center py-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="size-6 ml-2 animate-bounce"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+            clip-rule="evenodd"
+          />
+        </svg>
       </div>
     </section>
   `,
